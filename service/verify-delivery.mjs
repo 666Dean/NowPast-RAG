@@ -37,7 +37,7 @@ try {
     await copyFile(join(root, filename), target);
   }
 
-  run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs']);
+  run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs']);
   run(['evaluation/run.mjs']);
   const results = JSON.parse(await readFile(join(checkout, 'evaluation/results.json'), 'utf8'));
   const failedCurrent = results.rows.filter(row => !row.unboundedExact || !row.scores.NowPast.exact);
@@ -55,7 +55,7 @@ try {
   run(['service/verify-service.mjs', ...(withModel ? ['--model'] : [])]);
   const api = JSON.parse(await readFile(join(checkout, 'service/validation/api-results.json'), 'utf8'));
   const validationInputs = {};
-  for (const filename of ['service/verify-delivery.mjs', 'service/verify-service.mjs', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs']) {
+  for (const filename of ['service/verify-delivery.mjs', 'service/verify-service.mjs', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs']) {
     validationInputs[filename] = createHash('sha256').update(await readFile(join(checkout, filename))).digest('hex');
   }
   const report = {

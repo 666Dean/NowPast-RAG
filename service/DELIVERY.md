@@ -25,7 +25,7 @@ GNP08、X06、X07 从失败变为成功，原 38 题无退化。BM25 仍为 16/3
 
 ## 新测试与时间边界
 
-`retrieval/regression.test.mjs` 和 `generation/citations.test.mjs` 共 8 个测试组，通过 8/8。覆盖日期的多种写法、日期单独出现、仍需回答的截止时间、新口语问法、另一组开发者自编资料、未知对象、费用/人数缺证、混合已知未知问题、错误模型结构与跨来源引文。
+`retrieval/regression.test.mjs`、`generation/citations.test.mjs` 和 `temporal/dates.test.mjs` 当前共 13 个测试组，通过 13/13。覆盖日期的多种写法、日期单独出现、仍需回答的截止时间、新口语问法、另一组开发者自编资料、未知对象、费用/人数缺证、混合已知未知问题、错误模型结构与跨来源引文。11 月 21 日补充章节号、模型版本和参数值的识别，解决“论文第3.2节”被误查为 3 月 2 日的问题，同时保留短日期与年月日混用。
 
 日期与组别已实际检查：11/08 B组当前是 F01，B13 已公布待生效；11/12 B组是 B13，A组仍是 F01。11/14 B组 R21/R22 冲突，11/15 可采用已公布但晚导入的 R30；同日 A组保持 M03。新增 B组补充通知只在其生效日后改变 B组；未署日期草案不回填到导入前，也不作为确定依据。
 
@@ -56,12 +56,12 @@ GNP08、X06、X07 从失败变为成功，原 38 题无退化。BM25 仍为 16/3
 
 ## 复现命令
 
-完整交付检查可运行 `node service/verify-delivery.mjs`。模型准备完成并设置 NOWPAST_MODEL_HOME 后，加 `--model` 验证真实模型。该命令在临时干净副本中检查逐题结果和 HTTP 返回，并将报告保存为 service/validation/delivery-check.json。新一轮额外补充了课程融合要求与未知设备费用的混合问题，当前开发回归为 9/9。需求、任务和当前进度见根目录 REQUIREMENTS.md。
+完整交付检查可运行 `node service/verify-delivery.mjs`。模型准备完成并设置 NOWPAST_MODEL_HOME 后，加 `--model` 验证真实模型。该命令在临时干净副本中检查逐题结果和 HTTP 返回，并将报告保存为 service/validation/delivery-check.json。当前开发回归为 13/13。需求、任务和当前进度见根目录 REQUIREMENTS.md。
 
 从仓库根目录运行（Node.js 22+）：
 
 ```sh
-node --test retrieval/regression.test.mjs generation/citations.test.mjs
+node --test retrieval/regression.test.mjs generation/citations.test.mjs temporal/dates.test.mjs
 npm run eval
 node service/verify-service.mjs
 ```

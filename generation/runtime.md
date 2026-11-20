@@ -14,7 +14,7 @@ npm.cmd start
 
 macOS 使用 `python3 generation/prepare_model.py` 准备模型，再执行 `npm start`。默认缓存为 `~/Library/Caches/NowPast/models`。也可在准备和启动时设置同一个 `NOWPAST_MODEL_HOME`，将缓存放在指定目录。
 
-用 `node --test retrieval/regression.test.mjs generation/citations.test.mjs` 验证开发侧回归。
+用 `node --test retrieval/regression.test.mjs generation/citations.test.mjs temporal/dates.test.mjs` 验证开发侧回归。
 `node service/verify-service.mjs` 检查无模型与证据不足的 HTTP 返回；准备模型后，设置缓存目录并运行 `node service/verify-service.mjs --model` 验证三种真实模型选句。脚本会短暂启动本机服务并在结束时关闭，在 `service/validation/` 保存真实响应与两组页面联调样例。该脚本不会自动下载模型。
 
 打开 [本地服务](http://127.0.0.1:4173/)。默认地址只接受本机访问，环境变量 `PORT` 可调整端口。打开网页或提交普通问题不会加载模型。首次点击整理会启动 llama-server 子进程，绑定随机回环端口，使用一次性进程密钥。关闭应用服务会尝试退出该子进程。模型准备失败或未安装时可照常运行证据功能。

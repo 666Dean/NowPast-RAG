@@ -1,20 +1,21 @@
 {
   "passed": true,
-  "sourceCommit": "c510e240151bd26fd301e3009f90aa143c2b8521",
+  "sourceCommit": "12cbf7f736c976b0f2420022f807356c4e8e8f75",
   "inputs": {
     "../knowledge/data.mjs": "cf20c263f3635171",
     "../knowledge/schema.mjs": "339b6354a929ea4c",
-    "../temporal/graph.mjs": "6099497f42870028",
+    "../temporal/graph.mjs": "10a286622a1ba29e",
     "../retrieval/rank.mjs": "38fe76eb4c7d5b7a",
     "../qa/answer.mjs": "bbe8bd309abc62b2",
     "./cases.mjs": "42faf3dff7aed56f",
     "./run.mjs": "58752565abd389e9"
   },
   "validationInputs": {
-    "service/verify-delivery.mjs": "b62244d635f5dc9391d13baf264eea6a3a29dec50da45eaa84caa5f81115e308",
+    "service/verify-delivery.mjs": "d867db2aa495fd567453691276c3a05e221740a9f5a15942803aa0bdb223dcfa",
     "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
     "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
-    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5"
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"
   },
   "environment": {
     "node": "v26.13.0",

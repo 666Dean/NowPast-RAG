@@ -1,9 +1,22 @@
-const datePattern = /(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?/g;
+const datePattern = /(?<![\w.-])(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?(?![\d.])/g;
+const nonDateNumberPattern = /(?:§|第|章节|小节|版本|version|\bv)\s*\d+(?:\.\d+)+|\d+(?:\.\d+)+\s*(?:节|章|版)|(?:比例|比率|阈值|学习率|概率|dropout|温度)\s*(?:为|是|=|：|:)?\s*\d+\.\d+/gi;
 
-export function withoutDates(q) { return q.replace(datePattern, ' '); }
+function dateMatches(q) {
+  const protectedNumbers = [...q.matchAll(nonDateNumberPattern)];
+  return [...q.matchAll(datePattern)].filter(match => !protectedNumbers.some(number =>
+    match.index < number.index + number[0].length && number.index < match.index + match[0].length));
+}
+
+export function withoutDates(q) {
+  let text = q;
+  for (const match of dateMatches(q).reverse()) {
+    text = text.slice(0, match.index) + ' ' + text.slice(match.index + match[0].length);
+  }
+  return text;
+}
 
 export function parseDates(q, reference) {
-  const hits = [...q.matchAll(datePattern)];
+  const hits = dateMatches(q);
   return hits.map(m => (m[1] || reference.slice(0,4))+'-'+m[2].padStart(2,'0')+'-'+m[3].padStart(2,'0'));
 }
 
