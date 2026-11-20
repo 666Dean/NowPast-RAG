@@ -1,6 +1,6 @@
 # 条款数据与引用
 
-建议负责人为 **成员 A**。在 [Issue #2 · 条款数据与引用](https://github.com/666Dean/NowPast-RAG/issues/2) 中认领并记录进展。
+执行负责人为 **组员 AI**。任务跟踪见 [Issue #2 · 条款数据与引用](https://github.com/666Dean/NowPast-RAG/issues/2)。
 
 ## 现有实现
 

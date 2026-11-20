@@ -1,6 +1,6 @@
 # Now / Past 时序证据图
 
-建议负责人为 **成员 A**。在 [Issue #3 · Now / Past 时序证据图](https://github.com/666Dean/NowPast-RAG/issues/3) 中认领并记录进展。
+执行负责人为 **组员 AI**。任务跟踪见 [Issue #3 · Now / Past 时序证据图](https://github.com/666Dean/NowPast-RAG/issues/3)。
 
 ## 现有实现
 

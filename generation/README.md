@@ -1,6 +1,6 @@
 # 本地模型与引用核验
 
-建议负责人为 **成员 B**。在 [Issue #6 · 本地模型与引用核验](https://github.com/666Dean/NowPast-RAG/issues/6) 中认领并记录进展。
+执行负责人为 **组员 AI**。任务跟踪见 [Issue #6 · 本地模型与引用核验](https://github.com/666Dean/NowPast-RAG/issues/6)。
 
 ## 现有实现
 

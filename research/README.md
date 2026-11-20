@@ -1,6 +1,6 @@
 # 研究依据与复现口径
 
-建议负责人为 **成员 A**。在 [Issue #1 · 研究依据与复现口径](https://github.com/666Dean/NowPast-RAG/issues/1) 中认领并记录进展。
+执行负责人为 **Codex**。任务跟踪见 [Issue #1 · 研究依据与复现口径](https://github.com/666Dean/NowPast-RAG/issues/1)。
 
 ## 现有实现
 

@@ -1,6 +1,6 @@
 # 提问解析与双通道检索
 
-建议负责人为 **成员 A**。在 [Issue #4 · 提问解析与双通道检索](https://github.com/666Dean/NowPast-RAG/issues/4) 中认领并记录进展。
+执行负责人为 **组员 AI**。任务跟踪见 [Issue #4 · 提问解析与双通道检索](https://github.com/666Dean/NowPast-RAG/issues/4)。
 
 ## 现有实现
 

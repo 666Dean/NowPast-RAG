@@ -1,6 +1,6 @@
 # 证据融合与回答
 
-建议负责人为 **成员 B**。在 [Issue #5 · 证据融合与回答](https://github.com/666Dean/NowPast-RAG/issues/5) 中认领并记录进展。
+执行负责人为 **组员 AI**。任务跟踪见 [Issue #5 · 证据融合与回答](https://github.com/666Dean/NowPast-RAG/issues/5)。
 
 ## 现有实现
 
