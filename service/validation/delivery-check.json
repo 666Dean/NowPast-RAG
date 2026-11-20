@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "sourceCommit": "c510e240151bd26fd301e3009f90aa143c2b8521",
+  "inputs": {
+    "../knowledge/data.mjs": "cf20c263f3635171",
+    "../knowledge/schema.mjs": "339b6354a929ea4c",
+    "../temporal/graph.mjs": "6099497f42870028",
+    "../retrieval/rank.mjs": "38fe76eb4c7d5b7a",
+    "../qa/answer.mjs": "bbe8bd309abc62b2",
+    "./cases.mjs": "42faf3dff7aed56f",
+    "./run.mjs": "58752565abd389e9"
+  },
+  "validationInputs": {
+    "service/verify-delivery.mjs": "b62244d635f5dc9391d13baf264eea6a3a29dec50da45eaa84caa5f81115e308",
+    "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5"
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "currentEvidence": {
+    "passed": 38,
+    "total": 38
+  },
+  "evidenceRoles": {
+    "passed": 9,
+    "total": 9
+  },
+  "researchSources": {
+    "passed": 4,
+    "total": 4
+  },
+  "behavior": {
+    "passed": 22,
+    "total": 22
+  },
+  "realModel": true,
+  "httpChecks": [
+    {
+      "name": "evidence unavailable",
+      "status": 422
+    },
+    {
+      "name": "model unavailable",
+      "status": 503
+    },
+    {
+      "name": "research uses primary sources",
+      "status": 422
+    },
+    {
+      "name": "single clause",
+      "status": 200
+    },
+    {
+      "name": "multi-sentence reason",
+      "status": 200
+    },
+    {
+      "name": "unresolved conflict",
+      "status": 200
+    }
+  ],
+  "isolation": "Fresh source copy without .git, installed dependencies, or model caches. External model cache used only with --model."
+}

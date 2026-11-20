@@ -69,3 +69,14 @@ test('publication, effect, import and scope boundaries remain separate', () => {
   check(seed,'海报尺寸',[],{date:'2026-11-12'});
   assert.equal(check(seed,'海报尺寸',[],{date:'2026-11-13'}).status,'unknown');
 });
+
+test('course requirements and missing equipment costs remain distinct in a mixed question', () => {
+  const known = check(seed,'B组的融合方式是什么？',['B13']);
+  assert.equal(known.status,'ok');
+  assert.equal(check(seed,'设备费用可以报销多少元？',[]).status,'unknown');
+  const mixed = check(seed,'B组的融合方式是什么，设备费用可以报销多少元？',['B13']);
+  assert.equal(mixed.status,'unknown');
+  assert.ok(mixed.sections.some(section=>section.topic==='融合方式' && section.status==='ok'));
+  assert.ok(mixed.sections.some(section=>section.status==='unknown' && section.summary.includes('费用')));
+  assert.ok(mixed.research.some(reference=>reference.id==='code-fusion'));
+});

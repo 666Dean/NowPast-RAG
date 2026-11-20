@@ -56,6 +56,8 @@ GNP08、X06、X07 从失败变为成功，原 38 题无退化。BM25 仍为 16/3
 
 ## 复现命令
 
+完整交付检查可运行 `node service/verify-delivery.mjs`。模型准备完成并设置 NOWPAST_MODEL_HOME 后，加 `--model` 验证真实模型。该命令在临时干净副本中检查逐题结果和 HTTP 返回，并将报告保存为 service/validation/delivery-check.json。新一轮额外补充了课程融合要求与未知设备费用的混合问题，当前开发回归为 9/9。需求、任务和当前进度见根目录 REQUIREMENTS.md。
+
 从仓库根目录运行（Node.js 22+）：
 
 ```sh

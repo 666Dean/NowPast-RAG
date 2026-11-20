@@ -6,6 +6,8 @@
 
 ## 跑起来
 
+项目要求、双方分工、任务状态和自动推进的完成条件见 [要求与任务](REQUIREMENTS.md)。完整本机验收可执行 `node service/verify-delivery.mjs`，已准备模型时加 `--model`。
+
 需要 Node.js 22 或更高版本。网页和证据问答直接使用 Node 与浏览器，无需安装 npm 依赖。
 
 ```sh
