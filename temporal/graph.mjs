@@ -1,5 +1,9 @@
+const datePattern = /(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?/g;
+
+export function withoutDates(q) { return q.replace(datePattern, ' '); }
+
 export function parseDates(q, reference) {
-  const hits = [...q.matchAll(/(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?/g)];
+  const hits = [...q.matchAll(datePattern)];
   return hits.map(m => (m[1] || reference.slice(0,4))+'-'+m[2].padStart(2,'0')+'-'+m[3].padStart(2,'0'));
 }
 

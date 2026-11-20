@@ -1,10 +1,11 @@
-"""Install the optional Windows x64 inference engine. Python 3.11+, stdlib only."""
+"""Install the optional Windows x64 / macOS inference engine. Python 3.11.8+."""
 import concurrent.futures
 import hashlib
 import os
 from pathlib import Path
 import platform
 import sys
+import tarfile
 import tempfile
 import time
 import urllib.request
@@ -19,6 +20,12 @@ RUNTIME = (
     "llama.zip", 24876565, "2f3dcb3aea4f52bf734f52040d2a688bdd76c2f762ae200a159646b37d84e393",
     ["https://github.com/ggml-org/llama.cpp/releases/download/b12559/llama-b12559-bin-win-cpu-x64.zip"],
 )
+MAC_RUNTIMES = {
+    "arm64": ("llama.tar.gz", 16449886, "d8ab6a83e23e6b66cee98849c4d2593777895440bc5b045a9518035c1b0aa0bc",
+              ["https://github.com/ggml-org/llama.cpp/releases/download/b12559/llama-b12559-bin-macos-arm64.tar.gz"]),
+    "x86_64": ("llama.tar.gz", 12227467, "a094948a61922a8ad69658683c6a5862310f2ed82c166f65b142645bfb497996",
+               ["https://github.com/ggml-org/llama.cpp/releases/download/b12559/llama-b12559-bin-macos-x64.tar.gz"]),
+}
 
 
 def file_hash(path):
@@ -73,23 +80,39 @@ def fetch(cache, asset):
 
 
 if __name__ == "__main__":
-    if sys.platform != "win32" or platform.machine().lower() not in ("amd64", "x86_64"):
-        sys.exit("This setup targets Windows x64.")
-    cache = Path(os.getenv("NOWPAST_MODEL_HOME") or Path(os.environ["LOCALAPPDATA"]) / "NowPast" / "models")
+    if sys.version_info < (3, 11, 8):
+        sys.exit("Python 3.11.8 or newer is required.")
+    machine = platform.machine().lower()
+    if sys.platform == "darwin" and machine in MAC_RUNTIMES:
+        asset = MAC_RUNTIMES[machine]
+        default_cache = Path.home() / "Library" / "Caches" / "NowPast" / "models"
+        executable = "llama-server"
+    elif sys.platform == "win32" and machine in ("amd64", "x86_64"):
+        asset = RUNTIME
+        default_cache = Path(os.environ["LOCALAPPDATA"]) / "NowPast" / "models"
+        executable = "llama-server.exe"
+    else:
+        sys.exit("Supported platforms: Windows x64 and macOS arm64/x64.")
+    cache = Path(os.getenv("NOWPAST_MODEL_HOME") or default_cache)
     cache.mkdir(parents=True, exist_ok=True)
     print("Verifying Qwen 2.5 weights and llama.cpp CPU runtime...", flush=True)
     fetch(cache, MODEL)
-    archive_path = fetch(cache, RUNTIME)
+    archive_path = fetch(cache, asset)
     runtime = cache / "b12559"
     ready = runtime / ".verified-archive"
-    if not (ready.is_file() and ready.read_text() == RUNTIME[2] and any(runtime.rglob("llama-server.exe"))):
+    if not (ready.is_file() and ready.read_text() == asset[2] and any(runtime.rglob(executable))):
         # Compare existing files with ZIP member CRCs before rewriting: on
         # Windows a running model process keeps executable files locked.
         import zlib
-        with zipfile.ZipFile(archive_path) as archive:
-            for member in archive.infolist():
-                target = runtime / member.filename
-                if member.is_dir() or not target.is_file() or target.stat().st_size != member.file_size or zlib.crc32(target.read_bytes()) != member.CRC:
-                    archive.extract(member, runtime)
-        ready.write_text(RUNTIME[2])
+        if sys.platform == "darwin":
+            runtime.mkdir(parents=True, exist_ok=True)
+            with tarfile.open(archive_path) as archive:
+                archive.extractall(runtime, filter="data")
+        else:
+            with zipfile.ZipFile(archive_path) as archive:
+                for member in archive.infolist():
+                    target = runtime / member.filename
+                    if member.is_dir() or not target.is_file() or target.stat().st_size != member.file_size or zlib.crc32(target.read_bytes()) != member.CRC:
+                        archive.extract(member, runtime)
+        ready.write_text(asset[2])
     print(f"Model ready in {cache}")
