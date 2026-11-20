@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173d34">
+  <title>时知 NowPast · 实验课证据工作台</title>
+  <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast-inner">
+    <a class="brand" href="#ask" aria-label="时知问答首页"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>时知 <small>NowPast</small></a>
+    <nav aria-label="工作台"><button class="nav active" id="nav-ask" type="button">证据问答</button><button class="nav" id="nav-library" type="button">资料库 <span id="nav-count"></span></button></nav>
+    <span class="course-label"><i></i>课程实验工作台</span>
+  </div>
+</header>
+<main class="frame">
+  <section id="ask" aria-labelledby="ask-title">
+    <div class="intro"><div class="eyebrow"><span class="rule"></span> GNP 动态图论文复现 · 课程通知为虚构示例</div>
+      <h1 id="ask-title">这次实验，<em>按哪版做？</em></h1>
+      <p>对照论文、公开源码和课程通知，查清本组在当时应当复现的实现。</p>
+    </div>
+    <div class="query-grid">
+      <form id="ask-form" class="query card">
+        <label class="field-head" for="question">向课程资料提问</label>
+        <textarea id="question" rows="2" maxlength="500" required></textarea>
+        <div class="query-actions"><div class="filters">
+          <label>截至日期<input id="as-of" type="date" required></label>
+          <label>适用范围<select id="scope"><option>全班</option><option>A组</option><option>B组</option></select></label>
+          <label>查询方式<select id="mode"><option value="auto">自动判断</option><option value="current">有效要求</option><option value="compare">比较版本</option></select></label>
+        </div><button type="submit" class="primary">查证 <span aria-hidden="true">↗</span></button></div>
+        <div id="query-error" class="error" role="alert"></div>
+      </form>
+      <aside class="examples card"><h2>试着问</h2><div id="examples"></div></aside>
+    </div>
+    <section id="result" aria-live="polite" aria-atomic="true"></section>
+  </section>
+  <section id="library" hidden aria-labelledby="library-title">
+    <div class="intro split"><div><div class="eyebrow"><span class="rule"></span> SOURCE LIBRARY</div>
+      <h1 id="library-title">课程<em>资料库</em></h1><p>示例材料为虚构教学资料。导入的条款保存在当前浏览器，点击模型整理时会随问题发给本站模型服务。</p>
+    </div><button class="primary" id="open-import" type="button"><span aria-hidden="true">＋</span> 添加条款</button></div>
+    <div class="library-panel card"><div class="library-top"><h2>原始材料</h2><label class="search-label">筛选资料<input id="filter" type="search" placeholder="标题、主题或原文"></label></div><div id="library-list"></div></div>
+  </section>
+  <footer><span>时知 NowPast</span><span>课程示例库 · 本地证据计算</span></footer>
+</main>
+<dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-head"><span class="eyebrow">SOURCE DETAIL</span><button type="button" class="quiet" data-close="source-dialog">关闭 ×</button></div><div id="source-detail"></div></dialog>
+<dialog id="import-dialog" aria-labelledby="import-title"><div class="dialog-head"><span class="eyebrow">SOURCE IMPORT</span><button class="quiet" type="button" data-close="import-dialog">关闭 ×</button></div>
+  <h2 id="import-title">添加一条原文证据</h2><p class="help">每次录入一段描述同一要求的原文。相同主题的材料会一起核对，未知日期可留空。</p>
+  <form id="import-form">
+    <div class="form-grid">
+      <label>资料标题<input name="title" required maxlength="100" placeholder="例如：实验三补充通知"></label>
+      <label>条款主题<input name="topic" required list="topic-list" maxlength="80" placeholder="选择已有主题或新建"><datalist id="topic-list"></datalist></label>
+      <label>公布日期<input type="date" name="published"></label><label>生效日期<input type="date" name="effective"></label>
+      <label>适用范围<select name="scope"><option>全班</option><option>A组</option><option>B组</option></select></label>
+      <label>条款值<input name="value" required maxlength="160" placeholder="原文中的关键要求，如 PDF"></label>
+    </div>
+    <label>原文片段<textarea required name="text" rows="4" maxlength="12000" placeholder="粘贴可供核查的完整原文…"></textarea></label>
+    <label class="file-input">或读取 UTF-8 TXT 文件<input id="text-file" type="file" accept=".txt,text/plain"></label>
+    <fieldset class="targets"><legend>明确取代的旧条款（可多选）</legend><div id="targets"></div></fieldset>
+    <div class="form-end"><span id="import-message" class="error" role="alert"></span><button class="primary" type="submit">保存到资料库</button></div>
+  </form>
+</dialog>
+<script type="module" src="/web/app.mjs"></script>
+</body>
+</html>

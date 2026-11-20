@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+*.gguf
+*.pdf
+*.log
+__pycache__/
+.DS_Store
+.playwright-mcp/

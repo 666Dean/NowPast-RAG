@@ -1,0 +1,14 @@
+{
+  "name": "nowpast-rag",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node service/server.mjs",
+    "eval": "node evaluation/run.mjs",
+    "model:prepare": "python generation/prepare_model.py"
+  }
+}
