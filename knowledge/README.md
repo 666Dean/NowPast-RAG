@@ -1,6 +1,6 @@
 # 条款数据与引用
 
-建议负责人为 **成员 A**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[knowledge]` 找到任务并认领。
+建议负责人为 **成员 A**。在 [Issue #2 · 条款数据与引用](https://github.com/666Dean/NowPast-RAG/issues/2) 中认领并记录进展。
 
 ## 现有实现
 

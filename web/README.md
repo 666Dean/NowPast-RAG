@@ -1,6 +1,6 @@
 # 问答交互与资料录入
 
-建议负责人为 **成员 B**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[web]` 找到任务并认领。
+建议负责人为 **成员 B**。在 [Issue #7 · 问答交互与资料录入](https://github.com/666Dean/NowPast-RAG/issues/7) 中认领并记录进展。
 
 ## 现有实现
 

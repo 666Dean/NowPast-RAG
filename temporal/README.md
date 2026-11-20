@@ -1,6 +1,6 @@
 # Now / Past 时序证据图
 
-建议负责人为 **成员 A**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[temporal]` 找到任务并认领。
+建议负责人为 **成员 A**。在 [Issue #3 · Now / Past 时序证据图](https://github.com/666Dean/NowPast-RAG/issues/3) 中认领并记录进展。
 
 ## 现有实现
 

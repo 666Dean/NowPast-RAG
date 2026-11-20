@@ -1,6 +1,6 @@
 # 提问解析与双通道检索
 
-建议负责人为 **成员 A**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[retrieval]` 找到任务并认领。
+建议负责人为 **成员 A**。在 [Issue #4 · 提问解析与双通道检索](https://github.com/666Dean/NowPast-RAG/issues/4) 中认领并记录进展。
 
 ## 现有实现
 

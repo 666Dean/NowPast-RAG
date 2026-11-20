@@ -1,6 +1,6 @@
 # 本地服务与后续部署
 
-建议负责人为 **成员 C**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[service]` 找到任务并认领。
+建议负责人为 **成员 C**。在 [Issue #8 · 本地服务与后续部署](https://github.com/666Dean/NowPast-RAG/issues/8) 中认领并记录进展。
 
 ## 现有实现
 

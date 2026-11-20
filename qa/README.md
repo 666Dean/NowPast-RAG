@@ -1,6 +1,6 @@
 # 证据融合与回答
 
-建议负责人为 **成员 B**。在[模块任务列表](https://github.com/666Dean/NowPast-RAG/issues)按 `[qa]` 找到任务并认领。
+建议负责人为 **成员 B**。在 [Issue #5 · 证据融合与回答](https://github.com/666Dean/NowPast-RAG/issues/5) 中认领并记录进展。
 
 ## 现有实现
 
