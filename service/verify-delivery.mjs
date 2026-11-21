@@ -109,5 +109,7 @@ try {
   await writeFile(output, JSON.stringify({passed: false, realModelRequested: withModel, error: error.message}, null, 2) + '\n');
   throw error;
 } finally {
+  assert.equal(dirname(scratch),tmpdir(), 'Temporary checkout must remain inside the selected temp directory.');
+  assert.ok(scratch.startsWith(join(tmpdir(),'nowpast-delivery-')), 'Unexpected temporary checkout path.');
   await rm(scratch, {recursive: true, force: true});
 }
