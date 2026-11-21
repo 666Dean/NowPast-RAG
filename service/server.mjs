@@ -11,6 +11,8 @@ const hosts = new Set([host + ':' + port, 'localhost:' + port]);
 const files = new Map([
   ['/', ['web/index.html', 'text/html']],
   ['/index.html', ['web/index.html', 'text/html']],
+  ['/test-campus', ['service/manual-test.html', 'text/html']],
+  ['/service/manual-test.mjs', ['service/manual-test.mjs', 'text/javascript']],
   ['/web/style.css', ['web/style.css', 'text/css']],
   ['/web/controls.css', ['web/controls.css', 'text/css']],
   ['/web/controls.mjs', ['web/controls.mjs', 'text/javascript']],

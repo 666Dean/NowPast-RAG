@@ -42,6 +42,8 @@ asOf 表示截至哪天已公布的信息，lessonDate 表示课次。date 可�
 
 ## 响应与网页联调
 
+手动测试入口为 `/test-campus`，启动本地服务后可直接打开。它提供公布前后、换班、下周、冲突、澄清和费用七个场景，允许修改日期与问题，展开各字段的原文依据，并复制请求和实际响应。页面位于 service/manual-test.html、manual-test.mjs，使用同一 /api/query，供开发验收和用户试用。资料均标为虚构。
+
 `service/validation/campus-examples.json` 提供三组完整 `{path,request,response}`，请求已包含可直接 POST 的 docs。三组分别是已公布调整、当前冲突和地点有据但费用缺证。
 
 响应保留 status、label、summary、sections、items、research、date、scope，并增加 domain、asOf、lessonDate、classId、course、fields。fields.room 与 fields.time 各含 status、values、evidence。每个 evidence 包含 role 和完整 doc，原文在 doc.text，定位在 doc.source.locator，资料编号在 doc.id。

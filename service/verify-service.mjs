@@ -53,7 +53,7 @@ try {
   for (const path of ['/web/app.mjs','/knowledge/data.mjs','/temporal/graph.mjs','/retrieval/rank.mjs','/qa/answer.mjs','/qa/campus.mjs','/temporal/campus.mjs','/knowledge/campus-data.mjs']) {
     assert.equal((await fetch(server.origin+path)).status,200,path);
   }
-  for(const [path,type] of [['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
+  for(const [path,type] of [['/test-campus','text/html'],['/service/manual-test.mjs','text/javascript'],['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
     const response=await fetch(server.origin+path);
     assert.equal(response.status,200,path);
     assert.ok(response.headers.get('content-type')?.startsWith(type),path+' MIME');
