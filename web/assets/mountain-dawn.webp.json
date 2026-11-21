@@ -1,0 +1,6 @@
+{
+  "origin": "Generated with the built-in image_gen tool using the user-provided screenshot as a scenery style reference.",
+  "prompt": "Use case: stylized-concept. Asset type: website notification-banner background ONLY, not a UI mockup. Input image is a style and composition reference: the user's course dashboard screenshot. Generate only the wide mountain scenery seen in its main large notification banner; NO user-interface elements and absolutely NO text, numbers, letters, buttons, icons, frames or watermark. Very wide landscape, about 3:1 aspect ratio, 2304 x 768. A serene Himalayan snow peak rises on the RIGHT third, its peak at about 75% of image width and 30% from top, sculptural ridges lit by warm peach-gold dawn light, muted slate-lavender shadows. Cloud sea along the bottom. Left half is mostly soft pale peach and ivory haze, clear gentle low contrast negative space to put dark red live HTML text over. Sophisticated cinematic 3D landscape render, delicate atmosphere, refined realistic snowy ridges, calm and luminous. Match the screenshot's cream, blush, warm terracotta atmosphere. No extra objects. No purple sky. Full bleed opaque image.",
+  "asset": "mountain-dawn.webp",
+  "conversion": "Converted to WebP quality 88; original generated PNG preserved in Codex generated_images."
+}
