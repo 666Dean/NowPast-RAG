@@ -1,0 +1,2548 @@
+{
+  "inputs": {
+    "../knowledge/data.mjs": "cf20c263f3635171",
+    "../knowledge/schema.mjs": "339b6354a929ea4c",
+    "../temporal/graph.mjs": "6099497f42870028",
+    "../retrieval/rank.mjs": "38fe76eb4c7d5b7a",
+    "../qa/answer.mjs": "bbe8bd309abc62b2",
+    "./cases.mjs": "42faf3dff7aed56f",
+    "./run.mjs": "58752565abd389e9"
+  },
+  "rows": [
+    {
+      "id": "C01",
+      "question": "报告格式是什么？",
+      "date": "2026-11-06",
+      "scope": "B组",
+      "gold": [
+        "M01"
+      ],
+      "topics": [
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M01"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C02",
+      "question": "离线组的报告交什么格式？",
+      "date": "2026-11-08",
+      "scope": "B组",
+      "gold": [
+        "M01"
+      ],
+      "topics": [
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M01"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C03",
+      "question": "请告诉我实验报告的文件格式",
+      "date": "2026-11-10",
+      "scope": "B组",
+      "gold": [
+        "B11"
+      ],
+      "topics": [
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B11"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C04",
+      "question": "要附什么复现材料？",
+      "date": "2026-11-17",
+      "scope": "A组",
+      "gold": [
+        "M02"
+      ],
+      "topics": [
+        "复现材料"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M02"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M02"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M02"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M02"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M02"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C05",
+      "question": "要附哪些复现材料？",
+      "date": "2026-11-17",
+      "scope": "B组",
+      "gold": [
+        "B12"
+      ],
+      "topics": [
+        "复现材料"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M02"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B12"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C06",
+      "question": "现在去哪验收？",
+      "date": "2026-11-10",
+      "scope": "B组",
+      "gold": [
+        "M03"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M03"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M03"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C07",
+      "question": "设备搬走以后，去哪验收？",
+      "date": "2026-11-11",
+      "scope": "B组",
+      "gold": [
+        "R21",
+        "R22"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R22",
+            "R21"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "R22"
+          ],
+          "exact": 0,
+          "f1": 0.6666666666666666
+        },
+        "Now": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "R21",
+        "R22"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C08",
+      "question": "验收地点还存在哪些说法？",
+      "date": "2026-11-14",
+      "scope": "B组",
+      "gold": [
+        "R21",
+        "R22"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "R22"
+          ],
+          "exact": 0,
+          "f1": 0.6666666666666666
+        },
+        "Now": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "R21",
+        "R22"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C09",
+      "question": "验收地点现在定在哪里？",
+      "date": "2026-11-15",
+      "scope": "B组",
+      "gold": [
+        "R30"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "R30"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C10",
+      "question": "为什么验收地点出现过两种说法？",
+      "date": "2026-11-18",
+      "scope": "B组",
+      "gold": [
+        "R30"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "R30"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C11",
+      "question": "全班分别去哪验收？",
+      "date": "2026-11-16",
+      "scope": "全班",
+      "gold": [
+        "M03",
+        "R30"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21",
+            "R22"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "M03",
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M03",
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M03",
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M03",
+        "R30"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C12",
+      "question": "同一天，A组和B组交什么格式？",
+      "date": "2026-11-16",
+      "scope": "全班",
+      "gold": [
+        "M01",
+        "B11"
+      ],
+      "topics": [
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B11",
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M01",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M01",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M01",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M01",
+        "B11"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C13",
+      "question": "截止时间最晚到什么时候？",
+      "date": "2026-11-18",
+      "scope": "A组",
+      "gold": [
+        "M05"
+      ],
+      "topics": [
+        "截止时间"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M05"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C14",
+      "question": "B组什么时候交？",
+      "date": "2026-11-19",
+      "scope": "B组",
+      "gold": [
+        "T40"
+      ],
+      "topics": [
+        "截止时间"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "T40"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C15",
+      "question": "负采样比例是多少？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "M06"
+      ],
+      "topics": [
+        "负采样比例"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M06"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M06"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M06"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M06"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M06"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C16",
+      "question": "报告格式、复现材料和验收地点分别怎么安排？",
+      "date": "2026-11-12",
+      "scope": "B组",
+      "gold": [
+        "B11",
+        "B12",
+        "R21",
+        "R22"
+      ],
+      "topics": [
+        "报告格式",
+        "复现材料",
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21",
+            "M03",
+            "M01",
+            "B11"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "B11",
+            "B12",
+            "R22"
+          ],
+          "exact": 0,
+          "f1": 0.8571428571428571
+        },
+        "Now": {
+          "predicted": [
+            "B11",
+            "R21",
+            "R22",
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "B11",
+            "R21",
+            "R22",
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B11",
+        "R21",
+        "R22",
+        "B12"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C17",
+      "question": "平台维护后交到哪里，几点截止？",
+      "date": "2026-11-20",
+      "scope": "A组",
+      "gold": [
+        "M04",
+        "T40"
+      ],
+      "topics": [
+        "提交渠道",
+        "截止时间"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "T40",
+            "M04"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "M04",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M04",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M04",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M04",
+        "T40"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C18",
+      "question": "我抄的是工程楼 305，现在还去那里吗？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "R30"
+      ],
+      "topics": [
+        "验收地点"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R21"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "NowPast": {
+          "predicted": [
+            "R30"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "R30"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C19",
+      "question": "旧条款 M02 今天还适用吗？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "B12"
+      ],
+      "topics": [
+        "复现材料"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "R22"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "NowPast": {
+          "predicted": [
+            "B12"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B12"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C20",
+      "question": "从哪里上传，报告交什么格式？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "M04",
+        "B11"
+      ],
+      "topics": [
+        "提交渠道",
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B11",
+            "M01"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "M04",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M04",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M04",
+            "B11"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M04",
+        "B11"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C21",
+      "question": "日期选择器先填今天。2026年11月6日的实验报告怎么交？",
+      "date": "2026-11-06",
+      "scope": "B组",
+      "gold": [
+        "M01"
+      ],
+      "topics": [
+        "报告格式"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M01"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "C22",
+      "question": "负采样比例及截止时间？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "M06",
+        "T40"
+      ],
+      "topics": [
+        "负采样比例",
+        "截止时间"
+      ],
+      "collection": "course",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M06",
+            "M05"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "M06",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "M06",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "M06",
+            "T40"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "M06",
+        "T40"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X01",
+      "question": "数据移交名称是什么？",
+      "date": "2026-11-03",
+      "scope": "B组",
+      "gold": [
+        "X01"
+      ],
+      "topics": [
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X01"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X02",
+      "question": "我还在用北辰匣，现行叫法是什么？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "X03"
+      ],
+      "topics": [
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "NowPast": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X03"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X03",
+      "question": "请根据旧条款 X02 帮我确定现行安排。",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "X03"
+      ],
+      "topics": [
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "NowPast": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X03"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X04",
+      "question": "A组也要更新移交代号吗？",
+      "date": "2026-11-20",
+      "scope": "A组",
+      "gold": [
+        "X01"
+      ],
+      "topics": [
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "X01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X01"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X05",
+      "question": "交接柜号和移交代号？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "X03",
+        "X04",
+        "X05"
+      ],
+      "topics": [
+        "交接柜号",
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "X04",
+            "X02",
+            "X01"
+          ],
+          "exact": 0,
+          "f1": 0.3333333333333333
+        },
+        "Latest": {
+          "predicted": [
+            "X05",
+            "X03"
+          ],
+          "exact": 0,
+          "f1": 0.8
+        },
+        "Now": {
+          "predicted": [
+            "X03",
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "X03",
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X03",
+        "X05",
+        "X04"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X06",
+      "question": "小组交接时用的那个盒子，现在大家怎么称呼它？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "X03"
+      ],
+      "topics": [
+        "移交代号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "X02"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X03"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "X07",
+      "question": "盘应该放在哪个格子？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "X04",
+        "X05"
+      ],
+      "topics": [
+        "交接柜号"
+      ],
+      "collection": "archive",
+      "scores": {
+        "BM25": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "X05"
+          ],
+          "exact": 0,
+          "f1": 0.6666666666666666
+        },
+        "Now": {
+          "predicted": [
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "X05",
+        "X04"
+      ],
+      "unboundedExact": true
+    },
+    {
+      "id": "GNP01",
+      "question": "11月6日全班用哪种融合算子？",
+      "date": "2026-11-06",
+      "scope": "全班",
+      "gold": [
+        "F01"
+      ],
+      "topics": [
+        "融合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "全班",
+          "当前依据",
+          "F01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "F01"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "全班",
+            "role": "当前依据",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP02",
+      "question": "11月6日全班怎么做消息聚合？",
+      "date": "2026-11-06",
+      "scope": "全班",
+      "gold": [
+        "G01"
+      ],
+      "topics": [
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "全班",
+          "当前依据",
+          "G01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "G01"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "全班",
+            "role": "当前依据",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          }
+        ],
+        "references": [
+          "paper-aggregate"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP03",
+      "question": "B 组 11 月 7 日该用什么融合方式？",
+      "date": "2026-11-07",
+      "scope": "B组",
+      "gold": [
+        "F01"
+      ],
+      "topics": [
+        "融合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "B组",
+          "当前依据",
+          "F01"
+        ],
+        [
+          "B组",
+          "已公布待生效",
+          "B13"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Latest": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "F01"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已公布待生效",
+            "id": "B13",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "refs": [
+              "code-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion",
+          "code-fusion"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP04",
+      "question": "B 组 11 月 7 日该用什么聚合器？",
+      "date": "2026-11-07",
+      "scope": "B组",
+      "gold": [
+        "G01"
+      ],
+      "topics": [
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "B组",
+          "当前依据",
+          "G01"
+        ],
+        [
+          "B组",
+          "已公布待生效",
+          "B14"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "M05"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "G01"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已公布待生效",
+            "id": "B14",
+            "value": "选择时间最近的消息再更新记忆",
+            "refs": [
+              "code-aggregate"
+            ]
+          }
+        ],
+        "references": [
+          "paper-aggregate",
+          "code-aggregate"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP05",
+      "question": "11月10日 A 组和 B 组怎么融合？",
+      "date": "2026-11-10",
+      "scope": "全班",
+      "gold": [
+        "F01",
+        "B13"
+      ],
+      "topics": [
+        "融合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "A组",
+          "当前依据",
+          "F01"
+        ],
+        [
+          "B组",
+          "当前依据",
+          "B13"
+        ],
+        [
+          "B组",
+          "已被替代",
+          "F01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B13",
+            "B11"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "F01",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "F01",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "F01",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "F01",
+        "B13"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "A组",
+            "role": "当前依据",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "B13",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "refs": [
+              "code-fusion"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已被替代",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion",
+          "code-fusion"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP06",
+      "question": "11月10日全班的消息聚合要求分别是什么？",
+      "date": "2026-11-10",
+      "scope": "全班",
+      "gold": [
+        "G01",
+        "B14"
+      ],
+      "topics": [
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "A组",
+          "当前依据",
+          "G01"
+        ],
+        [
+          "B组",
+          "当前依据",
+          "B14"
+        ],
+        [
+          "B组",
+          "已被替代",
+          "G01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B11",
+            "B14"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "G01",
+            "B14"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "G01",
+            "B14"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "G01",
+            "B14"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "G01",
+        "B14"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "A组",
+            "role": "当前依据",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "B14",
+            "value": "选择时间最近的消息再更新记忆",
+            "refs": [
+              "code-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已被替代",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          }
+        ],
+        "references": [
+          "paper-aggregate",
+          "code-aggregate"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP07",
+      "question": "11月6日和11月10日，B组的融合方式和消息聚合有何变化？",
+      "date": "2026-11-10",
+      "scope": "B组",
+      "gold": [
+        "B13",
+        "B14"
+      ],
+      "topics": [
+        "融合方式",
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "B组",
+          "前一日期",
+          "F01"
+        ],
+        [
+          "B组",
+          "前一日期",
+          "G01"
+        ],
+        [
+          "B组",
+          "后一日期",
+          "B13"
+        ],
+        [
+          "B组",
+          "后一日期",
+          "B14"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B14",
+            "M01"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "B13",
+            "B14"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "B14",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "B14",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B14",
+        "B13"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "B组",
+            "role": "前一日期",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "后一日期",
+            "id": "B14",
+            "value": "选择时间最近的消息再更新记忆",
+            "refs": [
+              "code-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "前一日期",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "后一日期",
+            "id": "B13",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "refs": [
+              "code-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion",
+          "code-fusion",
+          "paper-aggregate",
+          "code-aggregate"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP08",
+      "question": "11月6日和11月10日，A组的融合方式和消息聚合有何变化？",
+      "date": "2026-11-10",
+      "scope": "A组",
+      "gold": [
+        "F01",
+        "G01"
+      ],
+      "topics": [
+        "融合方式",
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "A组",
+          "前一日期",
+          "F01"
+        ],
+        [
+          "A组",
+          "前一日期",
+          "G01"
+        ],
+        [
+          "A组",
+          "后一日期",
+          "F01"
+        ],
+        [
+          "A组",
+          "后一日期",
+          "G01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "G01",
+            "M01"
+          ],
+          "exact": 0,
+          "f1": 0.5
+        },
+        "Latest": {
+          "predicted": [
+            "F01",
+            "G01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [
+            "G01",
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "NowPast": {
+          "predicted": [
+            "G01",
+            "F01"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "G01",
+        "F01"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "A组",
+            "role": "前一日期",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "A组",
+            "role": "后一日期",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "A组",
+            "role": "前一日期",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          {
+            "scope": "A组",
+            "role": "后一日期",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion",
+          "paper-aggregate"
+        ],
+        "exact": true
+      }
+    },
+    {
+      "id": "GNP09",
+      "question": "B组今天还按 F01 和 G01 复现吗？",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "gold": [
+        "B13",
+        "B14"
+      ],
+      "topics": [
+        "融合方式",
+        "聚合方式"
+      ],
+      "collection": "course",
+      "suite": "gnp",
+      "queryDate": "2026-11-20",
+      "evidence": [
+        [
+          "B组",
+          "当前依据",
+          "B13"
+        ],
+        [
+          "B组",
+          "当前依据",
+          "B14"
+        ],
+        [
+          "B组",
+          "已被替代",
+          "F01"
+        ],
+        [
+          "B组",
+          "已被替代",
+          "G01"
+        ]
+      ],
+      "scores": {
+        "BM25": {
+          "predicted": [
+            "B12",
+            "B11"
+          ],
+          "exact": 0,
+          "f1": 0
+        },
+        "Latest": {
+          "predicted": [
+            "B13",
+            "B14"
+          ],
+          "exact": 1,
+          "f1": 1
+        },
+        "Now": {
+          "predicted": [],
+          "exact": 0,
+          "f1": 0
+        },
+        "NowPast": {
+          "predicted": [
+            "B14",
+            "B13"
+          ],
+          "exact": 1,
+          "f1": 1
+        }
+      },
+      "unbounded": [
+        "B14",
+        "B13"
+      ],
+      "unboundedExact": true,
+      "gnp": {
+        "actual": [
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "B14",
+            "value": "选择时间最近的消息再更新记忆",
+            "refs": [
+              "code-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已被替代",
+            "id": "G01",
+            "value": "先聚合平均消息再更新记忆",
+            "refs": [
+              "paper-aggregate"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "当前依据",
+            "id": "B13",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "refs": [
+              "code-fusion"
+            ]
+          },
+          {
+            "scope": "B组",
+            "role": "已被替代",
+            "id": "F01",
+            "value": "使用 Hadamard 逐元素乘积",
+            "refs": [
+              "paper-fusion"
+            ]
+          }
+        ],
+        "references": [
+          "paper-fusion",
+          "code-fusion",
+          "paper-aggregate",
+          "code-aggregate"
+        ],
+        "exact": true
+      }
+    }
+  ],
+  "researchRows": [
+    {
+      "id": "GNPS01",
+      "question": "论文和源码的融合方式有什么差异？",
+      "gold": [
+        "paper-fusion",
+        "code-fusion"
+      ],
+      "actual": [
+        {
+          "id": "paper-fusion",
+          "topic": "融合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 729",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "作者在 Now Module 一节末尾写到，以 Hadamard 乘积结合过去与当前的嵌入。这里指两路表示的融合。"
+        },
+        {
+          "id": "code-fusion",
+          "topic": "融合方式",
+          "kind": "源码",
+          "title": "GNP.forward · 第 254–260 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L254-L260",
+          "note": "固定提交的联合分支将归一化的 Past 表示和 Now 输出沿最后一维拼接，然后送入线性输出层。"
+        }
+      ],
+      "score": {
+        "exact": 1,
+        "f1": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "GNPS02",
+      "question": "论文和源码的聚合方式有什么差异？",
+      "gold": [
+        "paper-aggregate",
+        "code-aggregate"
+      ],
+      "actual": [
+        {
+          "id": "paper-aggregate",
+          "topic": "聚合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 728",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "论文描述最近批次的节点特征时提到先聚合平均消息，再由 GRU 更新节点记忆。"
+        },
+        {
+          "id": "code-aggregate",
+          "topic": "聚合方式",
+          "kind": "源码",
+          "title": "Aggregator.forward · 第 117–121 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L117-L121",
+          "note": "聚合器针对每个索引用时间参数选出最近一条消息，将对应向量写入聚合结果。"
+        }
+      ],
+      "score": {
+        "exact": 1,
+        "f1": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "GNPS03",
+      "question": "Hadamard 融合方式在论文哪一节？",
+      "gold": [
+        "paper-fusion"
+      ],
+      "actual": [
+        {
+          "id": "paper-fusion",
+          "topic": "融合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 729",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "作者在 Now Module 一节末尾写到，以 Hadamard 乘积结合过去与当前的嵌入。这里指两路表示的融合。"
+        }
+      ],
+      "score": {
+        "exact": 1,
+        "f1": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "GNPS04",
+      "question": "源码中消息聚合的实现在哪里？",
+      "gold": [
+        "code-aggregate"
+      ],
+      "actual": [
+        {
+          "id": "code-aggregate",
+          "topic": "聚合方式",
+          "kind": "源码",
+          "title": "Aggregator.forward · 第 117–121 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L117-L121",
+          "note": "聚合器针对每个索引用时间参数选出最近一条消息，将对应向量写入聚合结果。"
+        }
+      ],
+      "score": {
+        "exact": 1,
+        "f1": 1
+      },
+      "pass": true
+    }
+  ],
+  "behaviorTests": [
+    {
+      "name": "通知公布前不可引用 B11",
+      "pass": true
+    },
+    {
+      "name": "11/07 已公布但待生效，B11 导入时间是 11/08",
+      "pass": true
+    },
+    {
+      "name": "11/14 不得用尚未公布的追溯澄清",
+      "pass": true
+    },
+    {
+      "name": "11/15 恢复当时已公布的 R30，即使系统 11/17 才导入",
+      "pass": true
+    },
+    {
+      "name": "当日未署日期草案尚未导入，不能回填",
+      "pass": true
+    },
+    {
+      "name": "未署日期草案展示为待核并拒绝裁定",
+      "pass": true
+    },
+    {
+      "name": "没有依据的费用问题应当拒答",
+      "pass": true
+    },
+    {
+      "name": "提及已知报告但实际问评分，应拒绝给出格式作为答案",
+      "pass": true
+    },
+    {
+      "name": "混合已知主题和缺失主题，逐项提示缺少报销依据",
+      "pass": true
+    },
+    {
+      "name": "并行冲突时没有原文说明则拒绝推断原因",
+      "pass": true
+    },
+    {
+      "name": "澄清签发后能提取明确原因和引用",
+      "pass": true
+    },
+    {
+      "name": "两时点分别保留当时的冲突与后来的裁定",
+      "pass": true
+    },
+    {
+      "name": "历史链包含两条并行替代与更早手册",
+      "pass": true
+    },
+    {
+      "name": "关闭历史检索时不展示替代链",
+      "pass": true
+    },
+    {
+      "name": "人工新增澄清后当前回答改变，A 组隔离",
+      "pass": true
+    },
+    {
+      "name": "相同材料移除明确替代边后必须保留冲突",
+      "pass": true
+    },
+    {
+      "name": "已导入新通知与随后签发的原有澄清未指明互相替换，须保留新冲突",
+      "pass": true
+    },
+    {
+      "name": "跨主题替代关系被拒绝",
+      "pass": true
+    },
+    {
+      "name": "独立归档库按两跳前身还原命名更迭",
+      "pass": true
+    },
+    {
+      "name": "无效日历日期返回不确定",
+      "pass": true
+    },
+    {
+      "name": "新导入的 B 组融合修订单只更新已经生效的 B 组要求",
+      "pass": true
+    },
+    {
+      "name": "导入融合条款时拒绝跨主题挂接聚合依据",
+      "pass": true
+    }
+  ]
+}

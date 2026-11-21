@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "sourceCommit": "8688583609cb876e0f03f7da4f72acb45d06c777",
+  "source": {
+    "mode": "commit",
+    "commit": "8688583609cb876e0f03f7da4f72acb45d06c777",
+    "dirty": false,
+    "workspaceStatus": "",
+    "trackedPatchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files": {
+      "evaluation/cases.mjs": "42faf3dff7aed56fa18350863aa6bafd1c09803201acf0fe84ff831636b71070",
+      "evaluation/run.mjs": "58752565abd389e91fc5dcae68543418f33a6d4f092baf35d5d712cb3dac9076",
+      "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+      "generation/model.mjs": "55c37cad76827e5ecf12951d3dccfc93dfe1497255dd72ce4f0bab1d2851556b",
+      "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
+      "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
+      "knowledge/schema.mjs": "339b6354a929ea4cf474981148e49ce3638134f125c143d5f7e76accbbe3960d",
+      "package.json": "1c5aa45c9639dfba0561e32eb5c5c0c3e8191714f3942781a2a859be77602b38",
+      "qa/answer.mjs": "bbe8bd309abc62b261a1f40b96eedd0d5d816b3b0a5b90c3701689392baa7591",
+      "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
+      "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+      "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
+      "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
+      "service/server.mjs": "6805780beced04fb6c3a5b19d47e78eb7219458c83550220fe10859a3ef1c890",
+      "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
+      "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
+      "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
+      "temporal/graph.mjs": "bb6b58e606d0abb44fdaf5c85e70895e2e59f8aaad5a2bd5ea1ef0a260b66d27",
+      "web/app.mjs": "2c296b31cef8a0f0f7517d94e2d86b51601e89f95ba7d7c6650b484b9f9e588f",
+      "web/index.html": "c4e0d545420407259ac79ce3f5b4e889ad287fe10f90434fcb4c44a15a5e8730",
+      "web/style.css": "617ca44acd816e8ada3fb3009b449d63385cb68301eeee48cee4638e319f282b"
+    },
+    "sourceDigest": "1bd5747487f77065139f8859707b4710df32bef122659c4ef5c426daf6c2d049"
+  },
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/catalyst/Documents/ChatGPT/rag/NowPast-RAG-git/service/verify-delivery.mjs",
+    "--ref",
+    "HEAD"
+  ],
+  "apiResults": {
+    "realModel": false,
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "checks": [
+      {
+        "name": "evidence unavailable",
+        "request": {
+          "question": "电池费用能报销多少钱？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "当前证据不足，请先核查或补充资料。"
+        }
+      },
+      {
+        "name": "model unavailable",
+        "request": {
+          "question": "验收地点",
+          "date": "2026-11-12",
+          "scope": "B组"
+        },
+        "status": 503,
+        "response": {
+          "error": "本地模型尚未就绪。可在项目目录运行 npm run model:prepare，证据检索仍可使用。"
+        }
+      },
+      {
+        "name": "research uses primary sources",
+        "request": {
+          "question": "论文和源码的融合方式有什么差异？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "研究来源直查请查看原始依据，本地模型仅整理课程条款。"
+        }
+      }
+    ]
+  },
+  "inputs": {
+    "../knowledge/data.mjs": "cf20c263f3635171",
+    "../knowledge/schema.mjs": "339b6354a929ea4c",
+    "../temporal/graph.mjs": "bb6b58e606d0abb4",
+    "../retrieval/rank.mjs": "75ed68dee289d648",
+    "../qa/answer.mjs": "bbe8bd309abc62b2",
+    "./cases.mjs": "42faf3dff7aed56f",
+    "./run.mjs": "58752565abd389e9"
+  },
+  "validationInputs": {
+    "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
+    "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "currentEvidence": {
+    "passed": 38,
+    "total": 38
+  },
+  "evidenceRoles": {
+    "passed": 9,
+    "total": 9
+  },
+  "researchSources": {
+    "passed": 4,
+    "total": 4
+  },
+  "behavior": {
+    "passed": 22,
+    "total": 22
+  },
+  "realModel": false,
+  "httpChecks": [
+    {
+      "name": "evidence unavailable",
+      "status": 422
+    },
+    {
+      "name": "model unavailable",
+      "status": 503
+    },
+    {
+      "name": "research uses primary sources",
+      "status": 422
+    }
+  ],
+  "isolation": "Fresh source copy without .git, installed dependencies, or model caches. External model cache used only with --model."
+}

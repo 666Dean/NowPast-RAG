@@ -1,0 +1,129 @@
+{
+  "realModel": true,
+  "node": "v24.22.3",
+  "platform": "darwin",
+  "arch": "arm64",
+  "checks": [
+    {
+      "name": "evidence unavailable",
+      "request": {
+        "question": "电池费用能报销多少钱？",
+        "date": "2026-11-20",
+        "scope": "B组"
+      },
+      "status": 422,
+      "response": {
+        "error": "当前证据不足，请先核查或补充资料。"
+      }
+    },
+    {
+      "name": "model unavailable",
+      "request": {
+        "question": "验收地点",
+        "date": "2026-11-12",
+        "scope": "B组"
+      },
+      "status": 503,
+      "response": {
+        "error": "本地模型尚未就绪。可在项目目录运行 npm run model:prepare，证据检索仍可使用。"
+      }
+    },
+    {
+      "name": "research uses primary sources",
+      "request": {
+        "question": "论文和源码的融合方式有什么差异？",
+        "date": "2026-11-20",
+        "scope": "B组"
+      },
+      "status": 422,
+      "response": {
+        "error": "研究来源直查请查看原始依据，本地模型仅整理课程条款。"
+      }
+    },
+    {
+      "name": "single clause",
+      "request": {
+        "question": "A组报告交什么格式？",
+        "date": "2026-11-06",
+        "scope": "A组"
+      },
+      "status": 200,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+        "text": "【M01 · A组 · 当前依据】每组导出一份 PDF 报告，正文画出 Past、Now 与边预测解码器，注明使用的融合和消息聚合口径。",
+        "citations": [
+          {
+            "id": "M01",
+            "role": "A组 · 当前依据",
+            "quote": "每组导出一份 PDF 报告，正文画出 Past、Now 与边预测解码器，注明使用的融合和消息聚合口径。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "multi-sentence reason",
+      "request": {
+        "question": "验收地点为什么变了？",
+        "date": "2026-11-18",
+        "scope": "B组"
+      },
+      "status": 200,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+        "text": "【R30 · B组 · 当前依据】两份安排源于复现工作站迁移后排班未同步。\n【R21 · B组 · 已被替代】B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。\n【R22 · B组 · 已被替代】B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。\n【M03 · B组 · 已被替代】现场验收在理工楼 204，携带运行日志和可供检查的实验环境。",
+        "citations": [
+          {
+            "id": "R30",
+            "role": "B组 · 当前依据",
+            "quote": "两份安排源于复现工作站迁移后排班未同步。"
+          },
+          {
+            "id": "R21",
+            "role": "B组 · 已被替代",
+            "quote": "B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。"
+          },
+          {
+            "id": "R22",
+            "role": "B组 · 已被替代",
+            "quote": "B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。"
+          },
+          {
+            "id": "M03",
+            "role": "B组 · 已被替代",
+            "quote": "现场验收在理工楼 204，携带运行日志和可供检查的实验环境。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "unresolved conflict",
+      "request": {
+        "question": "验收地点",
+        "date": "2026-11-14",
+        "scope": "B组"
+      },
+      "status": 200,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+        "text": "【R21 · B组 · 冲突依据】B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。\n【R22 · B组 · 冲突依据】B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。\n【M03 · B组 · 已被替代】现场验收在理工楼 204，携带运行日志和可供检查的实验环境。",
+        "citations": [
+          {
+            "id": "R21",
+            "role": "B组 · 冲突依据",
+            "quote": "B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。"
+          },
+          {
+            "id": "R22",
+            "role": "B组 · 冲突依据",
+            "quote": "B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。"
+          },
+          {
+            "id": "M03",
+            "role": "B组 · 已被替代",
+            "quote": "现场验收在理工楼 204，携带运行日志和可供检查的实验环境。"
+          }
+        ]
+      }
+    }
+  ]
+}

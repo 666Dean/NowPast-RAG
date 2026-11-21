@@ -3,6 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { access, readdir } from 'node:fs/promises';
 import { createServer } from 'node:net';
 import { join } from 'node:path';
+import { homedir } from 'node:os';
 import { setTimeout as delay } from 'node:timers/promises';
 
 const name = 'Qwen2.5-0.5B-Instruct · Q4_K_M';
@@ -19,13 +20,16 @@ async function freePort() {
 }
 
 async function launch() {
-  const cache = process.env.NOWPAST_MODEL_HOME || join(process.env.LOCALAPPDATA || '.', 'NowPast', 'models');
+  const cache = process.env.NOWPAST_MODEL_HOME || (process.platform === 'darwin'
+    ? join(homedir(), 'Library', 'Caches', 'NowPast', 'models')
+    : join(process.env.LOCALAPPDATA || '.', 'NowPast', 'models'));
   const runtime = join(cache, 'b12559');
   const model = join(cache, 'model.gguf');
   let executable;
   try {
     await access(model);
-    executable = (await readdir(runtime, { recursive: true })).find(path => path.endsWith('llama-server.exe'));
+    const filename = process.platform === 'win32' ? 'llama-server.exe' : 'llama-server';
+    executable = (await readdir(runtime, { recursive: true })).find(path => path.split(/[\\/]/).at(-1) === filename);
   } catch { throw Error(unavailable); }
   if (!executable) throw Error(unavailable);
   const port = await freePort();
@@ -49,7 +53,21 @@ async function launch() {
   throw Error('本地推理进程未能加载模型。请重新校验模型缓存后再试。');
 }
 
-export function closeModel() { child?.kill(); }
+export function closeModel() { child?.kill(); child = undefined; start = undefined; }
+
+export function verifySelection(candidates, selection) {
+  const keys = new Set(candidates.map(c=>c.key));
+  if (!selection || Array.isArray(selection) || typeof selection !== 'object' ||
+      Object.keys(selection).length !== keys.size || Object.keys(selection).some(key=>!keys.has(key))) {
+    throw Error('模型未返回完整的引用结构。');
+  }
+  return candidates.map(({key, doc, role, lines}) => {
+    const choice = selection[key];
+    const quote = lines[Number(choice) - 1];
+    if (typeof choice !== 'string' || !/^[1-9][0-9]*$/.test(choice) || !quote || !doc.text.includes(quote)) throw Error('模型引用未通过原文核验。');
+    return {id: doc.id, role, quote};
+  });
+}
 
 // Only let the model choose spans that can be traced byte-for-byte to each source.
 // Every selected item and its precomputed temporal role remain visible.
@@ -93,12 +111,7 @@ export async function generate(result, question) {
   let selection;
   try { selection = JSON.parse(completion.choices[0].message.content); }
   catch { throw Error('模型未返回可核验的引用结构。'); }
-  const citations = candidates.map(({key, doc, role, lines}) => {
-    const choice = selection?.[key];
-    const quote = lines[Number(choice) - 1];
-    if (!/^[1-9][0-9]*$/.test(String(choice)) || !quote || !doc.text.includes(quote)) throw Error('模型引用未通过原文核验。');
-    return {id: doc.id, role, quote};
-  });
+  const citations = verifySelection(candidates, selection);
   return {
     model: name,
     text: citations.map(({id, role, quote}) => '【' + id + ' · ' + role + '】' + quote).join('\n'),

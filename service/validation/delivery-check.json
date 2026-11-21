@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "sourceCommit": "5b2d8d30f5beb8fd8e8e80771f4e8d1c7ffc7150",
+  "source": {
+    "mode": "commit",
+    "commit": "5b2d8d30f5beb8fd8e8e80771f4e8d1c7ffc7150",
+    "dirty": false,
+    "workspaceStatus": "",
+    "trackedPatchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files": {
+      "evaluation/cases.mjs": "42faf3dff7aed56fa18350863aa6bafd1c09803201acf0fe84ff831636b71070",
+      "evaluation/run.mjs": "58752565abd389e91fc5dcae68543418f33a6d4f092baf35d5d712cb3dac9076",
+      "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+      "generation/model.mjs": "55c37cad76827e5ecf12951d3dccfc93dfe1497255dd72ce4f0bab1d2851556b",
+      "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
+      "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
+      "knowledge/schema.mjs": "339b6354a929ea4cf474981148e49ce3638134f125c143d5f7e76accbbe3960d",
+      "package.json": "1c5aa45c9639dfba0561e32eb5c5c0c3e8191714f3942781a2a859be77602b38",
+      "qa/answer.mjs": "bbe8bd309abc62b261a1f40b96eedd0d5d816b3b0a5b90c3701689392baa7591",
+      "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
+      "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+      "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
+      "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
+      "service/server.mjs": "025dd67d80b02bb283229e069db261a3df76dc4bfe197ab32996e7452b36a52e",
+      "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
+      "service/verify-service.mjs": "6ab37b0403cb3231ae87eb290202479c827b4e10d08a72f367b28c2dc8318794",
+      "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
+      "temporal/graph.mjs": "bb6b58e606d0abb44fdaf5c85e70895e2e59f8aaad5a2bd5ea1ef0a260b66d27",
+      "web/app.mjs": "a81f829b8b02fb884e243c6f71aca50824fdce29a9a78562623119903abd33d7",
+      "web/controls.css": "8a54e71cad9f4555dc7a0c6f1b2990901692deea62b0d99c6d05375510ed4d13",
+      "web/controls.mjs": "ed6b9db263ccbe5c0897c5c9200c05742b474f078852f70dfccfebbdcb926923",
+      "web/index.html": "a85562b1bac6dac72f656c5a7e8c42de02873e9215af13da908a8f21d38b8698",
+      "web/style.css": "1163a0ce53e564256b9dec9a463e0526a97c6ab834139b0bebffbe32da16118d"
+    },
+    "sourceDigest": "eb009b4bfe09060b082183d4892409832b33047b83c957236062cb2f29c9f63c"
+  },
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/catalyst/Documents/ChatGPT/rag/NowPast-RAG-git/service/verify-delivery.mjs",
+    "--ref",
+    "HEAD",
+    "--model"
+  ],
+  "apiResults": {
+    "realModel": true,
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "staticChecks": [
+      {
+        "path": "/web/controls.mjs",
+        "status": 200,
+        "type": "text/javascript",
+        "bytes": 27058
+      },
+      {
+        "path": "/web/controls.css",
+        "status": 200,
+        "type": "text/css",
+        "bytes": 11631
+      },
+      {
+        "path": "/web/assets/mountain-dawn.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": 76146
+      }
+    ],
+    "checks": [
+      {
+        "name": "evidence unavailable",
+        "request": {
+          "question": "电池费用能报销多少钱？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "当前证据不足，请先核查或补充资料。"
+        }
+      },
+      {
+        "name": "model unavailable",
+        "request": {
+          "question": "验收地点",
+          "date": "2026-11-12",
+          "scope": "B组"
+        },
+        "status": 503,
+        "response": {
+          "error": "本地模型尚未就绪。可在项目目录运行 npm run model:prepare，证据检索仍可使用。"
+        }
+      },
+      {
+        "name": "research uses primary sources",
+        "request": {
+          "question": "论文和源码的融合方式有什么差异？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "研究来源直查请查看原始依据，本地模型仅整理课程条款。"
+        }
+      },
+      {
+        "name": "single clause",
+        "request": {
+          "question": "A组报告交什么格式？",
+          "date": "2026-11-06",
+          "scope": "A组"
+        },
+        "status": 200,
+        "response": {
+          "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+          "text": "【M01 · A组 · 当前依据】每组导出一份 PDF 报告，正文画出 Past、Now 与边预测解码器，注明使用的融合和消息聚合口径。",
+          "citations": [
+            {
+              "id": "M01",
+              "role": "A组 · 当前依据",
+              "quote": "每组导出一份 PDF 报告，正文画出 Past、Now 与边预测解码器，注明使用的融合和消息聚合口径。"
+            }
+          ]
+        }
+      },
+      {
+        "name": "multi-sentence reason",
+        "request": {
+          "question": "验收地点为什么变了？",
+          "date": "2026-11-18",
+          "scope": "B组"
+        },
+        "status": 200,
+        "response": {
+          "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+          "text": "【R30 · B组 · 当前依据】两份安排源于复现工作站迁移后排班未同步。\n【R21 · B组 · 已被替代】B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。\n【R22 · B组 · 已被替代】B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。\n【M03 · B组 · 已被替代】现场验收在理工楼 204，携带运行日志和可供检查的实验环境。",
+          "citations": [
+            {
+              "id": "R30",
+              "role": "B组 · 当前依据",
+              "quote": "两份安排源于复现工作站迁移后排班未同步。"
+            },
+            {
+              "id": "R21",
+              "role": "B组 · 已被替代",
+              "quote": "B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。"
+            },
+            {
+              "id": "R22",
+              "role": "B组 · 已被替代",
+              "quote": "B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。"
+            },
+            {
+              "id": "M03",
+              "role": "B组 · 已被替代",
+              "quote": "现场验收在理工楼 204，携带运行日志和可供检查的实验环境。"
+            }
+          ]
+        }
+      },
+      {
+        "name": "unresolved conflict",
+        "request": {
+          "question": "验收地点",
+          "date": "2026-11-14",
+          "scope": "B组"
+        },
+        "status": 200,
+        "response": {
+          "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
+          "text": "【R21 · B组 · 冲突依据】B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。\n【R22 · B组 · 冲突依据】B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。\n【M03 · B组 · 已被替代】现场验收在理工楼 204，携带运行日志和可供检查的实验环境。",
+          "citations": [
+            {
+              "id": "R21",
+              "role": "B组 · 冲突依据",
+              "quote": "B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。"
+            },
+            {
+              "id": "R22",
+              "role": "B组 · 冲突依据",
+              "quote": "B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。"
+            },
+            {
+              "id": "M03",
+              "role": "B组 · 已被替代",
+              "quote": "现场验收在理工楼 204，携带运行日志和可供检查的实验环境。"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "inputs": {
+    "../knowledge/data.mjs": "cf20c263f3635171",
+    "../knowledge/schema.mjs": "339b6354a929ea4c",
+    "../temporal/graph.mjs": "bb6b58e606d0abb4",
+    "../retrieval/rank.mjs": "75ed68dee289d648",
+    "../qa/answer.mjs": "bbe8bd309abc62b2",
+    "./cases.mjs": "42faf3dff7aed56f",
+    "./run.mjs": "58752565abd389e9"
+  },
+  "validationInputs": {
+    "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
+    "service/verify-service.mjs": "6ab37b0403cb3231ae87eb290202479c827b4e10d08a72f367b28c2dc8318794",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "currentEvidence": {
+    "passed": 38,
+    "total": 38
+  },
+  "evidenceRoles": {
+    "passed": 9,
+    "total": 9
+  },
+  "researchSources": {
+    "passed": 4,
+    "total": 4
+  },
+  "behavior": {
+    "passed": 22,
+    "total": 22
+  },
+  "realModel": true,
+  "httpChecks": [
+    {
+      "name": "evidence unavailable",
+      "status": 422
+    },
+    {
+      "name": "model unavailable",
+      "status": 503
+    },
+    {
+      "name": "research uses primary sources",
+      "status": 422
+    },
+    {
+      "name": "single clause",
+      "status": 200
+    },
+    {
+      "name": "multi-sentence reason",
+      "status": 200
+    },
+    {
+      "name": "unresolved conflict",
+      "status": 200
+    }
+  ],
+  "isolation": "Fresh source copy without .git, installed dependencies, or model caches. External model cache used only with --model."
+}
