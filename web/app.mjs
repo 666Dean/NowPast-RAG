@@ -440,6 +440,19 @@ function bookmark(group, origin) {
   nextFocus?.focus({preventScroll:true});
   animateBookmark(nextFocus);
 }
+function executionValues(value,previous = [],label = '') {
+  const values=make('span','execution-values');
+  const current=make('span','execution-current');
+  if (previous.length) current.append(make('span','sr-only','现'+label+'：'));
+  current.append(document.createTextNode(value));
+  values.append(current);
+  for (const value of previous) {
+    const old=make('del','execution-previous');
+    old.append(make('span','sr-only','原'+label+'（已替代）：'),document.createTextNode(value));
+    values.append(old);
+  }
+  return values;
+}
 function noticeRow(group) {
   const row = make('article','notice-item');
   const open = button('notice-main','',() => openNotice(group));
@@ -455,8 +468,9 @@ function noticeRow(group) {
   if (!['current'].includes(group.state)) meta.append(make('span','status '+group.state,group.label));
   const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
   const plan=make('span','notice-execution');
-  for (const [name,value] of [['clock',execution.when],['pin',execution.where],['check',execution.action]]) {
-    const line=make('span','execution-line');line.append(icon(name),document.createTextNode(value));plan.append(line);
+  for (const [name,field,label] of [['clock','when','时间'],['pin','where','地点'],['check','action','事项']]) {
+    const line=make('span','execution-line');
+    line.append(icon(name),executionValues(execution[field],execution.previous?.[field],label));plan.append(line);
   }
   content.append(title,plan,meta);
   open.append(kind,content);
@@ -507,7 +521,9 @@ function noticeConnections(group,featured = false,expanded = false) {
       for (const {doc,prior,kind,label} of links) {
         const change=make('p','connection-change');
         change.append(make('span','change-topic',''));
-        change.append(document.createTextNode(prior.value===doc.value?'沿用 '+doc.value:prior.value+' 改为 '+doc.value));
+        if (prior.value===doc.value) change.append(document.createTextNode('沿用 '+doc.value));
+        else if (doc.supersedes.includes(prior.id)) change.append(executionValues(doc.value,[prior.value],'要求'));
+        else change.append(document.createTextNode(prior.value+'；'+doc.value));
         change.append(make('span','change-effective',doc.effective?shortDate(doc.effective)+' 生效':'生效日期待核'));
         if (kind==='parallel') change.lastChild.textContent='并行依据，未替代旧通知';
         entry.append(change);
@@ -565,8 +581,11 @@ function renderFeature() {
   top.append(scope);
   const title = make('h2','',group.title);
   const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
-  const value = make('p','feature-value',execution.when);
-  const actionText=make('p','feature-action',execution.where+' · '+execution.action);
+  const value = make('p','feature-value');
+  value.append(executionValues(execution.when,execution.previous?.when,'时间'));
+  const actionText=make('p','feature-action');
+  actionText.append(executionValues(execution.where,execution.previous?.where,'地点'),document.createTextNode(' · '),
+    executionValues(execution.action,execution.previous?.action,'事项'));
   const bottom = make('div','feature-bottom');
   const meta = make('span','feature-meta'); meta.append(icon('clock'),document.createTextNode(shortDate(group.published) + ' 发布'));
   const action = button('feature-button','查看通知',() => openNotice(group)); action.append(icon('arrow'));

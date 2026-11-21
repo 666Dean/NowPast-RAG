@@ -9,6 +9,7 @@ colors:
   primary-bright: "#bb4e3e"
   ink: "#211914"
   muted: "#855d53"
+  historical-ink: "#9b8175"
   ground: "#f7efea"
   surface: "#fffbf7"
   line: "#ead8ce"
@@ -88,6 +89,7 @@ components:
 
 - 正文墨色（ink）：通知标题、课程与材料内容。
 - 次要棕色（muted）：必要元数据。
+- 浅暖棕色（historical-ink）：明确被替代的旧值，配合细删除线；悬停或键盘聚焦时过渡到次要棕色，按下时使用现有陶土色。
 - 暖白（ground、surface）：页面和内容表面。
 - 浅陶土（line、rose、peach）：分隔、选中背景与状态底色。
 

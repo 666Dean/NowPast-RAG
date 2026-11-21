@@ -1,7 +1,7 @@
 :root {
   color-scheme:light; --night:#4b100c; --purple:#85190f; --plum:#981f15; --mauve:#a05a4c;
   --rose:#e7c3b6; --peach:#fff0e7; --ink:#211914; --muted:#855d53; --ground:#f7efea;
-  --surface:#fffbf7; --line:#ead8ce; --tint:#f5e6de; --rail:224px;
+  --surface:#fffbf7; --line:#ead8ce; --tint:#f5e6de; --historical-ink:#9b8175; --rail:224px;
   --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.2,1.3,.4,1);
   --sans:"Segoe UI Variable Text","Segoe UI","PingFang SC","Microsoft YaHei UI",sans-serif;
 }
@@ -202,6 +202,13 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
 .notice-body>.notice-main{width:100%}
 .notice-execution{display:grid;gap:4px;margin:9px 0;color:var(--ink);font-size:14px;line-height:1.7}
 .execution-line{display:flex;gap:8px;align-items:flex-start}.execution-line .icon{width:16px;height:16px;margin-top:4px;color:var(--muted);flex-shrink:0}
+.execution-values{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;min-width:0;max-width:100%;vertical-align:baseline}
+.execution-current,.execution-previous{min-width:0;overflow-wrap:anywhere}
+.execution-previous{color:var(--historical-ink);font-size:.92em;font-weight:400;text-decoration-thickness:1px;text-decoration-color:currentColor;font-variant-numeric:tabular-nums}
+.notice-main:is(:hover,:focus-visible) .execution-previous,.featured-notice:is(:hover,:focus-within) .execution-previous,.connection-entry:is(:hover,:focus-within) .execution-previous{color:var(--muted)}
+.notice-main:active .execution-previous{color:var(--mauve)}
+.feature-value .execution-values{column-gap:16px}
+.feature-value .execution-previous{font-size:clamp(14px,.5em,18px);letter-spacing:normal}
 .feature-action{font-size:16px;font-weight:550;line-height:1.8;margin-top:8px;max-width:40ch}
 .event-task{font-size:14px;line-height:1.7;margin:4px 0}
 #page-subtitle{display:none}
@@ -586,6 +593,7 @@ button:hover:not(:disabled) .icon{scale:1.07}
   .event-content h3{font-size:15px}.agenda-event{gap:11px}
 }
 @media(prefers-reduced-motion:no-preference){
+  .execution-previous{transition:color 180ms var(--ease)}
   button{transition:background-color 180ms var(--ease),color 180ms var(--ease),transform 180ms var(--spring),filter 180ms var(--ease),box-shadow 220ms var(--ease)}
   button:hover:not(:disabled){transform:translateY(-1px)}
   button:active:not(:disabled){transform:translateY(1px) scale(.96)}

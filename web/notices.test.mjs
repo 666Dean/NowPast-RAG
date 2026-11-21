@@ -29,6 +29,41 @@ test('a changed deadline is displayed with the supported submission action and p
   assert.equal(prior[0].prior.title,'数据库：作业一提交要求');
   assert.equal(prior[0].prior.published,'2026-11-19');
 });
+
+test('only the replaced classroom appears beside the current arrangement',()=>{
+  const current=executionFor(group('数据库：11月27日教室调整'),noticeSeed,context);
+  assert.deepEqual(current.previous,{when:[],where:['A301'],action:[]});
+  const before=executionFor(group('数据库：11月27日上课安排'),noticeSeed,{...context,date:'2026-11-20'});
+  assert.deepEqual(before.previous,{when:[],where:[],action:[]});
+});
+
+test('old deadlines and service hours keep their date and action context',()=>{
+  const assignment=executionFor(group('数据库：作业一截止时间调整'),noticeSeed,context);
+  assert.deepEqual(assignment.previous,{when:['11月26日 18:00 前'],where:[],action:[]});
+  const library=executionFor(group('图书馆：二层暂停开放时间调整'),noticeSeed,context);
+  assert.equal(library.when,'11月22日 10:00–12:00');
+  assert.deepEqual(library.previous,{when:['11月22日 09:00–12:00'],where:[],action:[]});
+});
+
+test('a later classroom change compares with its immediate predecessor',()=>{
+  const predecessor=noticeSeed.find(doc=>doc.id==='DB-ROOM-NEW');
+  const next={...predecessor,id:'DB-ROOM-LATEST',published:'2026-11-22',effective:'2026-11-22',value:'C305',supersedes:[predecessor.id]};
+  const current=executionFor([next],[...noticeSeed,next],{...context,date:'2026-11-22'});
+  assert.equal(current.where,'C305');
+  assert.deepEqual(current.previous.where,['B204']);
+});
+
+test('parallel or unconfirmed requirements never mark a value as replaced',()=>{
+  const original=noticeSeed.find(doc=>doc.id==='DB-ROOM');
+  const parallel={...original,id:'DB-ROOM-PARALLEL',value:'C305',relations:[{id:original.id,kind:'parallel'}]};
+  const current=executionFor([parallel],[original,parallel],context);
+  assert.equal(current.where,'地点待确认');
+  assert.deepEqual(current.previous.where,[]);
+  const unchanged={...original,id:'DB-ROOM-SAME',supersedes:[original.id]};
+  assert.deepEqual(executionFor([unchanged],[original,unchanged],context).previous.where,[]);
+  const unknown={...unchanged,effective:'',analysis:{}};
+  assert.equal(executionFor([unknown],[original,unknown],context).previous,undefined);
+});
 test('school-wide notices stay visible for another class without exposing class-specific links',()=>{
   const library=group('图书馆：二层暂停开放时间调整');
   const other={...context,scope:'计科1班'};

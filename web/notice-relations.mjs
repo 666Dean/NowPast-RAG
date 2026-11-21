@@ -12,7 +12,7 @@ export function executionFor(records,all,{date,scope}) {
     const current=[...new Map(topics.flatMap(topic=>snapshot(visible,horizon,scope==='全校'?sample.scope:scope,topic).current).map(doc=>[doc.id,doc])).values()];
     return {doc:current[0],conflict:new Set(current.map(doc=>doc.value)).size>1};
   };
-  const deadline=field('deadline'),room=field('room'),time=field('time'),channel=field('channel'),task=field('task');
+  const deadline=field('deadline'),room=field('room'),time=field('time'),channel=field('channel'),task=field('task'),service=field('service');
   const event=sample.event || {};
   let day=sample.lessonDate || event.date;
   let hour=time.conflict?'':time.doc?.value || event.time;
@@ -25,8 +25,24 @@ export function executionFor(records,all,{date,scope}) {
   const action=task.conflict?'作业要求待确认':task.doc?.event?.action || task.doc?.value || event.action || (sample.noticeType==='course'?'上课':sample.noticeType==='assignment'?'提交作业':sample.value);
   if (sample.analysis && !sample.effective) return {when:'时间待确认',where:sample.field==='room'?sample.value:where,action,
     course:sample.course || '',type:sample.noticeType,activity:sample.activity || sample.id,conflict:true};
+  const previousFor=({doc,conflict},format,current)=>{
+    if (!doc || conflict) return [];
+    const prior=visible.filter(old=>doc.supersedes.includes(old.id) && old.topic===doc.topic &&
+      old.effective && old.effective<=horizon && (['全班','全校'].includes(old.scope) || old.scope===doc.scope));
+    return [...new Set(prior.map(format).filter(value=>value && value!==current))];
+  };
+  const priorTime=doc=>{
+    const oldDay=doc.field==='deadline'?parseDates(doc.value,date).find(validDay):day;
+    const oldHour=doc.field==='deadline'?doc.value.match(/\d{1,2}[:：]\d{2}/)?.[0]:doc.value;
+    return oldDay && oldHour?`${oldDay.slice(5).replace('-','月')}日 ${oldHour}${sample.noticeType==='assignment'?' 前':''}`:null;
+  };
+  const previous={
+    when:previousFor(deadline.doc?deadline:time.doc?time:service,priorTime,when),
+    where:previousFor(room.doc?room:channel,doc=>doc.value,where),
+    action:previousFor(task,doc=>doc.event?.action || doc.value,action)
+  };
   return {date:day,time:hour,when,where,action,conflict:deadline.conflict||room.conflict||time.conflict||task.conflict,
-    course:sample.course || '',type:sample.noticeType,activity:sample.activity || sample.id};
+    course:sample.course || '',type:sample.noticeType,activity:sample.activity || sample.id,previous};
 }
 export function relationsFor(records,all,{date,scope}) {
   const allowed=doc=>(doc.published ? doc.published<=date : doc.imported<=date) &&
