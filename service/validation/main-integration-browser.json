@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "main": "f349740",
+  "viewport": [
+    1440,
+    390
+  ],
+  "checks": [
+    "new workspace + date interval + clarification evidence",
+    "real Qwen through the new workspace",
+    "campus module and field-specific HTTP response on the same origin",
+    "390px query and partial missing evidence"
+  ],
+  "pageErrors": [],
+  "failedResponses": []
+}

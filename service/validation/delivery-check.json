@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "sourceCommit": "d74c2761852a20633a4e07abc61b6b17cf1f82f7",
+  "sourceCommit": "ea6229234b68aff53cb5239b0d54636830976fea",
   "source": {
     "mode": "commit",
-    "commit": "d74c2761852a20633a4e07abc61b6b17cf1f82f7",
+    "commit": "ea6229234b68aff53cb5239b0d54636830976fea",
     "dirty": false,
     "workspaceStatus": "",
     "trackedPatchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -24,17 +24,19 @@
       "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
       "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
       "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
-      "service/server.mjs": "d3f41cdfba1599d5e09fd7a2cf096dd6d9f3cd2deecb4b35ea458885a96a68f3",
+      "service/server.mjs": "a0100a546f07d792c8c89cfb117f292727d08f2552b957d9f48f691a9d0901c7",
       "service/verify-delivery.mjs": "400334892a92feb048a6d3f757b71e33f29875e6b61989796e28d00575f7f5a7",
-      "service/verify-service.mjs": "6308642b98958555cfcb9d3f6cfafea6cbcff9d316394694b8bcd10442ae8b41",
+      "service/verify-service.mjs": "76cf67447b8b6712ab802264989546c99796678a239f87e5272e164cb0d97675",
       "temporal/campus.mjs": "66391c3deca1ad44cc5a0afdcd91c079d58fa52d27966fd02387a3333ca3d2e4",
       "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
       "temporal/graph.mjs": "bb6b58e606d0abb44fdaf5c85e70895e2e59f8aaad5a2bd5ea1ef0a260b66d27",
-      "web/app.mjs": "2c296b31cef8a0f0f7517d94e2d86b51601e89f95ba7d7c6650b484b9f9e588f",
-      "web/index.html": "c4e0d545420407259ac79ce3f5b4e889ad287fe10f90434fcb4c44a15a5e8730",
-      "web/style.css": "617ca44acd816e8ada3fb3009b449d63385cb68301eeee48cee4638e319f282b"
+      "web/app.mjs": "a81f829b8b02fb884e243c6f71aca50824fdce29a9a78562623119903abd33d7",
+      "web/controls.css": "8a54e71cad9f4555dc7a0c6f1b2990901692deea62b0d99c6d05375510ed4d13",
+      "web/controls.mjs": "ed6b9db263ccbe5c0897c5c9200c05742b474f078852f70dfccfebbdcb926923",
+      "web/index.html": "a85562b1bac6dac72f656c5a7e8c42de02873e9215af13da908a8f21d38b8698",
+      "web/style.css": "1163a0ce53e564256b9dec9a463e0526a97c6ab834139b0bebffbe32da16118d"
     },
-    "sourceDigest": "fb69076745f1a45ca213285fbf2fa0be5ad73c46a9e5c19c331c9a3b6be61287"
+    "sourceDigest": "0491f938ec5ba19f9144d64ac7aeb2200f12e37417256a90acb58e797e332933"
   },
   "command": [
     "/usr/local/bin/node",
@@ -48,6 +50,26 @@
     "node": "v26.13.0",
     "platform": "darwin",
     "arch": "arm64",
+    "staticChecks": [
+      {
+        "path": "/web/controls.mjs",
+        "status": 200,
+        "type": "text/javascript",
+        "bytes": 27058
+      },
+      {
+        "path": "/web/controls.css",
+        "status": 200,
+        "type": "text/css",
+        "bytes": 11631
+      },
+      {
+        "path": "/web/assets/mountain-dawn.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": 76146
+      }
+    ],
     "checks": [
       {
         "name": "evidence unavailable",
@@ -2543,7 +2565,7 @@
   },
   "validationInputs": {
     "service/verify-delivery.mjs": "400334892a92feb048a6d3f757b71e33f29875e6b61989796e28d00575f7f5a7",
-    "service/verify-service.mjs": "6308642b98958555cfcb9d3f6cfafea6cbcff9d316394694b8bcd10442ae8b41",
+    "service/verify-service.mjs": "76cf67447b8b6712ab802264989546c99796678a239f87e5272e164cb0d97675",
     "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
     "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
     "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"

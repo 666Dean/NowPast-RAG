@@ -14,6 +14,7 @@ const realModel = process.argv.includes('--model');
 const output = new URL('./validation/',import.meta.url);
 await mkdir(output,{recursive:true});
 const log=[];
+const staticChecks=[];
 async function start(modelHome) {
   const probe=createServer();
   probe.listen(0,'127.0.0.1'); await once(probe,'listening');
@@ -51,6 +52,14 @@ try {
   const page=await fetch(server.origin+'/'); assert.equal(page.status,200);
   for (const path of ['/web/app.mjs','/knowledge/data.mjs','/temporal/graph.mjs','/retrieval/rank.mjs','/qa/answer.mjs','/qa/campus.mjs','/temporal/campus.mjs','/knowledge/campus-data.mjs']) {
     assert.equal((await fetch(server.origin+path)).status,200,path);
+  }
+  for(const [path,type] of [['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
+    const response=await fetch(server.origin+path);
+    assert.equal(response.status,200,path);
+    assert.ok(response.headers.get('content-type')?.startsWith(type),path+' MIME');
+    const bytes=(await response.arrayBuffer()).byteLength;
+    assert.ok(bytes>0,path+' empty response');
+    staticChecks.push({path,status:response.status,type,bytes});
   }
   await post(server,'evidence unavailable',{question:'电池费用能报销多少钱？',date:'2026-11-20',scope:'B组'},422);
   await post(server,'model unavailable',{question:'验收地点',date:'2026-11-12',scope:'B组'},503);
@@ -117,5 +126,5 @@ if (realModel) {
     }
   } finally {await stop(real.child);}
 }
-await writeFile(new URL('api-results.json',output),JSON.stringify({realModel,node:process.version,platform:process.platform,arch:process.arch,checks:log},null,2)+'\n');
+await writeFile(new URL('api-results.json',output),JSON.stringify({realModel,node:process.version,platform:process.platform,arch:process.arch,staticChecks,checks:log},null,2)+'\n');
 console.log('HTTP checks passed; real model:',realModel,'; recorded responses:',log.length);
