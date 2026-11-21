@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T09:53:07.987Z",
+  "title": "Design System: 时知 NowPast",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "暗红",
+        "canonical": "#961e14",
+        "tonalRamp": [
+          "#4b100c",
+          "#66180f",
+          "#82170f",
+          "#961e14",
+          "#bb4e3e",
+          "#d39079",
+          "#e7c3b6",
+          "#fff0e7"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "暖白",
+        "canonical": "#f7efea",
+        "tonalRamp": [
+          "#211914",
+          "#4b352c",
+          "#76574a",
+          "#a27c68",
+          "#cfb39e",
+          "#ead8ce",
+          "#f7efea",
+          "#fffbf7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "heading": {
+        "displayName": "页面标题",
+        "purpose": "工作区标题与首页称呼。"
+      },
+      "body": {
+        "displayName": "正文",
+        "purpose": "课程内容、原文和表单。"
+      },
+      "label": {
+        "displayName": "控件标签",
+        "purpose": "常用操作与必要元数据。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "glass-panel",
+        "value": "inset 0 1px 1px #ffffffbb, 0 14px 40px #7e41210a",
+        "purpose": "透明面板的轻微内缘与低位柔影。"
+      },
+      {
+        "name": "source-modal",
+        "value": "0 20px 70px #612a1d32",
+        "purpose": "原文与导入的模态层。"
+      },
+      {
+        "name": "control-popover",
+        "value": "0 14px 38px #6b321827, inset 0 1px 1px #ffffffd9",
+        "purpose": "统一的选择、日期与主题建议浮层。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "控件状态和中断后的自然减速。"
+      },
+      {
+        "name": "press",
+        "value": "140ms",
+        "purpose": "常规按钮的轻量按压。"
+      },
+      {
+        "name": "menu-enter",
+        "value": "210ms",
+        "purpose": "菜单遮罩与透明度展开。"
+      },
+      {
+        "name": "menu-exit",
+        "value": "140ms",
+        "purpose": "从当前绘制状态收合。"
+      },
+      {
+        "name": "calendar-selection",
+        "value": "230ms",
+        "purpose": "周历选中底板连续移动。"
+      },
+      {
+        "name": "view-transition",
+        "value": "210ms",
+        "purpose": "工作区切换与周/月翻页。"
+      },
+      {
+        "name": "drawer",
+        "value": "280ms / 180ms",
+        "purpose": "原文抽屉进入和退出。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-phone",
+        "value": "360px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "700px"
+      },
+      {
+        "name": "single-column",
+        "value": "900px"
+      },
+      {
+        "name": "compact-navigation",
+        "value": "1180px"
+      },
+      {
+        "name": "desktop-controls",
+        "value": "1480px"
+      },
+      {
+        "name": "reference-desktop",
+        "value": "1700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "主操作与保存；运行时提供扩散和忙碌状态。",
+      "html": "<button class=\"ds-primary\">保存资料</button>",
+      "css": ".ds-primary{font:550 14px var(--sans);color:#fff7ef;background:linear-gradient(135deg,#bc4d3a,#9b2519);padding:11px 19px;border:0;border-radius:15px;box-shadow:inset 0 1px 2px #ffffff50;cursor:pointer;transition:transform 180ms var(--ease),filter 180ms var(--ease)}.ds-primary:hover{filter:brightness(1.06);filter:brightness(1.03)}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "课程入口和次要操作。",
+      "html": "<button class=\"ds-secondary\">查看安排</button>",
+      "css": ".ds-secondary{font:500 14px var(--sans);padding:8px 14px;border:1px solid #d7b8a7;border-radius:12px;background:#fff7ef65;color:var(--ink);cursor:pointer;transition:background-color 180ms var(--ease),transform 180ms var(--ease)}.ds-secondary:hover{background:#fffbf5cc;filter:brightness(1.03)}.ds-secondary:active{transform:translateY(1px)}.ds-secondary:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "description": "通知、日历翻页和关闭等图标操作。",
+      "html": "<button class=\"ds-icon\" aria-label=\"通知\"><svg viewBox=\"0 0 24 24\" width=\"23\" height=\"23\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.85\" stroke-linecap=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4\"/></svg></button>",
+      "css": ".ds-icon{display:grid;place-items:center;width:39px;height:39px;border:0;border-radius:50%;background:transparent;color:var(--red-deep);cursor:pointer;transition:background-color 180ms var(--ease),transform 180ms var(--ease)}.ds-icon:hover{background:#b3563210;filter:brightness(1.03)}.ds-icon:active{transform:translateY(1px)}.ds-icon:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "description": "展开的全局搜索使用原生搜索字段。",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><circle cx=\"10.7\" cy=\"10.7\" r=\"6.7\"/><path d=\"m16 16 5 5\"/></svg><input type=\"search\" aria-label=\"搜索通知\" placeholder=\"搜索通知与资料\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:18px;background:#fffaf6;color:var(--red);box-shadow:0 12px 35px #64200f1a}.ds-search input{font:15px var(--sans);border:0;background:transparent;color:var(--ink);height:36px;min-width:0}.ds-search input::placeholder{color:#875c50}.ds-search:focus-within{box-shadow:0 5px 20px #a73d2720}.ds-search input:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "顶部导航，运行时底板随当前页的实际宽度滑动。",
+      "html": "<nav class=\"ds-nav\"><button aria-current=\"page\">首页</button><button>课程空间</button><button>通知中心</button></nav>",
+      "css": ".ds-nav{display:flex;gap:7px}.ds-nav button{font:650 16px var(--sans);padding:0 20px;height:52px;border:0;border-radius:19px;background:transparent;color:var(--ink);cursor:pointer;transition:transform 180ms var(--ease),background-color 180ms var(--ease)}.ds-nav button[aria-current]{background:linear-gradient(135deg,#c75a49,#9f251b 67%,#aa382b);color:#fffaf5;box-shadow:inset 0 2px 4px #ffffff80}.ds-nav button:hover{filter:brightness(1.03)}.ds-nav button:active{transform:translateY(1px)}.ds-nav button:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Status",
+      "kind": "chip",
+      "refersTo": "status",
+      "description": "文字明确说明条款当前状态。",
+      "html": "<span class=\"ds-status\">现行</span>",
+      "css": ".ds-status{display:inline-flex;font:500 13px var(--sans);padding:0 7px;border-radius:6px;color:#8a2c1c;background:#f9e1d5}"
+    },
+    {
+      "name": "Glass Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "与参考图一致的半透明内容面。",
+      "html": "<section class=\"ds-panel\"><h2>课程安排</h2><p>11 月 23 日 · 12:00 截止</p></section>",
+      "css": ".ds-panel{padding:23px 31px;border-radius:28px;background:rgba(255,251,248,.51);backdrop-filter:blur(18px);box-shadow:inset 0 1px 1px #ffffffbb,0 14px 40px #7e41210a;color:var(--ink);font:16px/1.6 var(--sans)}.ds-panel h2{font-size:22px;margin:0 0 16px}.ds-panel p{margin:0;color:var(--red-deep)}"
+    },
+    {
+      "name": "Calendar Day",
+      "kind": "button",
+      "description": "日期选中与普通日期的可操作原语。",
+      "html": "<button class=\"ds-day\" aria-pressed=\"true\"><span>周六</span><strong>21</strong></button>",
+      "css": ".ds-day{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:70px;min-width:58px;border:0;border-radius:19px;background:transparent;color:#845f53;font:13px var(--sans);cursor:pointer;transition:transform 180ms var(--spring),background-color 180ms var(--ease)}.ds-day strong{font-size:19px;font-weight:600}.ds-day[aria-pressed=true]{background:linear-gradient(140deg,#c55544,#a32c21);color:#fff5ed;box-shadow:inset 0 2px 4px #ffffff9c}.ds-day:hover{filter:brightness(1.03)}.ds-day:active{transform:scale(.91)}.ds-day:focus-visible{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Preparation Checklist",
+      "kind": "custom",
+      "description": "原生复选框驱动绘制勾选笔画。",
+      "html": "<label class=\"ds-check\"><input type=\"checkbox\"><span class=\"ds-box\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\"><path d=\"m5 12 4 4L19 6\"/></svg></span><span>PDF 报告和可执行 Notebook</span></label>",
+      "css": ".ds-check{position:relative;display:flex;align-items:center;gap:15px;color:var(--ink);font:550 15px/1.8 var(--sans);cursor:pointer}.ds-check input{position:absolute;left:0;width:24px;height:24px;opacity:0}.ds-box{display:grid;place-items:center;width:24px;height:24px;border:1.5px solid #b08270;border-radius:6px;color:#fff5ee;transition:background-color 180ms var(--ease),transform 200ms var(--spring)}.ds-box svg{stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset 200ms var(--ease)}.ds-check input:checked+.ds-box{background:var(--plum);border-color:var(--plum)}.ds-check input:checked+.ds-box svg{stroke-dashoffset:0}.ds-check:hover .ds-box{transform:scale(1.06)}.ds-check input:focus-visible+.ds-box{outline:3px solid var(--mauve);outline-offset:4px}"
+    },
+    {
+      "name": "Select Popover",
+      "kind": "custom",
+      "description": "与暖白暗红界面一致的组合框原语；运行时支持键盘选择和中断安全的收合。",
+      "html": "<div class=\"ds-select\"><button class=\"ds-trigger\" role=\"combobox\" aria-expanded=\"true\">B组<svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"m6 15 6-6 6 6\"/></svg></button><div class=\"ds-menu\" role=\"listbox\"><button role=\"option\" aria-selected=\"false\">全班</button><button role=\"option\" aria-selected=\"false\">A组</button><button role=\"option\" aria-selected=\"true\">B组<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m5 12 4 4L19 6\"/></svg></button></div></div>",
+      "css": ".ds-select{font:14px/1.5 var(--sans);width:186px;color:var(--ink)}.ds-trigger{display:flex;align-items:center;justify-content:space-between;width:100%;padding:9px 12px;border:1px solid #ddbeaf;border-radius:11px;background:#fff9f2a1;color:var(--red-deep)}.ds-menu{margin-top:9px;padding:7px;background:rgba(255,251,246,.97);border:1px solid #e7ccbb;border-radius:18px;box-shadow:0 14px 38px #6b321827,inset 0 1px 1px #ffffffd9}.ds-menu button{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:43px;padding:9px 12px;border:0;border-radius:11px;background:transparent;color:#614335;font:inherit;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1)}.ds-menu button[aria-selected=true],.ds-menu button:hover{background:#f4e2d5;color:var(--red-deep)}.ds-select button:focus-visible{outline:3px solid var(--mauve);outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "晨光中的课程工作台",
+    "overview": "当前界面依据用户提供的暖白、暗红与雪山工作台截图实现。主界面以清晰的日期、通知标题、要求状态和安排为中心。顶部导航组织首页、课程空间、通知中心、课程安排、证据问答和资料六个工作区。\n\n晨光雪山是独立的横幅素材，信息与控件始终由 HTML 渲染。说明收在帮助与折叠区域。按钮动画参考 Bencho 的连续反馈，保留原生按钮、输入、选择器和对话框的键盘语义。",
+    "keyCharacteristics": [
+      "暖白工作面与暗红操作色。",
+      "半透明面板与柔和、低位的投影。",
+      "通知与课程安排的清晰层级。",
+      "连续移动的选中底板和及时的操作反馈。"
+    ],
+    "rules": [
+      {
+        "name": "Meaning Before Color",
+        "body": "生效、冲突、待定与已替代都同时显示文字，不让颜色单独承担含义。",
+        "section": "colors"
+      },
+      {
+        "name": "One Reading Order",
+        "body": "响应式换位同时移动 DOM 节点并保留焦点，避免仅靠 CSS 排序。",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do 保持通知和安排的标题、日期与状态清楚可读。",
+      "Do 为动态按钮保留统一的按压反馈与键盘焦点。",
+      "Do 在帮助中说明演示资料、角色视角和浏览器存储边界。",
+      "Do 用现有原文和有效快照生成要求。"
+    ],
+    "donts": [
+      "Don't 将截图作为整页图片或把文字烘焙进背景。",
+      "Don't 把未公布的验收时间编造成课程时刻。",
+      "Don't 将仅对 A 组有效的原“全班”条款标成两组共用。",
+      "Don't 用仅视觉换位造成相反的键盘阅读顺序。"
+    ]
+  }
+}

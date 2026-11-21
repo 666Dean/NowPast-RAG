@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "sourceCommit": "8688583609cb876e0f03f7da4f72acb45d06c777",
+  "sourceCommit": "5b2d8d30f5beb8fd8e8e80771f4e8d1c7ffc7150",
   "source": {
     "mode": "commit",
-    "commit": "8688583609cb876e0f03f7da4f72acb45d06c777",
+    "commit": "5b2d8d30f5beb8fd8e8e80771f4e8d1c7ffc7150",
     "dirty": false,
     "workspaceStatus": "",
     "trackedPatchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -21,16 +21,18 @@
       "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
       "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
       "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
-      "service/server.mjs": "6805780beced04fb6c3a5b19d47e78eb7219458c83550220fe10859a3ef1c890",
+      "service/server.mjs": "025dd67d80b02bb283229e069db261a3df76dc4bfe197ab32996e7452b36a52e",
       "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
-      "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
+      "service/verify-service.mjs": "6ab37b0403cb3231ae87eb290202479c827b4e10d08a72f367b28c2dc8318794",
       "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
       "temporal/graph.mjs": "bb6b58e606d0abb44fdaf5c85e70895e2e59f8aaad5a2bd5ea1ef0a260b66d27",
-      "web/app.mjs": "2c296b31cef8a0f0f7517d94e2d86b51601e89f95ba7d7c6650b484b9f9e588f",
-      "web/index.html": "c4e0d545420407259ac79ce3f5b4e889ad287fe10f90434fcb4c44a15a5e8730",
-      "web/style.css": "617ca44acd816e8ada3fb3009b449d63385cb68301eeee48cee4638e319f282b"
+      "web/app.mjs": "a81f829b8b02fb884e243c6f71aca50824fdce29a9a78562623119903abd33d7",
+      "web/controls.css": "8a54e71cad9f4555dc7a0c6f1b2990901692deea62b0d99c6d05375510ed4d13",
+      "web/controls.mjs": "ed6b9db263ccbe5c0897c5c9200c05742b474f078852f70dfccfebbdcb926923",
+      "web/index.html": "a85562b1bac6dac72f656c5a7e8c42de02873e9215af13da908a8f21d38b8698",
+      "web/style.css": "1163a0ce53e564256b9dec9a463e0526a97c6ab834139b0bebffbe32da16118d"
     },
-    "sourceDigest": "1bd5747487f77065139f8859707b4710df32bef122659c4ef5c426daf6c2d049"
+    "sourceDigest": "eb009b4bfe09060b082183d4892409832b33047b83c957236062cb2f29c9f63c"
   },
   "command": [
     "/usr/local/bin/node",
@@ -44,6 +46,26 @@
     "node": "v26.13.0",
     "platform": "darwin",
     "arch": "arm64",
+    "staticChecks": [
+      {
+        "path": "/web/controls.mjs",
+        "status": 200,
+        "type": "text/javascript",
+        "bytes": 27058
+      },
+      {
+        "path": "/web/controls.css",
+        "status": 200,
+        "type": "text/css",
+        "bytes": 11631
+      },
+      {
+        "path": "/web/assets/mountain-dawn.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": 76146
+      }
+    ],
     "checks": [
       {
         "name": "evidence unavailable",
@@ -179,7 +201,7 @@
   },
   "validationInputs": {
     "service/verify-delivery.mjs": "352539ab2377cb110846a81799b40b52d4bcde012d95d122536787d446a40409",
-    "service/verify-service.mjs": "124c04e4682101bacf4263796a779eaa87573724e97aad9ca46f5427ea5e6bbc",
+    "service/verify-service.mjs": "6ab37b0403cb3231ae87eb290202479c827b4e10d08a72f367b28c2dc8318794",
     "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
     "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
     "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"
