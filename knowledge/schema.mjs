@@ -5,7 +5,7 @@ export function validDay(s) {
   const stamp = Date.parse(s + 'T00:00:00Z');
   return Number.isFinite(stamp) && new Date(stamp).toISOString().slice(0,10) === s;
 }
-export const scopes = ['全班','A组','B组'];
+export const scopes = ['全班','A组','B组','全校','计科1班','计科2班'];
 export function validateDocument(doc, docs = []) {
   if (!doc || typeof doc !== 'object') throw Error('需要一条完整的资料。');
   for (const k of ['id','topic','value','title','text']) {
@@ -20,6 +20,15 @@ export function validateDocument(doc, docs = []) {
   if (!Array.isArray(doc.supersedes) || new Set(doc.supersedes).size !== doc.supersedes.length) throw Error('替代关系格式无效。');
   for (const id of doc.supersedes) {
     const parent = docs.find(d => d.id === id);
-    if (!parent || parent.topic !== doc.topic || (parent.scope !== '全班' && doc.scope !== '全班' && doc.scope !== parent.scope)) throw Error('替代对象必须是已存在的同主题、范围相交的条款。');
+    if (!parent || parent.topic !== doc.topic || (!['全班','全校'].includes(parent.scope) && !['全班','全校'].includes(doc.scope) && doc.scope !== parent.scope)) throw Error('替代对象必须是已存在的同主题、范围相交的条款。');
   }
+  if (doc.relations !== undefined) {
+    if (!Array.isArray(doc.relations) || doc.relations.length>24) throw Error('通知关联格式无效。');
+    for (const relation of doc.relations) {
+      const parent=docs.find(d=>d.id===relation?.id);
+      if (!parent || parent.topic!==doc.topic || !['replace','clarify','parallel','same'].includes(relation.kind) ||
+          (!['全班','全校'].includes(parent.scope) && !['全班','全校'].includes(doc.scope) && parent.scope!==doc.scope) || !parent.published || !doc.published || parent.published>doc.published) throw Error('通知关联的主题、范围或公布时间无效。');
+    }
+  }
+  if (doc.excerpt !== undefined && (typeof doc.excerpt!=='string' || !doc.text.includes(doc.excerpt) || !doc.excerpt.includes(doc.value))) throw Error('整理片段须包含同一原文中的条款值。');
 }

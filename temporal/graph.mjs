@@ -28,7 +28,7 @@ export function parseDates(question, reference) {
 }
 
 export function snapshot(docs, date, scope, topic) {
-  const pool = docs.filter(d => d.topic === topic && (d.scope === '全班' || d.scope === scope));
+  const pool = docs.filter(d => d.topic === topic && (['全班','全校'].includes(d.scope) || d.scope === scope));
   const published = pool.filter(d => d.published && d.published <= date);
   const live = published.filter(d => d.effective && d.effective <= date);
   const byId = new Map(live.map(d => [d.id,d]));
