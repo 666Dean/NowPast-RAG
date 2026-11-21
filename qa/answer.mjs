@@ -2,6 +2,7 @@ import {references} from '../knowledge/data.mjs';
 import {scopes, validDay} from '../knowledge/schema.mjs';
 import {compact, matchedClue, routeQuestion} from '../retrieval/rank.mjs';
 import {parseDates, snapshot} from '../temporal/graph.mjs';
+import {answerCampus} from './campus.mjs';
 
 const evidence = (docs,role) => docs.map(doc => ({doc,role}));
 const values = docs => docs.map(d => d.value+' ['+d.id+']').join('；');
@@ -42,6 +43,8 @@ function unknown(message,date,scope) {
   return {status:'unknown',label:labels.unknown,summary:message,date,scope,items:[],sections:[]};
 }
 export function answer(docs, question, options = {}) {
+  if(options.domain==='campus') return answerCampus(docs,String(question || '').trim(),options);
+  docs=docs.filter(doc=>doc.kind!=='campus');
   const today = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date());
   const ref = options.date || today;
   const q = String(question || '').trim();

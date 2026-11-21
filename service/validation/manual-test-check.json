@@ -1,0 +1,2492 @@
+{
+  "passed": true,
+  "sourceCommit": "288c1c9b460ded53ad6098f2e91ee693d9febedf",
+  "source": {
+    "mode": "workspace",
+    "commit": "288c1c9b460ded53ad6098f2e91ee693d9febedf",
+    "dirty": true,
+    "workspaceStatus": " M service/server.mjs\n M service/verify-service.mjs\n?? service/manual-test.html\n?? service/manual-test.mjs\n",
+    "trackedPatchSha256": "4b8845d633acb7aaa84967552ec1dee4e607f5fab60057f1cf28f0f37aa0b63b",
+    "files": {
+      "evaluation/cases.mjs": "42faf3dff7aed56fa18350863aa6bafd1c09803201acf0fe84ff831636b71070",
+      "evaluation/run.mjs": "58752565abd389e91fc5dcae68543418f33a6d4f092baf35d5d712cb3dac9076",
+      "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+      "generation/model.mjs": "55c37cad76827e5ecf12951d3dccfc93dfe1497255dd72ce4f0bab1d2851556b",
+      "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
+      "knowledge/campus-data.mjs": "5c7f70ecb6f46aee590829faa017b8330adb0dadff417f038d854d4b31d43eef",
+      "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
+      "knowledge/schema.mjs": "f14d814f413e07b94cea68d405c8131a0a3b4b88ae1d52667160e8cc4085c933",
+      "package.json": "1c5aa45c9639dfba0561e32eb5c5c0c3e8191714f3942781a2a859be77602b38",
+      "qa/answer.mjs": "623e954245c96776fff018af6ee040dc8d03cb7e73f91e5dd5613342a7b99823",
+      "qa/campus.mjs": "c54ab84ac5ac97f4795f4739a276d0d2d64584bdc511c2fafe596eb5cb6c3f43",
+      "qa/campus.test.mjs": "febbf59a3f32cb53a2f34fb360ca43fb74fd13c08b7273f54a1fbffcf1bcde94",
+      "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
+      "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+      "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
+      "service/manual-test.html": "e06c7ca53c3935c8211ee585d568666b820660c544accb51549c3201cf0a9b72",
+      "service/manual-test.mjs": "382b46397f34506c2eb295f7072c4d79ae4fb56ee2149dd71144b3479984d824",
+      "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
+      "service/server.mjs": "6da17db2d6044d391e7e1a533a56b60d27045769c52f817af03b66f944a9240a",
+      "service/verify-delivery.mjs": "400334892a92feb048a6d3f757b71e33f29875e6b61989796e28d00575f7f5a7",
+      "service/verify-service.mjs": "8d6d48069c89857040e012729c977ce12f81836f1997aead80acf15cffdcdb63",
+      "temporal/campus.mjs": "66391c3deca1ad44cc5a0afdcd91c079d58fa52d27966fd02387a3333ca3d2e4",
+      "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
+      "temporal/graph.mjs": "bb6b58e606d0abb44fdaf5c85e70895e2e59f8aaad5a2bd5ea1ef0a260b66d27",
+      "web/app.mjs": "a81f829b8b02fb884e243c6f71aca50824fdce29a9a78562623119903abd33d7",
+      "web/controls.css": "8a54e71cad9f4555dc7a0c6f1b2990901692deea62b0d99c6d05375510ed4d13",
+      "web/controls.mjs": "ed6b9db263ccbe5c0897c5c9200c05742b474f078852f70dfccfebbdcb926923",
+      "web/index.html": "a85562b1bac6dac72f656c5a7e8c42de02873e9215af13da908a8f21d38b8698",
+      "web/style.css": "1163a0ce53e564256b9dec9a463e0526a97c6ab834139b0bebffbe32da16118d"
+    },
+    "sourceDigest": "ec491ae351bda70916637e3ab3bdea70b43a2097a0138d207a14afb77b928130"
+  },
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/catalyst/Documents/ChatGPT/rag/NowPast-RAG-git/service/verify-delivery.mjs"
+  ],
+  "apiResults": {
+    "realModel": false,
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "staticChecks": [
+      {
+        "path": "/test-campus",
+        "status": 200,
+        "type": "text/html",
+        "bytes": 4269
+      },
+      {
+        "path": "/service/manual-test.mjs",
+        "status": 200,
+        "type": "text/javascript",
+        "bytes": 4364
+      },
+      {
+        "path": "/web/controls.mjs",
+        "status": 200,
+        "type": "text/javascript",
+        "bytes": 27058
+      },
+      {
+        "path": "/web/controls.css",
+        "status": 200,
+        "type": "text/css",
+        "bytes": 11631
+      },
+      {
+        "path": "/web/assets/mountain-dawn.webp",
+        "status": 200,
+        "type": "image/webp",
+        "bytes": 76146
+      }
+    ],
+    "checks": [
+      {
+        "name": "evidence unavailable",
+        "path": "/api/generate",
+        "request": {
+          "question": "电池费用能报销多少钱？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "当前证据不足，请先核查或补充资料。"
+        }
+      },
+      {
+        "name": "model unavailable",
+        "path": "/api/generate",
+        "request": {
+          "question": "验收地点",
+          "date": "2026-11-12",
+          "scope": "B组"
+        },
+        "status": 503,
+        "response": {
+          "error": "本地模型尚未就绪。可在项目目录运行 npm run model:prepare，证据检索仍可使用。"
+        }
+      },
+      {
+        "name": "research uses primary sources",
+        "path": "/api/generate",
+        "request": {
+          "question": "论文和源码的融合方式有什么差异？",
+          "date": "2026-11-20",
+          "scope": "B组"
+        },
+        "status": 422,
+        "response": {
+          "error": "研究来源直查请查看原始依据，本地模型仅整理课程条款。"
+        }
+      },
+      {
+        "name": "campus before publication",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-24",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-24",
+          "date": "2026-11-24",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "A301"
+              ],
+              "summary": "上课教室：A301 [S2-2026-11-27-room]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S2-2026-11-27-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "A301"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "截至 2026-11-24，计科2班 2026-11-27 数据库：\n上课教室：A301 [S2-2026-11-27-room]\n上课时间：08:00–09:40 [S2-2026-11-27-time]"
+        }
+      },
+      {
+        "name": "campus published adjustment",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-25",
+          "date": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N25-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "B204",
+                "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                "scope": "计科2班",
+                "published": "2026-11-25",
+                "effective": "2026-11-27",
+                "imported": "2026-11-25",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "adjustment",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "已被替代"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "B204"
+              ],
+              "summary": "上课教室：B204 [N25-room]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S2-2026-11-27-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "B204"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "截至 2026-11-25，计科2班 2026-11-27 数据库：\n上课教室：B204 [N25-room]\n上课时间：08:00–09:40 [S2-2026-11-27-time]"
+        }
+      },
+      {
+        "name": "campus other class",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科1班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-25",
+          "date": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科1班",
+          "scope": "计科1班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S1-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科1班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科1班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科1班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S1-2026-11-27-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科1班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科1班",
+                  "lessonDate": "2026-11-27",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科1班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科1班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "A301"
+              ],
+              "summary": "上课教室：A301 [S1-2026-11-27-room]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S1-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科1班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科1班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科1班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科1班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S1-2026-11-27-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S1-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科1班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科1班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科1班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "A301"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S1-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科1班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科1班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科1班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S1-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科1班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科1班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科1班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "截至 2026-11-25，计科1班 2026-11-27 数据库：\n上课教室：A301 [S1-2026-11-27-room]\n上课时间：08:00–09:40 [S1-2026-11-27-time]"
+        }
+      },
+      {
+        "name": "campus next week",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-12-04",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-25",
+          "date": "2026-11-25",
+          "lessonDate": "2026-12-04",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-12-04-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-12-04",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-12-04",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-12-04 课表行"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-12-04-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-12-04",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-12-04",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-12-04 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "A301"
+              ],
+              "summary": "上课教室：A301 [S2-2026-12-04-room]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-12-04-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-12-04",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-12-04",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-12-04 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S2-2026-12-04-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-12-04-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-12-04",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-12-04",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-12-04 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "A301"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-12-04-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-12-04",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-12-04",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-12-04 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-12-04-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-12-04",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-12-04",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-12-04 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "截至 2026-11-25，计科2班 2026-12-04 数据库：\n上课教室：A301 [S2-2026-12-04-room]\n上课时间：08:00–09:40 [S2-2026-12-04-time]"
+        }
+      },
+      {
+        "name": "campus conflict",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-26",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-26",
+          "date": "2026-11-26",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N25-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "B204",
+                "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                "scope": "计科2班",
+                "published": "2026-11-25",
+                "effective": "2026-11-27",
+                "imported": "2026-11-25",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "adjustment",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "冲突依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N26-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "C105",
+                "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                "scope": "计科2班",
+                "published": "2026-11-26",
+                "effective": "2026-11-27",
+                "imported": "2026-11-26",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "parallel-notice",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "冲突依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "已被替代"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "conflict",
+              "label": "材料冲突",
+              "values": [
+                "B204",
+                "C105"
+              ],
+              "summary": "上课教室存在冲突：B204 [N25-room] 原句：虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。；C105 [N26-room] 原句：虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "冲突依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "C105",
+                    "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "parallel-notice",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "冲突依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S2-2026-11-27-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "conflict",
+              "values": [
+                "B204",
+                "C105"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "冲突依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "C105",
+                    "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "parallel-notice",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "冲突依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "conflict",
+          "label": "材料冲突",
+          "summary": "截至 2026-11-26，计科2班 2026-11-27 数据库：\n上课教室存在冲突：B204 [N25-room] 原句：虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。；C105 [N26-room] 原句：虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。\n上课时间：08:00–09:40 [S2-2026-11-27-time]"
+        }
+      },
+      {
+        "name": "campus clarification",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-26",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-26",
+          "date": "2026-11-26",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N26-clear",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "B204",
+                "text": "虚构澄清：计科2班2026-11-27数据库课以 B204 为准，本通知明确取代两份调课通知。",
+                "scope": "计科2班",
+                "published": "2026-11-26",
+                "effective": "2026-11-27",
+                "imported": "2026-11-26",
+                "supersedes": [
+                  "N25-room",
+                  "N26-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "clarification",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N25-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "B204",
+                "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                "scope": "计科2班",
+                "published": "2026-11-25",
+                "effective": "2026-11-27",
+                "imported": "2026-11-25",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "adjustment",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "已被替代"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "已被替代"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N26-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "C105",
+                "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                "scope": "计科2班",
+                "published": "2026-11-26",
+                "effective": "2026-11-27",
+                "imported": "2026-11-26",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "parallel-notice",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "已被替代"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-time",
+                "title": "虚构原课表",
+                "topic": "上课时间",
+                "value": "08:00–09:40",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "time"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "当前依据"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "B204"
+              ],
+              "summary": "上课教室：B204 [N26-clear]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-clear",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构澄清：计科2班2026-11-27数据库课以 B204 为准，本通知明确取代两份调课通知。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "N25-room",
+                      "N26-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "clarification",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "已被替代"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "C105",
+                    "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "parallel-notice",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            {
+              "field": "time",
+              "topic": "上课时间",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "08:00–09:40"
+              ],
+              "summary": "上课时间：08:00–09:40 [S2-2026-11-27-time]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "B204"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-clear",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构澄清：计科2班2026-11-27数据库课以 B204 为准，本通知明确取代两份调课通知。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "N25-room",
+                      "N26-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "clarification",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "已被替代"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N26-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "C105",
+                    "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-26",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-26",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "parallel-notice",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            "time": {
+              "status": "ok",
+              "values": [
+                "08:00–09:40"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-time",
+                    "title": "虚构原课表",
+                    "topic": "上课时间",
+                    "value": "08:00–09:40",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "time"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "当前依据"
+                }
+              ]
+            }
+          },
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "截至 2026-11-26，计科2班 2026-11-27 数据库：\n上课教室：B204 [N26-clear]\n上课时间：08:00–09:40 [S2-2026-11-27-time]"
+        }
+      },
+      {
+        "name": "campus missing fee",
+        "path": "/api/query",
+        "request": {
+          "domain": "campus",
+          "question": "上课在哪，要交多少钱？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 200,
+        "response": {
+          "domain": "campus",
+          "asOf": "2026-11-25",
+          "date": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "scope": "计科2班",
+          "course": "数据库",
+          "research": [],
+          "items": [
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "N25-room",
+                "title": "虚构调课通知",
+                "topic": "上课教室",
+                "value": "B204",
+                "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                "scope": "计科2班",
+                "published": "2026-11-25",
+                "effective": "2026-11-27",
+                "imported": "2026-11-25",
+                "supersedes": [
+                  "S2-2026-11-27-room"
+                ],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "adjustment",
+                  "locator": "通知第1段"
+                }
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "kind": "campus",
+                "id": "S2-2026-11-27-room",
+                "title": "虚构原课表",
+                "topic": "上课教室",
+                "value": "A301",
+                "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                "scope": "计科2班",
+                "published": "2026-11-01",
+                "effective": "2026-11-27",
+                "imported": "2026-11-01",
+                "supersedes": [],
+                "aliases": [],
+                "campus": {
+                  "course": "数据库",
+                  "classId": "计科2班",
+                  "lessonDate": "2026-11-27",
+                  "field": "room"
+                },
+                "source": {
+                  "type": "fictional",
+                  "id": "schedule",
+                  "locator": "计科2班 / 2026-11-27 课表行"
+                }
+              },
+              "role": "已被替代"
+            }
+          ],
+          "sections": [
+            {
+              "field": "room",
+              "topic": "上课教室",
+              "scope": "计科2班",
+              "status": "ok",
+              "label": "有据可查",
+              "values": [
+                "B204"
+              ],
+              "summary": "上课教室：B204 [N25-room]",
+              "items": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            {
+              "field": "fee",
+              "topic": "费用",
+              "scope": "计科2班",
+              "status": "unknown",
+              "label": "证据不足",
+              "values": [],
+              "summary": "费用缺少截至 2026-11-25 可核查的依据。",
+              "items": []
+            }
+          ],
+          "fields": {
+            "room": {
+              "status": "ok",
+              "values": [
+                "B204"
+              ],
+              "evidence": [
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "N25-room",
+                    "title": "虚构调课通知",
+                    "topic": "上课教室",
+                    "value": "B204",
+                    "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+                    "scope": "计科2班",
+                    "published": "2026-11-25",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-25",
+                    "supersedes": [
+                      "S2-2026-11-27-room"
+                    ],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "adjustment",
+                      "locator": "通知第1段"
+                    }
+                  },
+                  "role": "当前依据"
+                },
+                {
+                  "doc": {
+                    "kind": "campus",
+                    "id": "S2-2026-11-27-room",
+                    "title": "虚构原课表",
+                    "topic": "上课教室",
+                    "value": "A301",
+                    "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+                    "scope": "计科2班",
+                    "published": "2026-11-01",
+                    "effective": "2026-11-27",
+                    "imported": "2026-11-01",
+                    "supersedes": [],
+                    "aliases": [],
+                    "campus": {
+                      "course": "数据库",
+                      "classId": "计科2班",
+                      "lessonDate": "2026-11-27",
+                      "field": "room"
+                    },
+                    "source": {
+                      "type": "fictional",
+                      "id": "schedule",
+                      "locator": "计科2班 / 2026-11-27 课表行"
+                    }
+                  },
+                  "role": "已被替代"
+                }
+              ]
+            },
+            "fee": {
+              "status": "unknown",
+              "values": [],
+              "evidence": []
+            }
+          },
+          "status": "unknown",
+          "label": "证据不足",
+          "summary": "截至 2026-11-25，计科2班 2026-11-27 数据库：\n上课教室：B204 [N25-room]\n费用缺少截至 2026-11-25 可核查的依据。"
+        }
+      },
+      {
+        "name": "campus model unavailable",
+        "path": "/api/generate",
+        "request": {
+          "domain": "campus",
+          "question": "2班周五数据库课几点、在哪上？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 503,
+        "response": {
+          "error": "本地模型尚未就绪。可在项目目录运行 npm run model:prepare，证据检索仍可使用。"
+        }
+      },
+      {
+        "name": "campus fee has no evidence",
+        "path": "/api/generate",
+        "request": {
+          "domain": "campus",
+          "question": "要交多少钱？",
+          "asOf": "2026-11-25",
+          "lessonDate": "2026-11-27",
+          "classId": "计科2班",
+          "course": "数据库"
+        },
+        "status": 422,
+        "response": {
+          "error": "当前证据不足，请先核查或补充资料。"
+        }
+      }
+    ]
+  },
+  "modelArtifacts": null,
+  "inputs": {
+    "../knowledge/data.mjs": "cf20c263f3635171",
+    "../knowledge/schema.mjs": "f14d814f413e07b9",
+    "../temporal/graph.mjs": "bb6b58e606d0abb4",
+    "../retrieval/rank.mjs": "75ed68dee289d648",
+    "../qa/answer.mjs": "623e954245c96776",
+    "./cases.mjs": "42faf3dff7aed56f",
+    "./run.mjs": "58752565abd389e9"
+  },
+  "validationInputs": {
+    "service/verify-delivery.mjs": "400334892a92feb048a6d3f757b71e33f29875e6b61989796e28d00575f7f5a7",
+    "service/verify-service.mjs": "8d6d48069c89857040e012729c977ce12f81836f1997aead80acf15cffdcdb63",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349"
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "currentEvidence": {
+    "passed": 38,
+    "total": 38
+  },
+  "evidenceRoles": {
+    "passed": 9,
+    "total": 9
+  },
+  "researchSources": {
+    "passed": 4,
+    "total": 4
+  },
+  "behavior": {
+    "passed": 22,
+    "total": 22
+  },
+  "campusDevelopment": {
+    "testFile": "qa/campus.test.mjs",
+    "passed": true,
+    "separateFromFrozenEvaluation": true
+  },
+  "realModel": false,
+  "httpChecks": [
+    {
+      "name": "evidence unavailable",
+      "status": 422
+    },
+    {
+      "name": "model unavailable",
+      "status": 503
+    },
+    {
+      "name": "research uses primary sources",
+      "status": 422
+    },
+    {
+      "name": "campus before publication",
+      "status": 200
+    },
+    {
+      "name": "campus published adjustment",
+      "status": 200
+    },
+    {
+      "name": "campus other class",
+      "status": 200
+    },
+    {
+      "name": "campus next week",
+      "status": 200
+    },
+    {
+      "name": "campus conflict",
+      "status": 200
+    },
+    {
+      "name": "campus clarification",
+      "status": 200
+    },
+    {
+      "name": "campus missing fee",
+      "status": 200
+    },
+    {
+      "name": "campus model unavailable",
+      "status": 503
+    },
+    {
+      "name": "campus fee has no evidence",
+      "status": 422
+    }
+  ],
+  "isolation": "Fresh source copy without .git, installed dependencies, or model caches. External model cache used only with --model."
+}
