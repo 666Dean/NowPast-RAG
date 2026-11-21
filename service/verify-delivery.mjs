@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import {execFileSync, spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {copyFile, mkdir, mkdtemp, readFile, rm, writeFile} from 'node:fs/promises';
+import {createReadStream} from 'node:fs';
+import {copyFile, mkdir, mkdtemp, readFile, readdir, rm, stat, writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -32,6 +33,12 @@ function run(args) {
   });
   if (result.error) throw result.error;
   assert.equal(result.status, 0, `Command failed: node ${args.join(' ')}`);
+}
+
+async function artifact(path) {
+  const hash=createHash('sha256');
+  for await(const chunk of createReadStream(path)) hash.update(chunk);
+  return {bytes:(await stat(path)).size,sha256:hash.digest('hex')};
 }
 
 try {
@@ -65,6 +72,7 @@ try {
   await writeFile(new URL('./validation/delivery-source.patch',import.meta.url),workspacePatch);
 
   run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs', 'retrieval/review.test.mjs']);
+  run(['--test','qa/campus.test.mjs']);
   run(['evaluation/run.mjs']);
   const results = JSON.parse(await readFile(join(checkout, 'evaluation/results.json'), 'utf8'));
   const failedCurrent = results.rows.filter(row => !row.unboundedExact || !row.scores.NowPast.exact);
@@ -81,6 +89,17 @@ try {
 
   run(['service/verify-service.mjs', ...(withModel ? ['--model'] : [])]);
   const api = JSON.parse(await readFile(join(checkout, 'service/validation/api-results.json'), 'utf8'));
+  await copyFile(join(checkout,'service/validation/campus-examples.json'),new URL('./validation/campus-examples.json',import.meta.url));
+  const modelArtifacts=withModel ? {
+    weights:await artifact(join(process.env.NOWPAST_MODEL_HOME,'model.gguf'))
+  } : null;
+  if(withModel) {
+    const runtime=join(process.env.NOWPAST_MODEL_HOME,'b12559');
+    const filename=process.platform==='win32'?'llama-server.exe':'llama-server';
+    const executable=(await readdir(runtime,{recursive:true})).find(path=>path.split(/[\\/]/).at(-1)===filename);
+    assert.ok(executable,'Missing inference executable.');
+    modelArtifacts.runtime=await artifact(join(runtime,executable));
+  }
   const validationInputs = {};
   for (const filename of ['service/verify-delivery.mjs', 'service/verify-service.mjs', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs']) {
     validationInputs[filename] = createHash('sha256').update(await readFile(join(checkout, filename))).digest('hex');
@@ -91,6 +110,7 @@ try {
     source:sourceIdentity,
     command:[process.execPath,...process.argv.slice(1)],
     apiResults:api,
+    modelArtifacts,
     inputs: results.inputs,
     validationInputs,
     environment: {node: process.version, platform: process.platform, arch: process.arch},
@@ -98,6 +118,7 @@ try {
     evidenceRoles: {passed: results.rows.filter(row => row.gnp).length, total: results.rows.filter(row => row.gnp).length},
     researchSources: {passed: results.researchRows.length, total: results.researchRows.length},
     behavior: {passed: results.behaviorTests.length, total: results.behaviorTests.length},
+    campusDevelopment:{testFile:'qa/campus.test.mjs',passed:true,separateFromFrozenEvaluation:true},
     realModel: api.realModel,
     httpChecks: api.checks.map(check => ({name: check.name, status: check.status})),
     isolation: 'Fresh source copy without .git, installed dependencies, or model caches. External model cache used only with --model.'
