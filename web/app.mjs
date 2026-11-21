@@ -1,11 +1,13 @@
-import { seed, references } from '../knowledge/data.mjs';
+import {references} from '../knowledge/data.mjs';
+import {noticeSeed as seed} from '../knowledge/notices.mjs';
 import {answer} from '../qa/answer.mjs';
 import {validateDocument, validDay} from '../knowledge/schema.mjs';
 import {snapshot} from '../temporal/graph.mjs';
+import {relationsFor,executionFor} from './notice-relations.mjs';
 import {installControls,syncControls,closeControl,installMotion,animateRoute,animateBookmark,animateWeek,animateFilteredList,updateCalendarIndicator,openDialog,closeDialog,revealSearch,concealSearch} from './controls.mjs';
 
 const $ = (selector) => document.querySelector(selector);
-const key = 'nowpast.course.claims.v1';
+const key = 'nowpast.campus.notices.v2';
 const today = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Shanghai' }).format(new Date());
 const make = (tag, css, text) => {
   const node = document.createElement(tag);
@@ -19,13 +21,12 @@ const button = (css, text, fn) => {
   node.addEventListener('click', fn);
   return node;
 };
-const projectQuestion = '融合方式按哪版实现、要附哪些复现材料、去哪验收？';
+const projectQuestion = '数据库上课地点和上课时间是什么？';
 const examples = [
-  ['复现哪个融合算子，去哪验收？', projectQuestion, '2026-11-12', 'B组', 'auto'],
-  ['论文和源码的融合方式一致吗？', '论文和源码的融合方式有什么差异？', '2026-11-18', '全班', 'auto'],
-  ['澄清通知公布后，要求变了吗？', projectQuestion, '2026-11-18', 'B组', 'auto'],
-  ['拿着旧排班，该去哪里验收？', 'B组拿着写有“工程楼 305”的旧排班，现在该去哪，为什么变了？', '2026-11-18', 'B组', 'auto'],
-  ['从论文复现改到源码复现，改了什么？', '2026-11-05 和 2026-11-18，融合方式和消息聚合有什么变化？', '2026-11-18', 'B组', 'compare']
+  ['数据库在哪上课？', '数据库上课地点', '2026-11-21', '计科2班', 'auto'],
+  ['数据库作业什么时候交？', '数据库作业一截止时间', '2026-11-21', '计科2班', 'auto'],
+  ['图书馆几点暂停开放？', '图书馆二层开放安排', '2026-11-21', '计科2班', 'auto'],
+  ['数据库教室改到哪里了？', '数据库上课地点有什么变化？', '2026-11-21', '计科2班', 'compare']
 ];
 let docs = [];
 let requestNumber = 0;
@@ -59,7 +60,7 @@ function refresh() {
   renderNotices();
   $('#topic-list').replaceChildren(...[...new Set(docs.map(d => d.topic))].map(topic => new Option(topic)));
 }
-const viewNames = {home:'首页',space:'课程空间',notices:'通知中心',schedule:'课程安排',ask:'证据问答',library:'课程资料',help:'使用帮助'};
+const viewNames = {home:'首页',space:'课程空间',notices:'通知中心',schedule:'日程',ask:'通知问答',library:'课程资料',help:'使用帮助'};
 let activeView = Object.hasOwn(viewNames,location.hash.slice(1)) ? location.hash.slice(1) : 'home';
 function navigate(view, focus = false) {
   if (!viewNames[view]) view = 'home';
@@ -112,6 +113,7 @@ function sourceDetails(doc) {
     ['原文定位', doc.id]
   ]) fields.append(make('dt', '', name), make('dd', '', value || '未知'));
   detail.replaceChildren(heading, fields, make('h3', 'field-head', '原文片段'), make('blockquote', 'quote', doc.text));
+  detail.append(noticeConnections({docs:[doc]},false,true));
   detail.append(researchList(references.filter(r=>doc.refs?.includes(r.id))));
   sourceOrigin = document.activeElement;
   markRead([doc.id]);
@@ -253,20 +255,18 @@ function run() {
   }
 }
 function renderLibrary() {
-  const list = $('#library-list');
-  const filter = $('#filter').value.trim().toLowerCase();
-  const matches = docs.filter(d => [d.title, d.topic, d.text, d.scope].join(' ').toLowerCase().includes(filter));
-  $('#library-count').textContent = matches.length + ' 条';
-  list.replaceChildren(...matches.map(doc => {
-    const row = button('row-btn', '', () => sourceDetails(doc));
-    const title = make('span');
-    title.append(make('span', 'topic-tag', doc.topic), make('strong', '', doc.title),
-      make('span', 'row-meta', (doc.published || '公布时间未知') + ' · ' + doc.scope + ' · ' + doc.id));
-    row.append(title, make('span', 'row-out', '查看原文'));
-    return row;
+  const list=$('#library-list');
+  const filter=$('#filter').value.trim().toLowerCase();
+  const matches=noticeGroups().filter(group=>[group.title,group.scope,...group.docs.map(doc=>doc.text)].join(' ').toLowerCase().includes(filter));
+  $('#library-count').textContent=matches.length+' 份通知';
+  list.replaceChildren(...matches.map(group=>{
+    const row=button('row-btn','',()=>openNotice(group));
+    const title=make('span');
+    title.append(make('strong','',group.title),make('span','row-meta',(group.published || '公布时间待确认')+' · '+(group.docs[0].issuer || group.scope)));
+    row.append(title,make('span','row-out','查看原文'));return row;
   }));
-  if (!matches.length) list.append(make('p', 'empty', '未找到匹配的资料。'));
-  if (storageIssue) list.prepend(make('p', 'error', storageIssue));
+  if (!matches.length) list.append(make('p','empty','未找到通知'));
+  if (storageIssue) list.prepend(make('p','error',storageIssue));
 }
 const importForm = $('#import-form');
 function updateTargets() {
@@ -303,7 +303,7 @@ function loadUI() {
 }
 let ui = loadUI();
 let contextDate = today();
-let contextScope = 'B组';
+let contextScope = '计科2班';
 let calendarDay = contextDate;
 let calendarFocused = false;
 let homeFilter = 'all';
@@ -357,9 +357,9 @@ function emptyState(message, kind = 'calendar', action, callback) {
   if (action) node.append(button('text-button',action,callback));
   return node;
 }
-function selectedGroups() { return contextScope === '全班' ? ['A组','B组'] : [contextScope]; }
+function selectedGroups() { return contextScope === '全校' ? ['计科1班','计科2班'] : [contextScope]; }
 function currentDocs(topic, group = contextScope) {
-  const groups = group === '全班' ? ['A组','B组'] : [group];
+  const groups = group === '全校' ? ['计科1班','计科2班'] : [group];
   return [...new Map(groups.flatMap(g => snapshot(docs,contextDate,g,topic).current).map(d => [d.id,d])).values()];
 }
 function documentStates() {
@@ -381,7 +381,7 @@ function noticeGroups() {
   const groups = new Map();
   for (const doc of docs) {
     if (!states.has(doc.id)) continue;
-    const id = [doc.title,doc.published,doc.scope].join('|');
+    const id = [doc.noticeId || doc.title,doc.published,doc.scope].join('|');
     if (!groups.has(id)) groups.set(id,{id,title:doc.title,published:doc.published,scope:doc.scope,docs:[]});
     groups.get(id).docs.push(doc);
   }
@@ -393,7 +393,8 @@ function noticeGroups() {
     group.saved = ui.saved.includes(group.id);
     group.changed = group.docs.some(doc => doc.supersedes.length > 0);
     return group;
-  }).sort((a,b) => (b.published || b.docs[0].imported).localeCompare(a.published || a.docs[0].imported));
+  }).sort((a,b) => (b.published || b.docs[0].imported).localeCompare(a.published || a.docs[0].imported) ||
+    (b.docs.map(doc=>doc.analysis?.analyzedAt || '').sort().at(-1) || '').localeCompare(a.docs.map(doc=>doc.analysis?.analyzedAt || '').sort().at(-1) || ''));
 }
 function markRead(ids) {
   ui.read = [...new Set([...ui.read,...ids])];
@@ -413,6 +414,16 @@ function filteredNotices(groups, filter, query = '') {
   return groups.filter(group => (filter !== 'unread' || group.unread) &&
     (filter !== 'changed' || group.changed) && (filter !== 'saved' || group.saved) &&
     (!q || [group.title,group.scope,...group.docs.flatMap(d => [d.topic,d.value,d.text])].join(' ').toLowerCase().includes(q)));
+}
+function currentNoticeGroups() {
+  const seen=new Set();
+  return noticeGroups().filter(group=>{
+    if (group.state==='past') return false;
+    const activity=group.docs[0].activity || group.id;
+    const id=activity+'|'+group.scope;
+    if (seen.has(id)) return false;
+    seen.add(id);return true;
+  });
 }
 function bookmark(group, origin) {
   const listId = origin.closest('.notice-list').id;
@@ -440,16 +451,71 @@ function noticeRow(group) {
   title.append(make('strong','notice-title',group.title));
   if (group.unread) { const dot = make('span','unread-dot'); dot.setAttribute('aria-label','未读'); title.append(dot); }
   const meta = make('span','notice-meta');
-  meta.append(make('time','',shortDate(group.published)),make('span','meta-divider'),make('span','',group.scope),make('span','status '+group.state,group.label));
-  content.append(title,meta);
+  meta.append(make('span','',group.docs[0].issuer || group.scope),make('span','meta-divider'),make('time','',shortDate(group.published)+' 发布'));
+  if (!['current'].includes(group.state)) meta.append(make('span','status '+group.state,group.label));
+  const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
+  const plan=make('span','notice-execution');
+  for (const [name,value] of [['clock',execution.when],['pin',execution.where],['check',execution.action]]) {
+    const line=make('span','execution-line');line.append(icon(name),document.createTextNode(value));plan.append(line);
+  }
+  content.append(title,plan,meta);
   open.append(kind,content);
   const save = button('notice-bookmark','',() => bookmark(group,save));
   save.dataset.bookmarkId = group.id;
   save.append(icon('bookmark'));
   save.setAttribute('aria-label',(group.saved ? '取消收藏：' : '收藏：') + group.title);
   save.setAttribute('aria-pressed',String(group.saved));
-  row.append(open,save);
+  const body=make('div','notice-body');
+  body.append(open,noticeConnections(group));
+  row.append(body,save);
   return row;
+}
+function noticeConnections(group,featured = false,expanded = false) {
+  const container=make('div','notice-connections'+(featured?' feature-connections':''));
+  const relations=relationsFor(group.docs,docs,{date:contextDate,scope:contextScope});
+  if (!relations.length) {
+    return container;
+  }
+  const previous=relations.some(relation=>relation.direction==='previous');
+  if (!previous && !expanded) {
+    return container;
+  }
+  container.append(make('span','connection-heading',previous?'原通知':'后续通知'));
+  const groups=new Map();
+  for (const relation of relations) {
+    const target=relation.direction==='previous'?relation.prior:relation.doc;
+    const id=[target.title,target.published,target.scope,relation.direction].join('|');
+    if (!groups.has(id)) groups.set(id,{target,relations:[]});
+    groups.get(id).relations.push(relation);
+  }
+  for (const {target,relations:links} of groups.values()) {
+    const entry=make('div','connection-entry');
+    const open=button('connection-link',target.title,()=>{
+      const related=noticeGroups().find(notice=>notice.docs.some(doc=>doc.id===target.id));
+      if (related) openNotice(related); else sourceDetails(target);
+    });
+    open.setAttribute('aria-label','打开关联通知：'+target.title+'，'+(target.published || '公布日期待核'));
+    entry.append(open,make('span','connection-date',(target.published || '日期待核')+' · '+target.scope));
+    if (previous && expanded) {
+      if (!expanded && links.length>1) {
+        const effective=[...new Set(links.map(link=>link.doc.effective))];
+        entry.append(make('p','connection-change',links.map(link=>link.doc.topic).join('、')+'已更新'),
+          make('span','change-effective',effective.length===1 && effective[0]?shortDate(effective[0])+' 生效':'各项生效日期见原文'));
+        container.append(entry);
+        continue;
+      }
+      for (const {doc,prior,kind,label} of links) {
+        const change=make('p','connection-change');
+        change.append(make('span','change-topic',''));
+        change.append(document.createTextNode(prior.value===doc.value?'沿用 '+doc.value:prior.value+' 改为 '+doc.value));
+        change.append(make('span','change-effective',doc.effective?shortDate(doc.effective)+' 生效':'生效日期待核'));
+        if (kind==='parallel') change.lastChild.textContent='并行依据，未替代旧通知';
+        entry.append(change);
+      }
+    }
+    container.append(entry);
+  }
+  return container;
 }
 function openNotice(group) {
   sourceOrigin = document.activeElement;
@@ -459,14 +525,14 @@ function openNotice(group) {
   const meta = make('div','notice-meta');
   meta.append(make('span','',shortDate(group.published)),make('span','',group.scope),make('span','status '+group.state,group.label));
   const fragment = document.createDocumentFragment();
-  fragment.append(heading,meta);
+  fragment.append(heading,meta,noticeConnections(group,false,true));
   const states = documentStates();
   for (const doc of group.docs) {
     const section = make('section','notice-detail-clause');
     const head = make('div','section-heading');
     const state = states.get(doc.id);
     head.append(make('h3','',doc.topic),make('span','status '+state,({current:'现行',past:'已替代',scheduled:'待生效',conflict:'材料冲突',uncertain:'时间待核'})[state]));
-    section.append(head,make('p','',doc.text));
+    section.append(head,make('p','',doc.excerpt || doc.text));
     const details = make('div','notice-meta');
     details.append(make('span','',doc.effective ? shortDate(doc.effective) + ' 生效' : '生效日期待核'));
     details.append(button('text-button','条款 ' + doc.id,() => sourceDetails(doc)));
@@ -474,6 +540,11 @@ function openNotice(group) {
     fragment.append(section);
   }
   const refs = references.filter(ref => group.docs.some(doc => doc.refs?.includes(ref.id)));
+  if (group.docs.some(doc=>doc.analysis?.method==='rag-notice-intake')) {
+    const original=make('details','notice-original');
+    original.append(make('summary','','查看通知完整原文'),make('p','quote',group.docs[0].text));
+    fragment.append(original);
+  }
   if (refs.length) fragment.append(researchList(refs));
   const actions = make('div','notice-detail-actions');
   actions.append(button('primary','核查这条通知',async () => {
@@ -484,25 +555,26 @@ function openNotice(group) {
   openDialog($('#source-dialog'));
 }
 function renderFeature() {
-  const groups = noticeGroups();
-  const deadline = currentDocs('截止时间')[0];
-  const group = groups.find(g => g.docs.some(d => d.id === deadline?.id)) || groups.find(g => g.state !== 'past');
+  const groups = currentNoticeGroups();
+  const group = groups.find(g => g.state!=='past' && g.docs.some(doc=>doc.field==='deadline')) || groups.find(g => g.state !== 'past');
   const feature = $('#featured-notice');
   if (!group) { feature.replaceChildren(emptyState('暂无已公布的通知','bell')); return; }
   feature.dataset.noticeId = group.id;
   const top = make('div','feature-top');
-  const scope = make('span','feature-label'); scope.append(icon('bell'),document.createTextNode(group.scope + '通知'));
-  top.append(scope,make('span','status '+group.state,group.label));
+  const scope = make('span','feature-label'); scope.append(icon('bell'),document.createTextNode(group.docs[0].issuer || group.scope));
+  top.append(scope);
   const title = make('h2','',group.title);
-  const value = make('p','feature-value',group.state === 'conflict' ? '当前要求存在冲突' : deadline && group.docs.some(d => d.id === deadline.id) ? deadline.value + ' 截止' : group.docs[0].value);
+  const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
+  const value = make('p','feature-value',execution.when);
+  const actionText=make('p','feature-action',execution.where+' · '+execution.action);
   const bottom = make('div','feature-bottom');
   const meta = make('span','feature-meta'); meta.append(icon('clock'),document.createTextNode(shortDate(group.published) + ' 发布'));
   const action = button('feature-button','查看通知',() => openNotice(group)); action.append(icon('arrow'));
   bottom.append(meta,action);
-  feature.replaceChildren(top,title,value,bottom);
+  feature.replaceChildren(top,title,value,actionText,noticeConnections(group,true),bottom);
 }
 function renderHomeNotices() {
-  let groups = noticeGroups().filter(g => !['past','uncertain'].includes(g.state));
+  let groups = currentNoticeGroups().filter(g => !['uncertain'].includes(g.state));
   const featureId = $('#featured-notice').dataset.noticeId;
   groups = filteredNotices(groups,homeFilter).filter(g => g.id !== featureId).slice(0,3);
   const list = $('#home-notices');
@@ -514,7 +586,7 @@ function renderHomeNotices() {
 function renderNotices() {
   syncControls();
   const state = $('#notice-status').value;
-  let groups = noticeGroups().filter(g => state === 'all' || (state === 'active' ? g.state !== 'past' : g.state === state));
+  let groups = (state==='active'?currentNoticeGroups():noticeGroups()).filter(g => state === 'all' || state==='active' || g.state === state);
   groups = filteredNotices(groups,noticeFilter,$('#notice-search').value);
   $('#notice-result-count').textContent = groups.length + ' 条通知';
   $('#notice-list').replaceChildren(...groups.map(noticeRow));
@@ -525,33 +597,24 @@ function renderNotices() {
   requestAnimationFrame(updateIndicators);
 }
 function scheduleEvents() {
-  const events = new Map();
-  for (const scope of selectedGroups()) {
-    const deadlines = currentDocs('截止时间',scope);
-    if (new Set(deadlines.map(d => d.value)).size !== 1) continue;
-    const doc = deadlines[0];
-    if (!doc) continue;
-    const match = doc.value.match(/(?:(\d{4})\s*年\s*)?(\d{1,2})\s*月\s*(\d{1,2})\s*日\s*(\d{1,2}):(\d{2})/);
-    if (!match || Number(match[4]) > 23 || Number(match[5]) > 59) continue;
-    const date = (match[1] || (doc.effective || contextDate).slice(0,4)) + '-' + match[2].padStart(2,'0') + '-' + match[3].padStart(2,'0');
-    if (!validDay(date)) continue;
-    const channel = currentDocs('提交渠道',scope);
-    const destination = new Set(channel.map(d => d.value)).size === 1 ? channel[0].value : '提交渠道待确认';
-    const id = doc.id + '|' + destination;
-    if (events.has(id)) events.get(id).scope = '全班';
-    else events.set(id,{id,date,time:match[4].padStart(2,'0') + ':' + match[5],title:'实验三 · 材料提交',destination,scope,doc});
+  const events=new Map();
+  for (const group of noticeGroups().filter(group=>group.state!=='past')) {
+    const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
+    if (!execution.date || !execution.time || execution.conflict || events.has(execution.activity)) continue;
+    events.set(execution.activity,{...execution,id:execution.activity,title:execution.course || group.title,destination:execution.where,
+      scope:group.scope,doc:group.docs[0]});
   }
-  return [...events.values()].sort((a,b) => (a.date+a.time).localeCompare(b.date+b.time));
+  return [...events.values()].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
 }
 function eventRow(event) {
   const row = button('agenda-event','',() => sourceDetails(event.doc));
   const date = make('span','event-date');
   date.append(make('strong','',event.date.slice(8)),make('span','',Number(event.date.slice(5,7)) + '月 · ' + weekday(event.date)));
   const content = make('span','event-content');
-  content.append(make('h3','',event.title));
+  content.append(make('h3','',event.title),make('p','event-task',event.action));
   const location = make('p'); location.append(icon('folder'),document.createTextNode(event.destination));
   content.append(location);
-  const time = make('p'); time.append(icon('clock'),make('span','event-time',event.time + ' 截止'),make('span','',event.scope));
+  const time = make('p'); time.append(icon('clock'),make('span','event-time',event.time + (event.type==='assignment'?' 前':'')),make('span','',event.scope));
   content.append(time);
   row.append(date,content);
   return row;
@@ -585,12 +648,6 @@ function renderWeek(container) {
   }));
   requestAnimationFrame(()=>updateCalendarIndicator(container));
 }
-function roomViews() {
-  return selectedGroups().map(scope => {
-    const current = currentDocs('验收地点',scope);
-    return {scope,docs:current,conflict:new Set(current.map(d => d.value)).size > 1};
-  });
-}
 function renderSchedule() {
   const month = Number(calendarDay.slice(0,4)) + ' 年 ' + Number(calendarDay.slice(5,7)) + ' 月';
   $('#mini-month').textContent = month;
@@ -611,30 +668,20 @@ function renderSchedule() {
   }));
   $('#upcoming-agenda').replaceChildren(...upcoming.map(eventRow));
   if (!upcoming.length) $('#upcoming-agenda').append(make('p','empty','暂无后续安排'));
-  const rooms = roomViews();
   $('#home-room').replaceChildren();
-  const known = rooms.filter(room => room.docs.length);
-  const summary = button('room-link','',() => navigate('schedule',true));
-  summary.append(icon('pin'));
-  if (known.length) summary.append(make('strong','',known.map(room => room.conflict ? room.scope + '地点待确认' : (rooms.length > 1 ? room.scope + ' ' : '') + room.docs[0].value).join(' / ')));
-  else summary.append(make('strong','','验收地点待公布'));
-  summary.append(make('span','status','时间待定'));
-  $('#home-room').append(summary);
-  $('#schedule-rooms').replaceChildren(...rooms.map(room => {
-    const section = make('section','room-detail');
-    const heading = make('h3','',room.scope); heading.prepend(icon('users'));
-    section.append(heading,make('p','',room.conflict ? '地点存在冲突' : room.docs[0]?.value || '地点待公布'));
-    if (room.conflict) { const choices = make('p','fine',room.docs.map(d => d.value).join(' / ')); section.append(choices); }
-    const time = make('p','room-time'); time.append(icon('clock'),document.createTextNode('验收时间待公布')); section.append(time);
-    room.docs.forEach(doc => section.append(button('text-button',room.conflict ? '核查：' + doc.value : '查看安排原文',() => sourceDetails(doc))));
+  $('#schedule-rooms').replaceChildren(...events.filter(event=>event.type==='course' && event.date>=contextDate).map(event=>{
+    const section=make('section','room-detail');
+    section.append(make('h3','',event.title),make('p','',event.when || event.date+' '+event.time),make('p','',event.destination),
+      button('text-button','查看通知',()=>sourceDetails(event.doc)));
     return section;
   }));
+  if (!$('#schedule-rooms').childElementCount) $('#schedule-rooms').append(make('p','empty','暂无课程安排'));
 }
 function renderChecklist() {
   const values = new Map();
   let hasConflict = false;
   for (const group of selectedGroups()) {
-    for (const topic of ['报告格式','复现材料']) {
+    for (const topic of new Set(docs.filter(doc=>doc.noticeType==='assignment' && doc.field==='task').map(doc=>doc.topic))) {
       const current = snapshot(docs,contextDate,group,topic).current;
       if (new Set(current.map(doc => doc.value)).size > 1) { hasConflict = true; continue; }
       for (const doc of current) {
@@ -660,8 +707,8 @@ function renderChecklist() {
     };
     row.append(input,check,label); return row;
   }));
-  if (!values.size) $('#checklist').append(make('p','empty','准备要求待公布'));
-  if (hasConflict) $('#checklist').append(button('text-button','材料要求有冲突，核查原文',() => askQuestion('报告格式、复现材料现在按什么要求执行？')));
+  if (!values.size) $('#checklist').append(make('p','empty','暂无待交作业'));
+  if (hasConflict) $('#checklist').append(button('text-button','作业要求待确认',() => navigate('notices',true)));
 }
 // Move the same nodes at the breakpoint so visual and keyboard reading order agree.
 function syncHomeLayout() {
@@ -680,28 +727,19 @@ function syncHomeLayout() {
   if (focused !== document.activeElement && focused?.isConnected && overview.contains(focused)) focused.focus({preventScroll:true});
 }
 function renderSpace() {
-  const items = new Map();
-  for (const group of selectedGroups()) {
-    for (const topic of ['报告格式','复现材料','截止时间','提交渠道','融合方式','聚合方式']) {
-      const current = snapshot(docs,contextDate,group,topic).current;
-      const conflict = new Set(current.map(doc => doc.value)).size > 1;
-      for (const doc of current) {
-        if (!items.has(doc.id)) items.set(doc.id,{doc,groups:new Set(),conflict});
-        items.get(doc.id).groups.add(group);
-        items.get(doc.id).conflict ||= conflict;
-      }
-    }
+  const list=$('#course-requirements');
+  const seen=new Set();
+  list.replaceChildren();
+  for (const group of noticeGroups().filter(group=>group.state!=='past' && group.docs[0].noticeType!=='school')) {
+    const execution=executionFor(group.docs,docs,{date:contextDate,scope:contextScope});
+    if (seen.has(execution.activity)) continue;
+    seen.add(execution.activity);
+    const row=button('row-btn','',()=>openNotice(group));
+    const copy=make('span');
+    copy.append(make('strong','',group.title),make('span','row-meta',execution.when),make('p','',execution.where+' · '+execution.action));
+    row.append(copy);list.append(row);
   }
-  $('#course-requirements').replaceChildren(...[...items.values()].map(item => {
-    const {doc,groups,conflict} = item;
-    const row = button('requirement-row','',() => sourceDetails(doc));
-    const copy = make('span','requirement-copy');
-    const scope = contextScope === '全班' && groups.size < 2 ? [...groups].join('、') + ' · ' : '';
-    copy.append(make('strong','',scope + doc.topic),make('span','',doc.value));
-    row.append(copy,make('span','status' + (conflict ? ' conflict' : ''),conflict ? '材料冲突' : '现行'),icon('chevron'));
-    return row;
-  }));
-  if (!items.size) $('#course-requirements').append(emptyState('当前日期暂无已公布要求','book'));
+  if (!list.childElementCount) list.append(make('p','empty','暂无课程和作业通知'));
 }
 function renderDashboard() { renderFeature(); renderHomeNotices(); renderSchedule(); renderChecklist(); renderSpace(); }
 function setContext(date,scope) {
@@ -741,17 +779,33 @@ function setRole(role) {
   $('#avatar').textContent = ui.role === 'teacher' ? '师' : '同';
   $('#avatar').setAttribute('aria-label',ui.role === 'teacher' ? '教师视角' : '学生视角');
   $('#teacher-import').hidden = ui.role !== 'teacher';
-  $('#preparation-title').textContent = ui.role === 'teacher' ? '验收准备' : '提交前准备';
+  $('#teacher-import').replaceChildren(icon('plus'),document.createTextNode('发布通知'));
+  $('#preparation-title').textContent = '作业清单';
+  $('#open-import').hidden=ui.role!=='teacher';
   navigate(activeView);
   renderChecklist();
 }
 function openImport() {
   fileRead++;
+  intakeRequest?.abort();
   importForm.reset();
+  const automatic=ui.role==='teacher';
+  importForm.dataset.intake=String(automatic);
+  $('#import-title').textContent=automatic?'发布课程通知':'添加课程资料';
+  $('#notice-text-label').textContent=automatic?'通知完整原文':'原文片段';
+  $('#intake-note').hidden=true;
+  $('#intake-progress').hidden=true;
+  for (const node of importForm.querySelectorAll('[data-teacher-field]')) node.hidden=!automatic;
+  for (const node of importForm.querySelectorAll('[data-manual-field]')) {
+    node.hidden=automatic;
+    node.querySelectorAll('input,select').forEach(input=>{input.disabled=automatic;});
+  }
+  importForm.elements.topic.required=!automatic;
+  importForm.elements.value.required=!automatic;
+  importForm.querySelector('button[type="submit"]').textContent=automatic?'发布通知':'保存资料';
   importForm.elements.scope.value = contextScope;
   if (ui.role === 'teacher') {
     importForm.elements.published.value = today();
-    importForm.elements.effective.value = today();
   }
   $('#import-message').textContent = '';
   updateTargets(); syncControls(); openDialog($('#import-dialog'));
@@ -802,6 +856,7 @@ $('#teacher-import').onclick = openImport;
 importForm.elements.topic.oninput = updateTargets;
 importForm.elements.scope.onchange = updateTargets;
 let fileRead = 0;
+let intakeRequest;
 $('#text-file').onchange = async event => {
   const serial = ++fileRead;
   const file = event.target.files?.[0];
@@ -818,6 +873,7 @@ $('#text-file').onchange = async event => {
 };
 importForm.onsubmit = async event => {
   event.preventDefault();
+  if (importForm.dataset.intake==='true') {await publishNotice();return;}
   const data = new FormData(importForm);
   const values = Object.fromEntries(data);
   const doc = {id:'local-' + crypto.randomUUID().slice(0,8),imported:today(),aliases:[]};
@@ -851,6 +907,49 @@ importForm.onsubmit = async event => {
     save.textContent = originalLabel;
   }
 };
+async function publishNotice() {
+  const data=Object.fromEntries(new FormData(importForm));
+  const input={title:data.title.trim(),text:data.text.trim(),published:data.published,scope:data.scope,course:data.course,noticeType:data.noticeType};
+  const controller=new AbortController();
+  intakeRequest=controller;
+  const serial=++fileRead;
+  const timer=setTimeout(()=>controller.abort(),180000);
+  const submit=importForm.querySelector('button[type="submit"]');
+  const editable=[...importForm.querySelectorAll('input,select,textarea')].filter(node=>!node.disabled);
+  editable.forEach(node=>node.disabled=true);
+  submit.disabled=true;submit.dataset.busy='true';submit.setAttribute('aria-busy','true');submit.textContent='正在发布';
+  $('#intake-progress').hidden=false;$('#import-message').textContent='';
+  try {
+    const response=await fetch('/api/notices/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...input,docs}),signal:controller.signal});
+    if (!response.headers.get('content-type')?.includes('application/json')) throw Error('通知 AI 服务尚未连接，请启动项目服务后重试。');
+    const result=await response.json();
+    if (!response.ok) throw Error(response.status===503?'发布服务暂时不可用，原文已保留，请重试。':result.error || '发布未完成，请重试。');
+    if (controller.signal.aborted || serial!==fileRead) return;
+    if (!Array.isArray(result.clauses) || !result.clauses.length) throw Error('AI 未返回可发布的通知要求。');
+    const persist=()=>{
+      if (controller.signal.aborted || serial!==fileRead) return;
+      const all=readEntries();
+      for (const doc of result.clauses) {validateDocument(doc,all);all.push(doc);}
+      localStorage.setItem(key,JSON.stringify(all.slice(seed.length)));
+    };
+    if (navigator.locks) await navigator.locks.request(key,persist); else persist();
+    if (controller.signal.aborted || serial!==fileRead) return;
+    $('#filter').value='';refresh();setContext(input.published,input.scope);
+    await closeDialog($('#import-dialog'));
+    const group=noticeGroups().find(group=>group.docs.some(doc=>doc.id===result.clauses[0].id));
+    if (group) openNotice(group);
+    toast('通知已发布');
+  } catch(error) {
+    if (serial===fileRead) $('#import-message').textContent=controller.signal.aborted?'AI 整理超时，原文已保留，请重试。':error.message;
+  } finally {
+    clearTimeout(timer);
+    if (intakeRequest===controller) {
+      editable.forEach(node=>node.disabled=false);
+      submit.disabled=false;delete submit.dataset.busy;submit.setAttribute('aria-busy','false');submit.textContent='发布通知';
+      $('#intake-progress').hidden=true;intakeRequest=undefined;
+    }
+  }
+}
 document.querySelectorAll('[data-close]').forEach(node => node.onclick = () => closeDialog($('#' + node.dataset.close)));
 document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('cancel',event=>{
   event.preventDefault(); closeDialog(dialog);
@@ -866,7 +965,7 @@ $('#source-dialog').addEventListener('close',() => {
   (origin?.isConnected ? origin : sourceOrigin?.isConnected ? sourceOrigin : $('#main')).focus({preventScroll:true});
   sourceNoticeId = null;
 });
-$('#import-dialog').addEventListener('close',() => { fileRead++; });
+$('#import-dialog').addEventListener('close',() => { fileRead++;intakeRequest?.abort(); });
 $('#toast-close').onclick = dismissToast;
 window.addEventListener('hashchange',() => navigate(location.hash.slice(1) || 'home'));
 window.addEventListener('storage',event => {

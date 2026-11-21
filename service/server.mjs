@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import {answer} from '../qa/answer.mjs';
 import {validateDocument} from '../knowledge/schema.mjs';
 import { closeModel, generate } from '../generation/model.mjs';
+import {analyzeNotice,validateNoticeInput} from '../generation/notice.mjs';
 
 const host = '127.0.0.1';
 const port = Number(process.env.PORT || 4173);
@@ -16,7 +17,9 @@ const files = new Map([
   ['/web/controls.mjs', ['web/controls.mjs', 'text/javascript']],
   ['/web/assets/mountain-dawn.webp', ['web/assets/mountain-dawn.webp', 'image/webp']],
   ['/web/app.mjs', ['web/app.mjs', 'text/javascript']],
+  ['/web/notice-relations.mjs', ['web/notice-relations.mjs', 'text/javascript']],
   ['/knowledge/data.mjs', ['knowledge/data.mjs', 'text/javascript']],
+  ['/knowledge/notices.mjs', ['knowledge/notices.mjs', 'text/javascript']],
   ['/knowledge/schema.mjs', ['knowledge/schema.mjs', 'text/javascript']],
   ['/temporal/graph.mjs', ['temporal/graph.mjs', 'text/javascript']],
   ['/retrieval/rank.mjs', ['retrieval/rank.mjs', 'text/javascript']],
@@ -26,7 +29,7 @@ function json(res, code, payload) {
   res.writeHead(code, {'Content-Type':'application/json; charset=utf-8', 'Cache-Control':'no-store'});
   res.end(JSON.stringify(payload));
 }
-async function parseRequest(req) {
+async function parseRequest(req, intake = false) {
   const chunks = [];
   let length = 0;
   for await (const chunk of req) {
@@ -35,8 +38,9 @@ async function parseRequest(req) {
     chunks.push(chunk);
   }
   const body = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-  if (!body || typeof body.question !== 'string' || !body.question.trim() || body.question.length > 2000 ||
-      !Array.isArray(body.docs) || !body.docs.length || body.docs.length > 400) throw Error('问题或资料库格式无效。');
+  if (!body || (!intake && (typeof body.question !== 'string' || !body.question.trim() || body.question.length > 2000)) ||
+      !Array.isArray(body.docs) || (!intake && !body.docs.length) || body.docs.length > 400) throw Error('问题或资料库格式无效。');
+  if (intake) validateNoticeInput(body);
   const validated = [];
   for (const doc of body.docs) { validateDocument(doc, validated); validated.push(doc); }
   return body;
@@ -46,7 +50,7 @@ const server = http.createServer(async (req, res) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   if (!hosts.has(req.headers.host)) return json(res, 403, {error:'请从本站访问。'});
   const path = (req.url || '/').split('?')[0];
-  if (path === '/api/generate') {
+  if (path === '/api/generate' || path === '/api/notices/analyze') {
     if (req.method !== 'POST') return json(res, 405, {error:'请提交问题和资料。'});
     if (req.headers.origin && req.headers.origin !== 'http://' + req.headers.host) return json(res, 403, {error:'仅限同源请求。'});
     if (!(req.headers['content-type'] || '').startsWith('application/json')) return json(res, 415, {error:'请求须为 JSON。'});
@@ -54,8 +58,9 @@ const server = http.createServer(async (req, res) => {
     busy = true;
     try {
       let query;
-      try { query = await parseRequest(req); }
+      try { query = await parseRequest(req,path==='/api/notices/analyze'); }
       catch (err) { return json(res, 400, {error: err instanceof SyntaxError ? '请求 JSON 无效。' : err.message}); }
+      if (path==='/api/notices/analyze') return json(res,200,await analyzeNotice(query.docs,query));
       const {question, date, scope, mode, docs} = query;
       const result = answer(docs, question, {date, scope, mode});
       if (result.researchOnly) return json(res, 422, {error:'研究来源直查请查看原始依据，本地模型仅整理课程条款。'});

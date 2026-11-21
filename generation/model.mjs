@@ -55,6 +55,27 @@ async function launch() {
 
 export function closeModel() { child?.kill(); child = undefined; start = undefined; }
 
+// Shared inference transport for evidence selection and notice intake.
+export async function structuredCompletion({system, input, schema, maxTokens = 1200}) {
+  if (JSON.stringify(input).length > 12000) throw Error('本次通知与关联材料过长，请分批整理。');
+  start ??= launch().catch(err => { start = undefined; throw err; });
+  const {origin, key} = await start;
+  const response = await fetch(origin + '/v1/chat/completions', {
+    method:'POST', headers:{'Content-Type':'application/json',Authorization:'Bearer ' + key},
+    signal:AbortSignal.timeout(100000),
+    body:JSON.stringify({messages:[{role:'system',content:system},{role:'user',content:JSON.stringify(input)}],
+      response_format:{type:'json_schema',json_schema:{name:'notice_analysis',strict:true,schema}},
+      temperature:0,seed:42,max_tokens:maxTokens,stream:false})
+  });
+  if (!response.ok) throw Error('AI 整理服务暂时不可用，请保留原文后重试。');
+  const completion = await response.json();
+  if (completion.choices?.[0]?.finish_reason === 'length') throw Error('AI 整理未完成，请将长通知分段发布。');
+  let data;
+  try { data = JSON.parse(completion.choices[0].message.content); }
+  catch { throw Error('AI 未返回完整的通知整理结果，请重试。'); }
+  return {model:name,data};
+}
+
 export function verifySelection(candidates, selection) {
   const keys = new Set(candidates.map(c=>c.key));
   if (!selection || Array.isArray(selection) || typeof selection !== 'object' ||

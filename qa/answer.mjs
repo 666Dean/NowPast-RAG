@@ -58,9 +58,9 @@ export function answer(docs, question, options = {}) {
   // Replay only sources visible in the requested scope and publication horizon.
   // Now retrieves active claims. Past can match an old location, clause ID or
   // wording, then reopen its subject in the current, scope-specific snapshot.
-  const visible = docs.filter(d => (scope === '全班' || d.scope === '全班' || d.scope === scope) &&
+  const visible = docs.filter(d => (['全班','全校'].includes(scope) || ['全班','全校'].includes(d.scope) || d.scope === scope) &&
     (d.published ? d.published <= date : d.imported <= date));
-  const groups = scope === '全班' ? ['A组','B组'] : [scope];
+  const groups = scope === '全班' ? ['A组','B组'] : scope==='全校'?['计科1班','计科2班']:[scope];
   const nowIds = new Set();
   const historicalIds = new Set();
   for (const topic of new Set(visible.map(d=>d.topic))) {

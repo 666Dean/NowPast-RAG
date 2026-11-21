@@ -7,6 +7,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import assert from 'node:assert/strict';
 import {seed} from '../knowledge/data.mjs';
+import {noticeSeed} from '../knowledge/notices.mjs';
 import {answer} from '../qa/answer.mjs';
 
 const realModel = process.argv.includes('--model');
@@ -36,10 +37,10 @@ async function stop(child) {
   const timer=setTimeout(()=>child.kill('SIGKILL'),5000);
   try {await done;} finally {clearTimeout(timer);}
 }
-async function post(server,name,request,status) {
-  const response=await fetch(server.origin+'/api/generate',{
+async function post(server,name,request,status,{path='/api/generate',docs=seed}={}) {
+  const response=await fetch(server.origin+path,{
     method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({...request,docs:seed}),signal:AbortSignal.timeout(100000)});
+    body:JSON.stringify({...request,docs}),signal:AbortSignal.timeout(100000)});
   const body=await response.json();
   assert.equal(response.status,status,name+': '+JSON.stringify(body));
   log.push({name,request,status:response.status,response:body});
@@ -49,7 +50,7 @@ const missing=await mkdtemp(join(tmpdir(),'nowpast-no-model-'));
 const server=await start(missing);
 try {
   const page=await fetch(server.origin+'/'); assert.equal(page.status,200);
-  for (const path of ['/web/app.mjs','/knowledge/data.mjs','/temporal/graph.mjs','/retrieval/rank.mjs','/qa/answer.mjs']) {
+  for (const path of ['/web/app.mjs','/web/notice-relations.mjs','/knowledge/notices.mjs','/knowledge/data.mjs','/temporal/graph.mjs','/retrieval/rank.mjs','/qa/answer.mjs']) {
     assert.equal((await fetch(server.origin+path)).status,200,path);
   }
   for(const [path,type] of [['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
@@ -63,6 +64,7 @@ try {
   await post(server,'evidence unavailable',{question:'电池费用能报销多少钱？',date:'2026-11-20',scope:'B组'},422);
   await post(server,'model unavailable',{question:'验收地点',date:'2026-11-12',scope:'B组'},503);
   await post(server,'research uses primary sources',{question:'论文和源码的融合方式有什么差异？',date:'2026-11-20',scope:'B组'},422);
+  await post(server,'notice model unavailable',{title:'数据库教室调整',text:'11月27日起，计科2班数据库课教室调整为C205。',published:'2026-11-21',scope:'计科2班'},503,{path:'/api/notices/analyze',docs:noticeSeed});
 } finally {await stop(server.child);}
 
 const examples=[{name:'announced, not yet effective',request:{question:'B组该用什么融合方式？',date:'2026-11-08',scope:'B组'}},
@@ -87,6 +89,16 @@ if (realModel) {
       if(name==='single clause') assert.deepEqual(generated.citations.map(c=>c.id),['M01']);
       if(name==='multi-sentence reason') assert.ok(generated.citations.find(c=>c.id==='R30')?.quote.includes('源于'));
       if(name==='unresolved conflict') assert.deepEqual(generated.citations.map(c=>c.id).sort(),['M03','R21','R22']);
+    }
+    for (const [name,request,prior,value] of [
+      ['teacher room notice',{title:'数据库：11月27日教室调整',text:'自11月27日起，计科2班数据库课教室由B204调整为C205，替代此前的教室安排。上课时间仍为08:00–09:40。'},'DB-ROOM-NEW','C205'],
+      ['teacher assignment notice',{title:'数据库：作业一延期',text:'即日起，计科2班数据库作业一截止时间由11月27日18:00顺延至11月28日18:00，替代此前的截止要求。仍在课程平台提交。'},'DB-DUE-NEW','11月28日18:00']
+    ]) {
+      const result=await post(real,name,{...request,published:'2026-11-21',scope:'计科2班'},200,{path:'/api/notices/analyze',docs:noticeSeed});
+      assert.equal(result.clauses.length,1,name);
+      assert.equal(result.clauses[0].value,value,name);
+      assert.deepEqual(result.clauses[0].supersedes,[prior],name);
+      assert.ok(request.text.includes(result.clauses[0].value),name);
     }
   } finally {await stop(real.child);}
 }

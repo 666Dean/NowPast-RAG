@@ -65,6 +65,7 @@ try {
   await writeFile(new URL('./validation/delivery-source.patch',import.meta.url),workspacePatch);
 
   run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs', 'retrieval/review.test.mjs']);
+  run(['--test','generation/notice.test.mjs','web/notices.test.mjs']);
   run(['evaluation/run.mjs']);
   const results = JSON.parse(await readFile(join(checkout, 'evaluation/results.json'), 'utf8'));
   const failedCurrent = results.rows.filter(row => !row.unboundedExact || !row.scores.NowPast.exact);
