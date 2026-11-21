@@ -70,7 +70,7 @@ export function matchedClue(doc,q) {
 // Keep the requested dimension when checking the annotated topic and value.
 const dimensions = [
   [/几分|多少分|得分|加分|扣分|评分|分值|成绩占比/, /分值|分数|得分|评分|成绩|加分|扣分|\d\s*分(?:$|[^钟])/],
-  [/几元|多少钱|多少元|报销|预算|价格|费用/, /报销|预算|价格|费用|金额|元|人民币/],
+  [/几元|多少钱|多少元|报销|预算|价格|费用/, /报销|预算|价格|费用|金额|人民币|(?:\d+(?:\.\d+)?|[一二三四五六七八九十百千万两]+)\s*元(?!素)/],
   [/几[页字]|多少[页字]|字数|页数/, /页数|字数|[\d百千万]+\s*[页字]/],
   [/几人|多少人|人数/, /人数|[\d一二两三四五六七八九十]+\s*人/]
 ];
@@ -80,7 +80,8 @@ export function routeQuestion(now, past, question) {
   const all = [...now,...past];
   // Dates select snapshots, not subject matter. A date-only fragment must not
   // retrieve a deadline merely because that source also contains a month/day.
-  const parts = withoutDates(question).split(/[，,、；;。！？?!\n]+/u).map(p=>p.trim()).filter(p=>p.replace(/和|与|及|至|到/g,'').trim());
+  const parts = withoutDates(question).split(/[，,、；;。！？?!\n]+|(?:和|与|以及|及)(?=[^，,、；;。！？?!\n]*(?:费用|报销|预算|价格|多少钱|多少元))/u)
+    .map(p=>p.trim()).filter(p=>p.replace(/和|与|及|至|到/g,'').trim());
   for (const part of parts) {
     const expected = dimensions.filter(([trigger])=>trigger.test(part)).map(([,unit])=>unit);
     let hits = [...new Set([...topicMatches(now,part,false),...topicMatches(past,part,false)])];

@@ -8,6 +8,14 @@ import {fileURLToPath} from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const withModel = process.argv.includes('--model');
+const refIndex = process.argv.indexOf('--ref');
+const sourceRef = refIndex >= 0 ? process.argv[refIndex + 1] : null;
+if (refIndex >= 0) assert.ok(sourceRef, '--ref requires a commit or ref.');
+const git = args => execFileSync('git', args, {cwd:root, encoding:'utf8', maxBuffer:16*1024*1024});
+const sourceCommit = git(['rev-parse','--verify',(sourceRef || 'HEAD')+'^{commit}']).trim();
+const workspaceStatus = git(['status','--porcelain=v1','--untracked-files=all']);
+const workspacePatch = sourceRef ? '' : git(['diff','--binary','HEAD']);
+const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 if (withModel) {
   assert.ok(process.env.NOWPAST_MODEL_HOME, 'Set NOWPAST_MODEL_HOME to the prepared model cache.');
 }
@@ -27,17 +35,36 @@ function run(args) {
 }
 
 try {
-  // Use versioned files and new delivery files, excluding ignored model caches.
-  const filenames = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'], {
-    cwd: root, encoding: 'utf8'
-  }).split('\0').filter(Boolean);
-  for (const filename of new Set(filenames)) {
+  const filenames = sourceRef
+    ? git(['ls-tree','-r','--name-only','-z',sourceCommit]).split('\0').filter(Boolean)
+    : git(['ls-files','--cached','--others','--exclude-standard','-z']).split('\0').filter(Boolean);
+  const sourceFiles = {};
+  for (const filename of [...new Set(filenames)].sort()) {
     const target = join(checkout, filename);
-    await mkdir(dirname(target), {recursive: true});
-    await copyFile(join(root, filename), target);
+    await mkdir(dirname(target), {recursive:true});
+    if (sourceRef) {
+      const bytes = execFileSync('git',['show',sourceCommit+':'+filename],{cwd:root,maxBuffer:16*1024*1024});
+      await writeFile(target,bytes);
+    } else {
+      try { await copyFile(join(root, filename), target); }
+      catch (error) { if(error.code==='ENOENT') continue; throw error; }
+    }
+    if (/\.(?:mjs|py|html|css)$/.test(filename) || filename==='package.json') {
+      sourceFiles[filename] = digest(await readFile(target));
+    }
   }
+  const sourceIdentity = {
+    mode:sourceRef ? 'commit' : 'workspace',
+    commit:sourceCommit,
+    dirty:sourceRef ? false : Boolean(workspaceStatus.trim()),
+    workspaceStatus:sourceRef ? '' : workspaceStatus,
+    trackedPatchSha256:digest(workspacePatch),
+    files:sourceFiles,
+    sourceDigest:digest(JSON.stringify(sourceFiles))
+  };
+  await writeFile(new URL('./validation/delivery-source.patch',import.meta.url),workspacePatch);
 
-  run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs']);
+  run(['--test', 'retrieval/regression.test.mjs', 'generation/citations.test.mjs', 'temporal/dates.test.mjs', 'retrieval/review.test.mjs']);
   run(['evaluation/run.mjs']);
   const results = JSON.parse(await readFile(join(checkout, 'evaluation/results.json'), 'utf8'));
   const failedCurrent = results.rows.filter(row => !row.unboundedExact || !row.scores.NowPast.exact);
@@ -60,7 +87,10 @@ try {
   }
   const report = {
     passed: true,
-    sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], {cwd: root, encoding: 'utf8'}).trim(),
+    sourceCommit,
+    source:sourceIdentity,
+    command:[process.execPath,...process.argv.slice(1)],
+    apiResults:api,
     inputs: results.inputs,
     validationInputs,
     environment: {node: process.version, platform: process.platform, arch: process.arch},

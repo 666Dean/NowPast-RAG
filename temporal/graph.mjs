@@ -1,23 +1,30 @@
 const datePattern = /(?<![\w.-])(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?(?![\d.])/g;
+const rangePattern = /(?<![\w.-])(?:(\d{4})\s*[-年/.]\s*)?(\d{1,2})\s*[-月/.]\s*(\d{1,2})(?:\s*[日号])?\s*(?:至|到|[-–—~～])\s*(?:(\d{4})\s*[-年/.]\s*)?(?:(\d{1,2})\s*[-月/.]\s*)?(\d{1,2})(?:\s*[日号])?(?![\d.])/g;
 const nonDateNumberPattern = /(?:§|第|章节|小节|版本|version|\bv)\s*\d+(?:\.\d+)+|\d+(?:\.\d+)+\s*(?:节|章|版)|(?:比例|比率|阈值|学习率|概率|dropout|温度)\s*(?:为|是|=|：|:)?\s*\d+\.\d+/gi;
 
-function dateMatches(q) {
-  const protectedNumbers = [...q.matchAll(nonDateNumberPattern)];
-  return [...q.matchAll(datePattern)].filter(match => !protectedNumbers.some(number =>
-    match.index < number.index + number[0].length && number.index < match.index + match[0].length));
+function dateMentions(question) {
+  const protectedNumbers = [...question.matchAll(nonDateNumberPattern)];
+  const overlaps = (a,b) => a.index < b.index+b[0].length && b.index < a.index+a[0].length;
+  const ranges = [...question.matchAll(rangePattern)].filter(match=>!protectedNumbers.some(number=>overlaps(match,number)));
+  const singles = [...question.matchAll(datePattern)].filter(match=>
+    ![...protectedNumbers,...ranges].some(other=>overlaps(match,other)));
+  return [...ranges.map(match=>({index:match.index,length:match[0].length,
+    dates:[[match[1],match[2],match[3]],[match[4]||match[1],match[5]||match[2],match[6]]]})),
+    ...singles.map(match=>({index:match.index,length:match[0].length,dates:[[match[1],match[2],match[3]]]}))]
+    .sort((a,b)=>a.index-b.index);
 }
 
-export function withoutDates(q) {
-  let text = q;
-  for (const match of dateMatches(q).reverse()) {
-    text = text.slice(0, match.index) + ' ' + text.slice(match.index + match[0].length);
+export function withoutDates(question) {
+  let text=question;
+  for(const mention of dateMentions(question).reverse()) {
+    text=text.slice(0,mention.index)+' '+text.slice(mention.index+mention.length);
   }
   return text;
 }
 
-export function parseDates(q, reference) {
-  const hits = dateMatches(q);
-  return hits.map(m => (m[1] || reference.slice(0,4))+'-'+m[2].padStart(2,'0')+'-'+m[3].padStart(2,'0'));
+export function parseDates(question, reference) {
+  return dateMentions(question).flatMap(mention=>mention.dates.map(([year,month,day])=>
+    (year||reference.slice(0,4))+'-'+month.padStart(2,'0')+'-'+day.padStart(2,'0')));
 }
 
 export function snapshot(docs, date, scope, topic) {

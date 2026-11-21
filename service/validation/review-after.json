@@ -1,0 +1,683 @@
+[
+  {
+    "question": "B组11/14-11/15的验收地点有变化吗？",
+    "response": {
+      "status": "compare",
+      "label": "版本对照",
+      "summary": "B组 · 验收地点：2026-11-14：工程楼 305 [R21]；科学楼 108 [R22]。2026-11-15：科学楼 108 [R30]。前一日的材料互相冲突。",
+      "date": "2026-11-15",
+      "scope": "B组",
+      "items": [
+        {
+          "doc": {
+            "id": "R21",
+            "title": "课程组 · 现场验收排班",
+            "published": "2026-11-10",
+            "effective": "2026-11-11",
+            "imported": "2026-11-10",
+            "scope": "B组",
+            "topic": "验收地点",
+            "value": "工程楼 305",
+            "text": "§4 调整。B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。",
+            "supersedes": [
+              "M03"
+            ],
+            "aliases": [
+              "去哪验收",
+              "哪里验收",
+              "哪个教室",
+              "机房",
+              "教室",
+              "在哪验收",
+              "答辩地点"
+            ]
+          },
+          "role": "前一日期"
+        },
+        {
+          "doc": {
+            "id": "R22",
+            "title": "实验中心 · 设备场地分配",
+            "published": "2026-11-11",
+            "effective": "2026-11-11",
+            "imported": "2026-11-11",
+            "scope": "B组",
+            "topic": "验收地点",
+            "value": "科学楼 108",
+            "text": "§3 场地。B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。",
+            "supersedes": [
+              "M03"
+            ],
+            "aliases": [
+              "去哪验收",
+              "哪里验收",
+              "哪个教室",
+              "机房",
+              "教室",
+              "在哪验收",
+              "答辩地点"
+            ]
+          },
+          "role": "前一日期"
+        },
+        {
+          "doc": {
+            "id": "R30",
+            "title": "课程组与实验中心联合澄清",
+            "published": "2026-11-15",
+            "effective": "2026-11-14",
+            "imported": "2026-11-17",
+            "scope": "B组",
+            "topic": "验收地点",
+            "value": "科学楼 108",
+            "text": "§1 签发澄清。两份安排源于复现工作站迁移后排班未同步。经双方确认，B 组自 11 月 14 日起统一到科学楼 108 验收，本条同时取代两份场地安排。",
+            "supersedes": [
+              "R21",
+              "R22"
+            ],
+            "aliases": [
+              "去哪验收",
+              "哪里验收",
+              "哪个教室",
+              "机房",
+              "教室",
+              "在哪验收",
+              "答辩地点"
+            ]
+          },
+          "role": "后一日期"
+        }
+      ],
+      "sections": [
+        {
+          "scope": "B组",
+          "topic": "验收地点",
+          "status": "compare",
+          "label": "版本对照",
+          "summary": "2026-11-14：工程楼 305 [R21]；科学楼 108 [R22]。2026-11-15：科学楼 108 [R30]。前一日的材料互相冲突。",
+          "items": [
+            {
+              "doc": {
+                "id": "R21",
+                "title": "课程组 · 现场验收排班",
+                "published": "2026-11-10",
+                "effective": "2026-11-11",
+                "imported": "2026-11-10",
+                "scope": "B组",
+                "topic": "验收地点",
+                "value": "工程楼 305",
+                "text": "§4 调整。B 组验收改至工程楼 305，替代手册 §3.1；其余组按原安排。",
+                "supersedes": [
+                  "M03"
+                ],
+                "aliases": [
+                  "去哪验收",
+                  "哪里验收",
+                  "哪个教室",
+                  "机房",
+                  "教室",
+                  "在哪验收",
+                  "答辩地点"
+                ]
+              },
+              "role": "前一日期"
+            },
+            {
+              "doc": {
+                "id": "R22",
+                "title": "实验中心 · 设备场地分配",
+                "published": "2026-11-11",
+                "effective": "2026-11-11",
+                "imported": "2026-11-11",
+                "scope": "B组",
+                "topic": "验收地点",
+                "value": "科学楼 108",
+                "text": "§3 场地。B 组验收改在科学楼 108，原手册 §3.1 对 B 组停止适用。",
+                "supersedes": [
+                  "M03"
+                ],
+                "aliases": [
+                  "去哪验收",
+                  "哪里验收",
+                  "哪个教室",
+                  "机房",
+                  "教室",
+                  "在哪验收",
+                  "答辩地点"
+                ]
+              },
+              "role": "前一日期"
+            },
+            {
+              "doc": {
+                "id": "R30",
+                "title": "课程组与实验中心联合澄清",
+                "published": "2026-11-15",
+                "effective": "2026-11-14",
+                "imported": "2026-11-17",
+                "scope": "B组",
+                "topic": "验收地点",
+                "value": "科学楼 108",
+                "text": "§1 签发澄清。两份安排源于复现工作站迁移后排班未同步。经双方确认，B 组自 11 月 14 日起统一到科学楼 108 验收，本条同时取代两份场地安排。",
+                "supersedes": [
+                  "R21",
+                  "R22"
+                ],
+                "aliases": [
+                  "去哪验收",
+                  "哪里验收",
+                  "哪个教室",
+                  "机房",
+                  "教室",
+                  "在哪验收",
+                  "答辩地点"
+                ]
+              },
+              "role": "后一日期"
+            }
+          ]
+        }
+      ],
+      "research": []
+    }
+  },
+  {
+    "question": "B组11月8日至12日的融合方式有变化吗？",
+    "response": {
+      "status": "compare",
+      "label": "版本对照",
+      "summary": "B组 · 融合方式：2026-11-08：使用 Hadamard 逐元素乘积 [F01]。2026-11-12：拼接 Past 与 Now 后做线性投影 [B13]。",
+      "date": "2026-11-12",
+      "scope": "B组",
+      "items": [
+        {
+          "doc": {
+            "id": "F01",
+            "title": "GNP 链路预测复现实验手册 v1.0",
+            "published": "2026-11-01",
+            "effective": "2026-11-02",
+            "imported": "2026-11-02",
+            "scope": "全班",
+            "topic": "融合方式",
+            "value": "使用 Hadamard 逐元素乘积",
+            "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+            "supersedes": [],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          "role": "前一日期"
+        },
+        {
+          "doc": {
+            "id": "B13",
+            "title": "B 组源码复现任务补丁 v1.1",
+            "published": "2026-11-07",
+            "effective": "2026-11-10",
+            "imported": "2026-11-08",
+            "scope": "B组",
+            "topic": "融合方式",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+            "supersedes": [
+              "F01"
+            ],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "code-fusion"
+            ]
+          },
+          "role": "后一日期"
+        }
+      ],
+      "sections": [
+        {
+          "scope": "B组",
+          "topic": "融合方式",
+          "status": "compare",
+          "label": "版本对照",
+          "summary": "2026-11-08：使用 Hadamard 逐元素乘积 [F01]。2026-11-12：拼接 Past 与 Now 后做线性投影 [B13]。",
+          "items": [
+            {
+              "doc": {
+                "id": "F01",
+                "title": "GNP 链路预测复现实验手册 v1.0",
+                "published": "2026-11-01",
+                "effective": "2026-11-02",
+                "imported": "2026-11-02",
+                "scope": "全班",
+                "topic": "融合方式",
+                "value": "使用 Hadamard 逐元素乘积",
+                "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+                "supersedes": [],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "paper-fusion"
+                ]
+              },
+              "role": "前一日期"
+            },
+            {
+              "doc": {
+                "id": "B13",
+                "title": "B 组源码复现任务补丁 v1.1",
+                "published": "2026-11-07",
+                "effective": "2026-11-10",
+                "imported": "2026-11-08",
+                "scope": "B组",
+                "topic": "融合方式",
+                "value": "拼接 Past 与 Now 后做线性投影",
+                "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+                "supersedes": [
+                  "F01"
+                ],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "code-fusion"
+                ]
+              },
+              "role": "后一日期"
+            }
+          ]
+        }
+      ],
+      "research": [
+        {
+          "id": "paper-fusion",
+          "topic": "融合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 729",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "作者在 Now Module 一节末尾写到，以 Hadamard 乘积结合过去与当前的嵌入。这里指两路表示的融合。"
+        },
+        {
+          "id": "code-fusion",
+          "topic": "融合方式",
+          "kind": "源码",
+          "title": "GNP.forward · 第 254–260 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L254-L260",
+          "note": "固定提交的联合分支将归一化的 Past 表示和 Now 输出沿最后一维拼接，然后送入线性输出层。"
+        }
+      ]
+    }
+  },
+  {
+    "question": "B组融合方式和设备费用各是什么？",
+    "response": {
+      "status": "unknown",
+      "label": "证据不足",
+      "summary": "B组 · 融合方式：拼接 Past 与 Now 后做线性投影 [B13]。\nB组 · 待补证的问题：“设备费用各是什么”缺少直接回答该事项的资料。",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "items": [
+        {
+          "doc": {
+            "id": "B13",
+            "title": "B 组源码复现任务补丁 v1.1",
+            "published": "2026-11-07",
+            "effective": "2026-11-10",
+            "imported": "2026-11-08",
+            "scope": "B组",
+            "topic": "融合方式",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+            "supersedes": [
+              "F01"
+            ],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "code-fusion"
+            ]
+          },
+          "role": "当前依据"
+        },
+        {
+          "doc": {
+            "id": "F01",
+            "title": "GNP 链路预测复现实验手册 v1.0",
+            "published": "2026-11-01",
+            "effective": "2026-11-02",
+            "imported": "2026-11-02",
+            "scope": "全班",
+            "topic": "融合方式",
+            "value": "使用 Hadamard 逐元素乘积",
+            "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+            "supersedes": [],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          "role": "已被替代"
+        }
+      ],
+      "sections": [
+        {
+          "scope": "B组",
+          "topic": "融合方式",
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "拼接 Past 与 Now 后做线性投影 [B13]。",
+          "items": [
+            {
+              "doc": {
+                "id": "B13",
+                "title": "B 组源码复现任务补丁 v1.1",
+                "published": "2026-11-07",
+                "effective": "2026-11-10",
+                "imported": "2026-11-08",
+                "scope": "B组",
+                "topic": "融合方式",
+                "value": "拼接 Past 与 Now 后做线性投影",
+                "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+                "supersedes": [
+                  "F01"
+                ],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "code-fusion"
+                ]
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "id": "F01",
+                "title": "GNP 链路预测复现实验手册 v1.0",
+                "published": "2026-11-01",
+                "effective": "2026-11-02",
+                "imported": "2026-11-02",
+                "scope": "全班",
+                "topic": "融合方式",
+                "value": "使用 Hadamard 逐元素乘积",
+                "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+                "supersedes": [],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "paper-fusion"
+                ]
+              },
+              "role": "已被替代"
+            }
+          ]
+        },
+        {
+          "scope": "B组",
+          "topic": "待补证的问题",
+          "status": "unknown",
+          "label": "证据不足",
+          "summary": "“设备费用各是什么”缺少直接回答该事项的资料。",
+          "items": []
+        }
+      ],
+      "research": [
+        {
+          "id": "paper-fusion",
+          "topic": "融合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 729",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "作者在 Now Module 一节末尾写到，以 Hadamard 乘积结合过去与当前的嵌入。这里指两路表示的融合。"
+        },
+        {
+          "id": "code-fusion",
+          "topic": "融合方式",
+          "kind": "源码",
+          "title": "GNP.forward · 第 254–260 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L254-L260",
+          "note": "固定提交的联合分支将归一化的 Past 表示和 Now 输出沿最后一维拼接，然后送入线性输出层。"
+        }
+      ]
+    }
+  },
+  {
+    "question": "B组用什么融合方式，设备费用是多少？",
+    "response": {
+      "status": "unknown",
+      "label": "证据不足",
+      "summary": "B组 · 融合方式：拼接 Past 与 Now 后做线性投影 [B13]。\nB组 · 待补证的问题：“设备费用是多少”缺少直接回答该事项的资料。",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "items": [
+        {
+          "doc": {
+            "id": "B13",
+            "title": "B 组源码复现任务补丁 v1.1",
+            "published": "2026-11-07",
+            "effective": "2026-11-10",
+            "imported": "2026-11-08",
+            "scope": "B组",
+            "topic": "融合方式",
+            "value": "拼接 Past 与 Now 后做线性投影",
+            "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+            "supersedes": [
+              "F01"
+            ],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "code-fusion"
+            ]
+          },
+          "role": "当前依据"
+        },
+        {
+          "doc": {
+            "id": "F01",
+            "title": "GNP 链路预测复现实验手册 v1.0",
+            "published": "2026-11-01",
+            "effective": "2026-11-02",
+            "imported": "2026-11-02",
+            "scope": "全班",
+            "topic": "融合方式",
+            "value": "使用 Hadamard 逐元素乘积",
+            "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+            "supersedes": [],
+            "aliases": [
+              "融合算子",
+              "融合口径",
+              "怎么融合",
+              "如何融合",
+              "Hadamard",
+              "线性投影",
+              "逐元素乘积",
+              "拼接"
+            ],
+            "refs": [
+              "paper-fusion"
+            ]
+          },
+          "role": "已被替代"
+        }
+      ],
+      "sections": [
+        {
+          "scope": "B组",
+          "topic": "融合方式",
+          "status": "ok",
+          "label": "有据可查",
+          "summary": "拼接 Past 与 Now 后做线性投影 [B13]。",
+          "items": [
+            {
+              "doc": {
+                "id": "B13",
+                "title": "B 组源码复现任务补丁 v1.1",
+                "published": "2026-11-07",
+                "effective": "2026-11-10",
+                "imported": "2026-11-08",
+                "scope": "B组",
+                "topic": "融合方式",
+                "value": "拼接 Past 与 Now 后做线性投影",
+                "text": "§3 源码组融合方式。B 组改按固定提交的联合分支复现：将 Past 表示归一化，拼接 Past 与 Now 后做线性投影。此条替代手册 §1.1；A 组继续采用论文文字口径。",
+                "supersedes": [
+                  "F01"
+                ],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "code-fusion"
+                ]
+              },
+              "role": "当前依据"
+            },
+            {
+              "doc": {
+                "id": "F01",
+                "title": "GNP 链路预测复现实验手册 v1.0",
+                "published": "2026-11-01",
+                "effective": "2026-11-02",
+                "imported": "2026-11-02",
+                "scope": "全班",
+                "topic": "融合方式",
+                "value": "使用 Hadamard 逐元素乘积",
+                "text": "§1.1 融合方式。论文文字复现采用第 3.2 节的口径：使用 Hadamard 逐元素乘积融合 Past 与 Now 表示。请在报告中注明这是本课程选定的实现。",
+                "supersedes": [],
+                "aliases": [
+                  "融合算子",
+                  "融合口径",
+                  "怎么融合",
+                  "如何融合",
+                  "Hadamard",
+                  "线性投影",
+                  "逐元素乘积",
+                  "拼接"
+                ],
+                "refs": [
+                  "paper-fusion"
+                ]
+              },
+              "role": "已被替代"
+            }
+          ]
+        },
+        {
+          "scope": "B组",
+          "topic": "待补证的问题",
+          "status": "unknown",
+          "label": "证据不足",
+          "summary": "“设备费用是多少”缺少直接回答该事项的资料。",
+          "items": []
+        }
+      ],
+      "research": [
+        {
+          "id": "paper-fusion",
+          "topic": "融合方式",
+          "kind": "论文",
+          "title": "GNP §3.2 · 发表页 729",
+          "url": "https://doi.org/10.1007/978-981-95-7075-1_50",
+          "note": "作者在 Now Module 一节末尾写到，以 Hadamard 乘积结合过去与当前的嵌入。这里指两路表示的融合。"
+        },
+        {
+          "id": "code-fusion",
+          "topic": "融合方式",
+          "kind": "源码",
+          "title": "GNP.forward · 第 254–260 行",
+          "url": "https://github.com/for4ever44/GNP/blob/4bc08b4e818f3b70220f7f0234765b32b7fc403d/gnp.v1.0.py#L254-L260",
+          "note": "固定提交的联合分支将归一化的 Past 表示和 Now 输出沿最后一维拼接，然后送入线性输出层。"
+        }
+      ]
+    }
+  },
+  {
+    "question": "B组使用融合方式需要多少元？",
+    "response": {
+      "status": "unknown",
+      "label": "证据不足",
+      "summary": "未找到能回答此问题的依据。可在资料库核查已有条款，或补充原文。",
+      "date": "2026-11-20",
+      "scope": "B组",
+      "items": [],
+      "sections": []
+    }
+  }
+]
