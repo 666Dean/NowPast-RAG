@@ -65,7 +65,7 @@ NOWPAST_MODEL_HOME=/path/to/models node service/verify-delivery.mjs --model
 
 指定受验源码使用 `--ref <commit>`，例如 `node service/verify-delivery.mjs --ref HEAD --model`，模型缓存变量须同样设置。报告 source.mode=commit 时，从该提交导出源码执行。工作区模式记录 dirty、状态和补丁摘要。source.files、sourceDigest 覆盖运行源码、模型/服务入口、测试与页面模块；modelArtifacts 记录实际权重和运行程序摘要。
 
-本地实现受验提交为 d74c276。GitHub 功能提交与之通过报告源码文件散列核对。报告 service/validation/delivery-check.json 附实际命令、平台和完整 API 返回；campus-no-model.json 保存关闭模型的单独运行结果。
+本地实现受验提交为 d74c276，对应 GitHub 功能源码提交 `96d5d045fa55dcdfa7d712a04e904e6da1972f43`。逐一核对报告中的 25 个可执行输入与 GitHub tree 的 blob 散列，全部一致。PR #10 修复亦核对 21 个输入，全部一致。映射和源码集合摘要在 service/validation/published-source.json。报告 service/validation/delivery-check.json 附指定提交模式的实际命令、平台和完整 API 返回；campus-no-model.json 保存关闭模型的单独运行结果。默认 `node service/verify-delivery.mjs` 的工作区模式也已实际通过，报告明确显示 dirty 和工作区补丁状态。
 
 结果分列如下。
 

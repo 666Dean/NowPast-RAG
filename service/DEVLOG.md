@@ -36,3 +36,13 @@
 从正常 answer 入口验证，论文第3.2节查询现在返回 paper-fusion，日期采用查询选项。含 11 月 8 日与第3.2节的 B组问题，正确返回 F01 当前依据和 B13 待生效补丁。
 
 完整干净副本验收再次通过，开发回归从 9 组增至 13 组。原 38/38、证据角色 9/9、研究引用 4/4、行为 22/22 全部保持通过，真实 Qwen 与 422/503 返回检查通过。报告更新至 service/validation/delivery-check.json。本轮以开发回归和 HTTP 入口验证该修复。
+
+## Issue #12 · 运行评审修复与校务交付
+
+读取 main、PR #10 最新头提交、组长实际运行评审、Issue #12 和固定任务书。复现两种日期范围、并列费用和“逐元素”金额误匹配，先补 5 组失败回归（首次 1/5），再修复到 5/5。实际前后响应保存在 review-before.json、review-after.json 和 REVIEW-12.md。GNP 开发回归合计 18/18。PR #10 修复提交 bdd2a8f，已回复评审。
+
+从受验修复提交另开 codex/campus-notices-engine，功能 PR #13 以 #10 分支为基准并注明依赖。新增原子字段资料，按 asOf、lessonDate、classId、course 和 field 检索。25 日公布通知仅调整 2 班 27 日数据库课的 room，time 保留原课表证据。1 班和下周独立课次保持各自来源。并行通知保留冲突原句，明确澄清后更新。费用和联系人只在对应原文证据存在时回答。
+
+新增 /api/query，旧 answer 与 /api/generate 调用通过兼容验证。校务开发用例单列 10/10，冻结题 38/38、角色 9/9、研究 4/4、行为 22/22。模型关闭 12 项 HTTP 检查，开启 17 项，包括 GNP 三次和校务两次真实 Qwen 响应。环境 macOS arm64、Node v26.13.0，权重和运行程序实际摘要已记录。所有本轮校务数据 source.type=fictional，真实校务资料 0 条。
+
+验收支持 --ref 从指定提交导出源码，工作区模式记录 dirty、状态与补丁。逐项核对 21 个引擎输入与远端 bdd2a8f、25 个校务输入与远端 96d5d04，全部匹配，映射见 published-source.json。联调请求含完整 docs 和实际响应，见 campus-examples.json。剩余为组长页面、本校公开材料、独立评测和本轮 Windows 校务实机复测。
