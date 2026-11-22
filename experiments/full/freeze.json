@@ -1,0 +1,58 @@
+{
+  "configSha256": "1a078a983920c09d93ce72cd3898619cdc42c91cd455ffafe66cdb860e2b0979",
+  "generatorSha256": "ed0ed86d3b1431b30b505984fc8c1b85879282ee3cefc93912a8a1eff725e011",
+  "originFreezeSha256": "ff7ca98726d8d2316b4fb8a8e2df6b9aba81f5604cdcb2a49c40490c6df1fa96",
+  "schoolFreezeSha256": "f5dddcb4591d80b708b57352a4593e35d1fc444a78f09422e3a4de1ed048ee84",
+  "datasets": [
+    {
+      "seed": 11,
+      "file": "seed-11.json.gz",
+      "sha256": "639ac2ee2981cc619ab1bfe214506c1ac1bad21aeee2f5c9a4397aad95dccd69",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000,
+      "uniqueTestQuestions": 11000,
+      "independentTestCheckpoints": 1100
+    },
+    {
+      "seed": 23,
+      "file": "seed-23.json.gz",
+      "sha256": "93685e76a1dc62c8bab922365e4d1baea9201eeaf41b99bd66943543b7898082",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000,
+      "uniqueTestQuestions": 11000,
+      "independentTestCheckpoints": 1100
+    },
+    {
+      "seed": 37,
+      "file": "seed-37.json.gz",
+      "sha256": "0bfa23505fa2ec8eba845de15730b2e6b4780f73d540c268a82e61ab71efd3c4",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000,
+      "uniqueTestQuestions": 11000,
+      "independentTestCheckpoints": 1100
+    },
+    {
+      "seed": 51,
+      "file": "seed-51.json.gz",
+      "sha256": "ef981b299e914276ee59df82e306e2e6e38123ed68d15b31c435b3818f32b762",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000,
+      "uniqueTestQuestions": 11000,
+      "independentTestCheckpoints": 1100
+    },
+    {
+      "seed": 79,
+      "file": "seed-79.json.gz",
+      "sha256": "67c7c50995bd3697c71400bc28e9410ed3048852d06ed1578449de5c5ad2702a",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000,
+      "uniqueTestQuestions": 11000,
+      "independentTestCheckpoints": 1100
+    }
+  ]
+}

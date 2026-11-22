@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "main": "f349740",
+  "viewport": [
+    1440,
+    390
+  ],
+  "checks": [
+    "new workspace + date interval + clarification evidence",
+    "real Qwen through the new workspace",
+    "campus module and field-specific HTTP response on the same origin",
+    "390px query and partial missing evidence"
+  ],
+  "pageErrors": [],
+  "failedResponses": [],
+  "sourceCommit": "ea6229234b68aff53cb5239b0d54636830976fea",
+  "sourceDigest": "0491f938ec5ba19f9144d64ac7aeb2200f12e37417256a90acb58e797e332933"
+}

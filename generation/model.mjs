@@ -73,7 +73,7 @@ export async function structuredCompletion({system, input, schema, maxTokens = 1
   let data;
   try { data = JSON.parse(completion.choices[0].message.content); }
   catch { throw Error('AI 未返回完整的通知整理结果，请重试。'); }
-  return {model:name,data};
+  return {model:name,data,usage:completion.usage || null};
 }
 
 export function verifySelection(candidates, selection) {
@@ -92,10 +92,14 @@ export function verifySelection(candidates, selection) {
 
 // Only let the model choose spans that can be traced byte-for-byte to each source.
 // Every selected item and its precomputed temporal role remain visible.
+export function hasMissingEvidence(result) {
+  return result.status==='unknown' || (result.sections || []).some(section=>section.status==='unknown');
+}
+
 export async function generate(result, question) {
   const evidence = result.sections?.length ? result.sections.flatMap(section =>
     section.items.map(item => ({doc: item.doc, role: section.scope + ' · ' + item.role}))) : result.items;
-  if (result.status === 'unknown' || !evidence.length) throw Error('证据不足，暂时无法生成可核查的原文摘录。');
+  if (hasMissingEvidence(result) || !evidence.length) throw Error('证据不足，暂时无法生成可核查的原文摘录。');
   if (evidence.length > 18) throw Error('本地模型一次最多整理 18 条证据，请缩小主题或日期范围。');
   const candidates = evidence.map(({ doc, role }, i) => {
     const lines = doc.text.match(/[^。！？\n]+[。！？]?/gu)?.map(s => s.trim())

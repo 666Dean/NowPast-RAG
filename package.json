@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node service/server.mjs",
-    "test": "node --test",
+    "test": "node service/run-tests.mjs",
     "eval": "node evaluation/run.mjs",
     "model:prepare": "python generation/prepare_model.py"
   }

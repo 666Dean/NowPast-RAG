@@ -1,0 +1,51 @@
+{
+  "configSha256": "da4ab3b97e85aaa38f24531a72a5233a0e0fee2836d2fbac117c48a373ab6b45",
+  "generatorSha256": "167278b0cdd9cd86c1e51cb1859273d6771dbf8000b9eca58470895d40475768",
+  "datasets": [
+    {
+      "seed": 11,
+      "file": "seed-11.json.gz",
+      "sha256": "8574826ddc2b6aca38363d45a1c8815ddde15c792fa066af5b26bf51ec70805c",
+      "baseDatasetSha256": "585e33848a45003dc9e38f5c28585368e54d24f260db665a890c7a36c6b56c8b",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000
+    },
+    {
+      "seed": 23,
+      "file": "seed-23.json.gz",
+      "sha256": "2d13875af338d544a391cd28b58a012cde102be1b9308d157f8d2862bc6f559a",
+      "baseDatasetSha256": "36c018d5e290081c4c8ca5bdd2c946638638d6df699d3bc0184238ec29c587a3",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000
+    },
+    {
+      "seed": 37,
+      "file": "seed-37.json.gz",
+      "sha256": "253f5067f07106e5f35f51ffd4c0e20fe55eb65fdb357239e32d049617988ef8",
+      "baseDatasetSha256": "5590f62bf1760ba6701ccd200a28f090d4ca3d6d56602ce3cb2e02c5ae8cfb31",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000
+    },
+    {
+      "seed": 51,
+      "file": "seed-51.json.gz",
+      "sha256": "4b8e97cdbb624030abe1e4ce5e3d754e8cc344362b64d8afe80a8fd32a2e541f",
+      "baseDatasetSha256": "681546547808bd34da5147b8c168f9cb4603cfe9f7319c63cf5c6f53775b5421",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000
+    },
+    {
+      "seed": 79,
+      "file": "seed-79.json.gz",
+      "sha256": "fd2eb087491998f32d9aa5c6776d1a8c46ca85a2c2d054d48e87aba26c5d8958",
+      "baseDatasetSha256": "15427268e47227b4600e971fccdae45c2f991466301c86e543706274b8664fed",
+      "notices": 1470,
+      "questions": 13000,
+      "testQuestions": 11000
+    }
+  ]
+}

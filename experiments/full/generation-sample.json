@@ -1,0 +1,1385 @@
+{
+  "freezeSha256": "89a9672de712ff626339791b1254e37e3bcddd4d682dc3ff2c2b85096a9c01e2",
+  "samples": [
+    {
+      "seed": 11,
+      "id": "s11-w28-q147",
+      "scene": "normal",
+      "world": "s11-w28"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w31-q169",
+      "scene": "room-before",
+      "world": "s11-w31"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w34-q191",
+      "scene": "room-change",
+      "world": "s11-w34"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w38-q3",
+      "scene": "time-change",
+      "world": "s11-w38"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w41-q25",
+      "scene": "replacement-chain",
+      "world": "s11-w41"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w44-q47",
+      "scene": "conflict",
+      "world": "s11-w44"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w47-q69",
+      "scene": "conflict-missing-fee",
+      "world": "s11-w47"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w50-q91",
+      "scene": "clarification",
+      "world": "s11-w50"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w53-q113",
+      "scene": "homework-extension",
+      "world": "s11-w53"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w56-q135",
+      "scene": "missing-fee",
+      "world": "s11-w56"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w59-q157",
+      "scene": "retroactive-before",
+      "world": "s11-w59"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w18-q137",
+      "scene": "retroactive-after",
+      "world": "s11-w18"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w22-q33",
+      "scene": "late-publication",
+      "world": "s11-w22"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w25-q118",
+      "scene": "late-publication-after",
+      "world": "s11-w25"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w29-q14",
+      "scene": "late-import-before",
+      "world": "s11-w29"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w32-q99",
+      "scene": "late-import-after",
+      "world": "s11-w32"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w35-q184",
+      "scene": "cross-class",
+      "world": "s11-w35"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w39-q80",
+      "scene": "different-lesson",
+      "world": "s11-w39"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w42-q165",
+      "scene": "different-assignment",
+      "world": "s11-w42"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w46-q61",
+      "scene": "not-effective",
+      "world": "s11-w46"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w49-q146",
+      "scene": "announced-future-lesson",
+      "world": "s11-w49"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w44-q0",
+      "scene": "normal",
+      "world": "s11-w44"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w47-q22",
+      "scene": "room-before",
+      "world": "s11-w47"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w50-q44",
+      "scene": "room-change",
+      "world": "s11-w50"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w53-q66",
+      "scene": "time-change",
+      "world": "s11-w53"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w56-q88",
+      "scene": "replacement-chain",
+      "world": "s11-w56"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w59-q110",
+      "scene": "conflict",
+      "world": "s11-w59"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w12-q132",
+      "scene": "conflict-missing-fee",
+      "world": "s11-w12"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w15-q154",
+      "scene": "clarification",
+      "world": "s11-w15"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w18-q176",
+      "scene": "homework-extension",
+      "world": "s11-w18"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w21-q198",
+      "scene": "missing-fee",
+      "world": "s11-w21"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w25-q10",
+      "scene": "retroactive-before",
+      "world": "s11-w25"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w41-q74",
+      "scene": "retroactive-after",
+      "world": "s11-w41"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w44-q159",
+      "scene": "late-publication",
+      "world": "s11-w44"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w48-q55",
+      "scene": "late-publication-after",
+      "world": "s11-w48"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w51-q140",
+      "scene": "late-import-before",
+      "world": "s11-w51"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w55-q36",
+      "scene": "late-import-after",
+      "world": "s11-w55"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w58-q121",
+      "scene": "cross-class",
+      "world": "s11-w58"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w12-q17",
+      "scene": "different-lesson",
+      "world": "s11-w12"
+    },
+    {
+      "seed": 11,
+      "id": "s11-w15-q102",
+      "scene": "different-assignment",
+      "world": "s11-w15"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w49-q21",
+      "scene": "normal",
+      "world": "s23-w49"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w52-q43",
+      "scene": "room-before",
+      "world": "s23-w52"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w55-q65",
+      "scene": "room-change",
+      "world": "s23-w55"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w58-q87",
+      "scene": "time-change",
+      "world": "s23-w58"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w11-q109",
+      "scene": "replacement-chain",
+      "world": "s23-w11"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w14-q131",
+      "scene": "conflict",
+      "world": "s23-w14"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w17-q153",
+      "scene": "conflict-missing-fee",
+      "world": "s23-w17"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w20-q175",
+      "scene": "clarification",
+      "world": "s23-w20"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w23-q197",
+      "scene": "homework-extension",
+      "world": "s23-w23"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w27-q9",
+      "scene": "missing-fee",
+      "world": "s23-w27"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w30-q31",
+      "scene": "retroactive-before",
+      "world": "s23-w30"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w41-q74",
+      "scene": "retroactive-after",
+      "world": "s23-w41"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w44-q159",
+      "scene": "late-publication",
+      "world": "s23-w44"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w48-q55",
+      "scene": "late-publication-after",
+      "world": "s23-w48"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w51-q140",
+      "scene": "late-import-before",
+      "world": "s23-w51"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w55-q36",
+      "scene": "late-import-after",
+      "world": "s23-w55"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w58-q121",
+      "scene": "cross-class",
+      "world": "s23-w58"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w12-q17",
+      "scene": "different-lesson",
+      "world": "s23-w12"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w15-q102",
+      "scene": "different-assignment",
+      "world": "s23-w15"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w18-q187",
+      "scene": "not-effective",
+      "world": "s23-w18"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w22-q83",
+      "scene": "announced-future-lesson",
+      "world": "s23-w22"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w14-q84",
+      "scene": "normal",
+      "world": "s23-w14"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w17-q106",
+      "scene": "room-before",
+      "world": "s23-w17"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w20-q128",
+      "scene": "room-change",
+      "world": "s23-w20"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w23-q150",
+      "scene": "time-change",
+      "world": "s23-w23"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w26-q193",
+      "scene": "replacement-chain",
+      "world": "s23-w26"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w30-q5",
+      "scene": "conflict",
+      "world": "s23-w30"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w33-q27",
+      "scene": "conflict-missing-fee",
+      "world": "s23-w33"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w36-q49",
+      "scene": "clarification",
+      "world": "s23-w36"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w39-q71",
+      "scene": "homework-extension",
+      "world": "s23-w39"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w42-q93",
+      "scene": "missing-fee",
+      "world": "s23-w42"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w45-q115",
+      "scene": "retroactive-before",
+      "world": "s23-w45"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w14-q11",
+      "scene": "retroactive-after",
+      "world": "s23-w14"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w17-q96",
+      "scene": "late-publication",
+      "world": "s23-w17"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w20-q181",
+      "scene": "late-publication-after",
+      "world": "s23-w20"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w24-q77",
+      "scene": "late-import-before",
+      "world": "s23-w24"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w27-q162",
+      "scene": "late-import-after",
+      "world": "s23-w27"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w31-q58",
+      "scene": "cross-class",
+      "world": "s23-w31"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w34-q164",
+      "scene": "different-lesson",
+      "world": "s23-w34"
+    },
+    {
+      "seed": 23,
+      "id": "s23-w38-q60",
+      "scene": "different-assignment",
+      "world": "s23-w38"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w22-q189",
+      "scene": "normal",
+      "world": "s37-w22"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w26-q1",
+      "scene": "room-before",
+      "world": "s37-w26"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w29-q23",
+      "scene": "room-change",
+      "world": "s37-w29"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w32-q45",
+      "scene": "time-change",
+      "world": "s37-w32"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w35-q67",
+      "scene": "replacement-chain",
+      "world": "s37-w35"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w38-q89",
+      "scene": "conflict",
+      "world": "s37-w38"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w41-q111",
+      "scene": "conflict-missing-fee",
+      "world": "s37-w41"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w44-q133",
+      "scene": "clarification",
+      "world": "s37-w44"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w47-q155",
+      "scene": "homework-extension",
+      "world": "s37-w47"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w50-q177",
+      "scene": "missing-fee",
+      "world": "s37-w50"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w53-q199",
+      "scene": "retroactive-before",
+      "world": "s37-w53"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w17-q158",
+      "scene": "retroactive-after",
+      "world": "s37-w17"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w21-q54",
+      "scene": "late-publication",
+      "world": "s37-w21"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w24-q139",
+      "scene": "late-publication-after",
+      "world": "s37-w24"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w28-q35",
+      "scene": "late-import-before",
+      "world": "s37-w28"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w31-q120",
+      "scene": "late-import-after",
+      "world": "s37-w31"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w35-q16",
+      "scene": "cross-class",
+      "world": "s37-w35"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w38-q101",
+      "scene": "different-lesson",
+      "world": "s37-w38"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w41-q186",
+      "scene": "different-assignment",
+      "world": "s37-w41"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w45-q82",
+      "scene": "not-effective",
+      "world": "s37-w45"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w48-q167",
+      "scene": "announced-future-lesson",
+      "world": "s37-w48"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w38-q63",
+      "scene": "normal",
+      "world": "s37-w38"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w41-q85",
+      "scene": "room-before",
+      "world": "s37-w41"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w44-q107",
+      "scene": "room-change",
+      "world": "s37-w44"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w47-q129",
+      "scene": "time-change",
+      "world": "s37-w47"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w50-q151",
+      "scene": "replacement-chain",
+      "world": "s37-w50"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w53-q173",
+      "scene": "conflict",
+      "world": "s37-w53"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w56-q195",
+      "scene": "conflict-missing-fee",
+      "world": "s37-w56"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w10-q7",
+      "scene": "clarification",
+      "world": "s37-w10"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w13-q29",
+      "scene": "homework-extension",
+      "world": "s37-w13"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w16-q51",
+      "scene": "missing-fee",
+      "world": "s37-w16"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w19-q73",
+      "scene": "retroactive-before",
+      "world": "s37-w19"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w40-q116",
+      "scene": "retroactive-after",
+      "world": "s37-w40"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w44-q12",
+      "scene": "late-publication",
+      "world": "s37-w44"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w47-q97",
+      "scene": "late-publication-after",
+      "world": "s37-w47"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w50-q182",
+      "scene": "late-import-before",
+      "world": "s37-w50"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w54-q78",
+      "scene": "late-import-after",
+      "world": "s37-w54"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w57-q163",
+      "scene": "cross-class",
+      "world": "s37-w57"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w11-q59",
+      "scene": "different-lesson",
+      "world": "s37-w11"
+    },
+    {
+      "seed": 37,
+      "id": "s37-w14-q144",
+      "scene": "different-assignment",
+      "world": "s37-w14"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w46-q147",
+      "scene": "normal",
+      "world": "s51-w46"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w49-q169",
+      "scene": "room-before",
+      "world": "s51-w49"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w52-q191",
+      "scene": "room-change",
+      "world": "s51-w52"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w56-q3",
+      "scene": "time-change",
+      "world": "s51-w56"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w59-q25",
+      "scene": "replacement-chain",
+      "world": "s51-w59"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w12-q47",
+      "scene": "conflict",
+      "world": "s51-w12"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w15-q69",
+      "scene": "conflict-missing-fee",
+      "world": "s51-w15"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w18-q91",
+      "scene": "clarification",
+      "world": "s51-w18"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w21-q113",
+      "scene": "homework-extension",
+      "world": "s51-w21"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w24-q135",
+      "scene": "missing-fee",
+      "world": "s51-w24"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w27-q157",
+      "scene": "retroactive-before",
+      "world": "s51-w27"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w44-q53",
+      "scene": "retroactive-after",
+      "world": "s51-w44"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w47-q138",
+      "scene": "late-publication",
+      "world": "s51-w47"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w51-q34",
+      "scene": "late-publication-after",
+      "world": "s51-w51"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w54-q119",
+      "scene": "late-import-before",
+      "world": "s51-w54"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w58-q15",
+      "scene": "late-import-after",
+      "world": "s51-w58"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w11-q100",
+      "scene": "cross-class",
+      "world": "s51-w11"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w14-q185",
+      "scene": "different-lesson",
+      "world": "s51-w14"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w18-q81",
+      "scene": "different-assignment",
+      "world": "s51-w18"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w21-q166",
+      "scene": "not-effective",
+      "world": "s51-w21"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w25-q62",
+      "scene": "announced-future-lesson",
+      "world": "s51-w25"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w12-q21",
+      "scene": "normal",
+      "world": "s51-w12"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w15-q43",
+      "scene": "room-before",
+      "world": "s51-w15"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w18-q65",
+      "scene": "room-change",
+      "world": "s51-w18"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w21-q87",
+      "scene": "time-change",
+      "world": "s51-w21"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w24-q109",
+      "scene": "replacement-chain",
+      "world": "s51-w24"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w27-q152",
+      "scene": "conflict",
+      "world": "s51-w27"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w30-q174",
+      "scene": "conflict-missing-fee",
+      "world": "s51-w30"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w33-q196",
+      "scene": "clarification",
+      "world": "s51-w33"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w37-q8",
+      "scene": "homework-extension",
+      "world": "s51-w37"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w40-q30",
+      "scene": "missing-fee",
+      "world": "s51-w40"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w43-q52",
+      "scene": "retroactive-before",
+      "world": "s51-w43"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w17-q11",
+      "scene": "retroactive-after",
+      "world": "s51-w17"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w20-q96",
+      "scene": "late-publication",
+      "world": "s51-w20"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w23-q181",
+      "scene": "late-publication-after",
+      "world": "s51-w23"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w27-q77",
+      "scene": "late-import-before",
+      "world": "s51-w27"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w30-q162",
+      "scene": "late-import-after",
+      "world": "s51-w30"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w34-q79",
+      "scene": "cross-class",
+      "world": "s51-w34"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w37-q164",
+      "scene": "different-lesson",
+      "world": "s51-w37"
+    },
+    {
+      "seed": 51,
+      "id": "s51-w41-q60",
+      "scene": "different-assignment",
+      "world": "s51-w41"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w44-q63",
+      "scene": "normal",
+      "world": "s79-w44"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w47-q85",
+      "scene": "room-before",
+      "world": "s79-w47"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w50-q107",
+      "scene": "room-change",
+      "world": "s79-w50"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w53-q129",
+      "scene": "time-change",
+      "world": "s79-w53"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w56-q151",
+      "scene": "replacement-chain",
+      "world": "s79-w56"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w59-q173",
+      "scene": "conflict",
+      "world": "s79-w59"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w12-q195",
+      "scene": "conflict-missing-fee",
+      "world": "s79-w12"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w16-q7",
+      "scene": "clarification",
+      "world": "s79-w16"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w19-q29",
+      "scene": "homework-extension",
+      "world": "s79-w19"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w22-q51",
+      "scene": "missing-fee",
+      "world": "s79-w22"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w25-q73",
+      "scene": "retroactive-before",
+      "world": "s79-w25"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w47-q32",
+      "scene": "retroactive-after",
+      "world": "s79-w47"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w50-q117",
+      "scene": "late-publication",
+      "world": "s79-w50"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w54-q13",
+      "scene": "late-publication-after",
+      "world": "s79-w54"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w57-q98",
+      "scene": "late-import-before",
+      "world": "s79-w57"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w10-q183",
+      "scene": "late-import-after",
+      "world": "s79-w10"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w14-q79",
+      "scene": "cross-class",
+      "world": "s79-w14"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w17-q164",
+      "scene": "different-lesson",
+      "world": "s79-w17"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w21-q60",
+      "scene": "different-assignment",
+      "world": "s79-w21"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w24-q145",
+      "scene": "not-effective",
+      "world": "s79-w24"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w28-q41",
+      "scene": "announced-future-lesson",
+      "world": "s79-w28"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w59-q168",
+      "scene": "normal",
+      "world": "s79-w59"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w12-q190",
+      "scene": "room-before",
+      "world": "s79-w12"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w16-q2",
+      "scene": "room-change",
+      "world": "s79-w16"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w19-q24",
+      "scene": "time-change",
+      "world": "s79-w19"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w22-q46",
+      "scene": "replacement-chain",
+      "world": "s79-w22"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w25-q68",
+      "scene": "conflict",
+      "world": "s79-w25"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w28-q111",
+      "scene": "conflict-missing-fee",
+      "world": "s79-w28"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w31-q133",
+      "scene": "clarification",
+      "world": "s79-w31"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w34-q155",
+      "scene": "homework-extension",
+      "world": "s79-w34"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w37-q177",
+      "scene": "missing-fee",
+      "world": "s79-w37"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w40-q199",
+      "scene": "retroactive-before",
+      "world": "s79-w40"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w20-q11",
+      "scene": "retroactive-after",
+      "world": "s79-w20"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w23-q96",
+      "scene": "late-publication",
+      "world": "s79-w23"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w26-q181",
+      "scene": "late-publication-after",
+      "world": "s79-w26"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w30-q77",
+      "scene": "late-import-before",
+      "world": "s79-w30"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w33-q183",
+      "scene": "late-import-after",
+      "world": "s79-w33"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w37-q79",
+      "scene": "cross-class",
+      "world": "s79-w37"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w40-q164",
+      "scene": "different-lesson",
+      "world": "s79-w40"
+    },
+    {
+      "seed": 79,
+      "id": "s79-w44-q60",
+      "scene": "different-assignment",
+      "world": "s79-w44"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w9-q35",
+      "scene": "school-before",
+      "world": "school-s11-w9"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w0-q91",
+      "scene": "school-change",
+      "world": "school-s11-w0"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w2-q47",
+      "scene": "school-missing-fee",
+      "world": "school-s11-w2"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w4-q3",
+      "scene": "school-missing-time",
+      "world": "school-s11-w4"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w5-q59",
+      "scene": "school-old-title",
+      "world": "school-s11-w5"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w7-q15",
+      "scene": "school-before",
+      "world": "school-s11-w7"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w9-q55",
+      "scene": "school-before",
+      "world": "school-s23-w9"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w1-q11",
+      "scene": "school-change",
+      "world": "school-s23-w1"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w2-q67",
+      "scene": "school-missing-fee",
+      "world": "school-s23-w2"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w4-q23",
+      "scene": "school-missing-time",
+      "world": "school-s23-w4"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w5-q79",
+      "scene": "school-old-title",
+      "world": "school-s23-w5"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w7-q40",
+      "scene": "school-before",
+      "world": "school-s23-w7"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w1-q45",
+      "scene": "school-before",
+      "world": "school-s37-w1"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w3-q1",
+      "scene": "school-change",
+      "world": "school-s37-w3"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w4-q57",
+      "scene": "school-missing-fee",
+      "world": "school-s37-w4"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w6-q13",
+      "scene": "school-missing-time",
+      "world": "school-s37-w6"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w7-q69",
+      "scene": "school-old-title",
+      "world": "school-s37-w7"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w9-q40",
+      "scene": "school-before",
+      "world": "school-s37-w9"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w3-q35",
+      "scene": "school-before",
+      "world": "school-s51-w3"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w4-q91",
+      "scene": "school-change",
+      "world": "school-s51-w4"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w6-q47",
+      "scene": "school-missing-fee",
+      "world": "school-s51-w6"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w8-q3",
+      "scene": "school-missing-time",
+      "world": "school-s51-w8"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w9-q59",
+      "scene": "school-old-title",
+      "world": "school-s51-w9"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w1-q35",
+      "scene": "school-before",
+      "world": "school-s51-w1"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w7-q15",
+      "scene": "school-before",
+      "world": "school-s79-w7"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w8-q71",
+      "scene": "school-change",
+      "world": "school-s79-w8"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w0-q27",
+      "scene": "school-missing-fee",
+      "world": "school-s79-w0"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w1-q83",
+      "scene": "school-missing-time",
+      "world": "school-s79-w1"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w3-q39",
+      "scene": "school-old-title",
+      "world": "school-s79-w3"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w5-q25",
+      "scene": "school-before",
+      "world": "school-s79-w5"
+    }
+  ]
+}

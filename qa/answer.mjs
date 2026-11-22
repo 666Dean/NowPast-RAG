@@ -1,7 +1,8 @@
 import {references} from '../knowledge/data.mjs';
-import {scopes, validDay} from '../knowledge/schema.mjs';
+import {scopes, validDay,validScope} from '../knowledge/schema.mjs';
 import {compact, matchedClue, routeQuestion} from '../retrieval/rank.mjs';
 import {parseDates, snapshot} from '../temporal/graph.mjs';
+import {answerCampus} from './campus.mjs';
 
 const evidence = (docs,role) => docs.map(doc => ({doc,role}));
 const values = docs => docs.map(d => d.value+' ['+d.id+']').join('；');
@@ -42,6 +43,8 @@ function unknown(message,date,scope) {
   return {status:'unknown',label:labels.unknown,summary:message,date,scope,items:[],sections:[]};
 }
 export function answer(docs, question, options = {}) {
+  if(options.domain==='campus') return answerCampus(docs,String(question || '').trim(),options);
+  docs=docs.filter(doc=>doc.kind!=='campus');
   const today = new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date());
   const ref = options.date || today;
   const q = String(question || '').trim();
@@ -49,7 +52,7 @@ export function answer(docs, question, options = {}) {
   const scope = groupMatches.length === 1 ? groupMatches[0] : groupMatches.length > 1 || q.includes('全班') ? '全班' : options.scope || '全班';
   const dates = parseDates(q,ref);
   if (!validDay(ref) || dates.some(d=>!validDay(d)) || dates.length > 2) return unknown('请输入一至两个有效的查询日期。',ref,scope);
-  if (!scopes.includes(scope) || !q) return unknown('请输入问题并选择有效组别。',ref,scope);
+  if (!validScope(scope) || !q) return unknown('请输入问题并选择有效组别。',ref,scope);
   const sorted = [...dates].sort();
   const date = sorted.at(-1) || ref;
   const firstDay = sorted.length === 2 ? sorted[0] : null;

@@ -1,0 +1,11 @@
+{
+  "seeds": [11],
+  "worlds": 2,
+  "coursesPerWorld": 2,
+  "classesPerWorld": 2,
+  "lessonsPerCourse": 2,
+  "assignmentsPerCourse": 2,
+  "versions": 3,
+  "distractorRatio": 0.5,
+  "questionsPerWorld": 80
+}

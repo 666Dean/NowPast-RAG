@@ -1,0 +1,185 @@
+{
+  "freezeSha256": "f5dddcb4591d80b708b57352a4593e35d1fc444a78f09422e3a4de1ed048ee84",
+  "samples": [
+    {
+      "seed": 11,
+      "id": "school-s11-w9-q35",
+      "scene": "school-before",
+      "world": "school-s11-w9"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w0-q91",
+      "scene": "school-change",
+      "world": "school-s11-w0"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w2-q47",
+      "scene": "school-missing-fee",
+      "world": "school-s11-w2"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w4-q3",
+      "scene": "school-missing-time",
+      "world": "school-s11-w4"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w5-q59",
+      "scene": "school-old-title",
+      "world": "school-s11-w5"
+    },
+    {
+      "seed": 11,
+      "id": "school-s11-w7-q15",
+      "scene": "school-before",
+      "world": "school-s11-w7"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w9-q55",
+      "scene": "school-before",
+      "world": "school-s23-w9"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w1-q11",
+      "scene": "school-change",
+      "world": "school-s23-w1"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w2-q67",
+      "scene": "school-missing-fee",
+      "world": "school-s23-w2"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w4-q23",
+      "scene": "school-missing-time",
+      "world": "school-s23-w4"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w5-q79",
+      "scene": "school-old-title",
+      "world": "school-s23-w5"
+    },
+    {
+      "seed": 23,
+      "id": "school-s23-w7-q40",
+      "scene": "school-before",
+      "world": "school-s23-w7"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w1-q45",
+      "scene": "school-before",
+      "world": "school-s37-w1"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w3-q1",
+      "scene": "school-change",
+      "world": "school-s37-w3"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w4-q57",
+      "scene": "school-missing-fee",
+      "world": "school-s37-w4"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w6-q13",
+      "scene": "school-missing-time",
+      "world": "school-s37-w6"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w7-q69",
+      "scene": "school-old-title",
+      "world": "school-s37-w7"
+    },
+    {
+      "seed": 37,
+      "id": "school-s37-w9-q40",
+      "scene": "school-before",
+      "world": "school-s37-w9"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w3-q35",
+      "scene": "school-before",
+      "world": "school-s51-w3"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w4-q91",
+      "scene": "school-change",
+      "world": "school-s51-w4"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w6-q47",
+      "scene": "school-missing-fee",
+      "world": "school-s51-w6"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w8-q3",
+      "scene": "school-missing-time",
+      "world": "school-s51-w8"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w9-q59",
+      "scene": "school-old-title",
+      "world": "school-s51-w9"
+    },
+    {
+      "seed": 51,
+      "id": "school-s51-w1-q35",
+      "scene": "school-before",
+      "world": "school-s51-w1"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w7-q15",
+      "scene": "school-before",
+      "world": "school-s79-w7"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w8-q71",
+      "scene": "school-change",
+      "world": "school-s79-w8"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w0-q27",
+      "scene": "school-missing-fee",
+      "world": "school-s79-w0"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w1-q83",
+      "scene": "school-missing-time",
+      "world": "school-s79-w1"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w3-q39",
+      "scene": "school-old-title",
+      "world": "school-s79-w3"
+    },
+    {
+      "seed": 79,
+      "id": "school-s79-w5-q25",
+      "scene": "school-before",
+      "world": "school-s79-w5"
+    }
+  ]
+}

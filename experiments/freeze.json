@@ -1,0 +1,48 @@
+{
+  "configSha256": "4dc5f8d9e59601563d4bd697fa1ccd37a079bcf44a8efa7c00caaad4d105d3d5",
+  "generatorSha256": "ed2e520c03f959c8fc5444fd61e674cdceb464cb8a37625c38f8f3ec48ddf9cc",
+  "createdAt": "2026-11-21T16:47:03.153Z",
+  "generatorCommit": "49db3e1dea5cfb58b2babfb2bd385999d47d0c2e",
+  "datasets": [
+    {
+      "seed": 11,
+      "file": "seed-11.json.gz",
+      "sha256": "585e33848a45003dc9e38f5c28585368e54d24f260db665a890c7a36c6b56c8b",
+      "notices": 1440,
+      "questions": 12000,
+      "testQuestions": 10000
+    },
+    {
+      "seed": 23,
+      "file": "seed-23.json.gz",
+      "sha256": "36c018d5e290081c4c8ca5bdd2c946638638d6df699d3bc0184238ec29c587a3",
+      "notices": 1440,
+      "questions": 12000,
+      "testQuestions": 10000
+    },
+    {
+      "seed": 37,
+      "file": "seed-37.json.gz",
+      "sha256": "5590f62bf1760ba6701ccd200a28f090d4ca3d6d56602ce3cb2e02c5ae8cfb31",
+      "notices": 1440,
+      "questions": 12000,
+      "testQuestions": 10000
+    },
+    {
+      "seed": 51,
+      "file": "seed-51.json.gz",
+      "sha256": "681546547808bd34da5147b8c168f9cb4603cfe9f7319c63cf5c6f53775b5421",
+      "notices": 1440,
+      "questions": 12000,
+      "testQuestions": 10000
+    },
+    {
+      "seed": 79,
+      "file": "seed-79.json.gz",
+      "sha256": "15427268e47227b4600e971fccdae45c2f991466301c86e543706274b8664fed",
+      "notices": 1440,
+      "questions": 12000,
+      "testQuestions": 10000
+    }
+  ]
+}

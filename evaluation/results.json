@@ -1,10 +1,10 @@
 {
   "inputs": {
     "../knowledge/data.mjs": "cf20c263f3635171",
-    "../knowledge/schema.mjs": "339b6354a929ea4c",
-    "../temporal/graph.mjs": "cc03718c5b681383",
-    "../retrieval/rank.mjs": "aa5e61ab807b4e86",
-    "../qa/answer.mjs": "bbe8bd309abc62b2",
+    "../knowledge/schema.mjs": "2406b1ca64621fe9",
+    "../temporal/graph.mjs": "5dce7eb7df38a0a8",
+    "../retrieval/rank.mjs": "75ed68dee289d648",
+    "../qa/answer.mjs": "b647e88898f97290",
     "./cases.mjs": "42faf3dff7aed56f",
     "./run.mjs": "58752565abd389e9"
   },
@@ -1370,18 +1370,24 @@
           "f1": 1
         },
         "Now": {
-          "predicted": [],
-          "exact": 0,
-          "f1": 0
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
         },
         "NowPast": {
-          "predicted": [],
-          "exact": 0,
-          "f1": 0
+          "predicted": [
+            "X03"
+          ],
+          "exact": 1,
+          "f1": 1
         }
       },
-      "unbounded": [],
-      "unboundedExact": false
+      "unbounded": [
+        "X03"
+      ],
+      "unboundedExact": true
     },
     {
       "id": "X07",
@@ -1410,18 +1416,27 @@
           "f1": 0.6666666666666666
         },
         "Now": {
-          "predicted": [],
-          "exact": 0,
-          "f1": 0
+          "predicted": [
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
         },
         "NowPast": {
-          "predicted": [],
-          "exact": 0,
-          "f1": 0
+          "predicted": [
+            "X05",
+            "X04"
+          ],
+          "exact": 1,
+          "f1": 1
         }
       },
-      "unbounded": [],
-      "unboundedExact": false
+      "unbounded": [
+        "X05",
+        "X04"
+      ],
+      "unboundedExact": true
     },
     {
       "id": "GNP01",
@@ -2143,43 +2158,28 @@
         },
         "Now": {
           "predicted": [
-            "M05",
-            "G01"
+            "G01",
+            "F01"
           ],
-          "exact": 0,
-          "f1": 0.5
+          "exact": 1,
+          "f1": 1
         },
         "NowPast": {
           "predicted": [
-            "M05",
-            "G01"
+            "G01",
+            "F01"
           ],
-          "exact": 0,
-          "f1": 0.5
+          "exact": 1,
+          "f1": 1
         }
       },
       "unbounded": [
-        "M05",
         "G01",
         "F01"
       ],
-      "unboundedExact": false,
+      "unboundedExact": true,
       "gnp": {
         "actual": [
-          {
-            "scope": "A组",
-            "role": "前一日期",
-            "id": "M05",
-            "value": "11 月 22 日 17:00",
-            "refs": []
-          },
-          {
-            "scope": "A组",
-            "role": "后一日期",
-            "id": "M05",
-            "value": "11 月 22 日 17:00",
-            "refs": []
-          },
           {
             "scope": "A组",
             "role": "前一日期",
@@ -2221,7 +2221,7 @@
           "paper-fusion",
           "paper-aggregate"
         ],
-        "exact": false
+        "exact": true
       }
     },
     {

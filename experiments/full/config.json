@@ -1,0 +1,23 @@
+{
+  "version": "deduplicated-campus-school-v1",
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    79
+  ],
+  "worlds": 70,
+  "developmentWorlds": 10,
+  "questionsPerWorld": 200,
+  "topK": 5,
+  "contextCharacters": 6000,
+  "generationSamples": 230,
+  "embedding": "Xenova/bge-small-zh-v1.5",
+  "embeddingRevision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+  "queryInstruction": "为这个句子生成表示以用于检索相关文章：",
+  "embeddingMaxLength": 192,
+  "temperature": 0,
+  "generationSeed": 42,
+  "bootstrapSeed": 20261122
+}

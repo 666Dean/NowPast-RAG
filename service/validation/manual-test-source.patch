@@ -1,0 +1,26 @@
+diff --git a/service/server.mjs b/service/server.mjs
+index 8fced28..e16a705 100644
+--- a/service/server.mjs
++++ b/service/server.mjs
+@@ -11,6 +11,8 @@ const hosts = new Set([host + ':' + port, 'localhost:' + port]);
+ const files = new Map([
+   ['/', ['web/index.html', 'text/html']],
+   ['/index.html', ['web/index.html', 'text/html']],
++  ['/test-campus', ['service/manual-test.html', 'text/html']],
++  ['/service/manual-test.mjs', ['service/manual-test.mjs', 'text/javascript']],
+   ['/web/style.css', ['web/style.css', 'text/css']],
+   ['/web/controls.css', ['web/controls.css', 'text/css']],
+   ['/web/controls.mjs', ['web/controls.mjs', 'text/javascript']],
+diff --git a/service/verify-service.mjs b/service/verify-service.mjs
+index 46ab358..43d4bbb 100644
+--- a/service/verify-service.mjs
++++ b/service/verify-service.mjs
+@@ -53,7 +53,7 @@ try {
+   for (const path of ['/web/app.mjs','/knowledge/data.mjs','/temporal/graph.mjs','/retrieval/rank.mjs','/qa/answer.mjs','/qa/campus.mjs','/temporal/campus.mjs','/knowledge/campus-data.mjs']) {
+     assert.equal((await fetch(server.origin+path)).status,200,path);
+   }
+-  for(const [path,type] of [['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
++  for(const [path,type] of [['/test-campus','text/html'],['/service/manual-test.mjs','text/javascript'],['/web/controls.mjs','text/javascript'],['/web/controls.css','text/css'],['/web/assets/mountain-dawn.webp','image/webp']]) {
+     const response=await fetch(server.origin+path);
+     assert.equal(response.status,200,path);
+     assert.ok(response.headers.get('content-type')?.startsWith(type),path+' MIME');
