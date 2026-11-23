@@ -1,0 +1,60 @@
+{
+  "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 1519,
+      "lfs": null
+    },
+    {
+      "path": "LICENSE",
+      "size": 11343,
+      "lfs": null
+    },
+    {
+      "path": "README.md",
+      "size": 4917,
+      "lfs": null
+    },
+    {
+      "path": "config.json",
+      "size": 659,
+      "lfs": null
+    },
+    {
+      "path": "generation_config.json",
+      "size": 242,
+      "lfs": null
+    },
+    {
+      "path": "merges.txt",
+      "size": 1671839,
+      "lfs": null
+    },
+    {
+      "path": "model.safetensors",
+      "size": 988097824,
+      "lfs": {
+        "size": 988097824,
+        "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "pointer_size": 134
+      }
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 7031645,
+      "lfs": null
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 7305,
+      "lfs": null
+    },
+    {
+      "path": "vocab.json",
+      "size": 2776833,
+      "lfs": null
+    }
+  ]
+}

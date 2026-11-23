@@ -1,0 +1,477 @@
+{
+  "status": "local development validation, not independent test or formal training",
+  "sourceCommit": "5fc19e4dccff383fe6c655ec381ae604ff8b61f2",
+  "reports": [
+    {
+      "path": "training/runs/interface-fix/http-v2-source489a-default.json",
+      "sha256": "0ec8c60de2a71fdd4e0eabae22ecf278b8c8c69a056ea817711bd8c024a85004",
+      "source": "489a7c6610911175e2892e73a1813ec9cac3979c",
+      "sourceDigest": "e199072f9f0ac2e7db1fb63bb8cd8a02eb2eb155dc7ef208d83d551bb04b4076",
+      "variant": "finetuned",
+      "repetitionPenalty": 1,
+      "passed": 2,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 9165.665167000001,
+          "checks": null
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 6.182999999999083,
+          "checks": null
+        },
+        {
+          "name": "room-intake",
+          "status": 503,
+          "ok": false,
+          "ms": 2047.948624999999,
+          "checks": null
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 503,
+          "ok": false,
+          "ms": 45143.690541,
+          "checks": null
+        },
+        {
+          "name": "homework-extension",
+          "status": 503,
+          "ok": false,
+          "ms": 1639.2819999999992,
+          "checks": null
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-v2-source489a-dev.json",
+      "sha256": "0cee04849dacb1ddefc6f2713539fd5c9ab869bd6b1fbc0d621b246739fd9f96",
+      "source": "489a7c6610911175e2892e73a1813ec9cac3979c",
+      "sourceDigest": "e199072f9f0ac2e7db1fb63bb8cd8a02eb2eb155dc7ef208d83d551bb04b4076",
+      "variant": "finetuned",
+      "repetitionPenalty": 1.1,
+      "passed": 3,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 3485.892667,
+          "checks": null
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 6.199000000000069,
+          "checks": null
+        },
+        {
+          "name": "room-intake",
+          "status": 503,
+          "ok": false,
+          "ms": 2229.485875,
+          "checks": null
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 200,
+          "ok": true,
+          "ms": 5262.702416,
+          "checks": null
+        },
+        {
+          "name": "homework-extension",
+          "status": 503,
+          "ok": false,
+          "ms": 1900.2133329999997,
+          "checks": null
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-legacy-source489a-legacy.json",
+      "sha256": "64dfa639139bc41b4b755ae07ce762d8bd528eba5495c3084b765295cb44a8ea",
+      "source": "489a7c6610911175e2892e73a1813ec9cac3979c",
+      "sourceDigest": "e199072f9f0ac2e7db1fb63bb8cd8a02eb2eb155dc7ef208d83d551bb04b4076",
+      "variant": "finetuned",
+      "repetitionPenalty": 1,
+      "passed": 4,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 3920.422291,
+          "checks": null
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 3.4709160000002157,
+          "checks": null
+        },
+        {
+          "name": "room-intake",
+          "status": 200,
+          "ok": true,
+          "ms": 2587.28375,
+          "checks": null
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 200,
+          "ok": true,
+          "ms": 3323.9869579999995,
+          "checks": null
+        },
+        {
+          "name": "homework-extension",
+          "status": 503,
+          "ok": false,
+          "ms": 6987.503583,
+          "checks": null
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-v2-source489a-base.json",
+      "sha256": "022f30605a143da5488e2fc8cb08e440a229bb369213e0feacaddbfcbac6e143",
+      "source": "489a7c6610911175e2892e73a1813ec9cac3979c",
+      "sourceDigest": "e199072f9f0ac2e7db1fb63bb8cd8a02eb2eb155dc7ef208d83d551bb04b4076",
+      "variant": "base",
+      "repetitionPenalty": 1.1,
+      "passed": 2,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 3525.027625,
+          "checks": null
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 2.872458999999708,
+          "checks": null
+        },
+        {
+          "name": "room-intake",
+          "status": 503,
+          "ok": false,
+          "ms": 4020.000166,
+          "checks": null
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 503,
+          "ok": false,
+          "ms": 6096.903542000001,
+          "checks": null
+        },
+        {
+          "name": "homework-extension",
+          "status": 503,
+          "ok": false,
+          "ms": 5752.371375000001,
+          "checks": null
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-legacy-source5fc19-legacy.json",
+      "sha256": "8602b4b25812c479ee76cf9a264192607af7f9a44c45b066f4b8d5ad759f406c",
+      "source": "5fc19e4dccff383fe6c655ec381ae604ff8b61f2",
+      "sourceDigest": "d79c2a3e2bfe6b0aa8c0d8d0528dc8b94fa24431f75de0bf6c639e1eacdfb2e2",
+      "variant": "finetuned",
+      "repetitionPenalty": 1,
+      "passed": 5,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 5035.868583,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 5.560625000000073,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "room-intake",
+          "status": 200,
+          "ok": true,
+          "ms": 2694.349166,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 200,
+          "ok": true,
+          "ms": 3215.580917,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "homework-extension",
+          "status": 200,
+          "ok": true,
+          "ms": 2583.128832999999,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-v2-source5fc19-v2dev.json",
+      "sha256": "f08923188a4e3ec22ac4588c6fe2e38cf25a73faaae483b8b4d5333c78a50a1a",
+      "source": "5fc19e4dccff383fe6c655ec381ae604ff8b61f2",
+      "sourceDigest": "d79c2a3e2bfe6b0aa8c0d8d0528dc8b94fa24431f75de0bf6c639e1eacdfb2e2",
+      "variant": "finetuned",
+      "repetitionPenalty": 1.1,
+      "passed": 3,
+      "total": 5,
+      "cases": [
+        {
+          "name": "quotes",
+          "status": 200,
+          "ok": true,
+          "ms": 3376.804792,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "conflict-fee",
+          "status": 422,
+          "ok": true,
+          "ms": 5.5871250000000146,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "room-intake",
+          "status": 503,
+          "ok": false,
+          "ms": 1488.785875,
+          "checks": {
+            "grounded": false,
+            "complete": false,
+            "identityAndDates": false
+          }
+        },
+        {
+          "name": "new-course-two-fields",
+          "status": 200,
+          "ok": true,
+          "ms": 4735.288333,
+          "checks": {
+            "grounded": true,
+            "complete": true,
+            "identityAndDates": true
+          }
+        },
+        {
+          "name": "homework-extension",
+          "status": 503,
+          "ok": false,
+          "ms": 1700.6501250000001,
+          "checks": {
+            "grounded": false,
+            "complete": false,
+            "identityAndDates": false
+          }
+        }
+      ]
+    },
+    {
+      "path": "training/runs/interface-fix/http-legacy-source5fc19-seven-seven-lessons.json",
+      "sha256": "b92e33fec1024f8731071148e11f55d0e180bb0dbdc226d66d89e2a8baa8dfa0",
+      "source": "5fc19e4dccff383fe6c655ec381ae604ff8b61f2",
+      "sourceDigest": "d79c2a3e2bfe6b0aa8c0d8d0528dc8b94fa24431f75de0bf6c639e1eacdfb2e2",
+      "variant": "finetuned",
+      "repetitionPenalty": 1,
+      "passed": 0,
+      "total": 1,
+      "cases": [
+        {
+          "name": "seven-lessons",
+          "status": 503,
+          "ok": false,
+          "ms": 12135.370417,
+          "checks": {
+            "grounded": false,
+            "complete": false,
+            "identityAndDates": false
+          }
+        }
+      ]
+    }
+  ],
+  "nodeTests": {
+    "pass": 82,
+    "fail": 0
+  },
+  "pythonTests": {
+    "prompting": 3,
+    "dataAndLossWithGpu": 3
+  },
+  "delivery": {
+    "path": "service/validation/delivery-check.json",
+    "passed": true,
+    "frozen": 38,
+    "roles": 9,
+    "research": 4,
+    "behavior": 22,
+    "realModelHttp": 20
+  },
+  "humanReviewGate": {
+    "expectedExit": 2,
+    "actualExit": 2,
+    "formalTrainingAllowed": false,
+    "nErrors": 500,
+    "examples": [
+      "pending/failing/unattributed review train-002120-0",
+      "pending/failing/unattributed review train-003080-1",
+      "pending/failing/unattributed review train-003080-2",
+      "pending/failing/unattributed review train-002640-2",
+      "pending/failing/unattributed review train-000480-4",
+      "pending/failing/unattributed review train-003440-0",
+      "pending/failing/unattributed review train-000280-0",
+      "pending/failing/unattributed review train-003640-3",
+      "pending/failing/unattributed review train-003560-1",
+      "pending/failing/unattributed review train-002000-3"
+    ]
+  },
+  "trainingChanges": "none; adapter remains 1k tooling smoke",
+  "pythonRuntimeChange": "3.12.14 external interpreter disappeared; recovery 3.12.16 official standalone, same installed libraries and unchanged adapter",
+  "limitations": [
+    "v2 free raw intake not accepted: 3/5 development probes, not blind accuracy",
+    "7-clause grammar supports complete atomic publication in unit tests, real model missed C105/C106/C107 and was rejected",
+    "120k training, scale curves, independent model matrix and deployment remain unrun"
+  ],
+  "offline": {
+    "path": "training/runs/offline/finetuned.json",
+    "sourceCommit": "5fc19e4dccff383fe6c655ec381ae604ff8b61f2",
+    "externalBlocked": true,
+    "pass": 5,
+    "total": 5,
+    "identity": {
+      "baseRevision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "base": {
+        "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "bytes": 988097824
+      },
+      "adapter": {
+        "sha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381",
+        "bytes": 724268
+      },
+      "tokenizer": {
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "bytes": 7031645
+      },
+      "chatTemplate": {
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "bytes": 7305
+      },
+      "runtime": {
+        "backend": "mlx",
+        "python": {
+          "sha256": "54788b15120aa4f534da3f59b59f46658a9bfdc3d3d9c8b3af1459002e307c90",
+          "bytes": 18652456
+        },
+        "decoding": "outlines-json-schema",
+        "repetitionPenalty": 1,
+        "repetitionContext": 256,
+        "dependencies": {
+          "sha256": "84ee08f3e9f62d1076e576a67453725a5c23553c8452f26a2f02af4703c02322",
+          "bytes": 862
+        },
+        "worker": {
+          "sha256": "f2756565ecfa2c8f309dc375daf328afc721e0d40a221bb53bda561e4fae4a38",
+          "bytes": 4408
+        },
+        "prompting": {
+          "sha256": "da3630e36eb4e7b380feb7a1064cdd8610e941136930e679a18da158c44a0500",
+          "bytes": 981
+        }
+      },
+      "quantization": null,
+      "variant": "finetuned"
+    }
+  },
+  "evidenceArtifacts": {
+    "training/runs/worker-output.jsonl": {
+      "bytes": 177751,
+      "sha256": "317073244a58ae33a93ff5f76c9aab753c523b0b5347587ffb1c6cb58ebec351"
+    },
+    "training/runs/worker-events.jsonl": {
+      "bytes": 20231,
+      "sha256": "c9a03f798941776409f742ea5ac29192843e28147593edddc0759087964c63f6"
+    },
+    "training/runs/interface-fix/node-source5fc19.log": {
+      "bytes": 7434,
+      "sha256": "5b0ebdfa3c0ae52aac7cd97ab632a0769e4f0d40562f7d654fc97845775dc726"
+    },
+    "training/runs/interface-fix/prompting-tests-repaired.log": {
+      "bytes": 237,
+      "sha256": "78e0717e5f94176cea8ba68ec73d5ee1acb01212f67d0d8deece90bb6cf72b48"
+    },
+    "training/runs/interface-fix/python-training-tests-repaired-gpu.log": {
+      "bytes": 101,
+      "sha256": "6519dc345dba013e8a2718051700219f63678dd1f1753912ea597265dbcc9240"
+    },
+    "training/runs/offline/finetuned.json": {
+      "bytes": 36516,
+      "sha256": "934a436415ac51ed9989066348ea5ed492898283e864a99df3afb1eb7db2b005"
+    },
+    "training/INPUT-FORMAT-AUDIT.json": {
+      "bytes": 4577,
+      "sha256": "08930dc38415e6b028b9b29241eb5bbe3f135ffc8e02465a90a31f514fd7f983"
+    },
+    "service/validation/delivery-check.json": {
+      "bytes": 113319,
+      "sha256": "05d7a9c281d07987f1761011f3f8c71ae798841d7481e002ff7cbad7f70a1eac"
+    }
+  }
+}

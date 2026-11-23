@@ -1,0 +1,155 @@
+{
+  "scope": "train/valid only; no model selection or independent-test inference",
+  "synthetic": true,
+  "scriptSha256": "681fbd85ca2e940dddb2d1dfaaf1100bb49203773f5ef607115dcd6ac1e6d9cf",
+  "splits": [
+    {
+      "split": "train",
+      "inputSha256": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8",
+      "counts": {
+        "samples": 120000,
+        "task_extract": 36000,
+        "extract": 36000,
+        "full_identity_hint": 36000,
+        "multi_clause": 21678,
+        "task_relation": 30000,
+        "task_qa": 42000,
+        "task_negative": 12000,
+        "mixed_publication_dates": 16255,
+        "clause_publication_differs_envelope": 16255,
+        "clause_import_differs_envelope": 16255,
+        "multiple_activity_identities": 2322,
+        "pending_label": 3481
+      },
+      "clauseCountHistogram": {
+        "0": 3481,
+        "1": 10841,
+        "2": 4870,
+        "3": 10507,
+        "4": 3979,
+        "5": 852,
+        "6": 338,
+        "7": 217,
+        "8": 208,
+        "9": 219,
+        "10": 235,
+        "11": 222,
+        "12": 31
+      },
+      "exampleIds": {
+        "full_identity_hint": [
+          "train-000000-0",
+          "train-000000-1",
+          "train-000001-0"
+        ],
+        "multi_clause": [
+          "train-000000-0",
+          "train-000001-0",
+          "train-000002-0"
+        ],
+        "mixed_publication_dates": [
+          "train-000005-0",
+          "train-000006-0",
+          "train-000007-0"
+        ],
+        "clause_publication_differs_envelope": [
+          "train-000005-0",
+          "train-000006-0",
+          "train-000007-0"
+        ],
+        "clause_import_differs_envelope": [
+          "train-000005-0",
+          "train-000006-0",
+          "train-000007-0"
+        ],
+        "multiple_activity_identities": [
+          "train-000020-0",
+          "train-000021-0",
+          "train-000022-0"
+        ],
+        "pending_label": [
+          "train-000026-0",
+          "train-000029-0",
+          "train-000030-0"
+        ]
+      }
+    },
+    {
+      "split": "valid",
+      "inputSha256": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52",
+      "counts": {
+        "samples": 6000,
+        "task_extract": 1800,
+        "extract": 1800,
+        "full_identity_hint": 1800,
+        "multi_clause": 1086,
+        "task_relation": 1500,
+        "task_qa": 2100,
+        "task_negative": 600,
+        "mixed_publication_dates": 815,
+        "clause_publication_differs_envelope": 815,
+        "clause_import_differs_envelope": 815,
+        "multiple_activity_identities": 116,
+        "pending_label": 169
+      },
+      "clauseCountHistogram": {
+        "0": 169,
+        "1": 545,
+        "2": 244,
+        "3": 528,
+        "4": 198,
+        "5": 39,
+        "6": 16,
+        "7": 9,
+        "8": 7,
+        "9": 15,
+        "10": 10,
+        "11": 17,
+        "12": 3
+      },
+      "exampleIds": {
+        "full_identity_hint": [
+          "valid-000000-0",
+          "valid-000000-1",
+          "valid-000001-0"
+        ],
+        "multi_clause": [
+          "valid-000000-0",
+          "valid-000001-0",
+          "valid-000002-0"
+        ],
+        "mixed_publication_dates": [
+          "valid-000005-0",
+          "valid-000006-0",
+          "valid-000007-0"
+        ],
+        "clause_publication_differs_envelope": [
+          "valid-000005-0",
+          "valid-000006-0",
+          "valid-000007-0"
+        ],
+        "clause_import_differs_envelope": [
+          "valid-000005-0",
+          "valid-000006-0",
+          "valid-000007-0"
+        ],
+        "multiple_activity_identities": [
+          "valid-000020-0",
+          "valid-000021-0",
+          "valid-000022-0"
+        ],
+        "pending_label": [
+          "valid-000026-0",
+          "valid-000029-0",
+          "valid-000030-0"
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    "Full oracle world identity is supplied to training extraction. Live intake supplies only source-proven hints. Training-format diagnostics cannot establish free-notice accuracy.",
+    "Some extraction samples concatenate notices with distinct publication/import dates. Live teacher submission has one envelope publication/import date. These conditions must be reported separately, not silently treated as identical.",
+    "Literal-absence counters are lexical diagnostics, not proof of semantic mistakes. Source metadata dates may be explicit inside quotes.",
+    "This audit does not approve the 500 human semantic reviews and does not change labels, checkpoints or frozen test data."
+  ]
+}

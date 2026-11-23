@@ -1,0 +1,11 @@
+{
+  "version": "qwen-campus-v2",
+  "seed": 20261123,
+  "splits": {"train": 24000, "valid": 1200, "test": 2400},
+  "samplesPerWorld": 5,
+  "nested": [1000, 10000, 50000, 100000],
+  "contextLimit": 2048,
+  "humanTrainReview": 500,
+  "leaderReview": 200,
+  "holdout": "test has separate prose family, relation combinations and longer chains"
+}

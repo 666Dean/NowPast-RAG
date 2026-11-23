@@ -1,0 +1,186 @@
+{
+  "status": "development diagnostics, not independent test or formal training",
+  "sourceCommit": "fc6cb181367570e1cad94680a9584dfe357e62cb",
+  "fixtureSha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+  "synthetic": true,
+  "dataSeeds": [
+    703,
+    1907
+  ],
+  "modelTrainingChanges": "none; unchanged 1k smoke adapter",
+  "comparability": "identical fixtures/model identity/repetition penalty 1.1; schemas and program validators changed, not a pure model gain",
+  "reports": [
+    {
+      "path": "training/runs/raw-notices/legacy-source17b56.json",
+      "sha256": "bd39814c59d112e933ded2cb3e0a0a859d7a185c84a1875ef819cc918c580759",
+      "sourceCommit": "17b56f1d5e5ae26b29466a0d13b3a8192ebbba4e",
+      "sourceDigest": "67739731e95013fbf528cda4e9e578904242ea2363945a7f675815a222a79778",
+      "mode": "legacy",
+      "fixtureSha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+      "summary": {
+        "n": 15,
+        "pass": 3,
+        "published": 9,
+        "correctPublished": 1,
+        "incorrectPublished": 8,
+        "rejected": 6,
+        "correctPending": 2,
+        "modelRunFailure": 0,
+        "promptTokens": 4311,
+        "completionTokens": 1957,
+        "p50ms": 1763.6454169999997,
+        "p95ms": 8437.939166999999
+      }
+    },
+    {
+      "path": "training/runs/raw-notices/legacy-sourcefc6cb.json",
+      "sha256": "c649786cf4a0ad6eb1089de92cc4a00574b804b888dfcd9555db25dc0ecb2193",
+      "sourceCommit": "fc6cb181367570e1cad94680a9584dfe357e62cb",
+      "sourceDigest": "bb6290b43edec9c6bd340bb4d3bc985d34ff3048de323954f35f6223acdc2cf9",
+      "mode": "legacy",
+      "fixtureSha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+      "summary": {
+        "n": 15,
+        "pass": 8,
+        "published": 5,
+        "correctPublished": 5,
+        "incorrectPublished": 0,
+        "rejected": 10,
+        "correctPending": 3,
+        "modelRunFailure": 0,
+        "promptTokens": 4287,
+        "completionTokens": 2199,
+        "p50ms": 2474.2208339999997,
+        "p95ms": 7827.638958
+      }
+    },
+    {
+      "path": "training/runs/raw-notices/v2-source17b56.json",
+      "sha256": "5c983db74cc5e07a2a272c79dfb1098c78d036d110633653742dfb7e9c33549a",
+      "sourceCommit": "17b56f1d5e5ae26b29466a0d13b3a8192ebbba4e",
+      "sourceDigest": "67739731e95013fbf528cda4e9e578904242ea2363945a7f675815a222a79778",
+      "mode": "v2",
+      "fixtureSha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+      "summary": {
+        "n": 15,
+        "pass": 3,
+        "published": 0,
+        "correctPublished": 0,
+        "incorrectPublished": 0,
+        "rejected": 15,
+        "correctPending": 3,
+        "modelRunFailure": 0,
+        "promptTokens": 3042,
+        "completionTokens": 949,
+        "p50ms": 1453.1470829999998,
+        "p95ms": 13271.067209
+      }
+    },
+    {
+      "path": "training/runs/raw-notices/v2-sourcefc6cb.json",
+      "sha256": "affe828493652cc465c39c1b3a24cca40c5c96d4b45a54919aeac123231e7f34",
+      "sourceCommit": "fc6cb181367570e1cad94680a9584dfe357e62cb",
+      "sourceDigest": "bb6290b43edec9c6bd340bb4d3bc985d34ff3048de323954f35f6223acdc2cf9",
+      "mode": "v2",
+      "fixtureSha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+      "summary": {
+        "n": 15,
+        "pass": 3,
+        "published": 0,
+        "correctPublished": 0,
+        "incorrectPublished": 0,
+        "rejected": 15,
+        "correctPending": 3,
+        "modelRunFailure": 0,
+        "promptTokens": 3042,
+        "completionTokens": 949,
+        "p50ms": 1501.9430839999986,
+        "p95ms": 13807.324417
+      }
+    }
+  ],
+  "regression": {
+    "nodePass": 93,
+    "nodeFail": 0,
+    "frozenPass": 38,
+    "rolesPass": 9,
+    "researchPass": 4,
+    "behaviorPass": 22,
+    "realGgufHttpPass": 20,
+    "adapterDefaultHttpPass": 5,
+    "adapterDefaultHttpTotal": 5,
+    "adapterHttpPath": "training/runs/interface-fix/http-legacy-sourcefc6cb-default.json",
+    "adapterHttpSha256": "0cafc5c3bcdae5227b450ae568752de98db4e8881846f6f35237256915b2d329"
+  },
+  "evidenceArtifacts": {
+    "training/runs/raw-notices/v2-source17b56.json": {
+      "bytes": 242218,
+      "sha256": "5c983db74cc5e07a2a272c79dfb1098c78d036d110633653742dfb7e9c33549a"
+    },
+    "training/runs/raw-notices/v2-sourcefc6cb.json": {
+      "bytes": 243455,
+      "sha256": "affe828493652cc465c39c1b3a24cca40c5c96d4b45a54919aeac123231e7f34"
+    },
+    "training/runs/raw-notices/legacy-sourcefc6cb.json": {
+      "bytes": 150315,
+      "sha256": "c649786cf4a0ad6eb1089de92cc4a00574b804b888dfcd9555db25dc0ecb2193"
+    },
+    "training/runs/raw-notices/legacy-source17b56.json": {
+      "bytes": 149325,
+      "sha256": "bd39814c59d112e933ded2cb3e0a0a859d7a185c84a1875ef819cc918c580759"
+    },
+    "training/runs/raw-notices/legacy-source17b56.log": {
+      "bytes": 1715,
+      "sha256": "1f1e7a9fe91e27d05401c58ce592df77f31ef4567349036f46b9904385bf18b9"
+    },
+    "training/runs/raw-notices/v2-sourcefc6cb.log": {
+      "bytes": 1655,
+      "sha256": "d5c87f3a4ff523ad9089d8d0b2a6b2d4f6fa94eec22e772136a037281f773852"
+    },
+    "training/runs/raw-notices/v2-source17b56.log": {
+      "bytes": 1603,
+      "sha256": "ce1f056cc622daa641f397d481a87fc4e3be3d933039599cfde95b2e2611e991"
+    },
+    "training/runs/raw-notices/legacy-sourcefc6cb.log": {
+      "bytes": 1955,
+      "sha256": "0b517fe6d9e486ca9e768e37f83285dc77bc12e4e9a0216f5b8d92219a0cc0f2"
+    },
+    "training/runs/raw-notices/anchor-before.log": {
+      "bytes": 6430,
+      "sha256": "8a696d7f3a57fcf2bc296c98e565c856f1b85cd22e00d9fd63a4a84653d299cd"
+    },
+    "training/runs/raw-notices/node-sourcefc6cb.log": {
+      "bytes": 8464,
+      "sha256": "94b700023ac301b72d292a33214f45295af5657b38f3d385b148de16d0e79d3b"
+    },
+    "training/runs/raw-notices/rumor-before.log": {
+      "bytes": 5573,
+      "sha256": "93198e9feffd8ba5fcb11bb32205f49b38f0febdf490e42d909ae059a7ae5c6c"
+    },
+    "training/runs/raw-notices/coverage-before.log": {
+      "bytes": 4189,
+      "sha256": "c154a8fb752f3736bf1663d64399cff1b2edbafc8098b47860fcbb4873fc186e"
+    },
+    "service/validation/delivery-check.json": {
+      "bytes": 113540,
+      "sha256": "c2722fac3eb51fea8f9684245c6495e1db5fedacf7f535b3339e154e73627ba5"
+    }
+  },
+  "limitations": [
+    "15 cases are now observed development data, not independent test",
+    "legacy still rejects 7 of 12 actionable notices",
+    "v2 rejects all 12 actionable notices; 3 correct abstentions do not establish extraction coverage",
+    "no claim of zero unsafe publication outside these 15 cases",
+    "latency includes model warmup and possibly concurrent local verification; no performance gain claim",
+    "formal 120k training remains gated on 500 real human reviews",
+    "seven-lesson real model success not achieved"
+  ],
+  "humanReview": {
+    "required": 500,
+    "completedPassWithReviewer": 0,
+    "path": "training/review/train-500-decisions.csv",
+    "sha256": "63854db513cf7fde862999344a10b008782fb92c26ba077b74d9fed7d675ecf1",
+    "owner": "group leader arranges genuine human reviewers",
+    "formalTrainingAllowed": false
+  }
+}

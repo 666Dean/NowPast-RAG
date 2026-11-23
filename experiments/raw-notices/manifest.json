@@ -1,0 +1,13 @@
+{
+  "purpose": "frozen development diagnostics, not independent test or model selection",
+  "synthetic": true,
+  "seeds": [
+    703,
+    1907
+  ],
+  "n": 15,
+  "sha256": "aed23347caf1353624743350b38bfea385019ec9fb402d2644f735a3deb4fcc4",
+  "gold": "independent explicitly declared events, no answer/snapshot/parser imports",
+  "generatorSha256": "4ac41df35f415a5932dbe828df150b305d65047000b2fb3351f832b7b5564a5c",
+  "configurationSha256": "2e5a35cb91243c55935ecf2b28541ae413b31b6387a230af36127da7a6e86081"
+}

@@ -15,6 +15,11 @@ function requestedFields(question,assignment=false) {
 }
 
 export function answerCampus(docs,question,options) {
+  if(options.compareAsOf){
+    const dates=[options.asOf || options.date,options.compareAsOf];
+    const snapshots=dates.map(asOf=>answerCampus(docs,question,{...options,asOf,compareAsOf:undefined}));
+    return {...snapshots[1],comparison:{dates,snapshots},summary:snapshots.map(s=>s.summary).join('\n\n')};
+  }
   const asOf=options.asOf || options.date;
   const {lessonDate,classId,course}=options;
   const activityId=options.activityId || options.activity;
@@ -38,17 +43,19 @@ export function answerCampus(docs,question,options) {
         const value=doc.value.match(/\d{1,2}[:：]\d{2}(?:\s*[–—-]\s*\d{1,2}[:：]\d{2})?/)?.[0];
         return value && doc.text.includes(value)?[{...doc,value,excerpt:doc.text,campus:{...doc.campus,field:'time'},derivedFrom:'service'}]:[];
       });
-      snapshot={current:project(service.current),past:project(service.past),uncertain:project(service.uncertain)};
+      snapshot={current:project(service.current),past:project(service.past),uncertain:project(service.uncertain),errors:service.errors || []};
     }
     const values=[...new Set(snapshot.current.map(doc=>doc.value))];
     const status=values.length>1?'conflict':values.length?'ok':'unknown';
     const items=snapshot.current.map(doc=>({doc,role:status==='conflict'?'冲突依据':'当前依据'}));
     if(options.history!==false) items.push(...snapshot.past.map(doc=>({doc,role:'已被替代'})));
     items.push(...snapshot.uncertain.map(doc=>({doc,role:'时间待核'})));
+    items.push(...(snapshot.withdrawn || []).map(doc=>({doc,role:'撤销依据'})));
     const summary=status==='unknown'?`${names[field]}缺少截至 ${asOf} 可核查的依据。`:
       status==='conflict'?`${names[field]}存在冲突：`+snapshot.current.map(doc=>`${doc.value} [${doc.id}] 原句：${doc.text}`).join('；'):
       `${names[field]}：${values[0]} `+snapshot.current.map(doc=>`[${doc.id}]`).join(' ');
-    return {field,topic:names[field],scope:classId,status,label:{ok:'有据可查',conflict:'材料冲突',unknown:'证据不足'}[status],values,summary,items};
+    return {field,topic:names[field],scope:classId,status,label:{ok:'有据可查',conflict:'材料冲突',unknown:'证据不足'}[status],values,
+      summary:snapshot.errors?.length?'关系数据未通过核验，请确认原通知。':summary,items,validationErrors:snapshot.errors || []};
   });
   const status=['conflict','unknown','ok'].find(state=>sections.some(section=>section.status===state));
   const items=[...new Map(sections.flatMap(section=>section.items).map(item=>[item.doc.id,item])).values()];

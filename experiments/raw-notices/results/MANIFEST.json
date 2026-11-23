@@ -1,0 +1,29 @@
+{
+  "purpose": "actual development diagnostics for reviewer reproduction, not independent test",
+  "synthetic": true,
+  "copies": "byte-identical to original local inference outputs; source SHA remains that of inference, not publication",
+  "artifacts": {
+    "experiments/raw-notices/results/legacy-source17b56.json": {
+      "bytes": 149325,
+      "sha256": "bd39814c59d112e933ded2cb3e0a0a859d7a185c84a1875ef819cc918c580759"
+    },
+    "experiments/raw-notices/results/legacy-sourcefc6cb.json": {
+      "bytes": 150315,
+      "sha256": "c649786cf4a0ad6eb1089de92cc4a00574b804b888dfcd9555db25dc0ecb2193"
+    },
+    "experiments/raw-notices/results/v2-source17b56.json": {
+      "bytes": 242218,
+      "sha256": "5c983db74cc5e07a2a272c79dfb1098c78d036d110633653742dfb7e9c33549a"
+    },
+    "experiments/raw-notices/results/v2-sourcefc6cb.json": {
+      "bytes": 243455,
+      "sha256": "affe828493652cc465c39c1b3a24cca40c5c96d4b45a54919aeac123231e7f34"
+    },
+    "service/validation/qwen-adaptation-examples.json": {
+      "bytes": 68244,
+      "sha256": "0cafc5c3bcdae5227b450ae568752de98db4e8881846f6f35237256915b2d329"
+    }
+  },
+  "notIncluded": "120k training data, base weights, adapter weights and Python environment remain local",
+  "humanReview": "0/500 completed; no formal training claim"
+}

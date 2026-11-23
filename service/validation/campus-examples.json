@@ -408,7 +408,8 @@
                 },
                 "role": "已被替代"
               }
-            ]
+            ],
+            "validationErrors": []
           },
           {
             "field": "time",
@@ -449,7 +450,8 @@
                 },
                 "role": "当前依据"
               }
-            ]
+            ],
+            "validationErrors": []
           }
         ],
         "fields": {
@@ -1081,7 +1083,8 @@
                 },
                 "role": "已被替代"
               }
-            ]
+            ],
+            "validationErrors": []
           },
           {
             "field": "time",
@@ -1122,7 +1125,8 @@
                 },
                 "role": "当前依据"
               }
-            ]
+            ],
+            "validationErrors": []
           }
         ],
         "fields": {
@@ -1644,7 +1648,8 @@
                 },
                 "role": "已被替代"
               }
-            ]
+            ],
+            "validationErrors": []
           },
           {
             "field": "fee",
@@ -1654,7 +1659,8 @@
             "label": "证据不足",
             "values": [],
             "summary": "费用缺少截至 2026-11-25 可核查的依据。",
-            "items": []
+            "items": [],
+            "validationErrors": []
           }
         ],
         "fields": {

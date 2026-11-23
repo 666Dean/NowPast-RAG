@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "purpose": "frozen development diagnostics, not independent test or model selection",
+  "synthetic": true,
+  "seeds": [703, 1907],
+  "published": "2026-11-19",
+  "scenarios": ["same-room-different-lessons", "same-room-different-courses", "same-deadline-different-assignments", "seven-lessons", "omitted-month", "change-with-unchanged-time"],
+  "pendingScenarios": ["missing-course-and-date", "rumor", "unresolved-place"]
+}

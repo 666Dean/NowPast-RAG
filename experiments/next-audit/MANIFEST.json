@@ -1,0 +1,942 @@
+{
+  "runType": "NEW AUDIT of original outputs, not a rerun of old inference",
+  "sourceCommit": "39f23b55efca7c9a262a8cdf67a1fd73b60194ae",
+  "inventory": [
+    {
+      "path": "experiments/full/REPORT.md",
+      "bytes": 5475,
+      "sha256": "8ff15f8de09dc250227316e94cc82ce9335464deb4e3d5e1e7a047b11f1808fa"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/.gitignore",
+      "bytes": 1,
+      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/config.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/config.json.metadata",
+      "bytes": 100,
+      "sha256": "c975a9945d80a7e2f69016b0c756c6c6709c4d4b0ae2a16ac34a1a7aca438cf4"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/onnx/model_quantized.onnx.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/onnx/model_quantized.onnx.metadata",
+      "bytes": 124,
+      "sha256": "8a6248ce8271fb2b1d1b3a7bf405bc3ce48887fc376a6a84b7656757c5024971"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/tokenizer.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "experiments/full/cache/bge/.cache/huggingface/download/tokenizer.json.metadata",
+      "bytes": 100,
+      "sha256": "6a7a166104537e4f1d6d055f74313b855ab47ec7cd18f2f4791dfa871bffc759"
+    },
+    {
+      "path": "experiments/full/cache/bge/config.json",
+      "bytes": 716,
+      "sha256": "d4193ead3a810fd694fa8a31d7fc72fbaebc0668b603e398734bf2f6538ff42f"
+    },
+    {
+      "path": "experiments/full/cache/bge/onnx/model_quantized.onnx",
+      "bytes": 24010842,
+      "sha256": "15b717c382bcb518ba457b93ea6850ede7f4f1cd8937454aa06972366cd19bcc"
+    },
+    {
+      "path": "experiments/full/cache/bge/tokenizer.json",
+      "bytes": 439125,
+      "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26"
+    },
+    {
+      "path": "experiments/full/cache/embedding-model.json",
+      "bytes": 648,
+      "sha256": "de3a57ecfded2115a3c54ed851a41c6a46ad96b54adaa69fb17b565d3ad5fdaf"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-11-146a71b114b7.npz",
+      "bytes": 12314090,
+      "sha256": "71ccc11d6c7d8c20d0c45e32d9532e5d09d4dc23062d2b8aa638af5f31df392e"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-11-9594a414863d.npz",
+      "bytes": 12409056,
+      "sha256": "0e23ed717ac4df8a9baf990b845aa5ec91f09c5ad89faf4a1b81ed625ee6110d"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-11-d691b764dc66.npz",
+      "bytes": 12465975,
+      "sha256": "450f75594955df1372b93626fe90793cd851328cf09cc01a38956d5d3a3d2c08"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-11-eadb356b2b1c.npz",
+      "bytes": 27496810,
+      "sha256": "6947b2f9152cfb50396b8ce1fecda28d034d72eb9165421b0f7164af28d28813"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-11.npz",
+      "bytes": 12314469,
+      "sha256": "b8115e437b2c37fcb51f0b04cc629b05f3b991c29f7e1e40d6f0ac38cf872505"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-23-19bf9271ddfe.npz",
+      "bytes": 12464771,
+      "sha256": "ac3669837a8bbc9b254cb841aa7b348dcc6bc44adf0d93e1bac7ae6e890f9b1d"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-23-8c51f4ce8909.npz",
+      "bytes": 12312864,
+      "sha256": "5644b12843845d5959dd320b85e1b3c614c7909087b30f9ce0688f2282a654a1"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-23-9ff805551a38.npz",
+      "bytes": 27494919,
+      "sha256": "83e66152597245842d1f408582aa6bbb92c2a9d88a41ebcbecb204c244373dfb"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-23.npz",
+      "bytes": 12312930,
+      "sha256": "b1ed4d98a4c4c74f41abe56811ee9d0e7214b68b0430f48e0cd60d0f8ca3a15d"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-37-7c6b517933e2.npz",
+      "bytes": 12311962,
+      "sha256": "667159ead4437374cfe03ccee2d6f222c703dbf9741b9affd50e17be11098a9e"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-37-baa68d07cc7f.npz",
+      "bytes": 12463798,
+      "sha256": "07d0ff3a3b4359d4c153ff688941fab427c34d4ae3b6100f2c473100f4a6f8c4"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-37-eb6764a6460a.npz",
+      "bytes": 27493522,
+      "sha256": "08ad0d9a1330755022cf8f8ac6f6769170bb7c4bd482ba1d5096d7b95991a71c"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-37.npz",
+      "bytes": 12312500,
+      "sha256": "8d7cc6d3684f00d67cfb1b74d815577ccc6cecf4f87077bc4f93e0a7ac39f991"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-51-4010d59b3ce8.npz",
+      "bytes": 12466503,
+      "sha256": "c112ef163b7fe6216cac72701c0ea0a88d95e0a704275bd83b2ad0ba5201d3fe"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-51-7e2df9a67342.npz",
+      "bytes": 27497076,
+      "sha256": "ae52bcfe8691646bc40e653bbe1696de73288f2abefd47563c6fe2d3befcb0d7"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-51-c414614bf6be.npz",
+      "bytes": 12314585,
+      "sha256": "ec96afd5cc3b61dfc4ef45f6cc6bbceacd61e249cf9c5360e160a982a802229a"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-79-aa45edff1407.npz",
+      "bytes": 27495893,
+      "sha256": "e842715ae9d8ac5b6e0ab9ddb3ac978a40dcce9b143d609e7438ff28ec3eef5b"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-79-ceb6c36b989f.npz",
+      "bytes": 12312535,
+      "sha256": "90917f1811dc7f571c0d2c3505652640d2dc3f11f25cc85a42fe5cf3d5aebd0e"
+    },
+    {
+      "path": "experiments/full/cache/embeddings-79-e7c8c03b7418.npz",
+      "bytes": 12464439,
+      "sha256": "aa05da5da1553431f4358bac51530d098ee346e85c51441ff495dea984367ee6"
+    },
+    {
+      "path": "experiments/full/config.json",
+      "bytes": 542,
+      "sha256": "1a078a983920c09d93ce72cd3898619cdc42c91cd455ffafe66cdb860e2b0979"
+    },
+    {
+      "path": "experiments/full/data/seed-11.json.gz",
+      "bytes": 231967,
+      "sha256": "639ac2ee2981cc619ab1bfe214506c1ac1bad21aeee2f5c9a4397aad95dccd69"
+    },
+    {
+      "path": "experiments/full/data/seed-23.json.gz",
+      "bytes": 231810,
+      "sha256": "93685e76a1dc62c8bab922365e4d1baea9201eeaf41b99bd66943543b7898082"
+    },
+    {
+      "path": "experiments/full/data/seed-37.json.gz",
+      "bytes": 231806,
+      "sha256": "0bfa23505fa2ec8eba845de15730b2e6b4780f73d540c268a82e61ab71efd3c4"
+    },
+    {
+      "path": "experiments/full/data/seed-51.json.gz",
+      "bytes": 231908,
+      "sha256": "ef981b299e914276ee59df82e306e2e6e38123ed68d15b31c435b3818f32b762"
+    },
+    {
+      "path": "experiments/full/data/seed-79.json.gz",
+      "bytes": 231800,
+      "sha256": "67c7c50995bd3697c71400bc28e9410ed3048852d06ed1578449de5c5ad2702a"
+    },
+    {
+      "path": "experiments/full/freeze.json",
+      "bytes": 1902,
+      "sha256": "89a9672de712ff626339791b1254e37e3bcddd4d682dc3ff2c2b85096a9c01e2"
+    },
+    {
+      "path": "experiments/full/generate.mjs",
+      "bytes": 4984,
+      "sha256": "ed0ed86d3b1431b30b505984fc8c1b85879282ee3cefc93912a8a1eff725e011"
+    },
+    {
+      "path": "experiments/full/generation-sample.json",
+      "bytes": 27461,
+      "sha256": "c5764f9b3c23b5d44e148d0becbb2583c0aad144adf503e96b435ad094e383af"
+    },
+    {
+      "path": "experiments/full/results/analysis.json",
+      "bytes": 105329,
+      "sha256": "ef836320d5ff11e076f037ad2d82148ba66fb8fee21c05c447e124cf4e77f18b"
+    },
+    {
+      "path": "experiments/full/results/audit.log",
+      "bytes": 1143,
+      "sha256": "be8eadcd89da0490005b0e7362dddf14f856f0730d618462e4fb7978699bfd8e"
+    },
+    {
+      "path": "experiments/full/results/data-audit.json",
+      "bytes": 1620,
+      "sha256": "5adf2c4c3f88f18723386ee4f838648b5abc8e8667c65b6c401ae603285384e4"
+    },
+    {
+      "path": "experiments/full/results/errors.json",
+      "bytes": 76484,
+      "sha256": "f741cdbdc9d100e528fb0b9666ecb59660df1ebe6463eee4597cd555a96fec24"
+    },
+    {
+      "path": "experiments/full/results/evaluate-final.log",
+      "bytes": 2311,
+      "sha256": "bdbbeba829202c29ab80b5f692212ce7541d7694037ed0345eeb07abb45cd3aa"
+    },
+    {
+      "path": "experiments/full/results/generation-progress.json.gz",
+      "bytes": 160661,
+      "sha256": "e3b0f701358b9e321c309b317a080252e1ce28b5313d7df0ffb6502f9f906dbc"
+    },
+    {
+      "path": "experiments/full/results/generation-summary.csv",
+      "bytes": 1815,
+      "sha256": "6842bb43bc61f31ad9fcb0bb55e158ced0f64b507092c4b8e4a1106095352669"
+    },
+    {
+      "path": "experiments/full/results/generation-summary.json",
+      "bytes": 89507,
+      "sha256": "241fbdb119d2c5ee04e641cf9de4da44f00099b502eb28450c88d57fb600b5d2"
+    },
+    {
+      "path": "experiments/full/results/generation.json.gz",
+      "bytes": 161089,
+      "sha256": "949b2b37d0617b05c3fb804bf9acc44372ca7f27b525085c84044d4f091190c0"
+    },
+    {
+      "path": "experiments/full/results/generation.log",
+      "bytes": 15120,
+      "sha256": "5c8c691f379b3b7097f9c41bbea21d45b30a5eb53366db848d3732a83d6ad119"
+    },
+    {
+      "path": "experiments/full/results/gold-expanded-11.json.gz",
+      "bytes": 248761,
+      "sha256": "e2b4382f63c995777bf128b2be0ecb1f2b49780a4eac2823ad3e4831e2bd733d"
+    },
+    {
+      "path": "experiments/full/results/gold-expanded-23.json.gz",
+      "bytes": 248666,
+      "sha256": "a1fe3fabcb65a8a606bf73a55e1b6c832c3f75741704ed25ee6d74d19c004422"
+    },
+    {
+      "path": "experiments/full/results/gold-expanded-37.json.gz",
+      "bytes": 248720,
+      "sha256": "df2f201ca1a1f50c9faf0c93d94c3bd3edf10fdd595004a1325fb7caa0cd049f"
+    },
+    {
+      "path": "experiments/full/results/gold-expanded-51.json.gz",
+      "bytes": 248756,
+      "sha256": "5be56f8f6900d90428366b08c16256d583fd84b61950cd5b657a925d45458d0d"
+    },
+    {
+      "path": "experiments/full/results/gold-expanded-79.json.gz",
+      "bytes": 249115,
+      "sha256": "7fad84e6649d19f53cb580d0ae4058b9eefa726967508951b3a0f7a61c0e9d4c"
+    },
+    {
+      "path": "experiments/full/results/latency.csv",
+      "bytes": 1537,
+      "sha256": "ad797ea92033ea622028a314cec470ddb86817f0850fd2a8b852879978aa47f2"
+    },
+    {
+      "path": "experiments/full/results/model-cache.json",
+      "bytes": 448966,
+      "sha256": "f25d0ba9dc23055882e66946539bfe127ab55db96248c3ad24a951a7c8947f31"
+    },
+    {
+      "path": "experiments/full/results/ranks-11.json.gz",
+      "bytes": 549040,
+      "sha256": "ea6f7e19dc99954aaaf6d8a3f6831ef7e9d4b908e9ce29d695ea6051f3915e6e"
+    },
+    {
+      "path": "experiments/full/results/ranks-23.json.gz",
+      "bytes": 551109,
+      "sha256": "a9944215a95d082392295e6f4fb5f7a94c53cfc53c3977e4a5b21f9d130e4071"
+    },
+    {
+      "path": "experiments/full/results/ranks-37.json.gz",
+      "bytes": 562547,
+      "sha256": "0c4336feee9e37902a38c22e38efce724bceafd4873116e87c230af2c1503d90"
+    },
+    {
+      "path": "experiments/full/results/ranks-51.json.gz",
+      "bytes": 559313,
+      "sha256": "321e3e1236a8244f7440c8644e745759351b5a5edf1cfd189a763f3cf3938ad3"
+    },
+    {
+      "path": "experiments/full/results/ranks-79.json.gz",
+      "bytes": 548558,
+      "sha256": "98edb7a26a28082dce21a13cfa8e90cda4550c028e8aaebc00d9dad959c90310"
+    },
+    {
+      "path": "experiments/full/results/retrieval-11.json.gz",
+      "bytes": 2539442,
+      "sha256": "e0f5b9cc92b85a9a58cb99806e0e123b71b7d4950d9e86104ca5ea0b95862e08"
+    },
+    {
+      "path": "experiments/full/results/retrieval-23.json.gz",
+      "bytes": 2563129,
+      "sha256": "39502f9d7ae17865015ed1447c7e80e9632336bb0ca28ea4bf3d99d6bdd2e27f"
+    },
+    {
+      "path": "experiments/full/results/retrieval-37.json.gz",
+      "bytes": 2587614,
+      "sha256": "aaf24a0d7a16f9f16037b5672d6b1bf528d02eab4b566cec213fc625b306fc3d"
+    },
+    {
+      "path": "experiments/full/results/retrieval-51.json.gz",
+      "bytes": 2595887,
+      "sha256": "c629d1f1fd6496c9bb4f173690f5d8d08ad574a6dbc502481171e8a218664f11"
+    },
+    {
+      "path": "experiments/full/results/retrieval-79.json.gz",
+      "bytes": 2574287,
+      "sha256": "e07abc5660211e1af712bacfb628028f81861a832b37603bc81f220c527a5220"
+    },
+    {
+      "path": "experiments/full/results/retrieval-final.log",
+      "bytes": 1683,
+      "sha256": "e6120d77a2f3df79c531e26f01e9186e1009d7c6548089b0cd18f8525739b613"
+    },
+    {
+      "path": "experiments/full/results/retrieval-summary.csv",
+      "bytes": 950,
+      "sha256": "c0cf038be89786c39862cd17641c13d4f3d80d27a3a91a0d832d8b74a115c39a"
+    },
+    {
+      "path": "experiments/full/results/retrieval-summary.json",
+      "bytes": 67235,
+      "sha256": "1098ade9e7238d7c218ff71c2b81a30d5248811ff59cd359f28f0aea98836cec"
+    },
+    {
+      "path": "experiments/full/results/retrieval.log",
+      "bytes": 3429,
+      "sha256": "331f61df3cd856cd77b686439c0ec4f2de68cab8c1b700be740124dd20dc707b"
+    },
+    {
+      "path": "experiments/full/results/scale-ranks-11.json.gz",
+      "bytes": 25924,
+      "sha256": "95285841d2a94ff89b5c17f1d1aa19abbd8437cd2b36804540026f577901bdb3"
+    },
+    {
+      "path": "experiments/full/results/scale-ranks-23.json.gz",
+      "bytes": 25569,
+      "sha256": "fb25166705908ab5d6afa862e7b85280c4d56af851e864fae350f3115a394b71"
+    },
+    {
+      "path": "experiments/full/results/scale-ranks-37.json.gz",
+      "bytes": 25860,
+      "sha256": "503bec9c6518c9f204740ff8ce42f52fbb52920316b937dbc3105c7ad2af7249"
+    },
+    {
+      "path": "experiments/full/results/scale-ranks-51.json.gz",
+      "bytes": 26060,
+      "sha256": "a7dc45f67f431334cbf5769b01a2fb8c5ee2b5678b451d7ada5483245232505f"
+    },
+    {
+      "path": "experiments/full/results/scale-ranks-79.json.gz",
+      "bytes": 25862,
+      "sha256": "4b572fe71f914d08df1bc145c39e58f79bc714421db730080e38e701d1ef952a"
+    },
+    {
+      "path": "experiments/full/results/scale-workloads.json",
+      "bytes": 29558,
+      "sha256": "e14c882d56dce66842d591aca89311ba537bc1ec729f31f77cf500738d1fc478"
+    },
+    {
+      "path": "experiments/full/results/scale.log",
+      "bytes": 1541,
+      "sha256": "457e174496c6e68af424305b4a4e09115049a467b4005a0bca7341f712836d3d"
+    }
+  ],
+  "missing": [
+    {
+      "artifact": "raw HTTP completion body / finish_reason",
+      "status": "无法复核：旧 transport 只保存解析后的 data / usage，不保存原始响应字节或 finish_reason"
+    },
+    {
+      "artifact": "old original request byte log",
+      "status": "未保存原始请求日志；本次由固定源码、原候选重建。cacheKey 完全匹配时仅能证明规范 JSON 输入一致，不能称新文件为旧日志"
+    },
+    {
+      "artifact": "old runtime binary at run instant / model cache identity",
+      "status": "权重和当前 binary 可散列，旧 key 未纳入其身份；旧时刻文件是否相同仍未知"
+    }
+  ],
+  "rows": 2070,
+  "inputVerified": 2070,
+  "summary": [
+    {
+      "method": "Vector",
+      "n": 230,
+      "fieldQuestionFailures": 215,
+      "failures": 221,
+      "primaryCauseRows": 221,
+      "runtimeFailures": 3,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.07391304347826087
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.06521739130434782
+      },
+      "temporalError": {
+        "n": 227,
+        "value": 0.24669603524229075
+      },
+      "rangeError": {
+        "n": 227,
+        "value": 0.9559471365638766
+      },
+      "citationPrecision": {
+        "n": 227,
+        "value": 0.05044052863436123
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "conflictRetention": {
+        "n": 19,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.4
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9347826086956522
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.11428571428571428
+      }
+    },
+    {
+      "method": "BM25",
+      "n": 230,
+      "fieldQuestionFailures": 206,
+      "failures": 224,
+      "primaryCauseRows": 224,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.16956521739130434
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.10434782608695652
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0.5260869565217391
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.9347826086956522
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.21763802622498318
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.034782608695652174
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.034782608695652174
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.5714285714285714
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9347826086956522
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0.008
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.06666666666666667
+      }
+    },
+    {
+      "method": "Latest",
+      "n": 230,
+      "fieldQuestionFailures": 36,
+      "failures": 215,
+      "primaryCauseRows": 215,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.8565217391304348
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.8434782608695652
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.11304347826086956
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.9362318840579712
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.06521739130434782
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.06521739130434782
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.5714285714285714
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9239130434782609
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.14285714285714285
+      }
+    },
+    {
+      "method": "NowPast",
+      "n": 230,
+      "fieldQuestionFailures": 120,
+      "failures": 212,
+      "primaryCauseRows": 212,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.5043478260869565
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.4782608695652174
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0.508695652173913
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.20869565217391303
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.6506142167011733
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.0782608695652174
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.0782608695652174
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.7428571428571429
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9108695652173913
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0.024
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.14285714285714285
+      }
+    },
+    {
+      "method": "no-history",
+      "n": 230,
+      "fieldQuestionFailures": 44,
+      "failures": 215,
+      "primaryCauseRows": 215,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.853623188405797
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.808695652173913
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.19130434782608696
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.8786956521739131
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.06521739130434782
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.06521739130434782
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0.75
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.5714285714285714
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9239130434782609
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.14285714285714285
+      }
+    },
+    {
+      "method": "no-graph",
+      "n": 230,
+      "fieldQuestionFailures": 99,
+      "failures": 218,
+      "primaryCauseRows": 218,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.6021739130434782
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.5695652173913044
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0.4043478260869565
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.19130434782608696
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.708659420289855
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.5714285714285714
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9347826086956522
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0.016
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.09523809523809523
+      }
+    },
+    {
+      "method": "NowPast-auto",
+      "n": 230,
+      "fieldQuestionFailures": 120,
+      "failures": 212,
+      "primaryCauseRows": 212,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.5043478260869565
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.4782608695652174
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0.508695652173913
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.20869565217391303
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.6506142167011733
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.0782608695652174
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.0782608695652174
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.7428571428571429
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9108695652173913
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0.024
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.14285714285714285
+      }
+    },
+    {
+      "method": "Vector-filtered",
+      "n": 230,
+      "fieldQuestionFailures": 118,
+      "failures": 220,
+      "primaryCauseRows": 220,
+      "runtimeFailures": 1,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.532608695652174
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.48695652173913045
+      },
+      "temporalError": {
+        "n": 229,
+        "value": 0.4410480349344978
+      },
+      "rangeError": {
+        "n": 229,
+        "value": 0.22707423580786026
+      },
+      "citationPrecision": {
+        "n": 229,
+        "value": 0.6512892493241837
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.043478260869565216
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.043478260869565216
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.6
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9282608695652174
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.09523809523809523
+      }
+    },
+    {
+      "method": "BM25-filtered",
+      "n": 230,
+      "fieldQuestionFailures": 117,
+      "failures": 218,
+      "primaryCauseRows": 218,
+      "runtimeFailures": 0,
+      "fieldExact": {
+        "n": 230,
+        "value": 0.5311594202898551
+      },
+      "questionExact": {
+        "n": 230,
+        "value": 0.49130434782608695
+      },
+      "temporalError": {
+        "n": 230,
+        "value": 0.4652173913043478
+      },
+      "rangeError": {
+        "n": 230,
+        "value": 0.17391304347826086
+      },
+      "citationPrecision": {
+        "n": 230,
+        "value": 0.6782056590752243
+      },
+      "directLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "transitiveLinkExact": {
+        "n": 230,
+        "value": 0.05217391304347826
+      },
+      "conflictRetention": {
+        "n": 20,
+        "value": 0.05
+      },
+      "missingAbstention": {
+        "n": 35,
+        "value": 0.6
+      },
+      "coverage": {
+        "n": 230,
+        "value": 0.9326086956521739
+      },
+      "nonemptyOldLinks": {
+        "n": 125,
+        "value": 0.016
+      },
+      "emptyOldLinks": {
+        "n": 105,
+        "value": 0.09523809523809523
+      }
+    }
+  ],
+  "core": {
+    "n": 55000,
+    "fieldExact": {
+      "n": 55000,
+      "value": 1
+    },
+    "evidenceExact": {
+      "n": 55000,
+      "value": 1
+    },
+    "statusExact": {
+      "n": 55000,
+      "value": 1
+    },
+    "transitiveLinkExact": {
+      "n": 55000,
+      "value": 1
+    }
+  }
+}
