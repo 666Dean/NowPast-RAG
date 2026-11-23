@@ -1,0 +1,12 @@
+{
+  "status": "development configuration, not selected on independent test",
+  "adapterSha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381",
+  "chatTemplate": "exactly once via outlines.inputs.Chat",
+  "decoder": "Outlines JSON schema; large upper bounds validated after generation",
+  "repetitionPenalty": 1.1,
+  "repetitionContext": 256,
+  "temperature": 0,
+  "role": "experimental v2 raw-notice route only; original compatible route remains available",
+  "selection": "one explicitly recorded repetition mitigation trial on previously observed development cases, not a training gain or blind-test result",
+  "humanReviewGate": "500 real semantic reviews still required before formal 120k training"
+}

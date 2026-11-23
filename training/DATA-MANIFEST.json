@@ -1,0 +1,223 @@
+{
+  "config": {
+    "version": "qwen-campus-v2",
+    "seed": 20261123,
+    "splits": {
+      "train": 24000,
+      "valid": 1200,
+      "test": 2400
+    },
+    "samplesPerWorld": 5,
+    "nested": [
+      1000,
+      10000,
+      50000,
+      100000
+    ],
+    "contextLimit": 2048,
+    "humanTrainReview": 500,
+    "leaderReview": 200,
+    "holdout": "test has separate prose family, relation combinations and longer chains"
+  },
+  "scriptSha256": "7a6d782b9cc7e1813514ace5295a76108139065037683552f226b335c39d496f",
+  "synthetic": true,
+  "splits": [
+    {
+      "split": "train",
+      "samples": 120000,
+      "worlds": 24000,
+      "semanticWorldFingerprints": 22177,
+      "taskCounts": {
+        "extract": 36000,
+        "relation": 30000,
+        "qa": 42000,
+        "negative": 12000
+      },
+      "scenes": {
+        "normal": 19375,
+        "room": 3875,
+        "time": 3870,
+        "deadline": 3870,
+        "multi": 3870,
+        "chain": 3870,
+        "conflict": 3870,
+        "same-value": 3870,
+        "clarify": 3870,
+        "cancel": 3870,
+        "retroactive": 3870,
+        "late-publish": 3870,
+        "late-import": 3870,
+        "future": 3870,
+        "missing-date": 3870,
+        "mixed-missing": 3870,
+        "cross-class": 3870,
+        "cross-lesson": 3870,
+        "cross-assignment": 3870,
+        "old-title": 3870,
+        "two-dates": 3870,
+        "reason-missing": 3870,
+        "rumor": 3870,
+        "injection": 3870,
+        "long": 3870,
+        "incomplete": 3870,
+        "ambiguous": 3870
+      },
+      "difficulty": {
+        "normal": 65820,
+        "hard": 54180
+      },
+      "byteLengths": {
+        "p50": 2832.0,
+        "p95": 4493,
+        "max": 9287
+      },
+      "exactPromptDuplicates": 0,
+      "normalizedPromptDuplicates": 107455,
+      "bytes": 11229336,
+      "sha256": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8",
+      "status": "automatic checks passed; human semantic review pending"
+    },
+    {
+      "split": "valid",
+      "samples": 6000,
+      "worlds": 1200,
+      "semanticWorldFingerprints": 1131,
+      "taskCounts": {
+        "extract": 1800,
+        "relation": 1500,
+        "qa": 2100,
+        "negative": 600
+      },
+      "scenes": {
+        "normal": 975,
+        "room": 195,
+        "time": 195,
+        "deadline": 195,
+        "multi": 195,
+        "chain": 195,
+        "conflict": 195,
+        "same-value": 195,
+        "clarify": 195,
+        "cancel": 195,
+        "retroactive": 195,
+        "late-publish": 195,
+        "late-import": 195,
+        "future": 195,
+        "missing-date": 195,
+        "mixed-missing": 195,
+        "cross-class": 195,
+        "cross-lesson": 195,
+        "cross-assignment": 190,
+        "old-title": 190,
+        "two-dates": 190,
+        "reason-missing": 190,
+        "rumor": 190,
+        "injection": 190,
+        "long": 190,
+        "incomplete": 190,
+        "ambiguous": 190
+      },
+      "difficulty": {
+        "normal": 3290,
+        "hard": 2710
+      },
+      "byteLengths": {
+        "p50": 2926.0,
+        "p95": 4626,
+        "max": 9475
+      },
+      "exactPromptDuplicates": 0,
+      "normalizedPromptDuplicates": 3358,
+      "bytes": 570035,
+      "sha256": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52",
+      "status": "automatic checks passed; human semantic review pending"
+    },
+    {
+      "split": "test",
+      "samples": 12000,
+      "worlds": 2400,
+      "semanticWorldFingerprints": 2254,
+      "taskCounts": {
+        "extract": 3600,
+        "relation": 3000,
+        "qa": 4200,
+        "negative": 1200
+      },
+      "scenes": {
+        "heldout-combination": 615,
+        "normal": 1830,
+        "room": 370,
+        "time": 365,
+        "deadline": 365,
+        "multi": 370,
+        "chain": 365,
+        "conflict": 365,
+        "same-value": 370,
+        "clarify": 365,
+        "cancel": 365,
+        "retroactive": 365,
+        "late-publish": 360,
+        "late-import": 365,
+        "missing-date": 385,
+        "mixed-missing": 365,
+        "cross-class": 360,
+        "cross-lesson": 360,
+        "cross-assignment": 365,
+        "old-title": 360,
+        "two-dates": 360,
+        "reason-missing": 365,
+        "rumor": 385,
+        "injection": 365,
+        "long": 365,
+        "incomplete": 385,
+        "ambiguous": 385,
+        "future": 360
+      },
+      "difficulty": {
+        "hard": 5780,
+        "normal": 6220
+      },
+      "byteLengths": {
+        "p50": 2979.0,
+        "p95": 6588,
+        "max": 17118
+      },
+      "exactPromptDuplicates": 0,
+      "normalizedPromptDuplicates": 7809,
+      "bytes": 1302936,
+      "sha256": "9253a262245b6752aa635f85cf9d6a8b5677c8d5fe108173a287149d7ea7515d",
+      "status": "automatic checks passed; human semantic review pending"
+    }
+  ],
+  "leaks": [
+    {
+      "a": "train",
+      "b": "valid",
+      "worlds": 0,
+      "exactPrompts": 0,
+      "normalizedPrompts": 0
+    },
+    {
+      "a": "test",
+      "b": "train",
+      "worlds": 0,
+      "exactPrompts": 0,
+      "normalizedPrompts": 0
+    },
+    {
+      "a": "test",
+      "b": "valid",
+      "worlds": 0,
+      "exactPrompts": 0,
+      "normalizedPrompts": 0
+    }
+  ],
+  "humanReview": {
+    "trainPrepared": 500,
+    "leaderPrepared": 200,
+    "completed": 0,
+    "formalTrainingApproved": false
+  },
+  "nearDuplicateAudit": "pending tokenizer/near-neighbor pass; normalized collisions explicitly counted",
+  "claim": "finite grammar families; entity renaming alone not semantic coverage"
+}

@@ -1,0 +1,2224 @@
+{
+  "method": "entity-normalized character-5gram MinHash (24 hashes, 12 bands) candidate generation; exact Jaccard >= .85 within candidates",
+  "caveat": "approximate candidate search may miss pairs; normalized template similarities are not independent event counts",
+  "totalSamples": {
+    "train": 120000,
+    "valid": 6000,
+    "test": 12000
+  },
+  "uniqueNormalizedPrompts": {
+    "train": 1298,
+    "valid": 527,
+    "test": 824
+  },
+  "normalizedExactDuplicates": {
+    "train": 118702,
+    "valid": 5473,
+    "test": 11176
+  },
+  "candidatePairs": 2521568,
+  "highSimilarityPairs": 104836,
+  "crossSplitHighSimilarityPairs": 0,
+  "examples": [
+    {
+      "a": "train-000000-0",
+      "b": "train-000000-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9150943396226415,
+      "weightA": 1550,
+      "weightB": 776
+    },
+    {
+      "a": "train-000000-3",
+      "b": "train-000000-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9473684210526315,
+      "weightA": 1292,
+      "weightB": 969
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000001-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8753894080996885,
+      "weightA": 1328,
+      "weightB": 11450
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000001-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8767441860465116,
+      "weightA": 2214,
+      "weightB": 1106
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000002-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9459459459459459,
+      "weightA": 2214,
+      "weightB": 1662
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000004-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9033816425120773,
+      "weightA": 2656,
+      "weightB": 7634
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000005-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 2656,
+      "weightB": 5309
+    },
+    {
+      "a": "train-000004-1",
+      "b": "train-000005-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8577981651376146,
+      "weightA": 7634,
+      "weightB": 5309
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000005-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9548192771084337,
+      "weightA": 1328,
+      "weightB": 2655
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000005-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9333333333333333,
+      "weightA": 2214,
+      "weightB": 3318
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000005-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 1662,
+      "weightB": 3318
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000005-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9362186788154897,
+      "weightA": 1106,
+      "weightB": 1660
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000005-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8832599118942731,
+      "weightA": 3318,
+      "weightB": 1660
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000006-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 2656,
+      "weightB": 664
+    },
+    {
+      "a": "train-000004-1",
+      "b": "train-000006-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8577981651376146,
+      "weightA": 7634,
+      "weightB": 664
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000006-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 5309,
+      "weightB": 664
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000006-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9548192771084337,
+      "weightA": 1328,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-1",
+      "b": "train-000006-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 2655,
+      "weightB": 332
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000006-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 2214,
+      "weightB": 498
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000006-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9339622641509434,
+      "weightA": 1662,
+      "weightB": 498
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000006-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9489559164733179,
+      "weightA": 3318,
+      "weightB": 498
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000006-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8552915766738661,
+      "weightA": 1660,
+      "weightB": 498
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000006-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9333333333333333,
+      "weightA": 2214,
+      "weightB": 664
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000006-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 1662,
+      "weightB": 664
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000006-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 3318,
+      "weightB": 664
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000006-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8832599118942731,
+      "weightA": 1660,
+      "weightB": 664
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000006-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9489559164733179,
+      "weightA": 498,
+      "weightB": 664
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000006-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9362186788154897,
+      "weightA": 1106,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000006-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8832599118942731,
+      "weightA": 3318,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000006-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 1660,
+      "weightB": 332
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000006-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8552915766738661,
+      "weightA": 498,
+      "weightB": 332
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000006-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8832599118942731,
+      "weightA": 664,
+      "weightB": 332
+    },
+    {
+      "a": "train-000007-3",
+      "b": "train-000007-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9441117764471058,
+      "weightA": 117,
+      "weightB": 91
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000008-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 2656,
+      "weightB": 663
+    },
+    {
+      "a": "train-000004-1",
+      "b": "train-000008-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8577981651376146,
+      "weightA": 7634,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000008-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 5309,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000008-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9289099526066351,
+      "weightA": 2214,
+      "weightB": 663
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 1662,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952380952380953,
+      "weightA": 3318,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 1660,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 498,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952380952380953,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000008-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 332,
+      "weightB": 663
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 2214,
+      "weightB": 497
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9295774647887324,
+      "weightA": 1662,
+      "weightB": 497
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 3318,
+      "weightB": 497
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8516129032258064,
+      "weightA": 1660,
+      "weightB": 497
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952830188679245,
+      "weightA": 498,
+      "weightB": 497
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 664,
+      "weightB": 497
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8516129032258064,
+      "weightA": 332,
+      "weightB": 497
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000008-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9491916859122402,
+      "weightA": 663,
+      "weightB": 497
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000009-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 2656,
+      "weightB": 185
+    },
+    {
+      "a": "train-000004-1",
+      "b": "train-000009-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8577981651376146,
+      "weightA": 7634,
+      "weightB": 185
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000009-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 5309,
+      "weightB": 185
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000009-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 664,
+      "weightB": 185
+    },
+    {
+      "a": "train-000008-0",
+      "b": "train-000009-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 663,
+      "weightB": 185
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000009-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9548192771084337,
+      "weightA": 1328,
+      "weightB": 80
+    },
+    {
+      "a": "train-000005-1",
+      "b": "train-000009-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 2655,
+      "weightB": 80
+    },
+    {
+      "a": "train-000006-1",
+      "b": "train-000009-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 332,
+      "weightB": 80
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9289099526066351,
+      "weightA": 2214,
+      "weightB": 185
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 1662,
+      "weightB": 185
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952380952380953,
+      "weightA": 3318,
+      "weightB": 185
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 1660,
+      "weightB": 185
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 498,
+      "weightB": 185
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952380952380953,
+      "weightA": 664,
+      "weightB": 185
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 332,
+      "weightB": 185
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 663,
+      "weightB": 185
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000009-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9491916859122402,
+      "weightA": 497,
+      "weightB": 185
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9319727891156463,
+      "weightA": 1106,
+      "weightB": 80
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 3318,
+      "weightB": 80
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9954441913439636,
+      "weightA": 1660,
+      "weightB": 80
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8516129032258064,
+      "weightA": 498,
+      "weightB": 80
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8793859649122807,
+      "weightA": 664,
+      "weightB": 80
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9954441913439636,
+      "weightA": 332,
+      "weightB": 80
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8837719298245614,
+      "weightA": 663,
+      "weightB": 80
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8559139784946237,
+      "weightA": 497,
+      "weightB": 80
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000009-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8837719298245614,
+      "weightA": 185,
+      "weightB": 80
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 2656,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000004-1",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9033816425120773,
+      "weightA": 7634,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 5309,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 664,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000008-0",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 663,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000009-0",
+      "b": "train-000010-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9495412844036697,
+      "weightA": 185,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000010-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9875389408099688,
+      "weightA": 1328,
+      "weightB": 665
+    },
+    {
+      "a": "train-000005-1",
+      "b": "train-000010-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9668674698795181,
+      "weightA": 2655,
+      "weightB": 665
+    },
+    {
+      "a": "train-000006-1",
+      "b": "train-000010-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9668674698795181,
+      "weightA": 332,
+      "weightB": 665
+    },
+    {
+      "a": "train-000009-1",
+      "b": "train-000010-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9668674698795181,
+      "weightA": 80,
+      "weightB": 665
+    },
+    {
+      "a": "train-000001-2",
+      "b": "train-000010-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8646153846153846,
+      "weightA": 11450,
+      "weightB": 665
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9459459459459459,
+      "weightA": 2214,
+      "weightB": 995
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 1662,
+      "weightB": 995
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 3318,
+      "weightB": 995
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9339622641509434,
+      "weightA": 498,
+      "weightB": 995
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 664,
+      "weightB": 995
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 663,
+      "weightB": 995
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9295774647887324,
+      "weightA": 497,
+      "weightB": 995
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000010-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 185,
+      "weightB": 995
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 2214,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8767441860465116,
+      "weightA": 1106,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9459459459459459,
+      "weightA": 1662,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9333333333333333,
+      "weightA": 3318,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 498,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9333333333333333,
+      "weightA": 664,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9289099526066351,
+      "weightA": 663,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8804597701149425,
+      "weightA": 497,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9289099526066351,
+      "weightA": 185,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000010-2",
+      "b": "train-000010-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9459459459459459,
+      "weightA": 995,
+      "weightB": 1327
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8767441860465116,
+      "weightA": 2214,
+      "weightB": 665
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 1106,
+      "weightB": 665
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9362186788154897,
+      "weightA": 1660,
+      "weightB": 665
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9362186788154897,
+      "weightA": 332,
+      "weightB": 665
+    },
+    {
+      "a": "train-000009-4",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9319727891156463,
+      "weightA": 80,
+      "weightB": 665
+    },
+    {
+      "a": "train-000010-3",
+      "b": "train-000010-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8767441860465116,
+      "weightA": 1327,
+      "weightB": 665
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8922413793103449,
+      "weightA": 2656,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9396551724137931,
+      "weightA": 5309,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9396551724137931,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000008-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9396551724137931,
+      "weightA": 663,
+      "weightB": 663
+    },
+    {
+      "a": "train-000009-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9396551724137931,
+      "weightA": 185,
+      "weightB": 663
+    },
+    {
+      "a": "train-000010-0",
+      "b": "train-000012-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8922413793103449,
+      "weightA": 1327,
+      "weightB": 663
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8808988764044944,
+      "weightA": 2214,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9435665914221218,
+      "weightA": 3318,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969298245614035,
+      "weightA": 498,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9435665914221218,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9480812641083521,
+      "weightA": 663,
+      "weightB": 663
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9013157894736842,
+      "weightA": 497,
+      "weightB": 663
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9480812641083521,
+      "weightA": 185,
+      "weightB": 663
+    },
+    {
+      "a": "train-000010-3",
+      "b": "train-000012-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8808988764044944,
+      "weightA": 1327,
+      "weightB": 663
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8819599109131403,
+      "weightA": 1662,
+      "weightB": 498
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969298245614035,
+      "weightA": 3318,
+      "weightB": 498
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9440715883668904,
+      "weightA": 498,
+      "weightB": 498
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969298245614035,
+      "weightA": 664,
+      "weightB": 498
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9013157894736842,
+      "weightA": 663,
+      "weightB": 498
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9485458612975392,
+      "weightA": 497,
+      "weightB": 498
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9013157894736842,
+      "weightA": 185,
+      "weightB": 498
+    },
+    {
+      "a": "train-000010-2",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8819599109131403,
+      "weightA": 995,
+      "weightB": 498
+    },
+    {
+      "a": "train-000012-3",
+      "b": "train-000012-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9517543859649122,
+      "weightA": 663,
+      "weightB": 498
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9241071428571429,
+      "weightA": 2656,
+      "weightB": 664
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969957081545065,
+      "weightA": 5309,
+      "weightB": 664
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969957081545065,
+      "weightA": 664,
+      "weightB": 664
+    },
+    {
+      "a": "train-000008-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969957081545065,
+      "weightA": 663,
+      "weightB": 664
+    },
+    {
+      "a": "train-000009-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969957081545065,
+      "weightA": 185,
+      "weightB": 664
+    },
+    {
+      "a": "train-000010-0",
+      "b": "train-000013-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9241071428571429,
+      "weightA": 1327,
+      "weightB": 664
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000013-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8848314606741573,
+      "weightA": 1328,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-1",
+      "b": "train-000013-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8794520547945206,
+      "weightA": 2655,
+      "weightB": 332
+    },
+    {
+      "a": "train-000006-1",
+      "b": "train-000013-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8794520547945206,
+      "weightA": 332,
+      "weightB": 332
+    },
+    {
+      "a": "train-000009-1",
+      "b": "train-000013-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8794520547945206,
+      "weightA": 80,
+      "weightB": 332
+    },
+    {
+      "a": "train-000010-1",
+      "b": "train-000013-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8960674157303371,
+      "weightA": 665,
+      "weightB": 332
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8868778280542986,
+      "weightA": 2214,
+      "weightB": 664
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8857142857142857,
+      "weightA": 3318,
+      "weightB": 664
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8857142857142857,
+      "weightA": 664,
+      "weightB": 664
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8818380743982495,
+      "weightA": 663,
+      "weightB": 664
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8818380743982495,
+      "weightA": 185,
+      "weightB": 664
+    },
+    {
+      "a": "train-000010-3",
+      "b": "train-000013-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8868778280542986,
+      "weightA": 1327,
+      "weightB": 664
+    },
+    {
+      "a": "train-000001-4",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8915401301518439,
+      "weightA": 1106,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.890295358649789,
+      "weightA": 1660,
+      "weightB": 332
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.890295358649789,
+      "weightA": 332,
+      "weightB": 332
+    },
+    {
+      "a": "train-000009-4",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8865546218487395,
+      "weightA": 80,
+      "weightB": 332
+    },
+    {
+      "a": "train-000010-4",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8915401301518439,
+      "weightA": 665,
+      "weightB": 332
+    },
+    {
+      "a": "train-000013-3",
+      "b": "train-000013-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8886554621848739,
+      "weightA": 664,
+      "weightB": 332
+    },
+    {
+      "a": "train-000007-0",
+      "b": "train-000014-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9230769230769231,
+      "weightA": 145,
+      "weightB": 155
+    },
+    {
+      "a": "train-000007-3",
+      "b": "train-000014-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8764478764478765,
+      "weightA": 117,
+      "weightB": 91
+    },
+    {
+      "a": "train-000007-4",
+      "b": "train-000014-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9287128712871288,
+      "weightA": 91,
+      "weightB": 91
+    },
+    {
+      "a": "train-000007-3",
+      "b": "train-000014-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9284294234592445,
+      "weightA": 117,
+      "weightB": 127
+    },
+    {
+      "a": "train-000007-4",
+      "b": "train-000014-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8764478764478765,
+      "weightA": 91,
+      "weightB": 127
+    },
+    {
+      "a": "train-000014-2",
+      "b": "train-000014-3",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9438877755511023,
+      "weightA": 91,
+      "weightB": 127
+    },
+    {
+      "a": "train-000014-2",
+      "b": "train-000014-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8726235741444867,
+      "weightA": 91,
+      "weightB": 72
+    },
+    {
+      "a": "train-000014-3",
+      "b": "train-000014-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8867562380038387,
+      "weightA": 127,
+      "weightB": 72
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 2214,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9339622641509434,
+      "weightA": 1662,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9489559164733179,
+      "weightA": 3318,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000005-4",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8552915766738661,
+      "weightA": 1660,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 1.0,
+      "weightA": 498,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000006-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9489559164733179,
+      "weightA": 664,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000006-4",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8552915766738661,
+      "weightA": 332,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000008-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 663,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000008-4",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9952830188679245,
+      "weightA": 497,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000009-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9445727482678984,
+      "weightA": 185,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000009-4",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8516129032258064,
+      "weightA": 80,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000010-2",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9339622641509434,
+      "weightA": 995,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000010-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8845265588914549,
+      "weightA": 1327,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000012-3",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8969298245614035,
+      "weightA": 663,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000012-4",
+      "b": "train-000015-4",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9440715883668904,
+      "weightA": 498,
+      "weightB": 2487
+    },
+    {
+      "a": "train-000001-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.915929203539823,
+      "weightA": 2656,
+      "weightB": 663
+    },
+    {
+      "a": "train-000005-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9646017699115044,
+      "weightA": 5309,
+      "weightB": 663
+    },
+    {
+      "a": "train-000006-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9646017699115044,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000008-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9646017699115044,
+      "weightA": 663,
+      "weightB": 663
+    },
+    {
+      "a": "train-000009-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9646017699115044,
+      "weightA": 185,
+      "weightB": 663
+    },
+    {
+      "a": "train-000010-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.915929203539823,
+      "weightA": 1327,
+      "weightB": 663
+    },
+    {
+      "a": "train-000012-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9083333333333333,
+      "weightA": 663,
+      "weightB": 663
+    },
+    {
+      "a": "train-000013-0",
+      "b": "train-000018-0",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8672199170124482,
+      "weightA": 664,
+      "weightB": 663
+    },
+    {
+      "a": "train-000001-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9215116279069767,
+      "weightA": 1328,
+      "weightB": 332
+    },
+    {
+      "a": "train-000005-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9651162790697675,
+      "weightA": 2655,
+      "weightB": 332
+    },
+    {
+      "a": "train-000006-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9651162790697675,
+      "weightA": 332,
+      "weightB": 332
+    },
+    {
+      "a": "train-000009-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9651162790697675,
+      "weightA": 80,
+      "weightB": 332
+    },
+    {
+      "a": "train-000010-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9331395348837209,
+      "weightA": 665,
+      "weightB": 332
+    },
+    {
+      "a": "train-000013-1",
+      "b": "train-000018-1",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8514588859416445,
+      "weightA": 332,
+      "weightB": 332
+    },
+    {
+      "a": "train-000001-3",
+      "b": "train-000018-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.8606741573033708,
+      "weightA": 2214,
+      "weightB": 497
+    },
+    {
+      "a": "train-000002-2",
+      "b": "train-000018-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.908256880733945,
+      "weightA": 1662,
+      "weightB": 497
+    },
+    {
+      "a": "train-000005-3",
+      "b": "train-000018-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9232505643340858,
+      "weightA": 3318,
+      "weightB": 497
+    },
+    {
+      "a": "train-000006-2",
+      "b": "train-000018-2",
+      "splits": [
+        "train",
+        "train"
+      ],
+      "normalizedJaccard": 0.9723502304147466,
+      "weightA": 498,
+      "weightB": 497
+    }
+  ]
+}

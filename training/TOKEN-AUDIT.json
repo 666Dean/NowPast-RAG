@@ -1,0 +1,87 @@
+{
+  "datasetHashes": {
+    "train": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8",
+    "valid": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52",
+    "test": "9253a262245b6752aa635f85cf9d6a8b5677c8d5fe108173a287149d7ea7515d"
+  },
+  "tokenizerSha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "chatTemplateSha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "eos": 151645,
+  "pad": 151643,
+  "loss": "prompt masked; target including EOS only",
+  "stats": [
+    {
+      "split": "train",
+      "n": 120000,
+      "tokens": 103904661,
+      "targetTokens": 25127498,
+      "length": {
+        "p50": 887.0,
+        "p95": 1552,
+        "max": 3309
+      },
+      "wouldTruncateAt4096": 0,
+      "truncated": 0,
+      "normalizedTemplateDuplicates": 118702,
+      "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+    },
+    {
+      "split": "valid",
+      "n": 6000,
+      "tokens": 5209656,
+      "targetTokens": 1266987,
+      "length": {
+        "p50": 878.5,
+        "p95": 1547,
+        "max": 3286
+      },
+      "wouldTruncateAt4096": 0,
+      "truncated": 0,
+      "normalizedTemplateDuplicates": 5473,
+      "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+    },
+    {
+      "split": "test",
+      "n": 12000,
+      "tokens": 12103680,
+      "targetTokens": 2926541,
+      "length": {
+        "p50": 908.0,
+        "p95": 2096,
+        "max": 6441
+      },
+      "wouldTruncateAt4096": 333,
+      "truncated": 0,
+      "normalizedTemplateDuplicates": 11176,
+      "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+    }
+  ],
+  "leaks": [
+    {
+      "a": "train",
+      "b": "valid",
+      "worldOverlap": 0,
+      "exactPromptOverlap": 0,
+      "entityNormalizedOverlap": 0
+    },
+    {
+      "a": "test",
+      "b": "train",
+      "worldOverlap": 0,
+      "exactPromptOverlap": 0,
+      "entityNormalizedOverlap": 0
+    },
+    {
+      "a": "test",
+      "b": "valid",
+      "worldOverlap": 0,
+      "exactPromptOverlap": 0,
+      "entityNormalizedOverlap": 0
+    }
+  ],
+  "smoke": {
+    "n": 1000,
+    "context": 1536,
+    "status": "provisional tooling subset; 500 human checks NOT completed"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "purpose": "lossless text transport for GitHub connector; not new experiment output",
+  "encoding": "base64 of unchanged gzip bytes",
+  "artifacts": [
+    {
+      "path": "experiments/next-audit/case-audit.jsonl.gz",
+      "payload": "experiments/next-audit/payloads/72497102c9459c8e0d7b95eea5fb7c87841a9487.b64",
+      "bytes": 479223,
+      "gitBlobSha": "72497102c9459c8e0d7b95eea5fb7c87841a9487",
+      "sha256": "6e24a24ccd390151672ead88c660eb2aa31afcdfa000c16e4764a17718adfb77"
+    },
+    {
+      "path": "experiments/next-audit/core-replay.json.gz",
+      "payload": "experiments/next-audit/payloads/49cfb42b27aa2c748f36d845956950ca2b59327c.b64",
+      "bytes": 165486,
+      "gitBlobSha": "49cfb42b27aa2c748f36d845956950ca2b59327c",
+      "sha256": "a98e6d582c2d61175d170f56b5150470cf71abae68fc1e51b85c67bc1621c822"
+    },
+    {
+      "path": "experiments/next-audit/public-core/case-audit.jsonl.gz",
+      "payload": "experiments/next-audit/payloads/72497102c9459c8e0d7b95eea5fb7c87841a9487.b64",
+      "bytes": 479223,
+      "gitBlobSha": "72497102c9459c8e0d7b95eea5fb7c87841a9487",
+      "sha256": "6e24a24ccd390151672ead88c660eb2aa31afcdfa000c16e4764a17718adfb77"
+    },
+    {
+      "path": "experiments/next-audit/public-core/core-replay.json.gz",
+      "payload": "experiments/next-audit/payloads/49cfb42b27aa2c748f36d845956950ca2b59327c.b64",
+      "bytes": 165486,
+      "gitBlobSha": "49cfb42b27aa2c748f36d845956950ca2b59327c",
+      "sha256": "a98e6d582c2d61175d170f56b5150470cf71abae68fc1e51b85c67bc1621c822"
+    },
+    {
+      "path": "experiments/next-audit/public-core/representative-cases.jsonl.gz",
+      "payload": "experiments/next-audit/payloads/c6134ceaf3ecec73a5babc543c59fb920964712c.b64",
+      "bytes": 10229,
+      "gitBlobSha": "c6134ceaf3ecec73a5babc543c59fb920964712c",
+      "sha256": "dc0f801881abe5158ee157ec930c44e0826abe846159059a58673c8a22e1ef65"
+    },
+    {
+      "path": "experiments/next-audit/representative-cases.jsonl.gz",
+      "payload": "experiments/next-audit/payloads/c6134ceaf3ecec73a5babc543c59fb920964712c.b64",
+      "bytes": 10229,
+      "gitBlobSha": "c6134ceaf3ecec73a5babc543c59fb920964712c",
+      "sha256": "dc0f801881abe5158ee157ec930c44e0826abe846159059a58673c8a22e1ef65"
+    }
+  ]
+}

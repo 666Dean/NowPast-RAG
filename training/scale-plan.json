@@ -1,0 +1,21 @@
+{
+  "status": "NOT RUN; formal training blocked on human review and data sign-off",
+  "baseRevision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "sizes": [1000, 10000, 50000, 100000, 120000],
+  "policy": "each size starts from the same official base; nested IDs; report actual tokens/updates; validate-only checkpoint selection; never choose from independent test",
+  "candidateContext": 6144,
+  "candidateBatch": 1,
+  "candidateGradientAccumulation": 2,
+  "candidateEpochs": 1,
+  "freezeStatus": "parameters must be calibrated from smoke and signed off before launch, not a completed experiment",
+  "comparisonMatrix": [
+    {"context": "fixed NowPast", "models": ["base-0.5B", "formal-finetuned-0.5B"], "status": "not run on independent test"},
+    {"model": "base-0.5B", "systems": ["NowPast", "Vector-filtered", "BM25-filtered", "Latest", "no-history", "no-graph"], "status": "old diagnostic results preserved; new independent cohort not run"},
+    {"model": "formal-finetuned-0.5B", "systems": ["NowPast", "Vector-filtered", "BM25-filtered", "Latest", "no-history", "no-graph"], "status": "not run; no formal model"},
+    {"model": "none", "system": "deterministic rules", "status": "old 55k core replay measured separately"}
+  ],
+  "roleControl": "raw common evidence format and explicit snapshot-role format must be separate conditions; training adaptation disclosed",
+  "testLengthPolicy": "317 held-out long-chain samples exceed 4096 tokens; preserve all raw bytes, do not truncate gold or remove difficult cases",
+  "hardwareConstraints": "M1 Pro 32GB; free disk below 1GiB after isolated setup; merged BF16/GGUF export needs extra safe storage",
+  "reasonNotLaunched": "500 real human semantic reviews have been assigned to team leader but not received"
+}

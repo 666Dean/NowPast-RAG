@@ -4,6 +4,7 @@ import {answer} from '../qa/answer.mjs';
 import {validateDocument} from '../knowledge/schema.mjs';
 import { closeModel, generate, hasMissingEvidence } from '../generation/model.mjs';
 import {analyzeNotice,validateNoticeInput} from '../generation/notice.mjs';
+import {generateDomainAnswer} from '../generation/domain-answer.mjs';
 
 const host = '127.0.0.1';
 const port = Number(process.env.PORT || 4173);
@@ -29,6 +30,7 @@ const files = new Map([
   ['/qa/answer.mjs', ['qa/answer.mjs', 'text/javascript']],
   ['/qa/campus.mjs', ['qa/campus.mjs', 'text/javascript']],
   ['/temporal/campus.mjs', ['temporal/campus.mjs', 'text/javascript']],
+  ['/temporal/integrity.mjs', ['temporal/integrity.mjs', 'text/javascript']],
   ['/knowledge/campus-data.mjs', ['knowledge/campus-data.mjs', 'text/javascript']]
 ]);
 function json(res, code, payload) {
@@ -72,7 +74,7 @@ const server = http.createServer(async (req, res) => {
       if(path==='/api/query') return json(res,200,result);
       if (result.researchOnly) return json(res, 422, {error:'研究来源直查请查看原始依据，本地模型仅整理课程条款。'});
       if (hasMissingEvidence(result)) return json(res, 422, {error:'当前证据不足，请先核查或补充资料。',missing:result.sections.filter(section=>section.status==='unknown').map(section=>section.topic)});
-      const generated = await generate(result, question);
+      const generated = options.generationMode==='domain-v2' ? await generateDomainAnswer(result,question) : await generate(result, question);
       return json(res, 200, generated);
     } catch (err) {
       return json(res, 503, {error: err.name === 'TimeoutError' ? '本地模型推理超时。' : err.message});

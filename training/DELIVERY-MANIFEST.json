@@ -1,0 +1,929 @@
+{
+  "type": "local development handoff; NOT formal competition submission",
+  "sourceCommit": "b60f0f18bf57b795085e353edcc03f6a76113367",
+  "sourceMode": "workspace with per-file hashes",
+  "dirtyStatus": " M evaluation/results.json\n M service/validation/campus-examples.json\n M service/validation/delivery-check.json\n?? NEXT-STAGE-DELIVERY.md\n?? training/DELIVERY-MANIFEST.json\n?? training/REPRO-WINDOWS.md\n",
+  "branch": "codex/qwen-adaptation-local",
+  "sourceHashes": {
+    "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
+    "knowledge/schema.mjs": "25a4bda970c0ed7d97f28f6e1832f4daec7e79329cfc02d400bcfa9dbe167bb2",
+    "knowledge/notice-adapter.mjs": "2dc7b8a5d8cee99ff48246a27b3b2d3d157fa9c5499cd050f8e3d8e30b7c53c3",
+    "knowledge/campus-data.mjs": "5c7f70ecb6f46aee590829faa017b8330adb0dadff417f038d854d4b31d43eef",
+    "knowledge/notices.mjs": "78d3a8470c8d92ed38a96cad3ac018acaadb84538db51cf5337261f04d9fb1a4",
+    "temporal/graph.mjs": "5dce7eb7df38a0a809cb51cfece7cb5e8f9f5b9db270b9cf39c31f55e0b9a454",
+    "temporal/integrity.mjs": "06518d442a5640af09e27385ab5f381c1ebf8979c39b691981dae8f1365a2eb9",
+    "temporal/campus.mjs": "4222bf5986a2c31e19f8764341910e6f1144323ac24ab98d02e5067e302df014",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
+    "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
+    "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "qa/answer.mjs": "b647e88898f972907a51385b608317a1e8ea5dd685cac3ff0b803588e805c48f",
+    "qa/integration.test.mjs": "51a0230e8c0623c59ece0199295f78a69a7c56ca5d4f1cb6d0cccd1ec2f0a64d",
+    "qa/campus.mjs": "f433dd2a6792dab42c7dc776b1d329d4c71ee37e00ee1f04bdf07cda8c94749b",
+    "qa/campus.test.mjs": "febbf59a3f32cb53a2f34fb360ca43fb74fd13c08b7273f54a1fbffcf1bcde94",
+    "qa/next-core.test.mjs": "ef8c8067c7b74e03bafb86f77418bc2a6c33fda2582a36bf3271b29c41934b7a",
+    "generation/domain-notice.mjs": "3dad1edc42ff76acbd9bd28008fe5fe323195438bfb94158088eee4494f861a0",
+    "generation/domain-answer.mjs": "8c167b206734b6a427b7fdaf53f528245620be2d0b340b5d3181210dbc632a18",
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "generation/identity.mjs": "d93c1afb032f9e7efe947f18b303e88164cbf02e821ed8f42729a088fe897293",
+    "generation/domain-answer.test.mjs": "cf4143f5d78ce3794ee5446b7a9fbff7c44fca0d794071a87622a8ca152b5682",
+    "generation/mlx.mjs": "991294760c7ed850260edd91b7750b11048c9b0761488f772f701d45195e4fbd",
+    "generation/notice.mjs": "05a0fc7a0b545363b1bc3d3a72737b5ee9d070afe9898e89f87ad6ff8eef2897",
+    "generation/notice.test.mjs": "4b8cc95fa5c360da038352c569a0afd174bd0e765ce43369fe5328483e689a14",
+    "generation/mlx.test.mjs": "cf8338eba0f4298118059a92c0010165d61e537e75afbd29efcb6600577c0597",
+    "generation/notice-context.mjs": "c901739d4126328c45b47fd0bee2f827bba5d3e0ff90df5c0d4e0904c14a9b3d",
+    "generation/intake-regression.test.mjs": "1d2a2d3c3d2c400be19dfc8ec77d39834473da48f5e5894ebaf3eb84f8107902",
+    "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
+    "generation/domain-notice.test.mjs": "07584f2b086841a4b540c740a10a75ba6427dfd1d2f6b038c515b78b890dfe20",
+    "generation/identity.test.mjs": "28bd8003fddbe5513ff52dc6c7f8f768288c7a7e02d6a8bb3c8082a61b76a10e",
+    "generation/source-records.mjs": "68d059b4ed7fe80b5d030842821769d33d21ccf087c8e348ec1dd8cd09650742",
+    "generation/model.mjs": "44b601c2907fbb74783a2872f8a75230d6bde4147564a411ae26c741699c740f",
+    "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
+    "service/run-tests.mjs": "0f3501474084d1bdee14f35fdf63bd24f40bd6546f91736e6ee2c892d39a26a5",
+    "service/verify-delivery.mjs": "9bdcae33ef6c43e20338437910ff29dbee14e7a610ddc4f3c8622bd7fa98e2a4",
+    "service/static-imports.test.mjs": "a52f645363cda2a8f3cbdec263fa1c676de877d5a2783721fe240e97ab9a19b9",
+    "service/s1-probes.mjs": "ed4376a0d88b680aea9b3dd436d704b3c4e223f60b6cea5c1850facc55150f3e",
+    "service/server.mjs": "649aa0fee737efb195cb911ebda6fc2395c81afbec2aa21d2876729369e78fd7",
+    "service/manual-test.mjs": "382b46397f34506c2eb295f7072c4d79ae4fb56ee2149dd71144b3479984d824",
+    "service/verify-s1.mjs": "3082c3970f0eedbcc9fabfffe442e017f98174c74a2430308b53f107896cd06e",
+    "service/verify-service.mjs": "48b35e66ef0e87459f2bb09727ea64b482dcd78b61526b26e9b2495454645b81",
+    "service/integration-probes.mjs": "9669d5922773756a2cd4c5967bda89c1dacd672a7b0c96a33c1fea7665b57a4d",
+    "training/worker.py": "36a48c1ad8559374c40087f249af76a245f056401186087dd819243236dff952",
+    "training/near-audit.py": "33180678a7ea558c73e9fdfa2152d0869248b33ddabd877f8cc3f7d833e5ed21",
+    "training/metrics.py": "9a130f7bee1af99568336a8f205e06e3afd227419aa4796cbb3baacf1f1092ca",
+    "training/formal-gate.py": "a69edcc822ca211de801dfb6510b8808c06ed519b12b20e89b8f52b29b4616f6",
+    "training/data-config.json": "caf0eff2399b6f9448c944309165ddf3de94817820c7442a5fff8ce487acd44a",
+    "training/NEAR-DUPLICATE-AUDIT.json": "e95449a5d1d6600fd7fd44d96dff27b8593a8c08210180b73b4c094560535ad3",
+    "training/prepare-base.py": "329fd498d12cdf76b7d9c1c5e6c02eadd7b0cbff36f8127fb86f65d75bf1e32d",
+    "training/BASE-MANIFEST.json": "920645e4702e5404b64b329f3c36891539a1cba0320bbeb6b757291bf881212c",
+    "training/summarize.py": "f20d63c55f92916a074fbadf0de49b555659c900f1ea5756a7900023671412b2",
+    "training/review.py": "8c7aa8d36a70d70624c46cdca9c2a8537b5c878e893a693ab34bee1964bb1a62",
+    "training/offline-probe.mjs": "db4f201f473c4251a0d67abb72758da358ba748f8f7102ba2ff7677f8a9fb5a4",
+    "training/loss.py": "fe5be74b98b9ce3ceb128a9ba46248244ceb225933064c90c86d2ea6345afc05",
+    "training/train.py": "5d8b31f686fe03bae16fa26a5a49c8dc7aa2999d84551e703bbd937d6a13332c",
+    "training/smoke-config.json": "d1cb7248988a20b6f6aefbab6fd5d67c464fda84d885d8cce3f7448a358bab66",
+    "training/TOKEN-AUDIT.json": "cdc1fa5df1f07008d65ca6867c1327953122117a9a2216f5fbc7233aecee2776",
+    "training/scale-plan.json": "c345ac08b15b5a4c267387cf466ccf49389d3003b721e44cc924301b7721409d",
+    "training/tests.py": "7c9a4d87c2f425cd2aa08fe9dcae0333917a82e384d29a0049e3bc656cb12987",
+    "training/prepare.py": "56ed1cb461447176bb1cea911c1386341c22e1af084408c24a57d74a02193e45",
+    "training/data.py": "7a6d782b9cc7e1813514ace5295a76108139065037683552f226b335c39d496f",
+    "training/DATA-MANIFEST.json": "ab81bfa01c62f598ee824d7a627a71ec14370d35808106d1c1e6f1e37f3950d1",
+    "training/base-source.json": "5288b47c863fc976f72a5257d3bb323dd5bd763f02f16721914b6fa14cac5fe4"
+  },
+  "data": {
+    "config": {
+      "version": "qwen-campus-v2",
+      "seed": 20261123,
+      "splits": {
+        "train": 24000,
+        "valid": 1200,
+        "test": 2400
+      },
+      "samplesPerWorld": 5,
+      "nested": [
+        1000,
+        10000,
+        50000,
+        100000
+      ],
+      "contextLimit": 2048,
+      "humanTrainReview": 500,
+      "leaderReview": 200,
+      "holdout": "test has separate prose family, relation combinations and longer chains"
+    },
+    "scriptSha256": "7a6d782b9cc7e1813514ace5295a76108139065037683552f226b335c39d496f",
+    "synthetic": true,
+    "splits": [
+      {
+        "split": "train",
+        "samples": 120000,
+        "worlds": 24000,
+        "semanticWorldFingerprints": 22177,
+        "taskCounts": {
+          "extract": 36000,
+          "relation": 30000,
+          "qa": 42000,
+          "negative": 12000
+        },
+        "scenes": {
+          "normal": 19375,
+          "room": 3875,
+          "time": 3870,
+          "deadline": 3870,
+          "multi": 3870,
+          "chain": 3870,
+          "conflict": 3870,
+          "same-value": 3870,
+          "clarify": 3870,
+          "cancel": 3870,
+          "retroactive": 3870,
+          "late-publish": 3870,
+          "late-import": 3870,
+          "future": 3870,
+          "missing-date": 3870,
+          "mixed-missing": 3870,
+          "cross-class": 3870,
+          "cross-lesson": 3870,
+          "cross-assignment": 3870,
+          "old-title": 3870,
+          "two-dates": 3870,
+          "reason-missing": 3870,
+          "rumor": 3870,
+          "injection": 3870,
+          "long": 3870,
+          "incomplete": 3870,
+          "ambiguous": 3870
+        },
+        "difficulty": {
+          "normal": 65820,
+          "hard": 54180
+        },
+        "byteLengths": {
+          "p50": 2832.0,
+          "p95": 4493,
+          "max": 9287
+        },
+        "exactPromptDuplicates": 0,
+        "normalizedPromptDuplicates": 107455,
+        "bytes": 11229336,
+        "sha256": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8",
+        "status": "automatic checks passed; human semantic review pending"
+      },
+      {
+        "split": "valid",
+        "samples": 6000,
+        "worlds": 1200,
+        "semanticWorldFingerprints": 1131,
+        "taskCounts": {
+          "extract": 1800,
+          "relation": 1500,
+          "qa": 2100,
+          "negative": 600
+        },
+        "scenes": {
+          "normal": 975,
+          "room": 195,
+          "time": 195,
+          "deadline": 195,
+          "multi": 195,
+          "chain": 195,
+          "conflict": 195,
+          "same-value": 195,
+          "clarify": 195,
+          "cancel": 195,
+          "retroactive": 195,
+          "late-publish": 195,
+          "late-import": 195,
+          "future": 195,
+          "missing-date": 195,
+          "mixed-missing": 195,
+          "cross-class": 195,
+          "cross-lesson": 195,
+          "cross-assignment": 190,
+          "old-title": 190,
+          "two-dates": 190,
+          "reason-missing": 190,
+          "rumor": 190,
+          "injection": 190,
+          "long": 190,
+          "incomplete": 190,
+          "ambiguous": 190
+        },
+        "difficulty": {
+          "normal": 3290,
+          "hard": 2710
+        },
+        "byteLengths": {
+          "p50": 2926.0,
+          "p95": 4626,
+          "max": 9475
+        },
+        "exactPromptDuplicates": 0,
+        "normalizedPromptDuplicates": 3358,
+        "bytes": 570035,
+        "sha256": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52",
+        "status": "automatic checks passed; human semantic review pending"
+      },
+      {
+        "split": "test",
+        "samples": 12000,
+        "worlds": 2400,
+        "semanticWorldFingerprints": 2254,
+        "taskCounts": {
+          "extract": 3600,
+          "relation": 3000,
+          "qa": 4200,
+          "negative": 1200
+        },
+        "scenes": {
+          "heldout-combination": 615,
+          "normal": 1830,
+          "room": 370,
+          "time": 365,
+          "deadline": 365,
+          "multi": 370,
+          "chain": 365,
+          "conflict": 365,
+          "same-value": 370,
+          "clarify": 365,
+          "cancel": 365,
+          "retroactive": 365,
+          "late-publish": 360,
+          "late-import": 365,
+          "missing-date": 385,
+          "mixed-missing": 365,
+          "cross-class": 360,
+          "cross-lesson": 360,
+          "cross-assignment": 365,
+          "old-title": 360,
+          "two-dates": 360,
+          "reason-missing": 365,
+          "rumor": 385,
+          "injection": 365,
+          "long": 365,
+          "incomplete": 385,
+          "ambiguous": 385,
+          "future": 360
+        },
+        "difficulty": {
+          "hard": 5780,
+          "normal": 6220
+        },
+        "byteLengths": {
+          "p50": 2979.0,
+          "p95": 6588,
+          "max": 17118
+        },
+        "exactPromptDuplicates": 0,
+        "normalizedPromptDuplicates": 7809,
+        "bytes": 1302936,
+        "sha256": "9253a262245b6752aa635f85cf9d6a8b5677c8d5fe108173a287149d7ea7515d",
+        "status": "automatic checks passed; human semantic review pending"
+      }
+    ],
+    "leaks": [
+      {
+        "a": "train",
+        "b": "valid",
+        "worlds": 0,
+        "exactPrompts": 0,
+        "normalizedPrompts": 0
+      },
+      {
+        "a": "test",
+        "b": "train",
+        "worlds": 0,
+        "exactPrompts": 0,
+        "normalizedPrompts": 0
+      },
+      {
+        "a": "test",
+        "b": "valid",
+        "worlds": 0,
+        "exactPrompts": 0,
+        "normalizedPrompts": 0
+      }
+    ],
+    "humanReview": {
+      "trainPrepared": 500,
+      "leaderPrepared": 200,
+      "completed": 0,
+      "formalTrainingApproved": false
+    },
+    "nearDuplicateAudit": "pending tokenizer/near-neighbor pass; normalized collisions explicitly counted",
+    "claim": "finite grammar families; entity renaming alone not semantic coverage"
+  },
+  "tokenAudit": {
+    "datasetHashes": {
+      "train": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8",
+      "valid": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52",
+      "test": "9253a262245b6752aa635f85cf9d6a8b5677c8d5fe108173a287149d7ea7515d"
+    },
+    "tokenizerSha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "chatTemplateSha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "eos": 151645,
+    "pad": 151643,
+    "loss": "prompt masked; target including EOS only",
+    "stats": [
+      {
+        "split": "train",
+        "n": 120000,
+        "tokens": 103904661,
+        "targetTokens": 25127498,
+        "length": {
+          "p50": 887.0,
+          "p95": 1552,
+          "max": 3309
+        },
+        "wouldTruncateAt4096": 0,
+        "truncated": 0,
+        "normalizedTemplateDuplicates": 118702,
+        "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+      },
+      {
+        "split": "valid",
+        "n": 6000,
+        "tokens": 5209656,
+        "targetTokens": 1266987,
+        "length": {
+          "p50": 878.5,
+          "p95": 1547,
+          "max": 3286
+        },
+        "wouldTruncateAt4096": 0,
+        "truncated": 0,
+        "normalizedTemplateDuplicates": 5473,
+        "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+      },
+      {
+        "split": "test",
+        "n": 12000,
+        "tokens": 12103680,
+        "targetTokens": 2926541,
+        "length": {
+          "p50": 908.0,
+          "p95": 2096,
+          "max": 6441
+        },
+        "wouldTruncateAt4096": 333,
+        "truncated": 0,
+        "normalizedTemplateDuplicates": 11176,
+        "nearDuplicateMethod": "entity/date/number normalized exact collisions; fuzzy MinHash pending, not claimed completed"
+      }
+    ],
+    "leaks": [
+      {
+        "a": "train",
+        "b": "valid",
+        "worldOverlap": 0,
+        "exactPromptOverlap": 0,
+        "entityNormalizedOverlap": 0
+      },
+      {
+        "a": "test",
+        "b": "train",
+        "worldOverlap": 0,
+        "exactPromptOverlap": 0,
+        "entityNormalizedOverlap": 0
+      },
+      {
+        "a": "test",
+        "b": "valid",
+        "worldOverlap": 0,
+        "exactPromptOverlap": 0,
+        "entityNormalizedOverlap": 0
+      }
+    ],
+    "smoke": {
+      "n": 1000,
+      "context": 1536,
+      "status": "provisional tooling subset; 500 human checks NOT completed"
+    }
+  },
+  "training": {
+    "sourceCommit": "58b0c77b81e76f05b6554437cae20e980335cea0",
+    "configSha256": "d1cb7248988a20b6f6aefbab6fd5d67c464fda84d885d8cce3f7448a358bab66",
+    "baseRevision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "baseSha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "adapterSha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381",
+    "actualSteps": 500,
+    "actualSamplesSeen": 1000,
+    "uniqueSamplesClaim": 1000,
+    "dataHashes": {
+      "train.jsonl": "1ef48f4be96554e29fd1b520f539f7a88148b7d88fd15117747651685c0b5d62",
+      "valid.jsonl": "631c91b7877c1078f2d7f38f670df2a90e7be6439122e6550af5b8b92339bfd1",
+      "validation-audit.json": "30c6328e2c080b4a61e88f261599b8fb441e1bf7c81b61a0ffce408c844a1694",
+      "ids.json": "4328c17176365009652a55964ed6ae4ec4c8a61a169ed9958429e453a132854d"
+    },
+    "weightChanged": true,
+    "seconds": 559.3985548750497,
+    "peakMemoryBytes": 3636710966,
+    "parameters": 180224,
+    "trainingQuantization": null,
+    "exportQuantization": null,
+    "status": "tooling smoke, not formal 100k training"
+  },
+  "actualTargetTokens": 188765,
+  "reloadRawIdentical": 32,
+  "reviewOwner": "team leader (user chose this)",
+  "humanReviewsCompleted": 0,
+  "formalTrainingAllowed": false,
+  "notRun": [
+    "120k formal SFT",
+    "10k/50k/100k training scale curve",
+    "independent test model inference",
+    "fixed formal finetuned model across retrieval baselines",
+    "merged weights export",
+    "GGUF/ONNX export",
+    "deployment",
+    "forum/competition submission"
+  ],
+  "integrationStatus": "default GGUF preserved and verified; opt-in MLX smoke model has real schema failures and is NOT product-ready",
+  "inventory": [
+    {
+      "path": "training/data/smoke/ids.json",
+      "bytes": 18000,
+      "sha256": "3c6d46f532e8b17a41a8e8721ab32afe933cadcb0f4cf50a705daf8293e0adb4"
+    },
+    {
+      "path": "training/data/smoke/train.jsonl",
+      "bytes": 2360655,
+      "sha256": "9972184fbcab796192a68a9f5fc25a4fbc9fd6107ff820dfadb0b27d25bf0ebc"
+    },
+    {
+      "path": "training/data/smoke/valid.jsonl",
+      "bytes": 82645,
+      "sha256": "631c91b7877c1078f2d7f38f670df2a90e7be6439122e6550af5b8b92339bfd1"
+    },
+    {
+      "path": "training/data/smoke/validation-audit.json",
+      "bytes": 90915,
+      "sha256": "30c6328e2c080b4a61e88f261599b8fb441e1bf7c81b61a0ffce408c844a1694"
+    },
+    {
+      "path": "training/data/v2/nested.json",
+      "bytes": 2898044,
+      "sha256": "2e1dd108f6d03cc525ee20ca0a09822c3fcd640544d8bc7abb50b59e926230a2"
+    },
+    {
+      "path": "training/data/v2/test.jsonl.gz",
+      "bytes": 1302936,
+      "sha256": "9253a262245b6752aa635f85cf9d6a8b5677c8d5fe108173a287149d7ea7515d"
+    },
+    {
+      "path": "training/data/v2/train.jsonl.gz",
+      "bytes": 11229336,
+      "sha256": "335d326d00525c9dbb14d91f96d228c2cfadf91e5e06fe7b921ee049016c21a8"
+    },
+    {
+      "path": "training/data/v2/valid.jsonl.gz",
+      "bytes": 570035,
+      "sha256": "5193c5145ca5c402326b5c96d0c3e43a307ef26b35b205654d372e5bfeb66a52"
+    },
+    {
+      "path": "training/review/leader-200-decisions.csv",
+      "bytes": 5027,
+      "sha256": "2920acd92b0de8d06c413460e1d6955b61da4a0e2eba3cf66818998a0ea44983"
+    },
+    {
+      "path": "training/review/leader-200.html",
+      "bytes": 781221,
+      "sha256": "c77d5ce5e50e44ae28cada66d013c6a70fe1fcfe5cb6125ac2d559b88bd63b97"
+    },
+    {
+      "path": "training/review/leader-200.jsonl",
+      "bytes": 582288,
+      "sha256": "705c5aea9541263de03e31baade4d377a41759c570ab1ab0dc7c16b4aa4036ad"
+    },
+    {
+      "path": "training/review/train-500-decisions.csv",
+      "bytes": 12527,
+      "sha256": "63854db513cf7fde862999344a10b008782fb92c26ba077b74d9fed7d675ecf1"
+    },
+    {
+      "path": "training/review/train-500.html",
+      "bytes": 1678069,
+      "sha256": "3881ab591b9f664598507cf42356decdea7d54c9abbc01a1093e27d3f249ec68"
+    },
+    {
+      "path": "training/review/train-500.jsonl",
+      "bytes": 1276777,
+      "sha256": "d9542c99c22ff96ba240d66a77207ba9932a86f84e313fe6d8543e65779cae2d"
+    },
+    {
+      "path": "training/runs/offline/finetuned-previous-no-raw-response.json",
+      "bytes": 32340,
+      "sha256": "c086e8ed397b65c37079419d91690667c239612f8424689320ac63d246b18e5a"
+    },
+    {
+      "path": "training/runs/offline/finetuned.json",
+      "bytes": 33919,
+      "sha256": "942c2a7e6c28a5254d2be9cd3f52d289e853c96c6d77e86291ce10f1bbb59d87"
+    },
+    {
+      "path": "training/runs/offline-pilot-invalid-padding/base.json",
+      "bytes": 32221,
+      "sha256": "0b61dcdca57420072e27a412ba0e61da561b695820d8b7aa3f809945d149207f"
+    },
+    {
+      "path": "training/runs/offline-pilot-invalid-padding/finetuned.json",
+      "bytes": 32387,
+      "sha256": "bda41e2b309ad7969a6a7eb9f9f3361e7ff6cda27acc26879ba7be661f5147ea"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/0000100_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "22e98e692a0599196f18f5db46233682b9b0a77736384487514c5ec39dc53e98"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/INVALID.json",
+      "bytes": 112,
+      "sha256": "8d9f79674e6fa6954cf02b0256915c2046753add637a513e090818d63a55364d"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/adapter_config.json",
+      "bytes": 202,
+      "sha256": "dafc488750fc52a0442bff6898ccd9dc4e275e1a84e204fef62101cfab991bc4"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "22e98e692a0599196f18f5db46233682b9b0a77736384487514c5ec39dc53e98"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/base-validation.json",
+      "bytes": 134877,
+      "sha256": "3cc5acbc45e52f4a3fb4bebc5c7be775ca91b8e52adc7cf8f7cdd8c8b9a44cc5"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/config.json",
+      "bytes": 959,
+      "sha256": "da24d67c52d6f4cb80e79c51e3952c21f39fc03d358c445f4e4f0342d1ca11f3"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/console.log",
+      "bytes": 1174,
+      "sha256": "decbf2aee480132d1612698c1b0c422d42ed5d80fbc2e010694a2a949a8c5a4a"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/events.jsonl",
+      "bytes": 4667,
+      "sha256": "036854b213f37562c6229a5944018e00e704c4d0c45295a9926a2e074f37182f"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/input-ids.json",
+      "bytes": 18000,
+      "sha256": "3c6d46f532e8b17a41a8e8721ab32afe933cadcb0f4cf50a705daf8293e0adb4"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/input-train.jsonl",
+      "bytes": 2360709,
+      "sha256": "0556c38cc34f414d77e4ae09d9c5b39335698ae57c75e4d08203729fb9996b22"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/input-valid.jsonl",
+      "bytes": 82645,
+      "sha256": "631c91b7877c1078f2d7f38f670df2a90e7be6439122e6550af5b8b92339bfd1"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/input-validation-audit.json",
+      "bytes": 90915,
+      "sha256": "30c6328e2c080b4a61e88f261599b8fb441e1bf7c81b61a0ffce408c844a1694"
+    },
+    {
+      "path": "training/runs/pilot-invalid-future/mask-check.json",
+      "bytes": 216,
+      "sha256": "1d6ae2b7297d547b90082ea96e3cfc45e4a569936224f578aca01bfed20e5708"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/0000100_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "bab74163d8ad4295d3258194779f0ff230e8ff7ef97edfcc89bb7f1699a085c0"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/0000200_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "42fbb82d7fe0d4fc0c936456756774c666be9c581f2c40382e95521021a5982a"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/0000300_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "90183a5f2be7d4286d98e97dc7437b461184dbb5a70d3f1b3a04adc61c0c7bf8"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/0000400_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "bdf82da428820e36f5adc1c1591df04c0c740823cf4148829227f8d97f471b69"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/0000500_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "ebfcb2ebb8d66808bd6a5c204fc228c66aaf37f24ba1617eae9f03bdcd513892"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/INVALID.json",
+      "bytes": 120,
+      "sha256": "7f9ba23abb20fcc92024b2413f927bbece46d33ac5daef547a67c8dd99e6c659"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/adapter-validation.json",
+      "bytes": 128663,
+      "sha256": "4def76f19f66a769c5679e0f931e512cc07a529eee287b27ddf97055aa4e7b8d"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/adapter_config.json",
+      "bytes": 202,
+      "sha256": "dafc488750fc52a0442bff6898ccd9dc4e275e1a84e204fef62101cfab991bc4"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "ebfcb2ebb8d66808bd6a5c204fc228c66aaf37f24ba1617eae9f03bdcd513892"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/base-validation.json",
+      "bytes": 134878,
+      "sha256": "13ff6322d37974ec4ddd8439097e406d606531ec6a43cc5818e13d47e335d118"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/comparison.json",
+      "bytes": 176,
+      "sha256": "e280f62bd3cc38d4404268457db5084a5b003d387d222ee98d1c03c3acae2ca1"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/config.json",
+      "bytes": 959,
+      "sha256": "da24d67c52d6f4cb80e79c51e3952c21f39fc03d358c445f4e4f0342d1ca11f3"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/console.log",
+      "bytes": 3519,
+      "sha256": "45889d0c1e730333a33633eacb005a5f1a5b12f35158f69fac5ac42f7de631a7"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/events.jsonl",
+      "bytes": 13053,
+      "sha256": "b894266bd0e1d2a1a5a0b8803d1adace726378796b7452b09a5536344953ffe4"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/input-ids.json",
+      "bytes": 18000,
+      "sha256": "4328c17176365009652a55964ed6ae4ec4c8a61a169ed9958429e453a132854d"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/input-train.jsonl",
+      "bytes": 2348943,
+      "sha256": "1ef48f4be96554e29fd1b520f539f7a88148b7d88fd15117747651685c0b5d62"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/input-valid.jsonl",
+      "bytes": 82645,
+      "sha256": "631c91b7877c1078f2d7f38f670df2a90e7be6439122e6550af5b8b92339bfd1"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/input-validation-audit.json",
+      "bytes": 90915,
+      "sha256": "30c6328e2c080b4a61e88f261599b8fb441e1bf7c81b61a0ffce408c844a1694"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/mask-check.json",
+      "bytes": 216,
+      "sha256": "150f7f1a83f516cc1e81803ca4f0cec932b9e524c98b0ce7ef6218be0fa47de2"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/reload-manifest.json",
+      "bytes": 153,
+      "sha256": "588ab6be2308619dd80911c18845adc9ee23d49a36d9fa2f09d7f3926a5ed84a"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/reloaded.json",
+      "bytes": 128656,
+      "sha256": "ffe8f6d6fcfb6069f41a4a4e4d2a9119f40140d47843f0978519a47b1669693c"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/source-train.py",
+      "bytes": 6129,
+      "sha256": "93a285dc19f9778415f47571714b37f334493534ca8225f8bc552a3f8ac3fc0f"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/task-metrics.json",
+      "bytes": 52971,
+      "sha256": "a8246d06d1e51f5bef2078b4fe12007a71b05f3badca3d1cae5299399de2e4b7"
+    },
+    {
+      "path": "training/runs/pilot-invalid-padding/training-manifest.json",
+      "bytes": 1073,
+      "sha256": "f1db5a2b418f33aafa9b3708ce01800fbfbe2dbb9de036273f033593a50652cc"
+    },
+    {
+      "path": "training/runs/smoke-1k/0000100_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "114ba6f324331c0048bb4b0a7854fbc98dc6193d08bea8abc6f66ebe2d21097e"
+    },
+    {
+      "path": "training/runs/smoke-1k/0000200_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "fea5db00e1144455783602aae37da4906cb6c21ddbcce880d719eff9c7133fce"
+    },
+    {
+      "path": "training/runs/smoke-1k/0000300_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "3f71ca31850878e5dba8b16bc7096a3c691fb827746c19919544872e83942629"
+    },
+    {
+      "path": "training/runs/smoke-1k/0000400_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "cb046a7312465120f7c2fcaf00a44e847c2ecb3d882870409e18a744c927ac78"
+    },
+    {
+      "path": "training/runs/smoke-1k/0000500_adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381"
+    },
+    {
+      "path": "training/runs/smoke-1k/adapter-validation.json",
+      "bytes": 126831,
+      "sha256": "6e7a1214398c708775e20e8b3fba3412021c1f4f357321ca2d359e71b2a97bcc"
+    },
+    {
+      "path": "training/runs/smoke-1k/adapter_config.json",
+      "bytes": 202,
+      "sha256": "dafc488750fc52a0442bff6898ccd9dc4e275e1a84e204fef62101cfab991bc4"
+    },
+    {
+      "path": "training/runs/smoke-1k/adapters.safetensors",
+      "bytes": 724268,
+      "sha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381"
+    },
+    {
+      "path": "training/runs/smoke-1k/base-validation.json",
+      "bytes": 134878,
+      "sha256": "13ff6322d37974ec4ddd8439097e406d606531ec6a43cc5818e13d47e335d118"
+    },
+    {
+      "path": "training/runs/smoke-1k/baseline-provenance.json",
+      "bytes": 214,
+      "sha256": "e1359b46364c892d596e5b988dc93e080192e788fc33698969e899be8a88dd9a"
+    },
+    {
+      "path": "training/runs/smoke-1k/comparison.json",
+      "bytes": 174,
+      "sha256": "6c531d8906305b6664fa9336407234cd7a571ce76fcfee988c6d61a75e7b986c"
+    },
+    {
+      "path": "training/runs/smoke-1k/config.json",
+      "bytes": 959,
+      "sha256": "da24d67c52d6f4cb80e79c51e3952c21f39fc03d358c445f4e4f0342d1ca11f3"
+    },
+    {
+      "path": "training/runs/smoke-1k/events.jsonl",
+      "bytes": 13078,
+      "sha256": "010cf83c5818d2764fa8beff6fae493eb5d95afbeb19d80fa3f6bd0fc5de0940"
+    },
+    {
+      "path": "training/runs/smoke-1k/input-ids.json",
+      "bytes": 18000,
+      "sha256": "4328c17176365009652a55964ed6ae4ec4c8a61a169ed9958429e453a132854d"
+    },
+    {
+      "path": "training/runs/smoke-1k/input-train.jsonl",
+      "bytes": 2348943,
+      "sha256": "1ef48f4be96554e29fd1b520f539f7a88148b7d88fd15117747651685c0b5d62"
+    },
+    {
+      "path": "training/runs/smoke-1k/input-valid.jsonl",
+      "bytes": 82645,
+      "sha256": "631c91b7877c1078f2d7f38f670df2a90e7be6439122e6550af5b8b92339bfd1"
+    },
+    {
+      "path": "training/runs/smoke-1k/input-validation-audit.json",
+      "bytes": 90915,
+      "sha256": "30c6328e2c080b4a61e88f261599b8fb441e1bf7c81b61a0ffce408c844a1694"
+    },
+    {
+      "path": "training/runs/smoke-1k/mask-check.json",
+      "bytes": 216,
+      "sha256": "150f7f1a83f516cc1e81803ca4f0cec932b9e524c98b0ce7ef6218be0fa47de2"
+    },
+    {
+      "path": "training/runs/smoke-1k/reload-manifest.json",
+      "bytes": 153,
+      "sha256": "2ab8b438f06933dcfd0e6ed4f8c67f5329c354d77738c3ac977c4dac3d5e4161"
+    },
+    {
+      "path": "training/runs/smoke-1k/reloaded.json",
+      "bytes": 126825,
+      "sha256": "8d1a912115ee53f7884317804a1369a3d438725ef8ea8d9fdcc21fa116b51f76"
+    },
+    {
+      "path": "training/runs/smoke-1k/source-fingerprints.json",
+      "bytes": 444,
+      "sha256": "3753796719b5e337a9b5b5a9a684fa528c681d957074954f656bcd93ea4f673f"
+    },
+    {
+      "path": "training/runs/smoke-1k/task-metrics.json",
+      "bytes": 53383,
+      "sha256": "a4cf6e31ec257fb99909ec6d7d8bff8a88e58c5e7fc136c54e67f7406eca6e41"
+    },
+    {
+      "path": "training/runs/smoke-1k/training-manifest.json",
+      "bytes": 1073,
+      "sha256": "4a0d4b0a622ae3e8f0fa02c6344a7d34440a6c406404a0e6c36c488b60dac94d"
+    },
+    {
+      "path": "training/runs/verification/final-source-delivery.log",
+      "bytes": 6394,
+      "sha256": "9bb56b0817129485edfd2ff8ba286f4bf938deb2427e0efa3567a06c0ff0edc5"
+    },
+    {
+      "path": "training/runs/verification/frozen.log",
+      "bytes": 289,
+      "sha256": "5ac08547594fb74faa6f9cc63eaab6bb4be70464631c79cd91687bbbdbf35f11"
+    },
+    {
+      "path": "training/runs/verification/near-audit.log",
+      "bytes": 571,
+      "sha256": "fc8a485bc832e63cb16bd63a4347bc5d9de3088bd360e7098d2f114f24a5cc8f"
+    },
+    {
+      "path": "training/runs/verification/node-tests.log",
+      "bytes": 6726,
+      "sha256": "8ebb21320fb80e0083f74d969b3bba05f702919e39f440d826bed1bf0d142f46"
+    },
+    {
+      "path": "training/runs/verification/offline-gguf.log",
+      "bytes": 6396,
+      "sha256": "8dd4087092f188dfb5f7176677614f51e44a08f6ecd3da80e6c7d66ebeb8db1b"
+    },
+    {
+      "path": "training/runs/verification/token-audit.log",
+      "bytes": 2077,
+      "sha256": "0f3a28130aded8c0abad66042e05535f9403888d6e26f21b62191f7dfc8eef3b"
+    },
+    {
+      "path": "experiments/next-audit/MANIFEST.json",
+      "bytes": 26554,
+      "sha256": "951e264b069be9b425e6842cc6d432497330e7ec14f0aa85d2ccaa23ad48134e"
+    },
+    {
+      "path": "experiments/next-audit/case-audit.jsonl.gz",
+      "bytes": 479223,
+      "sha256": "6e24a24ccd390151672ead88c660eb2aa31afcdfa000c16e4764a17718adfb77"
+    },
+    {
+      "path": "experiments/next-audit/core-replay.json.gz",
+      "bytes": 165486,
+      "sha256": "a98e6d582c2d61175d170f56b5150470cf71abae68fc1e51b85c67bc1621c822"
+    },
+    {
+      "path": "experiments/next-audit/error-taxonomy.csv",
+      "bytes": 3065,
+      "sha256": "1e0e6dc988ab11212469a7057f28e60943bee8a10e9805b9a6ef10bd65dae69a"
+    },
+    {
+      "path": "experiments/next-audit/public-core/MANIFEST.json",
+      "bytes": 26971,
+      "sha256": "a03dfc93ffc1ba84c65cfc7bca147446a10217900c4763fe16cd18f2dac1e0f2"
+    },
+    {
+      "path": "experiments/next-audit/public-core/case-audit.jsonl.gz",
+      "bytes": 479223,
+      "sha256": "6e24a24ccd390151672ead88c660eb2aa31afcdfa000c16e4764a17718adfb77"
+    },
+    {
+      "path": "experiments/next-audit/public-core/core-replay.json.gz",
+      "bytes": 165486,
+      "sha256": "a98e6d582c2d61175d170f56b5150470cf71abae68fc1e51b85c67bc1621c822"
+    },
+    {
+      "path": "experiments/next-audit/public-core/error-taxonomy.csv",
+      "bytes": 3065,
+      "sha256": "1e0e6dc988ab11212469a7057f28e60943bee8a10e9805b9a6ef10bd65dae69a"
+    },
+    {
+      "path": "experiments/next-audit/public-core/representative-cases.jsonl",
+      "bytes": 168209,
+      "sha256": "5540b603d685dd7308d6d4470a85e360a84c2bb1cb4b95db3f0cd8110a26d821"
+    },
+    {
+      "path": "experiments/next-audit/public-core/representative-cases.jsonl.gz",
+      "bytes": 10229,
+      "sha256": "dc0f801881abe5158ee157ec930c44e0826abe846159059a58673c8a22e1ef65"
+    },
+    {
+      "path": "experiments/next-audit/public-core/root-cause-report.md",
+      "bytes": 1119,
+      "sha256": "7583574034e2a45abf2b60579ba9a161cdf2af4fe34e778997a3a361e389ddbf"
+    },
+    {
+      "path": "experiments/next-audit/public-core/source-map.json",
+      "bytes": 26122,
+      "sha256": "9b3f6388f7f155ddc37f68e623c59caa76f6c0956bd10b5487e287b8e776640f"
+    },
+    {
+      "path": "experiments/next-audit/representative-cases.jsonl",
+      "bytes": 168209,
+      "sha256": "5540b603d685dd7308d6d4470a85e360a84c2bb1cb4b95db3f0cd8110a26d821"
+    },
+    {
+      "path": "experiments/next-audit/representative-cases.jsonl.gz",
+      "bytes": 10229,
+      "sha256": "dc0f801881abe5158ee157ec930c44e0826abe846159059a58673c8a22e1ef65"
+    },
+    {
+      "path": "experiments/next-audit/representative-cases.md",
+      "bytes": 42779,
+      "sha256": "a4fdd02a830d858b920a6763d51c27521991306169548fc580d29b3c653b4694"
+    },
+    {
+      "path": "experiments/next-audit/root-cause-report.md",
+      "bytes": 1119,
+      "sha256": "7583574034e2a45abf2b60579ba9a161cdf2af4fe34e778997a3a361e389ddbf"
+    },
+    {
+      "path": "experiments/next-audit/source-map.json",
+      "bytes": 26122,
+      "sha256": "9b3f6388f7f155ddc37f68e623c59caa76f6c0956bd10b5487e287b8e776640f"
+    }
+  ]
+}

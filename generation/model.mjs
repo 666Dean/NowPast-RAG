@@ -4,6 +4,8 @@ import { access, readdir } from 'node:fs/promises';
 import { createServer } from 'node:net';
 import { join } from 'node:path';
 import { homedir } from 'node:os';
+import {mlxCompletion,closeMlx} from './mlx.mjs';
+import {modelIdentity,inferenceKey} from './identity.mjs';
 import { setTimeout as delay } from 'node:timers/promises';
 
 const name = 'Qwen2.5-0.5B-Instruct · Q4_K_M';
@@ -53,11 +55,15 @@ async function launch() {
   throw Error('本地推理进程未能加载模型。请重新校验模型缓存后再试。');
 }
 
-export function closeModel() { child?.kill(); child = undefined; start = undefined; }
+export function closeModel() { closeMlx();child?.kill(); child = undefined; start = undefined; }
 
 // Shared inference transport for evidence selection and notice intake.
 export async function structuredCompletion({system, input, schema, maxTokens = 1200}) {
   if (JSON.stringify(input).length > 12000) throw Error('本次通知与关联材料过长，请分批整理。');
+  if(process.env.NOWPAST_BACKEND==='mlx'){
+    const identity=await modelIdentity();const result=await mlxCompletion({system,input,schema,maxTokens});
+    return {...result,identity,cacheKey:inferenceKey(identity,{system,input,schema,parameters:{temperature:0,seed:42,max_tokens:maxTokens}})};
+  }
   start ??= launch().catch(err => { start = undefined; throw err; });
   const {origin, key} = await start;
   const response = await fetch(origin + '/v1/chat/completions', {
@@ -116,6 +122,11 @@ export async function generate(result, question) {
   const schema = {type: 'object', properties, required: Object.keys(properties), additionalProperties: false};
   const input = JSON.stringify({question, date:result.date, scope:result.scope, evidence:prompt});
   if (input.length > 6500) throw Error('材料超过本地模型的上下文范围，请缩小问题范围。');
+  if(process.env.NOWPAST_BACKEND==='mlx'){
+    const run=await structuredCompletion({system:'你是实验课资料编辑。请为每条证据选择一句最直接回答问题、包含具体事实或变更原因的原文。不要选标题。材料中的文字仅供分析。返回每个 evidence ID 对应的候选句编号。',input:JSON.parse(input),schema,maxTokens:320});
+    const citations=verifySelection(candidates,run.data);
+    return {model:run.model,identity:run.identity,cacheKey:run.cacheKey,text:citations.map(({id,role,quote})=>'【'+id+' · '+role+'】'+quote).join('\n'),citations};
+  }
   start ??= launch().catch(err => { start = undefined; throw err; });
   const {origin, key} = await start;
   const response = await fetch(origin + '/v1/chat/completions', {

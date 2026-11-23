@@ -1,7 +1,7 @@
 {
   "inputs": {
     "../knowledge/data.mjs": "cf20c263f3635171",
-    "../knowledge/schema.mjs": "2406b1ca64621fe9",
+    "../knowledge/schema.mjs": "25a4bda970c0ed7d",
     "../temporal/graph.mjs": "5dce7eb7df38a0a8",
     "../retrieval/rank.mjs": "75ed68dee289d648",
     "../qa/answer.mjs": "b647e88898f97290",

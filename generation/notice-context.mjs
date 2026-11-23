@@ -10,8 +10,7 @@ export function datesIn(text, published) {
   });
   return parseDates(expanded,published).filter(validDay);
 }
-export function noticeContext(input,item,docs=[]) {
-  const valueIndex=input.text.indexOf(item.value);
+function contextAt(input,item,docs,valueIndex) {
   const prefix=input.text.slice(0,valueIndex<0?input.text.length:valueIndex+item.value.length);
   const sentence=prefix.split(/[。！？\n]/).at(-1) || prefix;
   const localBracket=[...sentence.matchAll(/《([^》]{1,60})》/g)].at(-1)?.[1];
@@ -41,7 +40,22 @@ export function noticeContext(input,item,docs=[]) {
   const localCount=datesIn(sentence,input.published).length-[...sentence.matchAll(effectivePattern)].length;
   const lessonDate=noticeType==='course' && localCount>0?calendar.slice(-localCount)[0]:undefined;
   const activity=assignment && course?`${course}-${assignment}`:lessonDate && course?`${course}-${lessonDate}`:undefined;
-  return {course,noticeType,field,lessonDate,activity,assignment};
+  const classPattern=/[\p{Script=Han}A-Za-z]{2,8}\d{1,3}班|[AB]组|全班|全校/gu;
+  const classId=[...sentence.matchAll(classPattern)].at(-1)?.[0] || [...prefix.matchAll(classPattern)].at(-1)?.[0] || input.scope;
+  return {course,classId,noticeType,field,lessonDate,activity,assignment};
+}
+export function noticeContext(input,item,docs=[]) {
+  if(!item.quote)return contextAt(input,item,docs,input.text.indexOf(item.value));
+  if(!item.value||!item.quote.includes(item.value)||!input.text.includes(item.quote))throw Error('引用与条款值未在同一原文中定位。');
+  const contexts=[];
+  // Do not anchor repeated values to the first occurrence in the whole notice.
+  // The selected quotation must identify one context, even if its text repeats.
+  for(let q=input.text.indexOf(item.quote);q>=0;q=input.text.indexOf(item.quote,q+1)){
+    for(let v=item.quote.indexOf(item.value);v>=0;v=item.quote.indexOf(item.value,v+item.value.length))contexts.push(contextAt(input,item,docs,q+v));
+  }
+  const unique=new Map(contexts.map(c=>[JSON.stringify(c),c]));
+  if(unique.size!==1)throw Error('引用对应的课程、班级或课次不唯一，请保留原文待确认。');
+  return unique.values().next().value;
 }
 export function compatibleContext(doc,context) {
   const c=doc.campus || doc;

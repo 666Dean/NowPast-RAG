@@ -1,0 +1,1766 @@
+{
+  "source": "fc6cb181367570e1cad94680a9584dfe357e62cb",
+  "dirty": "M service/validation/delivery-check.json",
+  "sourceFiles": {
+    "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
+    "generation/domain-answer.mjs": "8c167b206734b6a427b7fdaf53f528245620be2d0b340b5d3181210dbc632a18",
+    "generation/domain-answer.test.mjs": "cf4143f5d78ce3794ee5446b7a9fbff7c44fca0d794071a87622a8ca152b5682",
+    "generation/domain-notice.mjs": "d1ed53bdc57683674995977d84956ca4b1c79c5c859879e25698bbfae0618671",
+    "generation/domain-notice.test.mjs": "12adcbec4b2b32c7fe8298c86d13391cff25af0ec7ba8fa12841f5099d6d37a1",
+    "generation/identity.mjs": "ca1c102d701d55f89bcfd00911aa2a6a4983f28686f521ec1585d444008e0dc3",
+    "generation/identity.test.mjs": "28bd8003fddbe5513ff52dc6c7f8f768288c7a7e02d6a8bb3c8082a61b76a10e",
+    "generation/intake-regression.test.mjs": "5ad1d6466a241135a94d71b1e9c71fb45916cbccd8f318658b909b55147bb29e",
+    "generation/mlx.mjs": "eb24390a32426fa355f98d05df854a0181d752a4106482d718184620d6c717b8",
+    "generation/mlx.test.mjs": "1ce29693203ea2644a8f82f93d2a86a1a8d1bf2c71e1380a3049e81743b92545",
+    "generation/model.mjs": "44b601c2907fbb74783a2872f8a75230d6bde4147564a411ae26c741699c740f",
+    "generation/notice-context.mjs": "d312abcb2e6f890a8874fb3f75bb50bf48f154f6f97b290f182aca03e6c79d92",
+    "generation/notice.mjs": "237de1c3b046f52a88cdc8d42875330787441bff02b74defda18fc9df2cfd9d7",
+    "generation/notice.test.mjs": "4b8cc95fa5c360da038352c569a0afd174bd0e765ce43369fe5328483e689a14",
+    "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
+    "generation/source-records.mjs": "68d059b4ed7fe80b5d030842821769d33d21ccf087c8e348ec1dd8cd09650742",
+    "generation/source-spans.mjs": "dd70e9c3cc137f44dd35bf5175cf904d117bc038da33af3ddbd304c180bea481",
+    "knowledge/campus-data.mjs": "5c7f70ecb6f46aee590829faa017b8330adb0dadff417f038d854d4b31d43eef",
+    "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
+    "knowledge/notice-adapter.mjs": "2dc7b8a5d8cee99ff48246a27b3b2d3d157fa9c5499cd050f8e3d8e30b7c53c3",
+    "knowledge/notices.mjs": "78d3a8470c8d92ed38a96cad3ac018acaadb84538db51cf5337261f04d9fb1a4",
+    "knowledge/schema.mjs": "25a4bda970c0ed7d97f28f6e1832f4daec7e79329cfc02d400bcfa9dbe167bb2",
+    "qa/answer.mjs": "b647e88898f972907a51385b608317a1e8ea5dd685cac3ff0b803588e805c48f",
+    "qa/campus.mjs": "f433dd2a6792dab42c7dc776b1d329d4c71ee37e00ee1f04bdf07cda8c94749b",
+    "qa/campus.test.mjs": "febbf59a3f32cb53a2f34fb360ca43fb74fd13c08b7273f54a1fbffcf1bcde94",
+    "qa/integration.test.mjs": "51a0230e8c0623c59ece0199295f78a69a7c56ca5d4f1cb6d0cccd1ec2f0a64d",
+    "qa/next-core.test.mjs": "ef8c8067c7b74e03bafb86f77418bc2a6c33fda2582a36bf3271b29c41934b7a",
+    "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
+    "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
+    "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
+    "service/integration-probes.mjs": "9669d5922773756a2cd4c5967bda89c1dacd672a7b0c96a33c1fea7665b57a4d",
+    "service/manual-test.mjs": "382b46397f34506c2eb295f7072c4d79ae4fb56ee2149dd71144b3479984d824",
+    "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
+    "service/run-tests.mjs": "0f3501474084d1bdee14f35fdf63bd24f40bd6546f91736e6ee2c892d39a26a5",
+    "service/s1-probes.mjs": "ed4376a0d88b680aea9b3dd436d704b3c4e223f60b6cea5c1850facc55150f3e",
+    "service/server.mjs": "649aa0fee737efb195cb911ebda6fc2395c81afbec2aa21d2876729369e78fd7",
+    "service/static-imports.test.mjs": "a52f645363cda2a8f3cbdec263fa1c676de877d5a2783721fe240e97ab9a19b9",
+    "service/verify-delivery.mjs": "9bdcae33ef6c43e20338437910ff29dbee14e7a610ddc4f3c8622bd7fa98e2a4",
+    "service/verify-s1.mjs": "3082c3970f0eedbcc9fabfffe442e017f98174c74a2430308b53f107896cd06e",
+    "service/verify-service.mjs": "48b35e66ef0e87459f2bb09727ea64b482dcd78b61526b26e9b2495454645b81",
+    "temporal/campus.mjs": "4222bf5986a2c31e19f8764341910e6f1144323ac24ab98d02e5067e302df014",
+    "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
+    "temporal/graph.mjs": "5dce7eb7df38a0a809cb51cfece7cb5e8f9f5b9db270b9cf39c31f55e0b9a454",
+    "temporal/integrity.mjs": "06518d442a5640af09e27385ab5f381c1ebf8979c39b691981dae8f1365a2eb9",
+    "training/data.py": "7a6d782b9cc7e1813514ace5295a76108139065037683552f226b335c39d496f",
+    "training/formal-gate.py": "a69edcc822ca211de801dfb6510b8808c06ed519b12b20e89b8f52b29b4616f6",
+    "training/input-format-audit.py": "681fbd85ca2e940dddb2d1dfaaf1100bb49203773f5ef607115dcd6ac1e6d9cf",
+    "training/interface-probe.mjs": "80d79264ea84e3387f87107ca7642c2bc79d5dccd2f7b38398fe0dc6fccbfaab",
+    "training/loss.py": "fe5be74b98b9ce3ceb128a9ba46248244ceb225933064c90c86d2ea6345afc05",
+    "training/metrics.py": "9a130f7bee1af99568336a8f205e06e3afd227419aa4796cbb3baacf1f1092ca",
+    "training/near-audit.py": "33180678a7ea558c73e9fdfa2152d0869248b33ddabd877f8cc3f7d833e5ed21",
+    "training/offline-probe.mjs": "db4f201f473c4251a0d67abb72758da358ba748f8f7102ba2ff7677f8a9fb5a4",
+    "training/prepare-base.py": "329fd498d12cdf76b7d9c1c5e6c02eadd7b0cbff36f8127fb86f65d75bf1e32d",
+    "training/prepare.py": "56ed1cb461447176bb1cea911c1386341c22e1af084408c24a57d74a02193e45",
+    "training/prompting-tests.py": "fc3109ce3b6534d2d354dfce159934fea6fa2c25cc8a702f6578c3b26c83418f",
+    "training/prompting.py": "da3630e36eb4e7b380feb7a1064cdd8610e941136930e679a18da158c44a0500",
+    "training/raw-notice-probe.mjs": "c8346395d06d1b725ccbb554acd6e5180d8b4984511de91c827e1d28799e7a53",
+    "training/requirements.txt": "84ee08f3e9f62d1076e576a67453725a5c23553c8452f26a2f02af4703c02322",
+    "training/review.py": "8c7aa8d36a70d70624c46cdca9c2a8537b5c878e893a693ab34bee1964bb1a62",
+    "training/summarize.py": "f20d63c55f92916a074fbadf0de49b555659c900f1ea5756a7900023671412b2",
+    "training/tests.py": "7c9a4d87c2f425cd2aa08fe9dcae0333917a82e384d29a0049e3bc656cb12987",
+    "training/train.py": "5d8b31f686fe03bae16fa26a5a49c8dc7aa2999d84551e703bbd937d6a13332c",
+    "training/v2-runtime.json": "4998030660a74228928eaa9c2eb9e6eef24a6aa344af58ef011734e6a5ea4cbc",
+    "training/worker.py": "f2756565ecfa2c8f309dc375daf328afc721e0d40a221bb53bda561e4fae4a38"
+  },
+  "sourceDigest": "83bcb3e0a230a2efdf2197f3294767c6ad9cfeafe3c8a5ec4c90f678811a8e47",
+  "startedAt": "2026-11-23T14:10:03.402Z",
+  "decoding": "outlines-json-schema",
+  "variant": "finetuned",
+  "repetitionPenalty": 1,
+  "repetitionContext": 256,
+  "cases": [
+    {
+      "name": "quotes",
+      "path": "/api/generate",
+      "request": {
+        "domain": "campus",
+        "asOf": "2026-11-26",
+        "lessonDate": "2026-11-27",
+        "classId": "计科2班",
+        "course": "数据库",
+        "question": "什么时候、在哪上？",
+        "docs": [
+          {
+            "kind": "campus",
+            "id": "S1-2026-11-27-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-11-27-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-11-27",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-12-04-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科1班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-12-04",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-12-04-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科1班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-12-04",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-11-27-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-11-27-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-12-04-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-12-04",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-12-04-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-12-04",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "N25-room",
+            "title": "虚构调课通知",
+            "topic": "上课教室",
+            "value": "B204",
+            "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+            "scope": "计科2班",
+            "published": "2026-11-25",
+            "effective": "2026-11-27",
+            "imported": "2026-11-25",
+            "supersedes": [
+              "S2-2026-11-27-room"
+            ],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "adjustment",
+              "locator": "通知第1段"
+            }
+          }
+        ]
+      },
+      "status": 200,
+      "expected": 200,
+      "checks": {
+        "grounded": true,
+        "complete": true,
+        "identityAndDates": true
+      },
+      "ok": true,
+      "ms": 3413.803917,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+        "identity": {
+          "baseRevision": "7ae557604adf67be50417f59c2c2f167def9a775",
+          "base": {
+            "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+            "bytes": 988097824
+          },
+          "adapter": {
+            "sha256": "8040e10f7da0dba5a32ab2e446df36bd66270dfc3cbdf221a965f2029b02f381",
+            "bytes": 724268
+          },
+          "tokenizer": {
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+            "bytes": 7031645
+          },
+          "chatTemplate": {
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+            "bytes": 7305
+          },
+          "runtime": {
+            "backend": "mlx",
+            "python": {
+              "sha256": "54788b15120aa4f534da3f59b59f46658a9bfdc3d3d9c8b3af1459002e307c90",
+              "bytes": 18652456
+            },
+            "decoding": "outlines-json-schema",
+            "repetitionPenalty": 1,
+            "repetitionContext": 256,
+            "dependencies": {
+              "sha256": "84ee08f3e9f62d1076e576a67453725a5c23553c8452f26a2f02af4703c02322",
+              "bytes": 862
+            },
+            "worker": {
+              "sha256": "f2756565ecfa2c8f309dc375daf328afc721e0d40a221bb53bda561e4fae4a38",
+              "bytes": 4408
+            },
+            "prompting": {
+              "sha256": "da3630e36eb4e7b380feb7a1064cdd8610e941136930e679a18da158c44a0500",
+              "bytes": 981
+            }
+          },
+          "quantization": null,
+          "variant": "finetuned"
+        },
+        "cacheKey": "7894ed61d98164f211b52b11693957b577ed5c1618c68fc2c4d3ee9ee996725b",
+        "text": "【N25-room · 计科2班 · 当前依据】虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。\n【S2-2026-11-27-room · 计科2班 · 已被替代】虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。\n【S2-2026-11-27-time · 计科2班 · 当前依据】虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+        "citations": [
+          {
+            "id": "N25-room",
+            "role": "计科2班 · 当前依据",
+            "quote": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。"
+          },
+          {
+            "id": "S2-2026-11-27-room",
+            "role": "计科2班 · 已被替代",
+            "quote": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。"
+          },
+          {
+            "id": "S2-2026-11-27-time",
+            "role": "计科2班 · 当前依据",
+            "quote": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "conflict-fee",
+      "path": "/api/generate",
+      "request": {
+        "domain": "campus",
+        "asOf": "2026-11-26",
+        "lessonDate": "2026-11-27",
+        "classId": "计科2班",
+        "course": "数据库",
+        "question": "教室在哪，要交多少钱？",
+        "docs": [
+          {
+            "kind": "campus",
+            "id": "S1-2026-11-27-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-11-27-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科1班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-11-27",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-12-04-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科1班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-12-04",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S1-2026-12-04-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科1班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科1班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科1班",
+              "lessonDate": "2026-12-04",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科1班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-11-27-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-11-27-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科2班2026-11-27数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-11-27",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-11-27 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-12-04-room",
+            "title": "虚构原课表",
+            "topic": "上课教室",
+            "value": "A301",
+            "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-12-04",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "S2-2026-12-04-time",
+            "title": "虚构原课表",
+            "topic": "上课时间",
+            "value": "08:00–09:40",
+            "text": "虚构课表：计科2班2026-12-04数据库课，教室 A301，上课时间 08:00–09:40。",
+            "scope": "计科2班",
+            "published": "2026-11-01",
+            "effective": "2026-12-04",
+            "imported": "2026-11-01",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-12-04",
+              "field": "time"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "schedule",
+              "locator": "计科2班 / 2026-12-04 课表行"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "N25-room",
+            "title": "虚构调课通知",
+            "topic": "上课教室",
+            "value": "B204",
+            "text": "虚构通知：计科2班2026-11-27数据库课由 A301 调整到 B204，仅调整教室。",
+            "scope": "计科2班",
+            "published": "2026-11-25",
+            "effective": "2026-11-27",
+            "imported": "2026-11-25",
+            "supersedes": [
+              "S2-2026-11-27-room"
+            ],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "adjustment",
+              "locator": "通知第1段"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "N26-room",
+            "title": "虚构调课通知",
+            "topic": "上课教室",
+            "value": "C105",
+            "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+            "scope": "计科2班",
+            "published": "2026-11-26",
+            "effective": "2026-11-27",
+            "imported": "2026-11-26",
+            "supersedes": [
+              "S2-2026-11-27-room"
+            ],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "room"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "parallel-notice",
+              "locator": "通知第1段"
+            }
+          },
+          {
+            "kind": "campus",
+            "id": "N26-contact",
+            "title": "虚构调课通知",
+            "topic": "联系人",
+            "value": "教务值班室",
+            "text": "虚构通知：计科2班2026-11-27数据库课教室为 C105。联系教务值班室。",
+            "scope": "计科2班",
+            "published": "2026-11-26",
+            "effective": "2026-11-27",
+            "imported": "2026-11-26",
+            "supersedes": [],
+            "aliases": [],
+            "campus": {
+              "course": "数据库",
+              "classId": "计科2班",
+              "lessonDate": "2026-11-27",
+              "field": "contact"
+            },
+            "source": {
+              "type": "fictional",
+              "id": "parallel-notice",
+              "locator": "通知第1段"
+            }
+          }
+        ]
+      },
+      "status": 422,
+      "expected": 422,
+      "checks": {
+        "grounded": true,
+        "complete": true,
+        "identityAndDates": true
+      },
+      "ok": true,
+      "ms": 4.426417000000129,
+      "response": {
+        "error": "当前证据不足，请先核查或补充资料。",
+        "missing": [
+          "费用"
+        ]
+      }
+    },
+    {
+      "name": "room-intake",
+      "path": "/api/notices/analyze",
+      "request": {
+        "title": "数据库教室调整",
+        "scope": "计科2班",
+        "published": "2026-11-25",
+        "text": "即日起，计科2班11月27日数据库课教室调整为C205。",
+        "docs": [
+          {
+            "id": "DB-ROOM",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "A301",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-TIME",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课时间",
+            "value": "08:00–09:40",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库几点",
+              "数据库什么时候上课",
+              "周五数据库课时间"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "time"
+          },
+          {
+            "id": "DB-HW",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一要求",
+            "value": "完成ER图设计",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业",
+              "作业一要求",
+              "ER图设计"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "task"
+          },
+          {
+            "id": "DB-DUE",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月26日18:00",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "DB-SUBMIT",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一提交地点",
+            "value": "课程平台",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业交到哪里",
+              "数据库作业提交平台"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "channel"
+          },
+          {
+            "id": "LIB-OLD",
+            "title": "图书馆：二层开放安排",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "09:00–12:00",
+            "text": "11月22日09:00–12:00，图书馆二层因设备维护暂停开放。",
+            "supersedes": [],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "09:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          },
+          {
+            "id": "PY-HW",
+            "title": "Python程序设计：列表练习",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "计科2班",
+            "topic": "Python程序设计·列表练习",
+            "value": "提交列表练习",
+            "text": "计科2班Python程序设计：11月24日20:00前在课程平台提交列表练习。",
+            "supersedes": [],
+            "aliases": [
+              "Python作业",
+              "列表练习"
+            ],
+            "activity": "Python-列表练习",
+            "course": "Python程序设计",
+            "noticeType": "assignment",
+            "issuer": "Python任课教师",
+            "field": "task",
+            "event": {
+              "date": "2026-11-24",
+              "time": "20:00",
+              "place": "课程平台",
+              "action": "提交列表练习"
+            }
+          },
+          {
+            "id": "DB-ROOM-NEW",
+            "title": "数据库：11月27日教室调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "B204",
+            "text": "计科2班11月27日数据库课教室由A301调整为B204，取代11月18日公布的教室安排。上课时间仍为08:00–09:40。",
+            "supersedes": [
+              "DB-ROOM"
+            ],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "B204",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-DUE-NEW",
+            "title": "数据库：作业一截止时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月27日18:00",
+            "text": "计科2班数据库作业一截止时间由11月26日18:00顺延至11月27日18:00，替代11月19日通知的截止要求。请在课程平台提交ER图设计作业。",
+            "supersedes": [
+              "DB-DUE"
+            ],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-27",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "LIB-NEW",
+            "title": "图书馆：二层暂停开放时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "10:00–12:00",
+            "text": "11月22日图书馆二层暂停开放时间由09:00–12:00调整为10:00–12:00，替代11月20日的安排。",
+            "supersedes": [
+              "LIB-OLD"
+            ],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "10:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          }
+        ]
+      },
+      "status": 200,
+      "expected": 200,
+      "checks": {
+        "grounded": true,
+        "complete": true,
+        "identityAndDates": true
+      },
+      "ok": true,
+      "ms": 2169.4861670000005,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+        "noticeId": "notice-bbbe8494-d361-4c50-bde3-1acad329dffb",
+        "clauses": [
+          {
+            "id": "notice-bbbe8494-d361-4c50-bde3-1acad329dffb-1",
+            "noticeId": "notice-bbbe8494-d361-4c50-bde3-1acad329dffb",
+            "title": "数据库教室调整",
+            "text": "即日起，计科2班11月27日数据库课教室调整为C205。",
+            "topic": "数据库·11月27日上课地点",
+            "value": "C205",
+            "scope": "计科2班",
+            "effective": "2026-11-25",
+            "published": "2026-11-25",
+            "imported": "2026-11-23",
+            "aliases": [],
+            "supersedes": [
+              "DB-ROOM-NEW"
+            ],
+            "relations": [
+              {
+                "id": "DB-ROOM-NEW",
+                "kind": "replace"
+              }
+            ],
+            "excerpt": "即日起，计科2班11月27日数据库课教室调整为C205。",
+            "analysis": {
+              "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+              "method": "rag-notice-intake",
+              "analyzedAt": "2026-11-23T14:10:08.990Z"
+            },
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "activity": "数据库-11月27日",
+            "field": "room",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "C205",
+              "action": "上课"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "new-course-two-fields",
+      "path": "/api/notices/analyze",
+      "request": {
+        "title": "交互设计安排",
+        "scope": "数媒3班",
+        "published": "2026-11-25",
+        "text": "即日起，数媒3班《交互设计》11月27日教室改为C302。数媒3班《交互设计》11月27日上课时间改为10:00–11:40。",
+        "docs": [
+          {
+            "id": "DB-ROOM",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "A301",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-TIME",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课时间",
+            "value": "08:00–09:40",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库几点",
+              "数据库什么时候上课",
+              "周五数据库课时间"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "time"
+          },
+          {
+            "id": "DB-HW",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一要求",
+            "value": "完成ER图设计",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业",
+              "作业一要求",
+              "ER图设计"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "task"
+          },
+          {
+            "id": "DB-DUE",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月26日18:00",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "DB-SUBMIT",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一提交地点",
+            "value": "课程平台",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业交到哪里",
+              "数据库作业提交平台"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "channel"
+          },
+          {
+            "id": "LIB-OLD",
+            "title": "图书馆：二层开放安排",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "09:00–12:00",
+            "text": "11月22日09:00–12:00，图书馆二层因设备维护暂停开放。",
+            "supersedes": [],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "09:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          },
+          {
+            "id": "PY-HW",
+            "title": "Python程序设计：列表练习",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "计科2班",
+            "topic": "Python程序设计·列表练习",
+            "value": "提交列表练习",
+            "text": "计科2班Python程序设计：11月24日20:00前在课程平台提交列表练习。",
+            "supersedes": [],
+            "aliases": [
+              "Python作业",
+              "列表练习"
+            ],
+            "activity": "Python-列表练习",
+            "course": "Python程序设计",
+            "noticeType": "assignment",
+            "issuer": "Python任课教师",
+            "field": "task",
+            "event": {
+              "date": "2026-11-24",
+              "time": "20:00",
+              "place": "课程平台",
+              "action": "提交列表练习"
+            }
+          },
+          {
+            "id": "DB-ROOM-NEW",
+            "title": "数据库：11月27日教室调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "B204",
+            "text": "计科2班11月27日数据库课教室由A301调整为B204，取代11月18日公布的教室安排。上课时间仍为08:00–09:40。",
+            "supersedes": [
+              "DB-ROOM"
+            ],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "B204",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-DUE-NEW",
+            "title": "数据库：作业一截止时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月27日18:00",
+            "text": "计科2班数据库作业一截止时间由11月26日18:00顺延至11月27日18:00，替代11月19日通知的截止要求。请在课程平台提交ER图设计作业。",
+            "supersedes": [
+              "DB-DUE"
+            ],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-27",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "LIB-NEW",
+            "title": "图书馆：二层暂停开放时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "10:00–12:00",
+            "text": "11月22日图书馆二层暂停开放时间由09:00–12:00调整为10:00–12:00，替代11月20日的安排。",
+            "supersedes": [
+              "LIB-OLD"
+            ],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "10:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          }
+        ]
+      },
+      "status": 200,
+      "expected": 200,
+      "checks": {
+        "grounded": true,
+        "complete": true,
+        "identityAndDates": true
+      },
+      "ok": true,
+      "ms": 2893.230625000001,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+        "noticeId": "notice-8653498f-8b26-4c52-bca5-890ba9bfb785",
+        "clauses": [
+          {
+            "id": "notice-8653498f-8b26-4c52-bca5-890ba9bfb785-1",
+            "noticeId": "notice-8653498f-8b26-4c52-bca5-890ba9bfb785",
+            "title": "交互设计安排",
+            "text": "即日起，数媒3班《交互设计》11月27日教室改为C302。数媒3班《交互设计》11月27日上课时间改为10:00–11:40。",
+            "topic": "交互设计·2026-11-27·room",
+            "value": "C302",
+            "scope": "数媒3班",
+            "effective": "2026-11-25",
+            "published": "2026-11-25",
+            "imported": "2026-11-23",
+            "aliases": [],
+            "supersedes": [],
+            "relations": [],
+            "excerpt": "即日起，数媒3班《交互设计》11月27日教室改为C302。数媒3班《交互设计》11月27日上课时间改为10:00–11:40。",
+            "analysis": {
+              "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+              "method": "rag-notice-intake",
+              "analyzedAt": "2026-11-23T14:10:11.887Z"
+            },
+            "course": "交互设计",
+            "noticeType": "course",
+            "issuer": "交互设计任课教师",
+            "activity": "交互设计-2026-11-27",
+            "field": "room",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "place": "C302"
+            }
+          },
+          {
+            "id": "notice-8653498f-8b26-4c52-bca5-890ba9bfb785-2",
+            "noticeId": "notice-8653498f-8b26-4c52-bca5-890ba9bfb785",
+            "title": "交互设计安排",
+            "text": "即日起，数媒3班《交互设计》11月27日教室改为C302。数媒3班《交互设计》11月27日上课时间改为10:00–11:40。",
+            "topic": "交互设计·2026-11-27·time",
+            "value": "10:00–11:40",
+            "scope": "数媒3班",
+            "effective": "2026-11-25",
+            "published": "2026-11-25",
+            "imported": "2026-11-23",
+            "aliases": [],
+            "supersedes": [],
+            "relations": [],
+            "excerpt": "数媒3班《交互设计》11月27日上课时间改为10:00–11:40。",
+            "analysis": {
+              "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+              "method": "rag-notice-intake",
+              "analyzedAt": "2026-11-23T14:10:11.887Z"
+            },
+            "course": "交互设计",
+            "noticeType": "course",
+            "issuer": "交互设计任课教师",
+            "activity": "交互设计-2026-11-27",
+            "field": "time",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "10:00–11:40"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "homework-extension",
+      "path": "/api/notices/analyze",
+      "request": {
+        "title": "数据库作业一延期",
+        "scope": "计科2班",
+        "published": "2026-11-25",
+        "text": "即日起，计科2班数据库作业一截止时间由11月27日18:00顺延至11月28日18:00，替代此前的截止要求。仍在课程平台提交。",
+        "docs": [
+          {
+            "id": "DB-ROOM",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "A301",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-TIME",
+            "title": "数据库：11月27日上课安排",
+            "published": "2026-11-18",
+            "effective": "2026-11-18",
+            "imported": "2026-11-18",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课时间",
+            "value": "08:00–09:40",
+            "text": "2026年11月27日08:00–09:40，计科2班数据库课在A301上课。",
+            "supersedes": [],
+            "aliases": [
+              "数据库几点",
+              "数据库什么时候上课",
+              "周五数据库课时间"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "A301",
+              "action": "上课"
+            },
+            "field": "time"
+          },
+          {
+            "id": "DB-HW",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一要求",
+            "value": "完成ER图设计",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业",
+              "作业一要求",
+              "ER图设计"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "task"
+          },
+          {
+            "id": "DB-DUE",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月26日18:00",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "DB-SUBMIT",
+            "title": "数据库：作业一提交要求",
+            "published": "2026-11-19",
+            "effective": "2026-11-19",
+            "imported": "2026-11-19",
+            "scope": "计科2班",
+            "topic": "数据库·作业一提交地点",
+            "value": "课程平台",
+            "text": "计科2班数据库作业一：完成ER图设计，于11月26日18:00前在课程平台提交ER图设计作业。",
+            "supersedes": [],
+            "aliases": [
+              "数据库作业交到哪里",
+              "数据库作业提交平台"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-26",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "channel"
+          },
+          {
+            "id": "LIB-OLD",
+            "title": "图书馆：二层开放安排",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "09:00–12:00",
+            "text": "11月22日09:00–12:00，图书馆二层因设备维护暂停开放。",
+            "supersedes": [],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "09:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          },
+          {
+            "id": "PY-HW",
+            "title": "Python程序设计：列表练习",
+            "published": "2026-11-20",
+            "effective": "2026-11-20",
+            "imported": "2026-11-20",
+            "scope": "计科2班",
+            "topic": "Python程序设计·列表练习",
+            "value": "提交列表练习",
+            "text": "计科2班Python程序设计：11月24日20:00前在课程平台提交列表练习。",
+            "supersedes": [],
+            "aliases": [
+              "Python作业",
+              "列表练习"
+            ],
+            "activity": "Python-列表练习",
+            "course": "Python程序设计",
+            "noticeType": "assignment",
+            "issuer": "Python任课教师",
+            "field": "task",
+            "event": {
+              "date": "2026-11-24",
+              "time": "20:00",
+              "place": "课程平台",
+              "action": "提交列表练习"
+            }
+          },
+          {
+            "id": "DB-ROOM-NEW",
+            "title": "数据库：11月27日教室调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·11月27日上课地点",
+            "value": "B204",
+            "text": "计科2班11月27日数据库课教室由A301调整为B204，取代11月18日公布的教室安排。上课时间仍为08:00–09:40。",
+            "supersedes": [
+              "DB-ROOM"
+            ],
+            "aliases": [
+              "数据库教室",
+              "数据库在哪上",
+              "周五数据库课教室"
+            ],
+            "activity": "数据库-11月27日",
+            "course": "数据库",
+            "noticeType": "course",
+            "issuer": "数据库任课教师",
+            "lessonDate": "2026-11-27",
+            "event": {
+              "date": "2026-11-27",
+              "time": "08:00–09:40",
+              "place": "B204",
+              "action": "上课"
+            },
+            "field": "room"
+          },
+          {
+            "id": "DB-DUE-NEW",
+            "title": "数据库：作业一截止时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "计科2班",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月27日18:00",
+            "text": "计科2班数据库作业一截止时间由11月26日18:00顺延至11月27日18:00，替代11月19日通知的截止要求。请在课程平台提交ER图设计作业。",
+            "supersedes": [
+              "DB-DUE"
+            ],
+            "aliases": [
+              "数据库作业截止",
+              "作业一什么时候交",
+              "数据库作业时间"
+            ],
+            "activity": "数据库-作业一",
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "event": {
+              "date": "2026-11-27",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            },
+            "field": "deadline"
+          },
+          {
+            "id": "LIB-NEW",
+            "title": "图书馆：二层暂停开放时间调整",
+            "published": "2026-11-21",
+            "effective": "2026-11-21",
+            "imported": "2026-11-21",
+            "scope": "全校",
+            "topic": "图书馆·二层开放安排",
+            "value": "10:00–12:00",
+            "text": "11月22日图书馆二层暂停开放时间由09:00–12:00调整为10:00–12:00，替代11月20日的安排。",
+            "supersedes": [
+              "LIB-OLD"
+            ],
+            "aliases": [
+              "图书馆开放",
+              "图书馆几点开放"
+            ],
+            "noticeType": "school",
+            "issuer": "图书馆",
+            "field": "service",
+            "event": {
+              "date": "2026-11-22",
+              "time": "10:00–12:00",
+              "place": "图书馆二层",
+              "action": "暂停开放"
+            }
+          }
+        ]
+      },
+      "status": 200,
+      "expected": 200,
+      "checks": {
+        "grounded": true,
+        "complete": true,
+        "identityAndDates": true
+      },
+      "ok": true,
+      "ms": 2464.629834000001,
+      "response": {
+        "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+        "noticeId": "notice-2226ea82-6b11-4958-8bab-d06725f05cdb",
+        "clauses": [
+          {
+            "id": "notice-2226ea82-6b11-4958-8bab-d06725f05cdb-1",
+            "noticeId": "notice-2226ea82-6b11-4958-8bab-d06725f05cdb",
+            "title": "数据库作业一延期",
+            "text": "即日起，计科2班数据库作业一截止时间由11月27日18:00顺延至11月28日18:00，替代此前的截止要求。仍在课程平台提交。",
+            "topic": "数据库·作业一截止时间",
+            "value": "11月28日18:00",
+            "scope": "计科2班",
+            "effective": "2026-11-25",
+            "published": "2026-11-25",
+            "imported": "2026-11-23",
+            "aliases": [],
+            "supersedes": [
+              "DB-DUE-NEW"
+            ],
+            "relations": [
+              {
+                "id": "DB-DUE-NEW",
+                "kind": "replace"
+              }
+            ],
+            "excerpt": "即日起，计科2班数据库作业一截止时间由11月27日18:00顺延至11月28日18:00，替代此前的截止要求。仍在课程平台提交。",
+            "analysis": {
+              "model": "Qwen2.5-0.5B-Instruct · MLX · finetuned",
+              "method": "rag-notice-intake",
+              "analyzedAt": "2026-11-23T14:10:14.353Z"
+            },
+            "course": "数据库",
+            "noticeType": "assignment",
+            "issuer": "数据库任课教师",
+            "activity": "数据库-作业一",
+            "field": "deadline",
+            "event": {
+              "date": "2026-11-28",
+              "time": "18:00",
+              "place": "课程平台",
+              "action": "提交ER图设计作业"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,25 +1,29 @@
 {
   "passed": true,
-  "sourceCommit": "4288171b89e41061b0949639d10a880c3d162dab",
+  "sourceCommit": "fc6cb181367570e1cad94680a9584dfe357e62cb",
   "source": {
     "mode": "commit",
-    "commit": "4288171b89e41061b0949639d10a880c3d162dab",
+    "commit": "fc6cb181367570e1cad94680a9584dfe357e62cb",
     "dirty": false,
     "workspaceStatus": "",
     "trackedPatchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "files": {
       "evaluation/cases.mjs": "42faf3dff7aed56fa18350863aa6bafd1c09803201acf0fe84ff831636b71070",
       "evaluation/run.mjs": "58752565abd389e91fc5dcae68543418f33a6d4f092baf35d5d712cb3dac9076",
+      "experiments/audit-score.mjs": "a547cc787a9153c2c6396fbdd0a5042680a630dba166a4573c188741028fae48",
+      "experiments/audit-score.test.mjs": "b4337b784d01f29dc8d9985256bcbfc23283b71c34d028906216857eaed6c9ba",
       "experiments/audit.mjs": "5138a766f26be2ef079f408ac01dca1e3f0cdbd3ddcef691b53f2906fbe37d16",
       "experiments/engine.mjs": "4a6a8c88ba348da09c8f18d7ebe76b7ec99ea98a5469249d2f1cbb588eb204dd",
       "experiments/evaluate.mjs": "201dcc9e2c9be25364f776637955f2a6b9a0f60791ae9da4e0d2da9a2d577b55",
       "experiments/full/generate.mjs": "ed0ed86d3b1431b30b505984fc8c1b85879282ee3cefc93912a8a1eff725e011",
-      "experiments/generate-answers.mjs": "ea144a53c10a71ed86ee07154dbbd2a7156c80ec6180b0d50379653e2f4befdc",
+      "experiments/generate-answers.mjs": "c06c4224d005ab545f3bcdfa3b9bc036c615c9751c5630808ec6a9c8da9d250e",
       "experiments/generate.mjs": "ed2e520c03f959c8fc5444fd61e674cdceb464cb8a37625c38f8f3ec48ddf9cc",
       "experiments/identity.mjs": "ab53286be6e47b41a87dcd2425193fdb70e86f814f69511bbfeec28b80e148ae",
       "experiments/intake-probe.mjs": "7268accd2208893c7f1a7726d8eb2267b38e2b5e258f1fe885893d88333515dd",
+      "experiments/next-audit.mjs": "a8ffb7ec4b0f4ebb713977a58eee1a5e2eb08e1b7f36e4d161a991301f160edf",
       "experiments/parametric.mjs": "d8cd23331267d7e4cc9deabe4defc79ff9ffb68b1cfa3b928e5b4048ee715487",
       "experiments/prepare-embedding.py": "be438829a5684f899850fe48377d70c3206ce7aa81f7114ec9d13e8b0a6313d5",
+      "experiments/raw-notices/fixtures.mjs": "4ac41df35f415a5932dbe828df150b305d65047000b2fb3351f832b7b5564a5c",
       "experiments/report.mjs": "b2f393f35730a5f23744a246f1491c16f5288443f0efc615e65bbcbbf4c64e5a",
       "experiments/retrieve.py": "df8cad8d276133842693279aafbc977be36f4b07d03f48f6b4675bb200fabd22",
       "experiments/school/generate.mjs": "167278b0cdd9cd86c1e51cb1859273d6771dbf8000b9eca58470895d40475768",
@@ -27,13 +31,22 @@
       "experiments/score.test.mjs": "4c2a5422687cff6f635a152309ff2c4e8be077df4d45306b899274fbcb9e00d1",
       "experiments/worlds.test.mjs": "4b0c84bfcc15f1a2381c6430b87ec1427475d3b18b6c7bc5f57cb0fca7f7ae49",
       "generation/citations.test.mjs": "b881bbf4376cb4e281185a0ecd4fb1063bf3ccfec6c02a9ff23a52b046b99ba5",
-      "generation/intake-regression.test.mjs": "1d2a2d3c3d2c400be19dfc8ec77d39834473da48f5e5894ebaf3eb84f8107902",
-      "generation/model.mjs": "51f4a3d969495c91070c0d05527bc6565fb114fb672485144faa644b6e2b5872",
-      "generation/notice-context.mjs": "c901739d4126328c45b47fd0bee2f827bba5d3e0ff90df5c0d4e0904c14a9b3d",
-      "generation/notice.mjs": "6a57104ed2db0aee5d463960e79cc6e31bc2491175905a05ea851bf329a4191e",
+      "generation/domain-answer.mjs": "8c167b206734b6a427b7fdaf53f528245620be2d0b340b5d3181210dbc632a18",
+      "generation/domain-answer.test.mjs": "cf4143f5d78ce3794ee5446b7a9fbff7c44fca0d794071a87622a8ca152b5682",
+      "generation/domain-notice.mjs": "d1ed53bdc57683674995977d84956ca4b1c79c5c859879e25698bbfae0618671",
+      "generation/domain-notice.test.mjs": "12adcbec4b2b32c7fe8298c86d13391cff25af0ec7ba8fa12841f5099d6d37a1",
+      "generation/identity.mjs": "ca1c102d701d55f89bcfd00911aa2a6a4983f28686f521ec1585d444008e0dc3",
+      "generation/identity.test.mjs": "28bd8003fddbe5513ff52dc6c7f8f768288c7a7e02d6a8bb3c8082a61b76a10e",
+      "generation/intake-regression.test.mjs": "5ad1d6466a241135a94d71b1e9c71fb45916cbccd8f318658b909b55147bb29e",
+      "generation/mlx.mjs": "eb24390a32426fa355f98d05df854a0181d752a4106482d718184620d6c717b8",
+      "generation/mlx.test.mjs": "1ce29693203ea2644a8f82f93d2a86a1a8d1bf2c71e1380a3049e81743b92545",
+      "generation/model.mjs": "44b601c2907fbb74783a2872f8a75230d6bde4147564a411ae26c741699c740f",
+      "generation/notice-context.mjs": "d312abcb2e6f890a8874fb3f75bb50bf48f154f6f97b290f182aca03e6c79d92",
+      "generation/notice.mjs": "237de1c3b046f52a88cdc8d42875330787441bff02b74defda18fc9df2cfd9d7",
       "generation/notice.test.mjs": "4b8cc95fa5c360da038352c569a0afd174bd0e765ce43369fe5328483e689a14",
       "generation/prepare_model.py": "527b0211b581cf617f4cd584c2351f4dbe0ed2c766d4d831cab90df7d61c0775",
       "generation/source-records.mjs": "68d059b4ed7fe80b5d030842821769d33d21ccf087c8e348ec1dd8cd09650742",
+      "generation/source-spans.mjs": "dd70e9c3cc137f44dd35bf5175cf904d117bc038da33af3ddbd304c180bea481",
       "knowledge/campus-data.mjs": "5c7f70ecb6f46aee590829faa017b8330adb0dadff417f038d854d4b31d43eef",
       "knowledge/data.mjs": "cf20c263f3635171808350fc4bff42ccd865b5efe8c002242ba0687f5d963422",
       "knowledge/notice-adapter.mjs": "2dc7b8a5d8cee99ff48246a27b3b2d3d157fa9c5499cd050f8e3d8e30b7c53c3",
@@ -41,9 +54,10 @@
       "knowledge/schema.mjs": "25a4bda970c0ed7d97f28f6e1832f4daec7e79329cfc02d400bcfa9dbe167bb2",
       "package.json": "e25801ceb38f4682932a29c9ff2bb872c5a42c70de0ed80b0f6b30840f00f223",
       "qa/answer.mjs": "b647e88898f972907a51385b608317a1e8ea5dd685cac3ff0b803588e805c48f",
-      "qa/campus.mjs": "52767c99c6f3b11196095391c3f4f477a92d841c6681a5984d7b562f1466d059",
+      "qa/campus.mjs": "f433dd2a6792dab42c7dc776b1d329d4c71ee37e00ee1f04bdf07cda8c94749b",
       "qa/campus.test.mjs": "febbf59a3f32cb53a2f34fb360ca43fb74fd13c08b7273f54a1fbffcf1bcde94",
       "qa/integration.test.mjs": "51a0230e8c0623c59ece0199295f78a69a7c56ca5d4f1cb6d0cccd1ec2f0a64d",
+      "qa/next-core.test.mjs": "ef8c8067c7b74e03bafb86f77418bc2a6c33fda2582a36bf3271b29c41934b7a",
       "retrieval/rank.mjs": "75ed68dee289d648ea85d93e1451047ce555340d11c5e6700c75096a22a518f5",
       "retrieval/regression.test.mjs": "d496b8457416b23b3d48ad0da545162792de64d6ed3ae40fafad72e28d2b23dc",
       "retrieval/review.test.mjs": "478efca3176e689de177cc616f7f9dd619b04fa79c3abe242de0876d39a5e335",
@@ -53,14 +67,33 @@
       "service/review-probes.mjs": "f5b00471b3517393a848954f6f0f4f77bb59f6bb5b397dde5481ea752a1cd938",
       "service/run-tests.mjs": "0f3501474084d1bdee14f35fdf63bd24f40bd6546f91736e6ee2c892d39a26a5",
       "service/s1-probes.mjs": "ed4376a0d88b680aea9b3dd436d704b3c4e223f60b6cea5c1850facc55150f3e",
-      "service/server.mjs": "d04064ac8ab7f3ed5769147487db83970e63f5b1a631cefad0db1d92ddfd4991",
+      "service/server.mjs": "649aa0fee737efb195cb911ebda6fc2395c81afbec2aa21d2876729369e78fd7",
       "service/static-imports.test.mjs": "a52f645363cda2a8f3cbdec263fa1c676de877d5a2783721fe240e97ab9a19b9",
       "service/verify-delivery.mjs": "9bdcae33ef6c43e20338437910ff29dbee14e7a610ddc4f3c8622bd7fa98e2a4",
       "service/verify-s1.mjs": "3082c3970f0eedbcc9fabfffe442e017f98174c74a2430308b53f107896cd06e",
       "service/verify-service.mjs": "48b35e66ef0e87459f2bb09727ea64b482dcd78b61526b26e9b2495454645b81",
-      "temporal/campus.mjs": "b814173e68f2502b1d75059360339b9c9fc55545d34c1a5f5432fe6e88b7b95d",
+      "temporal/campus.mjs": "4222bf5986a2c31e19f8764341910e6f1144323ac24ab98d02e5067e302df014",
       "temporal/dates.test.mjs": "001a3afe6ffc728949e95175142f5864417d66c9cf0e6876cbd97e50fe37a349",
       "temporal/graph.mjs": "5dce7eb7df38a0a809cb51cfece7cb5e8f9f5b9db270b9cf39c31f55e0b9a454",
+      "temporal/integrity.mjs": "06518d442a5640af09e27385ab5f381c1ebf8979c39b691981dae8f1365a2eb9",
+      "training/data.py": "7a6d782b9cc7e1813514ace5295a76108139065037683552f226b335c39d496f",
+      "training/formal-gate.py": "a69edcc822ca211de801dfb6510b8808c06ed519b12b20e89b8f52b29b4616f6",
+      "training/input-format-audit.py": "681fbd85ca2e940dddb2d1dfaaf1100bb49203773f5ef607115dcd6ac1e6d9cf",
+      "training/interface-probe.mjs": "80d79264ea84e3387f87107ca7642c2bc79d5dccd2f7b38398fe0dc6fccbfaab",
+      "training/loss.py": "fe5be74b98b9ce3ceb128a9ba46248244ceb225933064c90c86d2ea6345afc05",
+      "training/metrics.py": "9a130f7bee1af99568336a8f205e06e3afd227419aa4796cbb3baacf1f1092ca",
+      "training/near-audit.py": "33180678a7ea558c73e9fdfa2152d0869248b33ddabd877f8cc3f7d833e5ed21",
+      "training/offline-probe.mjs": "db4f201f473c4251a0d67abb72758da358ba748f8f7102ba2ff7677f8a9fb5a4",
+      "training/prepare-base.py": "329fd498d12cdf76b7d9c1c5e6c02eadd7b0cbff36f8127fb86f65d75bf1e32d",
+      "training/prepare.py": "56ed1cb461447176bb1cea911c1386341c22e1af084408c24a57d74a02193e45",
+      "training/prompting-tests.py": "fc3109ce3b6534d2d354dfce159934fea6fa2c25cc8a702f6578c3b26c83418f",
+      "training/prompting.py": "da3630e36eb4e7b380feb7a1064cdd8610e941136930e679a18da158c44a0500",
+      "training/raw-notice-probe.mjs": "c8346395d06d1b725ccbb554acd6e5180d8b4984511de91c827e1d28799e7a53",
+      "training/review.py": "8c7aa8d36a70d70624c46cdca9c2a8537b5c878e893a693ab34bee1964bb1a62",
+      "training/summarize.py": "f20d63c55f92916a074fbadf0de49b555659c900f1ea5756a7900023671412b2",
+      "training/tests.py": "7c9a4d87c2f425cd2aa08fe9dcae0333917a82e384d29a0049e3bc656cb12987",
+      "training/train.py": "5d8b31f686fe03bae16fa26a5a49c8dc7aa2999d84551e703bbd937d6a13332c",
+      "training/worker.py": "f2756565ecfa2c8f309dc375daf328afc721e0d40a221bb53bda561e4fae4a38",
       "web/app.mjs": "0c1895a761c2f1ae982491fe2eaa05f76b4cc7824631d567d61501bb3a2522b6",
       "web/controls.css": "8a54e71cad9f4555dc7a0c6f1b2990901692deea62b0d99c6d05375510ed4d13",
       "web/controls.mjs": "ed6b9db263ccbe5c0897c5c9200c05742b474f078852f70dfccfebbdcb926923",
@@ -69,13 +102,13 @@
       "web/notices.test.mjs": "8e6e2be23b7ab60b5675a3f759d9c0ca90e94d7d19a8004e55f000a42b8859b4",
       "web/style.css": "8ada8830c3e848a73f1c1b7c88097548fdd7049fd995538f80168c932089e088"
     },
-    "sourceDigest": "b664a3d77c7274a50f3568f3957488004fb992d85053525cf38d0d94547911ec"
+    "sourceDigest": "b4bb898c905e90bb109260de03957e8dbcf568f99ed3584f1cdc477630a06f85"
   },
   "command": [
     "/usr/local/bin/node",
     "/Users/catalyst/Documents/ChatGPT/rag/NowPast-RAG-git/service/verify-delivery.mjs",
     "--ref",
-    "HEAD",
+    "fc6cb18",
     "--model"
   ],
   "apiResults": {
@@ -289,7 +322,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -330,7 +364,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -591,7 +626,8 @@
                   },
                   "role": "已被替代"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -632,7 +668,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -863,7 +900,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -904,7 +942,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -1105,7 +1144,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -1146,7 +1186,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -1468,7 +1509,8 @@
                   },
                   "role": "已被替代"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -1509,7 +1551,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -1953,7 +1996,8 @@
                   },
                   "role": "已被替代"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "time",
@@ -1994,7 +2038,8 @@
                   },
                   "role": "当前依据"
                 }
-              ]
+              ],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -2318,7 +2363,8 @@
                   },
                   "role": "已被替代"
                 }
-              ]
+              ],
+              "validationErrors": []
             },
             {
               "field": "fee",
@@ -2328,7 +2374,8 @@
               "label": "证据不足",
               "values": [],
               "summary": "费用缺少截至 2026-11-25 可核查的依据。",
-              "items": []
+              "items": [],
+              "validationErrors": []
             }
           ],
           "fields": {
@@ -2544,11 +2591,11 @@
         "status": 200,
         "response": {
           "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
-          "noticeId": "notice-50a533eb-7f5d-4734-bd49-ad7d2bfa673d",
+          "noticeId": "notice-f82f6678-9d18-4b99-9e3b-4b0ca97ac529",
           "clauses": [
             {
-              "id": "notice-50a533eb-7f5d-4734-bd49-ad7d2bfa673d-1",
-              "noticeId": "notice-50a533eb-7f5d-4734-bd49-ad7d2bfa673d",
+              "id": "notice-f82f6678-9d18-4b99-9e3b-4b0ca97ac529-1",
+              "noticeId": "notice-f82f6678-9d18-4b99-9e3b-4b0ca97ac529",
               "title": "数据库：11月27日教室调整",
               "text": "自11月27日起，计科2班11月27日数据库课教室由B204调整为C205，替代此前的教室安排。上课时间仍为08:00–09:40。",
               "topic": "数据库·11月27日上课地点",
@@ -2556,7 +2603,7 @@
               "scope": "计科2班",
               "effective": "2026-11-27",
               "published": "2026-11-21",
-              "imported": "2026-11-22",
+              "imported": "2026-11-23",
               "aliases": [],
               "supersedes": [
                 "DB-ROOM-NEW"
@@ -2571,7 +2618,7 @@
               "analysis": {
                 "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
                 "method": "rag-notice-intake",
-                "analyzedAt": "2026-11-22T11:24:33.975Z"
+                "analyzedAt": "2026-11-23T14:08:59.191Z"
               },
               "course": "数据库",
               "noticeType": "course",
@@ -2601,19 +2648,19 @@
         "status": 200,
         "response": {
           "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
-          "noticeId": "notice-e4281485-2a84-416f-aacb-a526b42e6fcd",
+          "noticeId": "notice-69fad276-acbf-49e1-8dcd-54eb2db1b270",
           "clauses": [
             {
-              "id": "notice-e4281485-2a84-416f-aacb-a526b42e6fcd-1",
-              "noticeId": "notice-e4281485-2a84-416f-aacb-a526b42e6fcd",
+              "id": "notice-69fad276-acbf-49e1-8dcd-54eb2db1b270-1",
+              "noticeId": "notice-69fad276-acbf-49e1-8dcd-54eb2db1b270",
               "title": "数据库：作业一延期",
               "text": "即日起，计科2班数据库作业一截止时间由11月27日18:00顺延至11月28日18:00，替代此前的截止要求。仍在课程平台提交。",
               "topic": "数据库·作业一截止时间",
               "value": "11月28日18:00",
               "scope": "计科2班",
-              "effective": "2026-11-28",
+              "effective": "2026-11-21",
               "published": "2026-11-21",
-              "imported": "2026-11-22",
+              "imported": "2026-11-23",
               "aliases": [],
               "supersedes": [
                 "DB-DUE-NEW"
@@ -2628,7 +2675,7 @@
               "analysis": {
                 "model": "Qwen2.5-0.5B-Instruct · Q4_K_M",
                 "method": "rag-notice-intake",
-                "analyzedAt": "2026-11-22T11:24:35.895Z"
+                "analyzedAt": "2026-11-23T14:09:03.609Z"
               },
               "course": "数据库",
               "noticeType": "assignment",
